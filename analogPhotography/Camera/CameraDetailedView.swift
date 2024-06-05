@@ -27,9 +27,7 @@ struct CameraDetailedView: View {
                 })
             }
             
-            Section("Заметки") {
-                TextField("Добавить замтетку", text: $camera.note, axis: .vertical)
-            }
+            NoteView(prompt: "Добавить заметку", note: $camera.note)
         }
         .navigationTitle(camera.name)
         .navigationBarTitleDisplayMode(.large)
