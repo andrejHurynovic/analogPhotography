@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NoteView: View {
-    let prompt: String
+    var prompt: String = "Добавить заметку"
     @Binding var note: String
     
     var body: some View {
@@ -23,7 +23,7 @@ struct NoteView: View {
     
     return NavigationStack {
         List {
-            NoteView(prompt: "Добавить замтетку", note: $note)
+            NoteView(note: $note)
         }
     }
 }
