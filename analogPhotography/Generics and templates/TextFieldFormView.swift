@@ -11,13 +11,14 @@ struct TextFieldFormView: View {
     var title: String
     var placeholder: String = "Добавить"
     var setEditStateToFalseOnSubmit: Bool = false
+    var setFocusStateToTrueOnEditStateTrue = false
     
     @Binding var text: String
     @Binding var editState: Bool
     
     @FocusState var focusState: Bool
     
-    var foregroundColor: Color { !focusState ? .gray : .primary }
+    var foregroundColor: Color { focusState || editState ? .primary : .gray }
     
     var body: some View {
         FormView(title: title) {
@@ -32,6 +33,14 @@ struct TextFieldFormView: View {
                 .focused($focusState)
                 .onChange(of: focusState) { _, newValue in
                     editState = newValue
+                }
+                .onChange(of: editState) { _, newValue in
+                    if newValue == false && focusState == true {
+                        focusState = false
+                    }
+                    if setFocusStateToTrueOnEditStateTrue && newValue == true && focusState == false {
+                        focusState = true
+                    }
                 }
         }
         
