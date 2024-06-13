@@ -11,12 +11,13 @@ import SwiftData
 struct CameraDetailedView: View {
     @Environment(\.modelContext) private var modelContext
     @Bindable var camera: Camera
+    @State var editState: Bool = false
     
     var body: some View {
         List {
             
             Section("Информация") {
-                TextFieldFormView(title: "Название:", placeholder: "добавить", text: $camera.name)
+                TextFieldFormView(title: "Название", setFocusStateToTrueOnEditStateTrue: true, text: $camera.name, editState: $editState)
             }
             
             Section("Плёнки") {
@@ -35,12 +36,13 @@ struct CameraDetailedView: View {
         
     }
     
-    var toolbarMenu: some View {
-        Menu("", systemImage: "ellipsis.circle") {
+    @ViewBuilder var toolbarMenu: some View {
+        MenuWithEditState(editState: $editState) {
             DeleteButton {
                 modelContext.delete(camera)
             }
         }
+        
     }
     
 }

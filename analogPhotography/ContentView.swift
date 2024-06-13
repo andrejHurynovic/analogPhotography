@@ -16,7 +16,7 @@ struct ContentView: View {
     private var filmFormats: [FilmFormat]
 
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             List {
                 Button("sus") {
                     modelContext.insert(FilmFormat.getDefaults())
@@ -26,8 +26,6 @@ struct ContentView: View {
                 }
             }
 
-        } detail: {
-            Text("Select an item")
         }
     }
 

@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftData
-import CoreLocation
 
 @Model
 class Photo {
@@ -18,14 +17,14 @@ class Photo {
     var locationLatitude: Double?
     var locationLongitude: Double?
     
-    var aperture: Float?
-    var shutterSpeed: Float?
+    var aperture: String
+    var shutterSpeed: String?
     
     @Attribute(.externalStorage) var image: Data?
     
     var note: String = ""
     
-    init(film: Film, date: Date, locationLatitude: Double? = nil, locationLongitude: Double? = nil, aperture: Float? = nil, shutterSpeed: Float? = nil, image: Data? = nil, note: String) {
+    init(film: Film, date: Date, locationLatitude: Double? = nil, locationLongitude: Double? = nil, aperture: String, shutterSpeed: String? = nil, image: Data? = nil, note: String) {
         self.film = film
         self.date = date
         self.locationLatitude = locationLatitude

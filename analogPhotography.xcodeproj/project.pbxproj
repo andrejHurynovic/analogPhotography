@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F645616C2C110CC20007940D /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645616B2C110CC20007940D /* NoteView.swift */; };
 		F6D3A3462C0FB2AB00D56B8D /* CameraDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */; };
 		F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */; };
 		F6D3A34B2C0FBD4000D56B8D /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34A2C0FBD4000D56B8D /* FormView.swift */; };
 		F6D3A34D2C0FBF4900D56B8D /* TextFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34C2C0FBF4900D56B8D /* TextFormView.swift */; };
 		F6D3A34F2C0FC1FC00D56B8D /* TextFieldFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34E2C0FC1FC00D56B8D /* TextFieldFormView.swift */; };
 		F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3502C0FC9A600D56B8D /* PhotoDetailedView.swift */; };
+		F6E481992C1B0AD4006EE963 /* MenuWithEditState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E481982C1B0AD4006EE963 /* MenuWithEditState.swift */; };
+		F6E4819B2C1B15ED006EE963 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E4819A2C1B15ED006EE963 /* String.swift */; };
+		F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E4819E2C1B88AC006EE963 /* TextFieldWithPrefix.swift */; };
 		F6FE299F2C0F492B00E9C678 /* analogPhotographyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE299E2C0F492B00E9C678 /* analogPhotographyApp.swift */; };
 		F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE29A02C0F492B00E9C678 /* ContentView.swift */; };
 		F6FE29A52C0F493000E9C678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6FE29A42C0F493000E9C678 /* Assets.xcassets */; };
@@ -27,12 +31,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F645616B2C110CC20007940D /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailedView.swift; sourceTree = "<group>"; };
 		F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		F6D3A34A2C0FBD4000D56B8D /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		F6D3A34C2C0FBF4900D56B8D /* TextFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormView.swift; sourceTree = "<group>"; };
 		F6D3A34E2C0FC1FC00D56B8D /* TextFieldFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFormView.swift; sourceTree = "<group>"; };
 		F6D3A3502C0FC9A600D56B8D /* PhotoDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailedView.swift; sourceTree = "<group>"; };
+		F6E481982C1B0AD4006EE963 /* MenuWithEditState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuWithEditState.swift; sourceTree = "<group>"; };
+		F6E4819A2C1B15ED006EE963 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F6E4819E2C1B88AC006EE963 /* TextFieldWithPrefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPrefix.swift; sourceTree = "<group>"; };
 		F6FE299B2C0F492B00E9C678 /* analogPhotography.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = analogPhotography.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FE299E2C0F492B00E9C678 /* analogPhotographyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = analogPhotographyApp.swift; sourceTree = "<group>"; };
 		F6FE29A02C0F492B00E9C678 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,15 +66,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F6D3A3472C0FBA4000D56B8D /* Generics and templates */ = {
+		F6D3A3472C0FBA4000D56B8D /* Generics, templates and etc */ = {
 			isa = PBXGroup;
 			children = (
+				F6E4819D2C1B886E006EE963 /* ViewModifiers */,
 				F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */,
+				F6E481982C1B0AD4006EE963 /* MenuWithEditState.swift */,
 				F6D3A34A2C0FBD4000D56B8D /* FormView.swift */,
 				F6D3A34C2C0FBF4900D56B8D /* TextFormView.swift */,
 				F6D3A34E2C0FC1FC00D56B8D /* TextFieldFormView.swift */,
+				F645616B2C110CC20007940D /* NoteView.swift */,
 			);
-			path = "Generics and templates";
+			path = "Generics, templates and etc";
+			sourceTree = "<group>";
+		};
+		F6E4819D2C1B886E006EE963 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				F6E4819E2C1B88AC006EE963 /* TextFieldWithPrefix.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 		F6FE29922C0F492B00E9C678 = {
@@ -94,7 +113,7 @@
 				F6FE29BC2C0F803000E9C678 /* Photo */,
 				F6FE29B02C0F644400E9C678 /* Film */,
 				F6FE29A42C0F493000E9C678 /* Assets.xcassets */,
-				F6D3A3472C0FBA4000D56B8D /* Generics and templates */,
+				F6D3A3472C0FBA4000D56B8D /* Generics, templates and etc */,
 				F6FE29B32C0F703100E9C678 /* Extensions */,
 			);
 			path = analogPhotography;
@@ -116,6 +135,7 @@
 			children = (
 				F6FE29B62C0F769A00E9C678 /* Bool.swift */,
 				F6FE29B42C0F704A00E9C678 /* ModelContextExtensions.swift */,
+				F6E4819A2C1B15ED006EE963 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,18 +227,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E4819B2C1B15ED006EE963 /* String.swift in Sources */,
 				F6FE29B22C0F645200E9C678 /* FilmFormat.swift in Sources */,
 				F6D3A34D2C0FBF4900D56B8D /* TextFormView.swift in Sources */,
+				F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */,
 				F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */,
 				F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */,
 				F6FE29B52C0F704A00E9C678 /* ModelContextExtensions.swift in Sources */,
 				F6FE29BE2C0F804200E9C678 /* Photo.swift in Sources */,
+				F6E481992C1B0AD4006EE963 /* MenuWithEditState.swift in Sources */,
 				F6FE29AF2C0F4CDE00E9C678 /* FilmType.swift in Sources */,
 				F6FE29B92C0F784500E9C678 /* FilmProcess.swift in Sources */,
 				F6FE29C12C0FAA2400E9C678 /* Camera.swift in Sources */,
 				F6FE29BB2C0F7CBB00E9C678 /* Film.swift in Sources */,
 				F6D3A34B2C0FBD4000D56B8D /* FormView.swift in Sources */,
 				F6D3A34F2C0FC1FC00D56B8D /* TextFieldFormView.swift in Sources */,
+				F645616C2C110CC20007940D /* NoteView.swift in Sources */,
 				F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */,
 				F6FE299F2C0F492B00E9C678 /* analogPhotographyApp.swift in Sources */,
 				F6FE29B72C0F769A00E9C678 /* Bool.swift in Sources */,
@@ -354,7 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 116;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -384,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 116;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
