@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TextFieldFormView: View {
     var title: String
-    var placeholder: String
+    var placeholder: String = "Добавить"
+    var setEditStateToFalseOnSubmit: Bool = false
     
     @Binding var text: String
     @Binding var editState: Bool
