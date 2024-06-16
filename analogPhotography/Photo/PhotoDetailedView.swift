@@ -25,16 +25,24 @@ struct PhotoDetailedView: View {
         Section("Характеристики") {
             DatePicker("Дата", selection: $photo.date)
             aperturePicker
+            shutterSpeedPicker
         }
     }
     
     var aperturePicker: some View {
         TextFieldFormView(title: "Диафрагма",
-                          placeholder: "f/",
+                          placeholder: "f/2.8",
                           text: $apertureText,
                           editState:  .constant(true))
             .keyboardType(.numberPad)
             .textFieldPrefix(prefix: "f/", text: $photo.aperture, textFieldText: $apertureText)
+    }
+    @ViewBuilder var shutterSpeedPicker: some View {
+        TextFieldFormView(title: "Скорость затвора",
+                          placeholder: "1/100",
+                          text: $photo.shutterSpeed,
+                          editState: .constant(true))
+        DiscreteSlider(value: $photo.shutterSpeed, values: Constants.Other.shutterSpeeds)
     }
 }
 
@@ -53,7 +61,7 @@ struct PhotoDetailedView: View {
                                  locationLatitude: 53.912785,
                                  locationLongitude: 27.629385,
                                  aperture: "",
-                                 shutterSpeed: "1/100",
+                                 shutterSpeed: "",
                                  image: nil,
                                  note: "Кажется, получилось неплохо")
         PhotoDetailedView(photo: previewPhoto)

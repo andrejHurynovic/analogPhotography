@@ -18,13 +18,13 @@ class Photo {
     var locationLongitude: Double?
     
     var aperture: String
-    var shutterSpeed: String?
+    var shutterSpeed: String
     
     @Attribute(.externalStorage) var image: Data?
     
     var note: String = ""
     
-    init(film: Film, date: Date, locationLatitude: Double? = nil, locationLongitude: Double? = nil, aperture: String, shutterSpeed: String? = nil, image: Data? = nil, note: String) {
+    init(film: Film, date: Date, locationLatitude: Double? = nil, locationLongitude: Double? = nil, aperture: String, shutterSpeed: String, image: Data? = nil, note: String) {
         self.film = film
         self.date = date
         self.locationLatitude = locationLatitude
