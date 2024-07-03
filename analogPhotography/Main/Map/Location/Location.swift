@@ -1,0 +1,24 @@
+//
+//  Location.swift
+//  analogPhotography
+//
+//  Created by Andrej Hurynovič on 3.07.24.
+//
+
+import Foundation
+import MapKit
+
+struct Location: Codable, Hashable {
+    var latitude: Double
+    var longitude: Double
+    
+    init(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+    init?(from location: CLLocationCoordinate2D?) {
+        guard let location = location else { return nil }
+        self.latitude = location.latitude
+        self.longitude = location.longitude
+    }
+}

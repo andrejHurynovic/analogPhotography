@@ -13,9 +13,7 @@ class Photo {
     var film: Film
     
     var date: Date
-    
-    var locationLatitude: Double?
-    var locationLongitude: Double?
+    var location: Location?
     
     var aperture: String
     var shutterSpeed: String
@@ -24,11 +22,10 @@ class Photo {
     
     var note: String = ""
     
-    init(film: Film, date: Date, locationLatitude: Double? = nil, locationLongitude: Double? = nil, aperture: String, shutterSpeed: String, image: Data? = nil, note: String) {
+    init(film: Film, date: Date, location: Location? = nil, aperture: String, shutterSpeed: String, image: Data? = nil, note: String) {
         self.film = film
         self.date = date
-        self.locationLatitude = locationLatitude
-        self.locationLongitude = locationLongitude
+        self.location = location
         self.aperture = aperture
         self.shutterSpeed = shutterSpeed
         self.image = image

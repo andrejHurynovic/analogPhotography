@@ -48,6 +48,7 @@ struct DiscreteSlider<ValueType>: View where ValueType: Equatable {
                     return
                 }
                 sliderIndex = newIndex
+                Haptic.impact(.light)
             }
             .onChange(of: sliderIndex) { _, newSliderIndex in
                 value = values[Int(newSliderIndex)]

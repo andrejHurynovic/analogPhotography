@@ -16,12 +16,22 @@ struct PhotoDetailedView: View {
     
     var body: some View {
         List {
+            map
             properties
             NoteView(note: $photo.note)
         }
     }
     
-    var properties: some View {
+    @ViewBuilder var map: some View {
+        Section("Местоположение") {
+            MapPicker(selectedLocation: $photo.location, 
+                      otherItems: [],
+                      favoriteItems: [])
+        }
+        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+    }
+    
+    @ViewBuilder var properties: some View {
         Section("Характеристики") {
             DatePicker("Дата", selection: $photo.date)
             aperturePicker
@@ -29,7 +39,7 @@ struct PhotoDetailedView: View {
         }
     }
     
-    var aperturePicker: some View {
+    @ViewBuilder var aperturePicker: some View {
         TextFieldFormView(title: "Диафрагма",
                           placeholder: "f/2.8",
                           text: $apertureText,
@@ -58,8 +68,7 @@ struct PhotoDetailedView: View {
                                             configurations: config)
         let previewPhoto = Photo(film: Film(name: "Kodak Gold", note: "", photos: []),
                                  date: .now,
-                                 locationLatitude: 53.912785,
-                                 locationLongitude: 27.629385,
+                                 location: .init(latitude: 53.912785, longitude: 27.629385),
                                  aperture: "",
                                  shutterSpeed: "",
                                  image: nil,

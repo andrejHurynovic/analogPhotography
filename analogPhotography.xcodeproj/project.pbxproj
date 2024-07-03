@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60DC19D2C248FB50092E952 /* LocationItem.swift */; };
 		F645616C2C110CC20007940D /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645616B2C110CC20007940D /* NoteView.swift */; };
 		F65517A32C1F3668000133FA /* DiscreteSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517A22C1F3668000133FA /* DiscreteSlider.swift */; };
 		F65517A52C1F3C57000133FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517A42C1F3C57000133FA /* Constants.swift */; };
 		F65517A72C1F6F4C000133FA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517A62C1F6F4B000133FA /* Log.swift */; };
+		F65517AB2C1F9145000133FA /* HapticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517A82C1F9144000133FA /* HapticType.swift */; };
+		F65517AC2C1F9145000133FA /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517A92C1F9144000133FA /* Haptic.swift */; };
+		F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517B12C1F92E3000133FA /* MapPicker.swift */; };
+		F671790D2C346F860062D350 /* MapPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671790C2C346F860062D350 /* MapPickerViewModel.swift */; };
+		F671790F2C34A9B30062D350 /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671790E2C34A9B30062D350 /* MapMarker.swift */; };
+		F67179112C34AAB60062D350 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67179102C34AAB60062D350 /* Location.swift */; };
+		F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B56C02C20D077001F1D97 /* CLLocationCoordinate2D.swift */; };
 		F6D3A3462C0FB2AB00D56B8D /* CameraDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */; };
 		F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */; };
 		F6D3A34B2C0FBD4000D56B8D /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34A2C0FBD4000D56B8D /* FormView.swift */; };
@@ -34,10 +42,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F60DC19D2C248FB50092E952 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		F645616B2C110CC20007940D /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		F65517A22C1F3668000133FA /* DiscreteSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteSlider.swift; sourceTree = "<group>"; };
 		F65517A42C1F3C57000133FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F65517A62C1F6F4B000133FA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		F65517A82C1F9144000133FA /* HapticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticType.swift; sourceTree = "<group>"; };
+		F65517A92C1F9144000133FA /* Haptic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
+		F65517B12C1F92E3000133FA /* MapPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPicker.swift; sourceTree = "<group>"; };
+		F671790C2C346F860062D350 /* MapPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerViewModel.swift; sourceTree = "<group>"; };
+		F671790E2C34A9B30062D350 /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
+		F67179102C34AAB60062D350 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F68B56C02C20D077001F1D97 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailedView.swift; sourceTree = "<group>"; };
 		F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		F6D3A34A2C0FBD4000D56B8D /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
@@ -83,16 +99,57 @@
 			path = "Forms and pickers";
 			sourceTree = "<group>";
 		};
-		F6D3A3472C0FBA4000D56B8D /* Generics, templates and etc */ = {
+		F65517AE2C1F9155000133FA /* Haptic */ = {
 			isa = PBXGroup;
 			children = (
-				F65517A12C1F3329000133FA /* Forms and pickers */,
+				F65517A92C1F9144000133FA /* Haptic.swift */,
+				F65517A82C1F9144000133FA /* HapticType.swift */,
+			);
+			path = Haptic;
+			sourceTree = "<group>";
+		};
+		F65517AF2C1F9169000133FA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F65517B02C1F92D1000133FA /* Map */,
+				F6FE29BF2C0FAA1700E9C678 /* Camera */,
+				F6FE29B02C0F644400E9C678 /* Film */,
+				F6FE29BC2C0F803000E9C678 /* Photo */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F65517B02C1F92D1000133FA /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F67179122C34AAC50062D350 /* Location */,
+				F671790C2C346F860062D350 /* MapPickerViewModel.swift */,
+				F65517B12C1F92E3000133FA /* MapPicker.swift */,
+				F671790E2C34A9B30062D350 /* MapMarker.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F67179122C34AAC50062D350 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				F67179102C34AAB60062D350 /* Location.swift */,
+				F60DC19D2C248FB50092E952 /* LocationItem.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		F6D3A3472C0FBA4000D56B8D /* Other */ = {
+			isa = PBXGroup;
+			children = (
 				F6E4819D2C1B886E006EE963 /* ViewModifiers */,
+				F65517AE2C1F9155000133FA /* Haptic */,
+				F65517A12C1F3329000133FA /* Forms and pickers */,
 				F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */,
 				F6E481982C1B0AD4006EE963 /* MenuWithEditState.swift */,
 				F645616B2C110CC20007940D /* NoteView.swift */,
 			);
-			path = "Generics, templates and etc";
+			path = Other;
 			sourceTree = "<group>";
 		};
 		F6E4819D2C1B886E006EE963 /* ViewModifiers */ = {
@@ -126,11 +183,9 @@
 				F6FE29A02C0F492B00E9C678 /* ContentView.swift */,
 				F65517A42C1F3C57000133FA /* Constants.swift */,
 				F65517A62C1F6F4B000133FA /* Log.swift */,
-				F6FE29BF2C0FAA1700E9C678 /* Camera */,
-				F6FE29BC2C0F803000E9C678 /* Photo */,
-				F6FE29B02C0F644400E9C678 /* Film */,
+				F65517AF2C1F9169000133FA /* Main */,
 				F6FE29A42C0F493000E9C678 /* Assets.xcassets */,
-				F6D3A3472C0FBA4000D56B8D /* Generics, templates and etc */,
+				F6D3A3472C0FBA4000D56B8D /* Other */,
 				F6FE29B32C0F703100E9C678 /* Extensions */,
 			);
 			path = analogPhotography;
@@ -153,6 +208,7 @@
 				F6FE29B62C0F769A00E9C678 /* Bool.swift */,
 				F6E4819A2C1B15ED006EE963 /* String.swift */,
 				F6FE29B42C0F704A00E9C678 /* ModelContextExtensions.swift */,
+				F68B56C02C20D077001F1D97 /* CLLocationCoordinate2D.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,15 +302,23 @@
 			files = (
 				F6E4819B2C1B15ED006EE963 /* String.swift in Sources */,
 				F65517A72C1F6F4C000133FA /* Log.swift in Sources */,
+				F67179112C34AAB60062D350 /* Location.swift in Sources */,
 				F65517A52C1F3C57000133FA /* Constants.swift in Sources */,
 				F6FE29B22C0F645200E9C678 /* FilmFormat.swift in Sources */,
 				F65517A32C1F3668000133FA /* DiscreteSlider.swift in Sources */,
+				F671790F2C34A9B30062D350 /* MapMarker.swift in Sources */,
 				F6D3A34D2C0FBF4900D56B8D /* TextFormView.swift in Sources */,
+				F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */,
+				F65517AC2C1F9145000133FA /* Haptic.swift in Sources */,
+				F65517AB2C1F9145000133FA /* HapticType.swift in Sources */,
 				F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */,
 				F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */,
+				F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */,
 				F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */,
 				F6FE29B52C0F704A00E9C678 /* ModelContextExtensions.swift in Sources */,
+				F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D.swift in Sources */,
 				F6FE29BE2C0F804200E9C678 /* Photo.swift in Sources */,
+				F671790D2C346F860062D350 /* MapPickerViewModel.swift in Sources */,
 				F6E481992C1B0AD4006EE963 /* MenuWithEditState.swift in Sources */,
 				F6FE29AF2C0F4CDE00E9C678 /* FilmType.swift in Sources */,
 				F6FE29B92C0F784500E9C678 /* FilmProcess.swift in Sources */,
