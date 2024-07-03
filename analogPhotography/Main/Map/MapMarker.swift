@@ -11,20 +11,22 @@ struct MapMarker: View {
     var showPicker: Bool
     var inTransition: Bool
     
+    var mapPinSize: CGFloat = 32
+    
     var body: some View {
         if showPicker {
-            VStack {
-                Image(systemName: "mappin.circle.fill")
-                    .resizable()
-                    .frame(width: 32, height: 32)
-                    .offset(y: inTransition ? -64.0 : 0.0)
-                
-                Circle()
-                    .frame(width: 4, height: 4)
-            }
-            .alignmentGuide(VerticalAlignment.center, computeValue: { dimension in
-                dimension[VerticalAlignment.bottom]
-            })
+            Circle()
+                .frame(width: 4, height: 4)
+                .overlay {
+                    Image(systemName: "mappin.circle.fill")
+                        .resizable()
+                        .frame(width: mapPinSize, height: mapPinSize)
+                    //Offset from dot.
+                        .offset(y: -mapPinSize)
+                        .padding()
+                    //Dynamic offset for transition animation.
+                        .offset(y: inTransition ? -64.0 : 0.0)
+                }
         }
     }
 }

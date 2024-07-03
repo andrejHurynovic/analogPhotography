@@ -11,8 +11,8 @@ import MapKit
 struct MapPicker: View {
     @Binding var selectedLocation: Location?
     
-    @State var otherItems: [LocationItem]
-    @State var favoriteItems: [LocationItem]
+    var otherItems: [LocationItem]
+    var favoriteItems: [LocationItem]
     
     @State private var viewModel = MapPickerViewModel()
     
@@ -38,11 +38,11 @@ struct MapPicker: View {
     @ViewBuilder var map: some View {
         Map(position: $viewModel.position, selection: $viewModel.selectedItem) {
             ForEach(otherItems) { item in
-                Marker(item.description, systemImage: "camera", coordinate: item.clLocation)
+                Marker(item.description ?? "", systemImage: "camera", coordinate: item.clLocation)
                     .tag(item)
             }
             ForEach(favoriteItems) { item in
-                Marker(item.description, systemImage: "star", coordinate: item.clLocation)
+                Marker(item.description ?? "", systemImage: "star", coordinate: item.clLocation)
                     .tag(item)
             }
         }
@@ -87,20 +87,25 @@ struct MapPicker: View {
 #Preview {
     struct MapPickerContainer: View {
         @State var selectedLocation: Location?
+        @State var otherItems: [LocationItem] = [LocationItem(description: "1",
+                                                             location: .init(latitude: 53.921563, longitude: 27.641113)),
+                                                LocationItem(description: "2",
+                                                             location: .init(latitude: 53.912463, longitude: 27.630100)),
+                                                LocationItem(description: "3",
+                                                             location: .init(latitude: 53.916195, longitude: 27.636173))]
         
         var body: some View {
             NavigationStack {
                 List {
                     MapPicker(selectedLocation: $selectedLocation,
-                              otherItems: [LocationItem(description: "1",
-                                                        location: .init(latitude: 53.921563, longitude: 27.641113)),
-                                           LocationItem(description: "2",
-                                                        location: .init(latitude: 53.912463, longitude: 27.630100)),
-                                           LocationItem(description: "3",
-                                                        location: .init(latitude: 53.916195, longitude: 27.636173))],
+                              otherItems: otherItems,
                               favoriteItems: [])
                     .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    TextFormView("selectedLocation", String(selectedLocation.debugDescription))
+                    TextFormView("selectedLocation", selectedLocation?.description)
+                    Button("Add test item") {
+                        guard let location = selectedLocation else { return }
+                        otherItems.append(LocationItem(location: location))
+                    }
                 }
             }
         }

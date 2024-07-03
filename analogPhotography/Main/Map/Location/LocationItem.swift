@@ -10,7 +10,7 @@ import MapKit
 struct LocationItem: Codable, Equatable, Identifiable, Hashable {
     var id: UUID = UUID()
     
-    var description: String
+    var description: String?
         
     var location: Location
     var clLocation: CLLocationCoordinate2D { .init(latitude: location.latitude, longitude: location.longitude) }

@@ -12,6 +12,10 @@ struct Location: Codable, Hashable {
     var latitude: Double
     var longitude: Double
     
+    var description: String {
+        "latitude: \(latitude), longitude: \(longitude)"
+    }
+    
     init(latitude: Double, longitude: Double) {
         self.latitude = latitude
         self.longitude = longitude
