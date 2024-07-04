@@ -20,6 +20,7 @@
 		F67179112C34AAB60062D350 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67179102C34AAB60062D350 /* Location.swift */; };
 		F67179162C357AED0062D350 /* MapPickerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67179152C357AED0062D350 /* MapPickerMenu.swift */; };
 		F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B56C02C20D077001F1D97 /* CLLocationCoordinate2D.swift */; };
+		F6C40BC92C37230B00DB96A7 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = F6C40BC82C37230B00DB96A7 /* Shimmer */; };
 		F6D3A3462C0FB2AB00D56B8D /* CameraDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */; };
 		F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */; };
 		F6D3A34B2C0FBD4000D56B8D /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34A2C0FBD4000D56B8D /* FormView.swift */; };
@@ -84,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C40BC92C37230B00DB96A7 /* Shimmer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +260,9 @@
 			dependencies = (
 			);
 			name = analogPhotography;
+			packageProductDependencies = (
+				F6C40BC82C37230B00DB96A7 /* Shimmer */,
+			);
 			productName = analogPhotography;
 			productReference = F6FE299B2C0F492B00E9C678 /* analogPhotography.app */;
 			productType = "com.apple.product-type.application";
@@ -286,6 +291,9 @@
 				Base,
 			);
 			mainGroup = F6FE29922C0F492B00E9C678;
+			packageReferences = (
+				F6C40BC72C37230B00DB96A7 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
+			);
 			productRefGroup = F6FE299C2C0F492B00E9C678 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -551,6 +559,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6C40BC72C37230B00DB96A7 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6C40BC82C37230B00DB96A7 /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6C40BC72C37230B00DB96A7 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6FE29932C0F492B00E9C678 /* Project object */;
 }

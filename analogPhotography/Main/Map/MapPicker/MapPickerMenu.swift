@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Shimmer
 
 struct MapPickerMenu: View {
     @State var viewModel: MapPickerViewModel
@@ -38,6 +39,7 @@ struct MapPickerMenu: View {
         Text(viewModel.descriptionText)
             .padding(8)
             .redacted(reason: isRedacted ? .placeholder : [])
+            .shimmering(active: isRedacted, bandSize: 0.8, mode: .mask)
         
             .animation(.default, value: viewModel.isUpdatingDescriptionText)
     }
