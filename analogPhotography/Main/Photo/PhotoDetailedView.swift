@@ -24,7 +24,7 @@ struct PhotoDetailedView: View {
     
     @ViewBuilder var map: some View {
         Section("Местоположение") {
-            MapPicker(selectedLocation: $photo.location, 
+            MapPicker(viewModel: MapPickerViewModel(selectedLocation: $photo.location), 
                       otherItems: [],
                       favoriteItems: [])
         }
