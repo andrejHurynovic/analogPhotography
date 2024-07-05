@@ -11,7 +11,7 @@ struct MapMarker: View {
     var showPicker: Bool
     var inTransition: Bool
     
-    var mapPinSize: CGFloat = 32
+    let mapPinSize: CGFloat = 32
     
     var body: some View {
         if showPicker {

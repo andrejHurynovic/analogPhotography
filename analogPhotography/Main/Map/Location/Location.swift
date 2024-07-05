@@ -20,8 +20,7 @@ struct Location: Codable, Hashable {
         self.latitude = latitude
         self.longitude = longitude
     }
-    init?(from location: CLLocationCoordinate2D?) {
-        guard let location = location else { return nil }
+    init(from location: CLLocationCoordinate2D) {
         self.latitude = location.latitude
         self.longitude = location.longitude
     }

@@ -14,4 +14,13 @@ struct LocationItem: Codable, Equatable, Identifiable, Hashable {
         
     var location: Location
     var clLocation: CLLocationCoordinate2D { .init(latitude: location.latitude, longitude: location.longitude) }
+    
+    init(description: String? = nil, location: Location) {
+        self.description = description
+        self.location = location
+    }
+    
+    init(from item: MKMapItem) {
+        self.location = Location(from: item.placemark.coordinate)
+    }
 }

@@ -12,23 +12,26 @@ import MapKit
 @Observable class MapPickerViewModel {
     //Map
     var position: MapCameraPosition = .automatic
-    var selectedLocation: Binding<Location?>
+    private var selectedLocation: Binding<Location?>
     private var previousDistance: Double?
-    
+    private var rect: MKMapRect?
+
     var selectedItem: LocationItem?
     
     //Picker
     var inTransition: Bool = false
-    var inTransitionToItem: Bool = false
+    private var inTransitionToItem: Bool = false
     var showPicker: Bool = true
-    
-    //DescriptionText
-    var isUpdatingDescriptionText: Bool = true
-    var descriptionText: String = "placeholder street"
-    private var geocoderTask: Task<(), Never>? = nil
     
     //Search
     var searchText: String = ""
+    var searchItems: [MKMapItem] = []
+    var searchBarState: MapPickerMenuSearchBatState = .description
+    
+    //DescriptionText
+    var isUpdatingDescriptionText: Bool = true
+    var descriptionText: String = ""
+    private var geocoderTask: Task<(), Never>? = nil
     
     init(selectedLocation: Binding<Location?>) {
         self._selectedLocation = selectedLocation
@@ -36,8 +39,8 @@ import MapKit
     
     //MARK: MapCamera and picker transitions
     func mapCameraUpdated() {
+        guard inTransition == false else {return}
         withAnimation {
-            guard inTransition == false else {return}
             inTransition = true
             
             guard inTransitionToItem == false else { return }
@@ -48,16 +51,17 @@ import MapKit
             }
         }
     }
-    func mapCameraEnded(coordinate: CLLocationCoordinate2D, distance: Double) {
+    func mapCameraEnded(context: MapCameraUpdateContext) {
+        //This method should be above inTransition change for stable redacted state in MapPickerMenuView
+        updatePlaceDescription()
+        
+        self.rect = context.rect
+        self.previousDistance = context.camera.distance
         withAnimation {
-            //This method should be above inTransition method for stable redacted in MapPickerMenuView
-            updatePlaceDescription()
-            
             inTransition = false
             inTransitionToItem = false
             
-            previousDistance = distance
-            selectedLocation.wrappedValue = Location(from: coordinate)
+            selectedLocation.wrappedValue = Location(from: context.camera.centerCoordinate)
         }
     }
     
@@ -71,6 +75,47 @@ import MapKit
             position = .camera(MapCamera(centerCoordinate: item.clLocation,
                                          distance: previousDistance ?? Constants.Other.defaultMapDistance))
             showPicker = false
+        }
+    }
+    
+    //MARK: Search
+    func searchFocusedUpdated(_ searchFocus: Bool) {
+        searchFocus ? searchFocused() : searchUnfocused()
+    }
+    
+    private func searchFocused() {
+        Log.info("searchFocused")
+        //        if searchText == descriptionText {
+        searchBarState = .search
+        //            searchText = ""
+        //        }
+    }
+    
+    private func searchUnfocused() {
+        Log.info("searchUnfocused")
+        //        if searchText == "" {
+        searchBarState = .description
+        //            searchText = descriptionText
+        //        }
+    }
+    
+    func search() {
+        guard let rect = rect else { return }
+        Task {
+            let request = MKLocalSearch.Request()
+            request.naturalLanguageQuery = searchText
+            request.resultTypes = [.address, .pointOfInterest]
+            request.region = .init(rect)
+            
+            let search = MKLocalSearch(request: request)
+            let response = try? await search.start()
+            await MainActor.run {
+                withAnimation {
+                    position = .automatic
+                    searchItems = response?.mapItems ?? []
+                }
+            }
+            
         }
     }
     
@@ -90,14 +135,15 @@ import MapKit
                   let result = results.first else { return }
             
             let resultsHierarchy = [result.thoroughfare,
-                              result.subLocality,
-                              result.locality,
-                              result.subAdministrativeArea,
-                              result.administrativeArea,
-                              result.country]
+                                    result.subLocality,
+                                    result.locality,
+                                    result.subAdministrativeArea,
+                                    result.administrativeArea,
+                                    result.country]
             guard let descriptionText = (resultsHierarchy.compactMap { $0 }).first else { return }
             
             self.descriptionText = descriptionText
+            //            self.searchText = descriptionText
             self.isUpdatingDescriptionText = false
         }
     }

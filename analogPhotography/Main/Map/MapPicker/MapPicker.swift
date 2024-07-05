@@ -25,8 +25,7 @@ struct MapPicker: View {
             viewModel.mapCameraUpdated()
         })
         .onMapCameraChange(frequency: .onEnd, { context in
-            viewModel.mapCameraEnded(coordinate: context.region.center,
-                                     distance: context.camera.distance)
+            viewModel.mapCameraEnded(context: context)
         })
         .onChange(of: viewModel.selectedItem) { viewModel.selectedItemUpdated(item: $1) }
         
@@ -41,6 +40,10 @@ struct MapPicker: View {
             ForEach(favoriteItems) { item in
                 Marker(item.description ?? "", systemImage: "star", coordinate: item.clLocation)
                     .tag(item)
+            }
+            ForEach(viewModel.searchItems) { item in
+                Marker(item: item)
+                    .tag(LocationItem(from: item))
             }
         }
         .mapControls {
