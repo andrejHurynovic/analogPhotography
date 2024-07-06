@@ -9,21 +9,11 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var films: [FilmType]
-    @Query(sort: [SortDescriptor(\FilmFormat.outdated),
-                  SortDescriptor(\FilmFormat.name)])
-    private var filmFormats: [FilmFormat]
-
+//    @Environment(\.modelContext) private var modelContext
     var body: some View {
         NavigationStack {
             List {
-                Button("sus") {
-                    modelContext.insert(FilmFormat.getDefaults())
-                }
-                ForEach(filmFormats) { format in
-                    Text(format.name)
-                }
+                Text("SUS")
             }
 
         }
@@ -33,5 +23,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: FilmType.self, inMemory: true)
+        .modelContainer(DataContainer().getContainer())
 }

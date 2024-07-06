@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60DC19D2C248FB50092E952 /* LocationItem.swift */; };
 		F63084922C381D18008ABF71 /* MKMapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63084912C381D18008ABF71 /* MKMapItem.swift */; };
+		F63084942C38294A008ABF71 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63084932C38294A008ABF71 /* CameraView.swift */; };
+		F63084A12C3852E7008ABF71 /* Camera+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63084A02C3852E7008ABF71 /* Camera+Sample.swift */; };
+		F63084A32C3857E7008ABF71 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63084A22C3857E7008ABF71 /* ModelPreview.swift */; };
 		F645616C2C110CC20007940D /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645616B2C110CC20007940D /* NoteView.swift */; };
+		F649B2C52C3897AE00FE7180 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F649B2C42C3897AE00FE7180 /* DataContainer.swift */; };
 		F65517A32C1F3668000133FA /* DiscreteSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517A22C1F3668000133FA /* DiscreteSlider.swift */; };
 		F65517A52C1F3C57000133FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517A42C1F3C57000133FA /* Constants.swift */; };
 		F65517A72C1F6F4C000133FA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517A62C1F6F4B000133FA /* Log.swift */; };
@@ -48,7 +52,11 @@
 /* Begin PBXFileReference section */
 		F60DC19D2C248FB50092E952 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		F63084912C381D18008ABF71 /* MKMapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapItem.swift; sourceTree = "<group>"; };
+		F63084932C38294A008ABF71 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		F63084A02C3852E7008ABF71 /* Camera+Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Camera+Sample.swift"; sourceTree = "<group>"; };
+		F63084A22C3857E7008ABF71 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
 		F645616B2C110CC20007940D /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		F649B2C42C3897AE00FE7180 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		F65517A22C1F3668000133FA /* DiscreteSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteSlider.swift; sourceTree = "<group>"; };
 		F65517A42C1F3C57000133FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F65517A62C1F6F4B000133FA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -96,6 +104,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F63084972C3847C8008ABF71 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F649B2C42C3897AE00FE7180 /* DataContainer.swift */,
+				F63084A22C3857E7008ABF71 /* ModelPreview.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F630849E2C3852C8008ABF71 /* PreviewAssets */ = {
+			isa = PBXGroup;
+			children = (
+				F630849F2C3852DD008ABF71 /* Models */,
+			);
+			path = PreviewAssets;
+			sourceTree = "<group>";
+		};
+		F630849F2C3852DD008ABF71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F63084A02C3852E7008ABF71 /* Camera+Sample.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F65517A12C1F3329000133FA /* Forms and pickers */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,10 +152,10 @@
 		F65517AF2C1F9169000133FA /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				F65517B02C1F92D1000133FA /* Map */,
 				F6FE29BF2C0FAA1700E9C678 /* Camera */,
 				F6FE29B02C0F644400E9C678 /* Film */,
 				F6FE29BC2C0F803000E9C678 /* Photo */,
+				F65517B02C1F92D1000133FA /* Map */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -182,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FE299D2C0F492B00E9C678 /* analogPhotography */,
+				F630849E2C3852C8008ABF71 /* PreviewAssets */,
 				F6FE299C2C0F492B00E9C678 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -201,6 +235,7 @@
 				F6FE29A02C0F492B00E9C678 /* ContentView.swift */,
 				F65517A42C1F3C57000133FA /* Constants.swift */,
 				F65517A62C1F6F4B000133FA /* Log.swift */,
+				F63084972C3847C8008ABF71 /* Data */,
 				F65517AF2C1F9169000133FA /* Main */,
 				F6FE29A42C0F493000E9C678 /* Assets.xcassets */,
 				F6D3A3472C0FBA4000D56B8D /* Other */,
@@ -245,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FE29C02C0FAA2400E9C678 /* Camera.swift */,
+				F63084932C38294A008ABF71 /* CameraView.swift */,
 				F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */,
 			);
 			path = Camera;
@@ -330,11 +366,14 @@
 				F67179112C34AAB60062D350 /* Location.swift in Sources */,
 				F63084922C381D18008ABF71 /* MKMapItem.swift in Sources */,
 				F65517A52C1F3C57000133FA /* Constants.swift in Sources */,
+				F649B2C52C3897AE00FE7180 /* DataContainer.swift in Sources */,
 				F6FE29B22C0F645200E9C678 /* FilmFormat.swift in Sources */,
 				F65517A32C1F3668000133FA /* DiscreteSlider.swift in Sources */,
 				F671790F2C34A9B30062D350 /* MapMarker.swift in Sources */,
+				F63084942C38294A008ABF71 /* CameraView.swift in Sources */,
 				F6D3A34D2C0FBF4900D56B8D /* TextFormView.swift in Sources */,
 				F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */,
+				F63084A12C3852E7008ABF71 /* Camera+Sample.swift in Sources */,
 				F65517AC2C1F9145000133FA /* Haptic.swift in Sources */,
 				F65517AB2C1F9145000133FA /* HapticType.swift in Sources */,
 				F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */,
@@ -351,6 +390,7 @@
 				F6FE29C12C0FAA2400E9C678 /* Camera.swift in Sources */,
 				F6FE29BB2C0F7CBB00E9C678 /* Film.swift in Sources */,
 				F6D3A34B2C0FBD4000D56B8D /* FormView.swift in Sources */,
+				F63084A32C3857E7008ABF71 /* ModelPreview.swift in Sources */,
 				F6D3A34F2C0FC1FC00D56B8D /* TextFieldFormView.swift in Sources */,
 				F645616C2C110CC20007940D /* NoteView.swift in Sources */,
 				F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */,

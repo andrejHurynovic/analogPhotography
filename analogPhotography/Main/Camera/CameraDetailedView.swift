@@ -47,18 +47,8 @@ struct CameraDetailedView: View {
     
 }
 
-
 #Preview {
-    NavigationView {
-        do {
-            let config = ModelConfiguration(isStoredInMemoryOnly: true)
-            let container = try ModelContainer(for: Camera.self,
-                                               configurations: config)
-            let previewCamera = Camera(name: "Pentax SFX", note: "Мой личный Pentax SFX", Films: [])
-            return CameraDetailedView(camera: previewCamera)
-                .modelContainer(container)
-        } catch {
-            fatalError("Failed to create model")
-        }
+    ModelPreview { camera in
+        CameraDetailedView(camera: camera)
     }
 }
