@@ -73,7 +73,7 @@ import MapKit
             }
             inTransitionToItem = true
             position = .camera(MapCamera(centerCoordinate: item.clLocation,
-                                         distance: previousDistance ?? Constants.Other.defaultMapDistance))
+                                         distance: previousDistance ?? Constants.Map.defaultMapDistance))
             showPicker = false
         }
     }

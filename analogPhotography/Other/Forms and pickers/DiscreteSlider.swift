@@ -87,7 +87,7 @@ struct DiscreteSlider<ValueType>: View where ValueType: Equatable {
                                   text: $value,
                                   editState: .constant(true))
                 HStack {
-                    DiscreteSlider(value: $value, values: Constants.Other.shutterSpeeds)
+                    DiscreteSlider(value: $value, values: Constants.Photo.shutterSpeeds)
                 }
             }
         }

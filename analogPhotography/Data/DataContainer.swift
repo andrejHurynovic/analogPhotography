@@ -31,7 +31,8 @@ class DataContainer {
 #else
             //If not running in the simulator, configure the container to use persistent storage
             self.container = try ModelContainer(for: schema,
-                                                configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: false))
+                                                configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: true))
+            self.insertPreviewData()
 #endif
         } catch {
             fatalError("Failed to create persistentContainer: \(error.localizedDescription)")
@@ -40,7 +41,4 @@ class DataContainer {
     
     func getContainer() -> ModelContainer { container }
     
-    private func insertPreviewData() {
-        self.container.mainContext.insert(Camera.samples())
-    }
 }

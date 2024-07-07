@@ -8,10 +8,9 @@
 import SwiftData
 
 extension ModelContext {
-    public func insert<T>(_ models: Array<T>) where T : PersistentModel {
+    public func insert(_ models: Array<any PersistentModel>) {
         models.forEach { model in
             self.insert(model)
         }
     }
-    
 }

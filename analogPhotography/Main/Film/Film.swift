@@ -9,19 +9,22 @@ import Foundation
 import SwiftData
 
 @Model
-class Film {
-    @Relationship var camera: Camera?
+final class Film {
+    @Relationship(inverse: \Camera.films) var camera: Camera?
     @Relationship(inverse: \FilmType.films) var type: FilmType?
     
-    var name: String = ""
+    var name: String?
     var note: String = ""
-    @Relationship var photos: [Photo]
+    var finished: Bool = false
     
-    init(camera: Camera? = nil, type: FilmType? = nil, name: String, note: String, photos: [Photo]) {
+    @Relationship(inverse: \Photo.film) var photos: [Photo]
+    
+    init(camera: Camera? = nil, type: FilmType? = nil, name: String? = nil, note: String, finished: Bool, photos: [Photo]) {
         self.camera = camera
         self.type = type
         self.name = name
         self.note = note
+        self.finished = finished
         self.photos = photos
     }
 }

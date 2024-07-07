@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class FilmFormat {
+final class FilmFormat {
     @Attribute(.unique) var name: String
     var length: Int
     var outdated: Bool
@@ -20,7 +20,7 @@ class FilmFormat {
         self.outdated = outdated
     }
     
-    static func getDefaults() -> [FilmFormat] {
+    static func defaults() -> [FilmFormat] {
         [FilmFormat(name: "110", length: 16, outdated: false),
          FilmFormat(name: "120", length: 60, outdated: false),
          FilmFormat(name: "127", length: 40, outdated: false),

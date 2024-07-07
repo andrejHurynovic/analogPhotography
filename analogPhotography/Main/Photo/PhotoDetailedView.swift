@@ -33,7 +33,7 @@ struct PhotoDetailedView: View {
     
     @ViewBuilder var properties: some View {
         Section("Характеристики") {
-            DatePicker("Дата", selection: $photo.date)
+//            DatePicker("Дата", selection: $photo.date)
             aperturePicker
             shutterSpeedPicker
         }
@@ -52,28 +52,12 @@ struct PhotoDetailedView: View {
                           placeholder: "1/100",
                           text: $photo.shutterSpeed,
                           editState: .constant(true))
-        DiscreteSlider(value: $photo.shutterSpeed, values: Constants.Other.shutterSpeeds)
+        DiscreteSlider(value: $photo.shutterSpeed, values: Constants.Photo.shutterSpeeds)
     }
 }
 
 #Preview {
-    let schema = Schema([
-        Film.self,
-        Photo.self
-    ])
-    let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
-    
-    return NavigationStack {
-        let container = try! ModelContainer(for: schema,
-                                            configurations: config)
-        let previewPhoto = Photo(film: Film(name: "Kodak Gold", note: "", photos: []),
-                                 date: .now,
-                                 location: .init(latitude: 53.912785, longitude: 27.629385),
-                                 aperture: "",
-                                 shutterSpeed: "",
-                                 image: nil,
-                                 note: "Кажется, получилось неплохо")
-        PhotoDetailedView(photo: previewPhoto)
-            .modelContainer(container)
+    ModelPreview { photo in
+        PhotoDetailedView(photo: photo)
     }
 }

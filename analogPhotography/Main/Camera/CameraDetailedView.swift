@@ -10,6 +10,7 @@ import SwiftData
 
 struct CameraDetailedView: View {
     @Environment(\.modelContext) private var modelContext
+    
     @Bindable var camera: Camera
     @State var editState: Bool = false
     

@@ -8,8 +8,14 @@
 import Foundation
 
 struct Constants {
-    struct Other {
-        static let shutterSpeeds: [String] = ["1"] +  [2, 4, 8, 15, 30, 60, 125, 250, 500, 1000].map({ "1/" + (String($0)) })
+    struct Photo {
+        static let sampleAperture: [String] = [2.8, 4, 5.6, 8, 11, 16, 22].map { String($0) }
+        static let shutterSpeeds: [String] = ["1"] +  [2, 4, 8, 15, 30, 60, 125, 250, 500, 1000].map({ "1/\($0)" })
+    }
+    struct Film {
+        static let sampleISOs: [Int] = [50, 100, 200, 400, 800, 1200]
+    }
+    struct Map {
         static let defaultMapDistance: Double = 200_000
     }
 }

@@ -9,15 +9,15 @@ import Foundation
 import SwiftData
 
 @Model
-class Camera {
+final class Camera {
     var name: String
     var note: String = ""
     
-    @Relationship(inverse: \Film.camera) var films: [Film]
+    @Relationship var films: [Film] = []
     
-    init(name: String, note: String, Films: [Film]) {
+    init(name: String, note: String, films: [Film]) {
         self.name = name
         self.note = note
-        self.films = Films
+        self.films = films
     }
 }

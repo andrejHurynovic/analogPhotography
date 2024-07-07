@@ -9,14 +9,14 @@ import Foundation
 import SwiftData
 
 @Model
-class FilmProcess {
+final class FilmProcess {
     @Attribute(.unique) var name: String
     
     init(name: String) {
         self.name = name
     }
     
-    static func getDefaults() -> [FilmProcess] {
+    static func defaults() -> [FilmProcess] {
         [FilmProcess(name: "C-41"),
          FilmProcess(name: "B&W"),
          FilmProcess(name: "ECN-2"),
@@ -24,5 +24,3 @@ class FilmProcess {
     }
     
 }
-
-
