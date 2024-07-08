@@ -5,26 +5,28 @@
 //  Created by Andrej Hurynovič on 4.06.24.
 //
 
-import Foundation
 import SwiftData
 
 @Model
 final class Film {
-    @Relationship(inverse: \Camera.films) var camera: Camera?
-    @Relationship(inverse: \FilmType.films) var type: FilmType?
+    var name: String = ""
     
-    var name: String?
-    var note: String = ""
-    var finished: Bool = false
+    var capacity: Int?
+    var iso: Int?
+    var expired: Bool?
     
-    @Relationship(inverse: \Photo.film) var photos: [Photo]
+    @Relationship var format: FilmFormat?
+    @Relationship var process: FilmProcess?
+    @Relationship var rolls: [FilmRoll] = []
     
-    init(camera: Camera? = nil, type: FilmType? = nil, name: String? = nil, note: String, finished: Bool, photos: [Photo]) {
-        self.camera = camera
-        self.type = type
+    init(name: String = "", capacity: Int? = nil, iso: Int? = nil, expired: Bool? = nil, format: FilmFormat? = nil, process: FilmProcess? = nil, rolls: [FilmRoll] = []) {
         self.name = name
-        self.note = note
-        self.finished = finished
-        self.photos = photos
+        self.capacity = capacity
+        self.iso = iso
+        self.expired = expired
+        self.format = format
+        self.process = process
+        self.rolls = rolls
     }
+    
 }

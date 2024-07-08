@@ -23,8 +23,8 @@ struct CameraDetailedView: View {
             
             Section("Плёнки") {
                 Button("Добавить", systemImage: "plus.circle.fill", action: {
-                    if camera.films.isEmpty == false {
-//                        FilmsView(films: films)
+                    if camera.filmRolls.isEmpty == false {
+//                        FilmsView(rolls: filmRolls)
                     }
                 })
             }

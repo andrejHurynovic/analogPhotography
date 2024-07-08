@@ -15,7 +15,6 @@ private struct TextFieldWithPrefix: ViewModifier {
     init(prefix: String, text: Binding<String>, innerText: Binding<String>) {
         self.prefix = prefix
         self._text = text
-        self._innerText = innerText
         
         if !text.wrappedValue.isEmpty {
             self.innerText = prefix + text.wrappedValue

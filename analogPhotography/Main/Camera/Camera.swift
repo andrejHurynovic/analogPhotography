@@ -10,14 +10,14 @@ import SwiftData
 
 @Model
 final class Camera {
-    var name: String
+    var name: String = ""
     var note: String = ""
     
-    @Relationship var films: [Film] = []
+    @Relationship var filmRolls: [FilmRoll] = []
     
-    init(name: String, note: String, films: [Film]) {
+    init(name: String = "", note: String = "", filmRolls: [FilmRoll] = []) {
         self.name = name
         self.note = note
-        self.films = films
+        self.filmRolls = filmRolls
     }
 }

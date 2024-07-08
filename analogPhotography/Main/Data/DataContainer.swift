@@ -15,8 +15,8 @@ class DataContainer {
         let schema = Schema([
             Camera.self,
             Photo.self,
+            FilmRoll.self,
             Film.self,
-            FilmType.self,
             FilmFormat.self,
             FilmProcess.self
         ])
