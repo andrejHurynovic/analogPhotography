@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct NoteView: View {
-    var prompt: String = "Добавить заметку"
     @Binding var note: String
+    
+    var prompt: String = "Добавить заметку"
     
     var body: some View {
         Section("Заметки") {

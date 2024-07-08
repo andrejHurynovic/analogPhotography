@@ -5,7 +5,6 @@
 //  Created by Andrej Hurynovič on 4.06.24.
 //
 
-import Foundation
 import SwiftData
 
 @Model

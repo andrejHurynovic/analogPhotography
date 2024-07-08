@@ -136,17 +136,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		F65517A12C1F3329000133FA /* Forms and pickers */ = {
-			isa = PBXGroup;
-			children = (
-				F6D3A34A2C0FBD4000D56B8D /* FormView.swift */,
-				F6D3A34C2C0FBF4900D56B8D /* TextFormView.swift */,
-				F6D3A34E2C0FC1FC00D56B8D /* TextFieldFormView.swift */,
-				F65517A22C1F3668000133FA /* DiscreteSlider.swift */,
-			);
-			path = "Forms and pickers";
-			sourceTree = "<group>";
-		};
 		F65517AE2C1F9155000133FA /* Haptic */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,14 +187,48 @@
 			path = MapPicker;
 			sourceTree = "<group>";
 		};
+		F6BC7BE12C3C1CC600160C3E /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				F6D3A34A2C0FBD4000D56B8D /* FormView.swift */,
+				F6D3A34C2C0FBF4900D56B8D /* TextFormView.swift */,
+				F6D3A34E2C0FC1FC00D56B8D /* TextFieldFormView.swift */,
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
+		F6BC7BE22C3C1CCF00160C3E /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				F65517A22C1F3668000133FA /* DiscreteSlider.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
+		F6BC7BE32C3C1CD500160C3E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F6BC7BE42C3C1DC600160C3E /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				F6E481982C1B0AD4006EE963 /* MenuWithEditState.swift */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
 		F6D3A3472C0FBA4000D56B8D /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				F6E4819D2C1B886E006EE963 /* ViewModifiers */,
 				F65517AE2C1F9155000133FA /* Haptic */,
-				F65517A12C1F3329000133FA /* Forms and pickers */,
-				F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */,
-				F6E481982C1B0AD4006EE963 /* MenuWithEditState.swift */,
+				F6BC7BE12C3C1CC600160C3E /* Forms */,
+				F6BC7BE22C3C1CCF00160C3E /* Pickers */,
+				F6BC7BE32C3C1CD500160C3E /* Buttons */,
+				F6BC7BE42C3C1DC600160C3E /* Menus */,
 				F645616B2C110CC20007940D /* NoteView.swift */,
 			);
 			path = Other;
@@ -245,6 +268,7 @@
 				F65517A62C1F6F4B000133FA /* Log.swift */,
 				F65517AF2C1F9169000133FA /* Main */,
 				F6D3A3472C0FBA4000D56B8D /* Other */,
+				F6E4819D2C1B886E006EE963 /* ViewModifiers */,
 				F649B2C82C39767E00FE7180 /* Protocols */,
 				F6FE29B32C0F703100E9C678 /* Extensions */,
 				F6FE29A42C0F493000E9C678 /* Assets.xcassets */,
