@@ -24,6 +24,10 @@
 		F67179112C34AAB60062D350 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67179102C34AAB60062D350 /* Location.swift */; };
 		F67179162C357AED0062D350 /* MapPickerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67179152C357AED0062D350 /* MapPickerMenu.swift */; };
 		F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B56C02C20D077001F1D97 /* CLLocationCoordinate2D.swift */; };
+		F6BC7BE62C3C1E2300160C3E /* OptionalDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BE52C3C1E2300160C3E /* OptionalDatePicker.swift */; };
+		F6BC7BE82C3C3CBD00160C3E /* ClearFormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BE72C3C3CBD00160C3E /* ClearFormButton.swift */; };
+		F6BC7BEA2C3CA58F00160C3E /* OptionalDatePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BE92C3CA58E00160C3E /* OptionalDatePickerViewModel.swift */; };
+		F6BC7BEC2C3CA5F800160C3E /* TapToAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */; };
 		F6C40BC92C37230B00DB96A7 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = F6C40BC82C37230B00DB96A7 /* Shimmer */; };
 		F6C40BCB2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C40BCA2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift */; };
 		F6D3A3462C0FB2AB00D56B8D /* CameraDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */; };
@@ -67,6 +71,10 @@
 		F67179102C34AAB60062D350 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F67179152C357AED0062D350 /* MapPickerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerMenu.swift; sourceTree = "<group>"; };
 		F68B56C02C20D077001F1D97 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		F6BC7BE52C3C1E2300160C3E /* OptionalDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalDatePicker.swift; sourceTree = "<group>"; };
+		F6BC7BE72C3C3CBD00160C3E /* ClearFormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearFormButton.swift; sourceTree = "<group>"; };
+		F6BC7BE92C3CA58E00160C3E /* OptionalDatePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalDatePickerViewModel.swift; sourceTree = "<group>"; };
+		F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToAddButton.swift; sourceTree = "<group>"; };
 		F6C40BCA2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerMenuSearchBatState.swift; sourceTree = "<group>"; };
 		F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailedView.swift; sourceTree = "<group>"; };
 		F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
@@ -201,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				F65517A22C1F3668000133FA /* DiscreteSlider.swift */,
+				F6BC7BE92C3CA58E00160C3E /* OptionalDatePickerViewModel.swift */,
+				F6BC7BE52C3C1E2300160C3E /* OptionalDatePicker.swift */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -208,7 +218,9 @@
 		F6BC7BE32C3C1CD500160C3E /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				F6BC7BE72C3C3CBD00160C3E /* ClearFormButton.swift */,
 				F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */,
+				F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -401,7 +413,9 @@
 				F649B2C52C3897AE00FE7180 /* DataContainer.swift in Sources */,
 				F6FE29B22C0F645200E9C678 /* FilmFormat.swift in Sources */,
 				F65517A32C1F3668000133FA /* DiscreteSlider.swift in Sources */,
+				F6BC7BE62C3C1E2300160C3E /* OptionalDatePicker.swift in Sources */,
 				F6EEF2762C3AC98D00FEBCE4 /* DataContainerPreviewData.swift in Sources */,
+				F6BC7BEC2C3CA5F800160C3E /* TapToAddButton.swift in Sources */,
 				F671790F2C34A9B30062D350 /* MapMarker.swift in Sources */,
 				F63084942C38294A008ABF71 /* CameraView.swift in Sources */,
 				F6D3A34D2C0FBF4900D56B8D /* TextFormView.swift in Sources */,
@@ -409,6 +423,7 @@
 				F65517AC2C1F9145000133FA /* Haptic.swift in Sources */,
 				F65517AB2C1F9145000133FA /* HapticType.swift in Sources */,
 				F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */,
+				F6BC7BEA2C3CA58F00160C3E /* OptionalDatePickerViewModel.swift in Sources */,
 				F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */,
 				F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */,
 				F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */,
@@ -431,6 +446,7 @@
 				F6C40BCB2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift in Sources */,
 				F6D3A3462C0FB2AB00D56B8D /* CameraDetailedView.swift in Sources */,
 				F67179162C357AED0062D350 /* MapPickerMenu.swift in Sources */,
+				F6BC7BE82C3C3CBD00160C3E /* ClearFormButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

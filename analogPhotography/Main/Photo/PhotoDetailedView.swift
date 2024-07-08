@@ -33,7 +33,7 @@ struct PhotoDetailedView: View {
     
     @ViewBuilder var properties: some View {
         Section("Характеристики") {
-//            DatePicker("Дата", selection: $photo.date)
+            OptionalDatePicker(viewModel: OptionalDatePickerViewModel(date: $photo.date))
             aperturePicker
             shutterSpeedPicker
         }

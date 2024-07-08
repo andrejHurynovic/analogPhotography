@@ -29,7 +29,7 @@ struct CameraDetailedView: View {
                 })
             }
             
-            NoteView(prompt: "Добавить заметку", note: $camera.note)
+            NoteView(note: $camera.note, prompt: "Добавить заметку")
         }
         .navigationTitle(camera.name)
         .navigationBarTitleDisplayMode(.large)
