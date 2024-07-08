@@ -19,7 +19,5 @@ struct TapToAddButton: View {
 }
 
 #Preview {
-    TapToAddButton {
-        
-    }
+    TapToAddButton { }
 }

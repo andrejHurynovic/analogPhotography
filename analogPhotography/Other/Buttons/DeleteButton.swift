@@ -11,12 +11,8 @@ struct DeleteButton: View {
     var action: () -> ()
     
     var body: some View {
-        Button(role: .destructive) {
+        Button("Delete", systemImage: "trash", role: .destructive) {
             action()
-        } label: {
-            Button("Удалить", systemImage: "trash", role: .destructive) {
-                action()
-            }
         }
     }
 }
