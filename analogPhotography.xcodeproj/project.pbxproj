@@ -28,6 +28,7 @@
 		F6BC7BE82C3C3CBD00160C3E /* ClearFormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BE72C3C3CBD00160C3E /* ClearFormButton.swift */; };
 		F6BC7BEA2C3CA58F00160C3E /* OptionalDatePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BE92C3CA58E00160C3E /* OptionalDatePickerViewModel.swift */; };
 		F6BC7BEC2C3CA5F800160C3E /* TapToAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */; };
+		F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BED2C3CB70C00160C3E /* DiscreteSliderViewModel.swift */; };
 		F6C40BC92C37230B00DB96A7 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = F6C40BC82C37230B00DB96A7 /* Shimmer */; };
 		F6C40BCB2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C40BCA2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift */; };
 		F6D3A3462C0FB2AB00D56B8D /* CameraDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */; };
@@ -75,6 +76,7 @@
 		F6BC7BE72C3C3CBD00160C3E /* ClearFormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearFormButton.swift; sourceTree = "<group>"; };
 		F6BC7BE92C3CA58E00160C3E /* OptionalDatePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalDatePickerViewModel.swift; sourceTree = "<group>"; };
 		F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToAddButton.swift; sourceTree = "<group>"; };
+		F6BC7BED2C3CB70C00160C3E /* DiscreteSliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteSliderViewModel.swift; sourceTree = "<group>"; };
 		F6C40BCA2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerMenuSearchBatState.swift; sourceTree = "<group>"; };
 		F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailedView.swift; sourceTree = "<group>"; };
 		F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				F65517A22C1F3668000133FA /* DiscreteSlider.swift */,
+				F6BC7BED2C3CB70C00160C3E /* DiscreteSliderViewModel.swift */,
 				F6BC7BE92C3CA58E00160C3E /* OptionalDatePickerViewModel.swift */,
 				F6BC7BE52C3C1E2300160C3E /* OptionalDatePicker.swift */,
 			);
@@ -425,6 +428,7 @@
 				F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */,
 				F6BC7BEA2C3CA58F00160C3E /* OptionalDatePickerViewModel.swift in Sources */,
 				F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */,
+				F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */,
 				F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */,
 				F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */,
 				F6FE29B52C0F704A00E9C678 /* ModelContextExtensions.swift in Sources */,

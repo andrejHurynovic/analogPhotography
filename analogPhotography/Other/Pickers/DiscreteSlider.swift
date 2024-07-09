@@ -7,75 +7,17 @@
 
 import SwiftUI
 
-struct DiscreteSlider<ValueType>: View where ValueType: Equatable {
-    
-    @Binding private var value: ValueType
-    private var values: [ValueType]
-    
-    @State private var needReset: Bool = false
-    @State private var sliderIndex: Double = 0.0
-    
-    init(value: Binding<ValueType>, values: [ValueType]) {
-        self._value = value
-        self.values = values
-        
-        self._sliderIndex = State(initialValue: (self.findIndex() ?? 0.0))
-    }
-    
+struct DiscreteSlider: View {
+    @Bindable var viewModel: DiscreteSliderViewModel
     
     var body: some View {
         HStack {
-            resetButton
-            if let first = values.first as? String {
-                Text(first)
-            }
-            slider
-            if let last = values.last as? String {
-                Text(last)
-            }
-        }
-    }
-    
-    var slider: some View {
-        Slider(value: $sliderIndex, in: 0.0...(Double(values.count) - 1.0) , step: 1.0)
-            .disabled(needReset)
-            .animation(.default, value: sliderIndex)
-            .animation(.default, value: needReset)
-        
-            .onChange(of: value) { _, newValue in
-                guard let newIndex = findIndex() else {
-                    self.needReset = true
-                    return
-                }
-                sliderIndex = newIndex
-                Haptic.impact(.light)
-            }
-            .onChange(of: sliderIndex) { _, newSliderIndex in
-                value = values[Int(newSliderIndex)]
-            }
-    }
-    
-    @ViewBuilder var resetButton: some View {
-        if needReset {
-            Button("", systemImage: "arrow.uturn.backward.circle") {
-                guard let firstValue = values.first else { return }
-                value = firstValue
-            }
-        }
-    }
-    
-    private func findIndex() -> Double? {
-        if let index = values.firstIndex(of: value) {
-            needReset = false
-            return Double(index)
-        } else {
-            needReset = true
-            return nil
+            Text(viewModel.firstValueText)
+            Slider(value: viewModel.sliderIndex, in: viewModel.sliderBounds , step: 1.0)
+            Text(viewModel.lastValueText)
         }
     }
 }
-
-
 
 #Preview {
     struct DiscreteSliderContainer: View {
@@ -86,9 +28,9 @@ struct DiscreteSlider<ValueType>: View where ValueType: Equatable {
                 TextFieldFormView(title: "Скорость затвора",
                                   text: $value,
                                   editState: .constant(true))
-                HStack {
-                    DiscreteSlider(value: $value, values: Constants.Photo.shutterSpeeds)
-                }
+                
+                DiscreteSlider(viewModel: DiscreteSliderViewModel(value: $value,
+                                                                  values: Constants.Photo.shutterSpeeds))
             }
         }
     }

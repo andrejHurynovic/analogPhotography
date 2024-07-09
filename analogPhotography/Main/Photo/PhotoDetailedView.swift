@@ -52,7 +52,7 @@ struct PhotoDetailedView: View {
                           placeholder: "1/100",
                           text: $photo.shutterSpeed,
                           editState: .constant(true))
-        DiscreteSlider(value: $photo.shutterSpeed, values: Constants.Photo.shutterSpeeds)
+        DiscreteSlider(viewModel: DiscreteSliderViewModel(value: $photo.shutterSpeed, values: Constants.Photo.shutterSpeeds))
     }
 }
 
