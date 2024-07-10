@@ -8,23 +8,32 @@
 import SwiftUI
 
 struct OptionalDatePicker: View {
-    @Bindable var viewModel: OptionalDatePickerViewModel
+    @Binding var date: Date?
+    var isEnabled: Bool { date != nil }
     
     var body: some View {
         HStack {
             Text("Date")
             Spacer()
-            if viewModel.isEnabled {
-                DatePicker("", selection: viewModel.innerDate)
-                ClearFormButton { viewModel.disablePicker() }
+            if isEnabled {
+                datePicker
+                ClearFormButton { disablePicker() }
             } else {
-                TapToAddButton { viewModel.enablePicker() }
+                TapToAddButton { enablePicker() }
             }
         }
-        
-        .animation(.default, value: viewModel.isEnabled)
-        
+        .animation(.default, value: isEnabled)
     }
+    
+    var datePicker: some View {
+        DatePicker("", selection: Binding(
+            get: { return date ?? .now },
+            set: { date = $0 }))
+    }
+    
+    //MARK: - Functions
+    private func enablePicker() { date = .now }
+    private func disablePicker() { date = nil }
 }
 
 #Preview {
@@ -33,15 +42,11 @@ struct OptionalDatePicker: View {
         
         var body: some View {
             List {
-                OptionalDatePicker(viewModel: OptionalDatePickerViewModel(date: $date))
-                Section("Developer") {
-                    TextFormView("Date", "\(String(describing: date))")
-                    Button("Change date") {
-                        date = .distantFuture
-                    }
-                    Button("Remove date", role: .destructive) {
-                        date = nil
-                    }
+                OptionalDatePicker(date: $date)
+                Section("Debug") {
+                    TextForm("Date", "\(String(describing: date))")
+                    Button("Change date to distantFuture") { date = .distantFuture }
+                    Button("Remove date", role: .destructive) { date = nil }
                 }
             }
         }

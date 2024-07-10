@@ -77,7 +77,7 @@ struct MapPickerPreview: View {
                           otherItems: otherItems,
                           favoriteItems: [])
                 .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                TextFormView("selectedLocation", selectedLocation?.description)
+                TextForm("selectedLocation", selectedLocation?.description)
                 Button("Add test item") {
                     guard let location = selectedLocation else { return }
                     otherItems.append(LocationItem(location: location))
