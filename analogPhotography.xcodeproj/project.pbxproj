@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60DC19D2C248FB50092E952 /* LocationItem.swift */; };
+		F62D38BC2C44731A00E745A6 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62D38BB2C44731A00E745A6 /* CameraViewModel.swift */; };
 		F63084922C381D18008ABF71 /* MKMapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63084912C381D18008ABF71 /* MKMapItem.swift */; };
 		F63084942C38294A008ABF71 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63084932C38294A008ABF71 /* CameraView.swift */; };
 		F63084A32C3857E7008ABF71 /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63084A22C3857E7008ABF71 /* ModelPreview.swift */; };
@@ -43,7 +44,7 @@
 		F6E481992C1B0AD4006EE963 /* MenuWithEditState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E481982C1B0AD4006EE963 /* MenuWithEditState.swift */; };
 		F6E4819B2C1B15ED006EE963 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E4819A2C1B15ED006EE963 /* String.swift */; };
 		F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E4819E2C1B88AC006EE963 /* TextFieldWithPrefix.swift */; };
-		F6EEF2762C3AC98D00FEBCE4 /* DataContainerPreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EEF2752C3AC98D00FEBCE4 /* DataContainerPreviewData.swift */; };
+		F6EEF2762C3AC98D00FEBCE4 /* PreviewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EEF2752C3AC98D00FEBCE4 /* PreviewDataProvider.swift */; };
 		F6FE299F2C0F492B00E9C678 /* analogPhotographyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE299E2C0F492B00E9C678 /* analogPhotographyApp.swift */; };
 		F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE29A02C0F492B00E9C678 /* ContentView.swift */; };
 		F6FE29A52C0F493000E9C678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6FE29A42C0F493000E9C678 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		F60DC19D2C248FB50092E952 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
+		F62D38BB2C44731A00E745A6 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		F63084912C381D18008ABF71 /* MKMapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapItem.swift; sourceTree = "<group>"; };
 		F63084932C38294A008ABF71 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		F63084A22C3857E7008ABF71 /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
@@ -93,7 +95,7 @@
 		F6E481982C1B0AD4006EE963 /* MenuWithEditState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuWithEditState.swift; sourceTree = "<group>"; };
 		F6E4819A2C1B15ED006EE963 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F6E4819E2C1B88AC006EE963 /* TextFieldWithPrefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPrefix.swift; sourceTree = "<group>"; };
-		F6EEF2752C3AC98D00FEBCE4 /* DataContainerPreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainerPreviewData.swift; sourceTree = "<group>"; };
+		F6EEF2752C3AC98D00FEBCE4 /* PreviewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDataProvider.swift; sourceTree = "<group>"; };
 		F6FE299B2C0F492B00E9C678 /* analogPhotography.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = analogPhotography.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FE299E2C0F492B00E9C678 /* analogPhotographyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = analogPhotographyApp.swift; sourceTree = "<group>"; };
 		F6FE29A02C0F492B00E9C678 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,11 +122,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F62D38BA2C44572500E745A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F62D38BD2C44732800E745A6 /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				F63084932C38294A008ABF71 /* CameraView.swift */,
+				F62D38BB2C44731A00E745A6 /* CameraViewModel.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
 		F63084972C3847C8008ABF71 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				F649B2C42C3897AE00FE7180 /* DataContainer.swift */,
-				F6EEF2752C3AC98D00FEBCE4 /* DataContainerPreviewData.swift */,
+				F6EEF2752C3AC98D00FEBCE4 /* PreviewDataProvider.swift */,
 				F63084A22C3857E7008ABF71 /* ModelPreview.swift */,
 			);
 			path = Data;
@@ -285,6 +303,7 @@
 				F6FE299D2C0F492B00E9C678 /* analogPhotography */,
 				F630849E2C3852C8008ABF71 /* PreviewAssets */,
 				F6FE299C2C0F492B00E9C678 /* Products */,
+				F62D38BA2C44572500E745A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -351,7 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FE29C02C0FAA2400E9C678 /* Camera.swift */,
-				F63084932C38294A008ABF71 /* CameraView.swift */,
+				F62D38BD2C44732800E745A6 /* CameraView */,
 				F6635A7C2C3FFF8800813E00 /* CamerasView.swift */,
 				F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */,
 			);
@@ -437,6 +456,7 @@
 				F6E4819B2C1B15ED006EE963 /* String.swift in Sources */,
 				F65517A72C1F6F4C000133FA /* Log.swift in Sources */,
 				F67179112C34AAB60062D350 /* Location.swift in Sources */,
+				F62D38BC2C44731A00E745A6 /* CameraViewModel.swift in Sources */,
 				F63084922C381D18008ABF71 /* MKMapItem.swift in Sources */,
 				F65517A52C1F3C57000133FA /* Constants.swift in Sources */,
 				F649B2C52C3897AE00FE7180 /* DataContainer.swift in Sources */,
@@ -445,7 +465,7 @@
 				F6FE29B22C0F645200E9C678 /* FilmFormat.swift in Sources */,
 				F65517A32C1F3668000133FA /* DiscreteSlider.swift in Sources */,
 				F6BC7BE62C3C1E2300160C3E /* OptionalDatePicker.swift in Sources */,
-				F6EEF2762C3AC98D00FEBCE4 /* DataContainerPreviewData.swift in Sources */,
+				F6EEF2762C3AC98D00FEBCE4 /* PreviewDataProvider.swift in Sources */,
 				F6BC7BEC2C3CA5F800160C3E /* TapToAddButton.swift in Sources */,
 				F671790F2C34A9B30062D350 /* MapMarker.swift in Sources */,
 				F6BD32AA2C3F2243008521FB /* ShutterSpeedPicker.swift in Sources */,
@@ -611,11 +631,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 117;
+				CURRENT_PROJECT_VERSION = 120;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = analogPhotography;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -641,11 +662,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 117;
+				CURRENT_PROJECT_VERSION = 120;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = analogPhotography;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

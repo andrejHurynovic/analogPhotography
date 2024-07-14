@@ -22,7 +22,7 @@ final class Photo {
     
     @Attribute(.externalStorage) var image: Data?
     
-    @Relationship var filmRoll: FilmRoll
+    @Relationship var filmRoll: FilmRoll?
     
     init(date: Date? = .now,
          location: Location? = nil,
@@ -31,8 +31,8 @@ final class Photo {
          ruined: Bool = false, 
          note: String = "",
          image: Data? = nil,
-         filmRoll: FilmRoll) {
-        self.order = filmRoll.photos.count
+         filmRoll: FilmRoll?) {
+        self.order = filmRoll!.photos.count
         self.date = date
         self.location = location
         self.aperture = aperture

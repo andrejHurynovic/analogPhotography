@@ -9,10 +9,13 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    
+    @State var navigationPath = NavigationPath()
+    
     var body: some View {
-        NavigationStack {
-
-        }
+        NavigationStack(path: $navigationPath, root: {
+            CamerasView()
+        })
     }
 
 }

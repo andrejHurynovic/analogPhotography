@@ -20,3 +20,7 @@ final class Camera {
         self.filmRolls = filmRolls
     }
 }
+
+extension Camera {
+    var currentFilmRoll: FilmRoll? { filmRolls.first { !$0.finished } }
+}
