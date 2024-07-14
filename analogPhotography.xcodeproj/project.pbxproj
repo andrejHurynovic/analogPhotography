@@ -19,6 +19,8 @@
 		F65517AB2C1F9145000133FA /* HapticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517A82C1F9144000133FA /* HapticType.swift */; };
 		F65517AC2C1F9145000133FA /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517A92C1F9144000133FA /* Haptic.swift */; };
 		F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65517B12C1F92E3000133FA /* MapPicker.swift */; };
+		F6635A7D2C3FFF8800813E00 /* CamerasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6635A7C2C3FFF8800813E00 /* CamerasView.swift */; };
+		F6635A7F2C4067AA00813E00 /* FilmRollsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6635A7E2C4067A900813E00 /* FilmRollsView.swift */; };
 		F671790D2C346F860062D350 /* MapPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671790C2C346F860062D350 /* MapPickerViewModel.swift */; };
 		F671790F2C34A9B30062D350 /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671790E2C34A9B30062D350 /* MapMarker.swift */; };
 		F67179112C34AAB60062D350 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67179102C34AAB60062D350 /* Location.swift */; };
@@ -26,16 +28,17 @@
 		F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B56C02C20D077001F1D97 /* CLLocationCoordinate2D.swift */; };
 		F6BC7BE62C3C1E2300160C3E /* OptionalDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BE52C3C1E2300160C3E /* OptionalDatePicker.swift */; };
 		F6BC7BE82C3C3CBD00160C3E /* ClearFormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BE72C3C3CBD00160C3E /* ClearFormButton.swift */; };
-		F6BC7BEA2C3CA58F00160C3E /* OptionalDatePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BE92C3CA58E00160C3E /* OptionalDatePickerViewModel.swift */; };
 		F6BC7BEC2C3CA5F800160C3E /* TapToAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */; };
 		F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BED2C3CB70C00160C3E /* DiscreteSliderViewModel.swift */; };
+		F6BD32AA2C3F2243008521FB /* ShutterSpeedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD32A92C3F2243008521FB /* ShutterSpeedPicker.swift */; };
 		F6C40BC92C37230B00DB96A7 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = F6C40BC82C37230B00DB96A7 /* Shimmer */; };
 		F6C40BCB2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C40BCA2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift */; };
+		F6CDAB8A2C3D9C53000CC580 /* TextFieldFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CDAB892C3D9C53000CC580 /* TextFieldFormViewModel.swift */; };
 		F6D3A3462C0FB2AB00D56B8D /* CameraDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */; };
 		F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */; };
 		F6D3A34B2C0FBD4000D56B8D /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34A2C0FBD4000D56B8D /* FormView.swift */; };
-		F6D3A34D2C0FBF4900D56B8D /* TextFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34C2C0FBF4900D56B8D /* TextFormView.swift */; };
-		F6D3A34F2C0FC1FC00D56B8D /* TextFieldFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34E2C0FC1FC00D56B8D /* TextFieldFormView.swift */; };
+		F6D3A34D2C0FBF4900D56B8D /* TextForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34C2C0FBF4900D56B8D /* TextForm.swift */; };
+		F6D3A34F2C0FC1FC00D56B8D /* TextFieldForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34E2C0FC1FC00D56B8D /* TextFieldForm.swift */; };
 		F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3502C0FC9A600D56B8D /* PhotoDetailedView.swift */; };
 		F6E481992C1B0AD4006EE963 /* MenuWithEditState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E481982C1B0AD4006EE963 /* MenuWithEditState.swift */; };
 		F6E4819B2C1B15ED006EE963 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E4819A2C1B15ED006EE963 /* String.swift */; };
@@ -67,6 +70,8 @@
 		F65517A82C1F9144000133FA /* HapticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticType.swift; sourceTree = "<group>"; };
 		F65517A92C1F9144000133FA /* Haptic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		F65517B12C1F92E3000133FA /* MapPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPicker.swift; sourceTree = "<group>"; };
+		F6635A7C2C3FFF8800813E00 /* CamerasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasView.swift; sourceTree = "<group>"; };
+		F6635A7E2C4067A900813E00 /* FilmRollsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollsView.swift; sourceTree = "<group>"; };
 		F671790C2C346F860062D350 /* MapPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerViewModel.swift; sourceTree = "<group>"; };
 		F671790E2C34A9B30062D350 /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		F67179102C34AAB60062D350 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -74,15 +79,16 @@
 		F68B56C02C20D077001F1D97 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		F6BC7BE52C3C1E2300160C3E /* OptionalDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalDatePicker.swift; sourceTree = "<group>"; };
 		F6BC7BE72C3C3CBD00160C3E /* ClearFormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearFormButton.swift; sourceTree = "<group>"; };
-		F6BC7BE92C3CA58E00160C3E /* OptionalDatePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalDatePickerViewModel.swift; sourceTree = "<group>"; };
 		F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToAddButton.swift; sourceTree = "<group>"; };
 		F6BC7BED2C3CB70C00160C3E /* DiscreteSliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteSliderViewModel.swift; sourceTree = "<group>"; };
+		F6BD32A92C3F2243008521FB /* ShutterSpeedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterSpeedPicker.swift; sourceTree = "<group>"; };
 		F6C40BCA2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerMenuSearchBatState.swift; sourceTree = "<group>"; };
+		F6CDAB892C3D9C53000CC580 /* TextFieldFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFormViewModel.swift; sourceTree = "<group>"; };
 		F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailedView.swift; sourceTree = "<group>"; };
 		F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		F6D3A34A2C0FBD4000D56B8D /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
-		F6D3A34C2C0FBF4900D56B8D /* TextFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormView.swift; sourceTree = "<group>"; };
-		F6D3A34E2C0FC1FC00D56B8D /* TextFieldFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFormView.swift; sourceTree = "<group>"; };
+		F6D3A34C2C0FBF4900D56B8D /* TextForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextForm.swift; sourceTree = "<group>"; };
+		F6D3A34E2C0FC1FC00D56B8D /* TextFieldForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldForm.swift; sourceTree = "<group>"; };
 		F6D3A3502C0FC9A600D56B8D /* PhotoDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailedView.swift; sourceTree = "<group>"; };
 		F6E481982C1B0AD4006EE963 /* MenuWithEditState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuWithEditState.swift; sourceTree = "<group>"; };
 		F6E4819A2C1B15ED006EE963 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -201,8 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				F6D3A34A2C0FBD4000D56B8D /* FormView.swift */,
-				F6D3A34C2C0FBF4900D56B8D /* TextFormView.swift */,
-				F6D3A34E2C0FC1FC00D56B8D /* TextFieldFormView.swift */,
+				F6D3A34C2C0FBF4900D56B8D /* TextForm.swift */,
+				F6CDAB8B2C3D9C62000CC580 /* TextFieldForm */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -210,9 +216,7 @@
 		F6BC7BE22C3C1CCF00160C3E /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
-				F65517A22C1F3668000133FA /* DiscreteSlider.swift */,
-				F6BC7BED2C3CB70C00160C3E /* DiscreteSliderViewModel.swift */,
-				F6BC7BE92C3CA58E00160C3E /* OptionalDatePickerViewModel.swift */,
+				F6DC89F52C44078500259E7F /* DiscreteSlider */,
 				F6BC7BE52C3C1E2300160C3E /* OptionalDatePicker.swift */,
 			);
 			path = Pickers;
@@ -236,6 +240,15 @@
 			path = Menus;
 			sourceTree = "<group>";
 		};
+		F6CDAB8B2C3D9C62000CC580 /* TextFieldForm */ = {
+			isa = PBXGroup;
+			children = (
+				F6D3A34E2C0FC1FC00D56B8D /* TextFieldForm.swift */,
+				F6CDAB892C3D9C53000CC580 /* TextFieldFormViewModel.swift */,
+			);
+			path = TextFieldForm;
+			sourceTree = "<group>";
+		};
 		F6D3A3472C0FBA4000D56B8D /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +260,15 @@
 				F645616B2C110CC20007940D /* NoteView.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		F6DC89F52C44078500259E7F /* DiscreteSlider */ = {
+			isa = PBXGroup;
+			children = (
+				F65517A22C1F3668000133FA /* DiscreteSlider.swift */,
+				F6BC7BED2C3CB70C00160C3E /* DiscreteSliderViewModel.swift */,
+			);
+			path = DiscreteSlider;
 			sourceTree = "<group>";
 		};
 		F6E4819D2C1B886E006EE963 /* ViewModifiers */ = {
@@ -298,6 +320,7 @@
 				F6FE29B12C0F645200E9C678 /* FilmFormat.swift */,
 				F6FE29B82C0F784500E9C678 /* FilmProcess.swift */,
 				F6FE29BA2C0F7CBB00E9C678 /* FilmRoll.swift */,
+				F6635A7E2C4067A900813E00 /* FilmRollsView.swift */,
 			);
 			path = Film;
 			sourceTree = "<group>";
@@ -319,6 +342,7 @@
 			children = (
 				F6FE29BD2C0F804200E9C678 /* Photo.swift */,
 				F6D3A3502C0FC9A600D56B8D /* PhotoDetailedView.swift */,
+				F6BD32A92C3F2243008521FB /* ShutterSpeedPicker.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -328,6 +352,7 @@
 			children = (
 				F6FE29C02C0FAA2400E9C678 /* Camera.swift */,
 				F63084932C38294A008ABF71 /* CameraView.swift */,
+				F6635A7C2C3FFF8800813E00 /* CamerasView.swift */,
 				F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */,
 			);
 			path = Camera;
@@ -408,25 +433,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6CDAB8A2C3D9C53000CC580 /* TextFieldFormViewModel.swift in Sources */,
 				F6E4819B2C1B15ED006EE963 /* String.swift in Sources */,
 				F65517A72C1F6F4C000133FA /* Log.swift in Sources */,
 				F67179112C34AAB60062D350 /* Location.swift in Sources */,
 				F63084922C381D18008ABF71 /* MKMapItem.swift in Sources */,
 				F65517A52C1F3C57000133FA /* Constants.swift in Sources */,
 				F649B2C52C3897AE00FE7180 /* DataContainer.swift in Sources */,
+				F6635A7D2C3FFF8800813E00 /* CamerasView.swift in Sources */,
+				F6635A7F2C4067AA00813E00 /* FilmRollsView.swift in Sources */,
 				F6FE29B22C0F645200E9C678 /* FilmFormat.swift in Sources */,
 				F65517A32C1F3668000133FA /* DiscreteSlider.swift in Sources */,
 				F6BC7BE62C3C1E2300160C3E /* OptionalDatePicker.swift in Sources */,
 				F6EEF2762C3AC98D00FEBCE4 /* DataContainerPreviewData.swift in Sources */,
 				F6BC7BEC2C3CA5F800160C3E /* TapToAddButton.swift in Sources */,
 				F671790F2C34A9B30062D350 /* MapMarker.swift in Sources */,
+				F6BD32AA2C3F2243008521FB /* ShutterSpeedPicker.swift in Sources */,
 				F63084942C38294A008ABF71 /* CameraView.swift in Sources */,
-				F6D3A34D2C0FBF4900D56B8D /* TextFormView.swift in Sources */,
+				F6D3A34D2C0FBF4900D56B8D /* TextForm.swift in Sources */,
 				F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */,
 				F65517AC2C1F9145000133FA /* Haptic.swift in Sources */,
 				F65517AB2C1F9145000133FA /* HapticType.swift in Sources */,
 				F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */,
-				F6BC7BEA2C3CA58F00160C3E /* OptionalDatePickerViewModel.swift in Sources */,
 				F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */,
 				F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */,
 				F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */,
@@ -442,7 +470,7 @@
 				F6FE29BB2C0F7CBB00E9C678 /* FilmRoll.swift in Sources */,
 				F6D3A34B2C0FBD4000D56B8D /* FormView.swift in Sources */,
 				F63084A32C3857E7008ABF71 /* ModelPreview.swift in Sources */,
-				F6D3A34F2C0FC1FC00D56B8D /* TextFieldFormView.swift in Sources */,
+				F6D3A34F2C0FC1FC00D56B8D /* TextFieldForm.swift in Sources */,
 				F645616C2C110CC20007940D /* NoteView.swift in Sources */,
 				F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */,
 				F6FE299F2C0F492B00E9C678 /* analogPhotographyApp.swift in Sources */,

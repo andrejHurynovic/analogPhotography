@@ -10,10 +10,10 @@ import SwiftUI
 struct NoteView: View {
     @Binding var note: String
     
-    var prompt: String = "Добавить заметку"
+    var prompt: String = "Add note"
     
     var body: some View {
-        Section("Заметки") {
+        Section("Note") {
             TextField(prompt, text: $note, axis: .vertical)
         }
     }

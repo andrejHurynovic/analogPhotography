@@ -7,13 +7,11 @@
 
 import SwiftUI
 import SwiftData
-import MapKit
 
 struct PhotoDetailedView: View {
-    
     @Bindable var photo: Photo
     @State var apertureText: String = ""
-    
+
     var body: some View {
         List {
             map
@@ -23,8 +21,8 @@ struct PhotoDetailedView: View {
     }
     
     @ViewBuilder var map: some View {
-        Section("Местоположение") {
-            MapPicker(viewModel: MapPickerViewModel(selectedLocation: $photo.location), 
+        Section("Map") {
+            MapPicker(viewModel: MapPickerViewModel(selectedLocation: $photo.location),
                       otherItems: [],
                       favoriteItems: [])
         }
@@ -32,32 +30,24 @@ struct PhotoDetailedView: View {
     }
     
     @ViewBuilder var properties: some View {
-        Section("Характеристики") {
-            OptionalDatePicker(viewModel: OptionalDatePickerViewModel(date: $photo.date))
+        Section("Properties") {
+            OptionalDatePicker(date: $photo.date)
             aperturePicker
-            shutterSpeedPicker
+            ShutterSpeedPicker(value: $photo.shutterSpeed)
         }
     }
     
     @ViewBuilder var aperturePicker: some View {
-        TextFieldFormView(title: "Диафрагма",
+        TextFieldForm(title: "Aperture",
                           placeholder: "f/2.8",
-                          text: $apertureText,
-                          editState:  .constant(true))
+                          text: $apertureText)
             .keyboardType(.numberPad)
             .textFieldPrefix(prefix: "f/", text: $photo.aperture, textFieldText: $apertureText)
-    }
-    @ViewBuilder var shutterSpeedPicker: some View {
-        TextFieldFormView(title: "Скорость затвора",
-                          placeholder: "1/100",
-                          text: $photo.shutterSpeed,
-                          editState: .constant(true))
-        DiscreteSlider(viewModel: DiscreteSliderViewModel(value: $photo.shutterSpeed, values: Constants.Photo.shutterSpeeds))
     }
 }
 
 #Preview {
-    ModelPreview { photo in
-        PhotoDetailedView(photo: photo)
-    }
+        ModelPreview<Photo, PhotoDetailedView> { photo in
+            PhotoDetailedView(photo: photo)
+        }
 }

@@ -10,23 +10,23 @@ import SwiftData
 
 @Model
 final class FilmRoll {
-    var name: String = ""
+    var name: String?
     var note: String = ""
     
-    var creationDate: Date = Date()
+    var creationDate: Date
     var finished: Bool = false
     
-    @Relationship(inverse: \Film.rolls) var type: Film?
+    @Relationship(inverse: \Film.rolls) var roll: Film?
     @Relationship(inverse: \Photo.filmRoll) var photos: [Photo]
     
     @Relationship(inverse: \Camera.filmRolls) var camera: Camera?
     
-    init(name: String = "", note: String = "", creationDate: Date = .now, finished: Bool = false, type: Film? = nil, photos: [Photo] = [], camera: Camera? = nil) {
+    init(name: String? = nil , note: String = "", creationDate: Date = .now, finished: Bool = false, type: Film? = nil, photos: [Photo] = [], camera: Camera? = nil) {
         self.name = name
         self.note = note
         self.creationDate = creationDate
         self.finished = finished
-        self.type = type
+        self.roll = type
         self.photos = photos
         self.camera = camera
     }

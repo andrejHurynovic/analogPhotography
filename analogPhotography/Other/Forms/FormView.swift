@@ -21,7 +21,6 @@ struct FormView<Content: View>: View  {
     }
 }
 
-
 #Preview {
     FormView(title: "ISO") {
         Text("300")

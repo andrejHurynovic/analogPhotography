@@ -17,19 +17,19 @@ struct CameraDetailedView: View {
     var body: some View {
         List {
             
-            Section("Информация") {
-                TextFieldFormView(title: "Название", setFocusStateToTrueOnEditStateTrue: true, text: $camera.name, editState: $editState)
+            Section("Info") {
+                TextFieldForm(title: "Name", text: $camera.name, isEditing: $editState, focusOnEdit: true)
             }
             
-            Section("Плёнки") {
-                Button("Добавить", systemImage: "plus.circle.fill", action: {
+            Section("Films") {
+                Button("Add", systemImage: "plus.circle.fill", action: {
                     if camera.filmRolls.isEmpty == false {
 //                        FilmsView(rolls: filmRolls)
                     }
                 })
             }
             
-            NoteView(note: $camera.note, prompt: "Добавить заметку")
+            NoteView(note: $camera.note)
         }
         .navigationTitle(camera.name)
         .navigationBarTitleDisplayMode(.large)

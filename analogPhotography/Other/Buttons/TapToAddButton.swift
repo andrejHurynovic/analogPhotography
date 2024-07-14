@@ -14,7 +14,7 @@ struct TapToAddButton: View {
         Button("Tap to add") {
             action()
         }
-        .foregroundStyle(.gray)
+        .foregroundStyle(Color(uiColor: .systemGray5))
     }
 }
 

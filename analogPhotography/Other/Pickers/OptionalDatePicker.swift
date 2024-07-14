@@ -41,7 +41,7 @@ struct OptionalDatePicker: View {
         @State var date: Date? = nil
         
         var body: some View {
-            List {
+            Form {
                 OptionalDatePicker(date: $date)
                 Section("Debug") {
                     TextForm("Date", "\(String(describing: date))")
