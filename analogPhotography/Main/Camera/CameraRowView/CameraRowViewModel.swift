@@ -1,5 +1,5 @@
 //
-//  CameraViewModel.swift
+//  CameraRowViewModel.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 14.07.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class CameraViewModel: ObservableObject {
+class CameraRowViewModel: ObservableObject {
     @Published var camera: Camera
     
     init(camera: Camera) {

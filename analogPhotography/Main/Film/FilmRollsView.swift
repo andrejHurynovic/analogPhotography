@@ -1,5 +1,5 @@
 //
-//  FilmsView.swift
+//  FilmRollsView.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 11.07.24.
@@ -8,13 +8,12 @@
 import SwiftUI
 import SwiftData
 
-struct FilmsView: View {
+struct FilmRollsView: View {
     @Query var filmRolls: [FilmRoll]
     
     var body: some View {
-        let _ = Self._printChanges()
         List(filmRolls) { filmRoll in
-            FilmRollView(roll: filmRoll)
+            FilmRollRowView(roll: filmRoll)
         }
         .navigationTitle("Film rolls")
         .overlay { contentUnavailable }
@@ -37,41 +36,7 @@ struct FilmsView: View {
 
 #Preview {
     NavigationStack {
-        FilmsView()
+        FilmRollsView()
             .modelContainer(DataContainer().getContainer())
     }
 }
-
-struct FilmRollView: View {
-    @Bindable var roll: FilmRoll
-    
-    var body: some View {
-        VStack {
-            name
-            creationDate
-        }
-    }
-    
-    var name: some View {
-        Text(roll.name ?? roll.film?.name ?? "")
-            .font(.title2)
-            .fontWeight(.bold)
-    }
-    
-    var creationDate: some View {
-        Text(roll.creationDate.formatted())
-            .font(.caption)
-            .foregroundStyle(.gray)
-    }
-//    var progress: some View {
-//        ProgressView
-//    }
-}
-
-//#Preview {
-//    ModelPreview { film in
-//        List {
-//            FilmView(film: film)
-//        }
-//    }
-//}

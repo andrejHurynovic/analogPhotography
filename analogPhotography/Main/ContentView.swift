@@ -6,18 +6,18 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    
-    @State var navigationPath = NavigationPath()
+    @StateObject private var router = AppRouter()
     
     var body: some View {
-        NavigationStack(path: $navigationPath, root: {
+        NavigationStack(path: $router.path) {
             CamerasView()
-        })
+                .routerNavigationDestinations()
+        }
+        .environmentObject(router)
     }
-
+    
 }
 
 #Preview {

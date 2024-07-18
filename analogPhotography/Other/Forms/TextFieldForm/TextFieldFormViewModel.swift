@@ -11,29 +11,30 @@ import Combine
 extension TextFieldForm {
     final class TextFieldFormViewModel: ObservableObject {
         var text: Binding<String>
-        private var isEditing: Binding<Bool>?
+        private var viewState: Binding<ViewState>?
         
         private var resetEditOnSubmit: Bool
         private var focusOnEdit: Bool
         
         @Published var isFocused: Bool = false
                 
-        init(text: Binding<String>, isEditing: Binding<Bool>? = nil, resetEditOnSubmit: Bool , focusOnEdit: Bool) {
+        init(text: Binding<String>, viewState: Binding<ViewState>? = nil, resetEditOnSubmit: Bool , focusOnEdit: Bool) {
             self.text = text
             self.resetEditOnSubmit = resetEditOnSubmit
             self.focusOnEdit = focusOnEdit
-            self.isEditing = isEditing
+            self.viewState = viewState
         }
         
         func handleFocusChange(_ isFocused: Bool) {
             self.isFocused = isFocused
             
-            guard let isEditing = self.isEditing else { return }
-            isEditing.wrappedValue = isFocused
+            guard let viewState = self.viewState,
+                  viewState.wrappedValue != .creating else { return }
+            viewState.wrappedValue = isFocused ? .editing : .showing
         }
         func handleIsEditingChange() {
-            guard let isEditing = self.isEditing?.wrappedValue else { return }
-            isFocused = isEditing && focusOnEdit
+            guard let viewState = self.viewState?.wrappedValue else { return }
+            isFocused = viewState.editingAvailable && focusOnEdit
         }
         
         func handleClear() {

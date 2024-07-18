@@ -10,9 +10,9 @@ import SwiftUI
 struct TextFieldForm: View {
     private var title: String
     private var placeholder: String
-    private var foregroundColor: Color { isFocused || (isEditing?.wrappedValue ?? false) ? .primary : .gray }
+    private var foregroundColor: Color { return isFocused || viewState?.wrappedValue.editingAvailable ?? false ? .primary : .gray }
     
-    private var isEditing: Binding<Bool>?
+    private var viewState: Binding<ViewState>?
     @FocusState private var isFocused: Bool
     
     @StateObject private var viewModel: TextFieldFormViewModel
@@ -20,12 +20,12 @@ struct TextFieldForm: View {
     init(title: String,
          placeholder: String = "Tap to add",
          text: Binding<String>,
-         isEditing: Binding<Bool>? = nil,
+         viewState: Binding<ViewState>? = nil,
          resetEditOnSubmit: Bool = true,
          focusOnEdit: Bool = true) {
         self._viewModel = StateObject(wrappedValue:
-            TextFieldFormViewModel(text: text, isEditing: isEditing, resetEditOnSubmit: resetEditOnSubmit, focusOnEdit: focusOnEdit))
-        self.isEditing = isEditing
+            TextFieldFormViewModel(text: text, viewState: viewState, resetEditOnSubmit: resetEditOnSubmit, focusOnEdit: focusOnEdit))
+        self.viewState = viewState
         self.title = title
         self.placeholder = placeholder
     }
@@ -46,7 +46,7 @@ struct TextFieldForm: View {
         
             .onChange(of: viewModel.isFocused) { self.isFocused = $1 }
             .onChange(of: self.isFocused) { viewModel.handleFocusChange($1) }
-            .onChange(of: isEditing?.wrappedValue) { viewModel.handleIsEditingChange() }
+            .onChange(of: viewState?.wrappedValue) { viewModel.handleIsEditingChange() }
     }
     @ViewBuilder private var clearFormButton: some View {
         if isFocused {
@@ -60,19 +60,25 @@ struct TextFieldForm: View {
     struct TextFieldFormViewPreview: View {
         @State var textA: String = ""
         @State var textB: String = ""
-        @State var isEditing: Bool = false
+        @State var viewState: ViewState = .editing
         
         var body: some View {
-            List {
-                Section("With isEditing") {
-                    Toggle("isEditing", isOn: $isEditing)
-                TextFieldForm(title: "Name",
-                              text: $textA,
-                              isEditing: $isEditing)
+            NavigationStack {
+                Form {
+                    Section("With ViewState") {
+                        TextFieldForm(title: "Name",
+                                      text: $textA,
+                                      viewState: $viewState)
+                    }
+                    Section("Without ViewState") {
+                        TextFieldForm(title: "Name",
+                                      text: $textB)
+                    }
                 }
-                Section("Without isEditing") {
-                TextFieldForm(title: "Name",
-                              text: $textB)
+                .toolbar {
+                    ViewStateToolbar(viewState: $viewState) {
+                        EmptyView()
+                    }
                 }
             }
         }

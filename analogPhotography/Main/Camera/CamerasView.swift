@@ -10,11 +10,16 @@ import SwiftData
 
 struct CamerasView: View {
     @Query(sort: [SortDescriptor(\Camera.name)]) var cameras: [Camera]
+    @EnvironmentObject var router: AppRouter
+    
     var body: some View {
         List(cameras) { camera in
-            CameraView(camera: camera)
+            CameraRowView(camera: camera)
         }
         .navigationTitle("Cameras")
+        .toolbar(content: {
+            NavigationLink("Add", value: Route.camera(Camera()))
+        })
         .overlay { contentUnavailable }
     }
     
@@ -25,9 +30,7 @@ struct CamerasView: View {
             }, description: {
                 Text("You're cameras will appear here.")
             }, actions: {
-                Button("Add camera") {
-                    
-                }
+                NavigationLink("Add camera", value: Route.camera(Camera()))
             })
         }
     }
@@ -36,6 +39,7 @@ struct CamerasView: View {
 #Preview {
     NavigationStack {
         CamerasView()
+            .routerNavigationDestinations()
     }
     .modelContainer(DataContainer().getContainer())
 }
