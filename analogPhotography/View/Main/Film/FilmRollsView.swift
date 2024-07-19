@@ -35,7 +35,7 @@ struct FilmRollsView: View {
 }
 
 #Preview {
-    NavigationStack {
+    NavigationStackPreview {
         FilmRollsView()
             .modelContainer(DataContainer().getContainer())
     }

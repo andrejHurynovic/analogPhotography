@@ -71,7 +71,7 @@ struct MapPickerPreview: View {
                                                                   location: .init(latitude: 53.916195, longitude: 27.636173))]
     
     var body: some View {
-        NavigationStack {
+        NavigationStackPreview {
             List {
                 MapPicker(viewModel: MapPickerViewModel(selectedLocation: $selectedLocation),
                           otherItems: otherItems,

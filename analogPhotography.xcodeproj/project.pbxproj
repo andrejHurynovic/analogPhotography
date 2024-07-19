@@ -29,6 +29,7 @@
 		F660FCBE2C4A807F0022D597 /* CreateableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCBD2C4A807F0022D597 /* CreateableModel.swift */; };
 		F660FCC02C4A81D30022D597 /* Camera+CreateableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCBF2C4A81D30022D597 /* Camera+CreateableModel.swift */; };
 		F660FCC22C4A88A70022D597 /* ModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCC12C4A88A60022D597 /* ModelsView.swift */; };
+		F660FCCD2C4A92650022D597 /* NavigationStackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCCC2C4A92650022D597 /* NavigationStackPreview.swift */; };
 		F6635A7D2C3FFF8800813E00 /* CamerasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6635A7C2C3FFF8800813E00 /* CamerasView.swift */; };
 		F6635A7F2C4067AA00813E00 /* FilmRollsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6635A7E2C4067A900813E00 /* FilmRollsView.swift */; };
 		F671790D2C346F860062D350 /* MapPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671790C2C346F860062D350 /* MapPickerViewModel.swift */; };
@@ -91,6 +92,7 @@
 		F660FCBD2C4A807F0022D597 /* CreateableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateableModel.swift; sourceTree = "<group>"; };
 		F660FCBF2C4A81D30022D597 /* Camera+CreateableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Camera+CreateableModel.swift"; sourceTree = "<group>"; };
 		F660FCC12C4A88A60022D597 /* ModelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsView.swift; sourceTree = "<group>"; };
+		F660FCCC2C4A92650022D597 /* NavigationStackPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackPreview.swift; sourceTree = "<group>"; };
 		F6635A7C2C3FFF8800813E00 /* CamerasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasView.swift; sourceTree = "<group>"; };
 		F6635A7E2C4067A900813E00 /* FilmRollsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollsView.swift; sourceTree = "<group>"; };
 		F671790C2C346F860062D350 /* MapPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerViewModel.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			children = (
 				F660FCC12C4A88A60022D597 /* ModelsView.swift */,
 				F63084A22C3857E7008ABF71 /* ModelPreview.swift */,
+				F660FCCC2C4A92650022D597 /* NavigationStackPreview.swift */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D.swift in Sources */,
 				F6FE29BE2C0F804200E9C678 /* Photo.swift in Sources */,
 				F671790D2C346F860062D350 /* MapPickerViewModel.swift in Sources */,
+				F660FCCD2C4A92650022D597 /* NavigationStackPreview.swift in Sources */,
 				F6E481992C1B0AD4006EE963 /* ViewStateToolbar.swift in Sources */,
 				F6FE29AF2C0F4CDE00E9C678 /* Film.swift in Sources */,
 				F6FE29B92C0F784500E9C678 /* FilmProcess.swift in Sources */,

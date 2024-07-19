@@ -21,7 +21,7 @@ struct CamerasView: View {
 }
 
 #Preview {
-    NavigationStack {
+    NavigationStackPreview {
         CamerasView()
             .routerNavigationDestinations()
     }
