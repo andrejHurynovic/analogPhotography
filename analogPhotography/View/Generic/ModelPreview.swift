@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct ModelPreview<Model: PersistentModel, Content: View>: View {
-    @StateObject private var router = AppRouter()
     var content: (Model) -> Content
     
     init(@ViewBuilder content: @escaping (Model) -> Content) {
@@ -17,12 +16,11 @@ struct ModelPreview<Model: PersistentModel, Content: View>: View {
     }
     
     var body: some View {
-        NavigationStack(path: $router.path) {
+        NavigationStackPreview {
             PreviewContentView(content: content)
                 .modelContainer(DataContainer().getContainer())
                 .routerNavigationDestinations()
         }
-        .environmentObject(router)
     }
     
     

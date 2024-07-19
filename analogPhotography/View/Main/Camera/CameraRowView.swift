@@ -60,7 +60,7 @@ struct CameraRowView: View {
 
 #Preview {
     ModelPreview { camera in
-        List {
+        Form {
             CameraRowView(camera: camera)
         }
     }

@@ -13,34 +13,26 @@ struct CameraDetailedView: View {
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject private var router: AppRouter
     
-    init(camera: Camera?) {
-        self._viewModel = StateObject(wrappedValue: CameraDetailedViewModel(camera: camera))
+    init(camera: Camera) {
+        self._viewModel = StateObject(wrappedValue: CameraDetailedViewModel(model: camera))
     }
     
     var body: some View {
         List {
-            Button("Nigga") {
-                router.navigate(to: .camera(viewModel.camera))
-            }
-            Button("Nigga II") {
-                print(router.path)
-            }
             Section("Info") {
-                TextFieldForm(title: "Name", text: $viewModel.camera.name, viewState: $viewModel.viewState, focusOnEdit: true)
+                TextFieldForm(title: "Name", text: $viewModel.model.name, viewState: $viewModel.viewState, focusOnEdit: true)
             }
             
-            Section("Films") {
+            Section("Film rolls") {
                 Button("Add", systemImage: "plus.circle.fill", action: {
-                    if viewModel.camera.filmRolls.isEmpty == false {
-//                        FilmRollsView(rolls: filmRolls)
-                    }
+                    
                 })
             }
             
-            NoteView(note: $viewModel.camera.note)
+            NoteView(note: $viewModel.model.note)
         }
         .navigationBarBackButtonHidden(viewModel.viewState == .creating)
-        .navigationTitle(viewModel.camera.name)
+        .navigationTitle(viewModel.model.name)
         .navigationBarTitleDisplayMode(.large)
         .toolbar { toolbarContent }
         
