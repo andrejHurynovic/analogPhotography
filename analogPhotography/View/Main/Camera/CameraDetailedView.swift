@@ -7,43 +7,23 @@
 
 import SwiftUI
 
-
 struct CameraDetailedView: View {
-    @StateObject private var viewModel: CameraDetailedViewModel
-    @Environment(\.modelContext) private var modelContext
-    @EnvironmentObject private var router: AppRouter
-    
-    init(camera: Camera) {
-        self._viewModel = StateObject(wrappedValue: CameraDetailedViewModel(model: camera))
-    }
+    @Bindable var camera: Camera
     
     var body: some View {
-        List {
-            Section("Info") {
-                TextFieldForm(title: "Name", text: $viewModel.model.name, viewState: $viewModel.viewState, focusOnEdit: true)
+        DetailedView(model: camera, viewModelType: CameraDetailedViewModel.self) { viewModel, viewModelBinding  in
+            List {
+                Section("Info") {
+                    TextFieldForm(title: "Name", text: viewModelBinding.model.name, viewState: viewModelBinding.viewState, focusOnEdit: true)
+                }
+                Section("Film rolls") {
+                    Button("Add", systemImage: "plus.circle.fill", action: { })
+                }
+                
+                NoteView(note: viewModelBinding.model.note)
             }
-            
-            Section("Film rolls") {
-                Button("Add", systemImage: "plus.circle.fill", action: {
-                    
-                })
-            }
-            
-            NoteView(note: $viewModel.model.note)
         }
-        .navigationBarBackButtonHidden(viewModel.viewState == .creating)
-        .navigationTitle(viewModel.model.name)
-        .navigationBarTitleDisplayMode(.large)
-        .toolbar { toolbarContent }
-        
     }
-    
-    private var toolbarContent: some ToolbarContent {
-        ViewStateToolbar(viewState: $viewModel.viewState) { EmptyView() }
-    createAction: { viewModel.insert(in: modelContext) }
-    deleteAction: { viewModel.delete(in: modelContext) }
-    }
-    
 }
 
 #Preview {

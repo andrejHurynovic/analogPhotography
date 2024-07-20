@@ -6,17 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
-struct ViewStateToolbar<Content: View>: ToolbarContent {
-    @Binding var viewState: ViewState
+struct ViewStateToolbar<Content: View, Model: PersistentModel>: ToolbarContent {
+    @ObservedObject var viewModel: ModelViewModel<Model>
+    
+    @Environment(\.modelContext) private var modelContext
     @EnvironmentObject var router: AppRouter
     
     var menuContent: () -> Content
-    var createAction: (() -> ())?
-    var deleteAction: (() -> ())?
     
     var body: some ToolbarContent {
-        switch viewState {
+        switch viewModel.viewState {
             case .showing: showing
             case .editing: editing
             case .creating: creating
@@ -27,31 +28,10 @@ struct ViewStateToolbar<Content: View>: ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
             Menu("", systemImage: "ellipsis.circle") {
                 Button("Edit", systemImage: "pencil") {
-                    viewState = .editing
+                    viewModel.viewState = .editing
                 }
                 menuContent()
-                if let deleteAction = deleteAction {
-                    DeleteButton {
-                        deleteAction()
-                        router.removeAllWithCurrentModel()
-                    }
-                }
-            }
-        }
-    }
-    
-    @ToolbarContentBuilder var creating: some ToolbarContent {
-        ToolbarItem(placement: .topBarLeading) {
-            Button("Cancel") {
-                router.navigateBack()
-            }
-        }
-        if let saveAction = createAction {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button("Save") {
-                    saveAction()
-                    viewState = .showing
-                }
+                deleteButton
             }
         }
     }
@@ -59,24 +39,27 @@ struct ViewStateToolbar<Content: View>: ToolbarContent {
     var editing: some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
             Button("Done") {
-                viewState = .showing
+                viewModel.viewState = .showing
             }
         }
     }
-}
-
-fileprivate struct ViewStateToolbarPreview: View {
-    @State var viewState: ViewState
-    
-    var body: some View {
-        return NavigationStack {
-                EmptyView()
-            .toolbar {
-                ViewStateToolbar(viewState: $viewState) { EmptyView() } }
+    @ToolbarContentBuilder var creating: some ToolbarContent {
+        ToolbarItem(placement: .topBarLeading) {
+            Button("Cancel") {
+                router.removeAllWithCurrentModel()
+            }
+        }
+        ToolbarItem(placement: .topBarTrailing) {
+            Button("Save") {
+                viewModel.insert(in: modelContext)
+                viewModel.viewState = .showing
+            }
         }
     }
-    
+    var deleteButton: some View {
+        DeleteButton {
+            viewModel.delete(in: modelContext)
+            router.removeAllWithCurrentModel()
+        }
+    }
 }
-
-#Preview { return ViewStateToolbarPreview(viewState: .showing) }
-#Preview { return ViewStateToolbarPreview(viewState: .creating) }

@@ -12,9 +12,10 @@ class ModelViewModel<Model: PersistentModel>: ObservableObject {
     @Published var model: Model
     @Published var viewState: ViewState
     
-    init(model: Model, viewState: ViewState = .showing) {
+    required init(model: Model) {
+        print("init ModelViewModel")
         self.model = model
-        self.viewState = viewState
+        self.viewState = model.modelContext != nil ? .showing : .creating
     }
     
     func delete(in modelContext: ModelContext) {
@@ -22,5 +23,6 @@ class ModelViewModel<Model: PersistentModel>: ObservableObject {
     }
     func insert(in modelContext: ModelContext) {
         modelContext.insert(model)
+        viewState = .showing
     }
 }

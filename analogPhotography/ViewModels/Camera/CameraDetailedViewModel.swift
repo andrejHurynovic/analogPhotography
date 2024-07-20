@@ -8,6 +8,6 @@
 import SwiftUI
 import SwiftData
 
-final class CameraDetailedViewModel: ModelViewModel<Camera> {
-    
+final class CameraDetailedViewModel: ModelViewModel<Camera>, ModelViewModelProtocol {
+    var name: String { model.name }
 }

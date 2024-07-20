@@ -60,12 +60,13 @@ struct TextFieldForm: View {
     struct TextFieldFormViewPreview: View {
         @State var textA: String = ""
         @State var textB: String = ""
-        @State var viewState: ViewState = .editing
+        @State var viewState: ViewState = .showing
         
         var body: some View {
             NavigationStack {
                 Form {
                     Section("With ViewState") {
+                        TextForm("State", "\(viewState)")
                         TextFieldForm(title: "Name",
                                       text: $textA,
                                       viewState: $viewState)
@@ -73,11 +74,6 @@ struct TextFieldForm: View {
                     Section("Without ViewState") {
                         TextFieldForm(title: "Name",
                                       text: $textB)
-                    }
-                }
-                .toolbar {
-                    ViewStateToolbar(viewState: $viewState) {
-                        EmptyView()
                     }
                 }
             }
