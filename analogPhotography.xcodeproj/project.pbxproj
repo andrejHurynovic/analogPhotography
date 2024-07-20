@@ -33,6 +33,8 @@
 		F660FCD02C4A99990022D597 /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCCF2C4A99990022D597 /* ModelViewModel.swift */; };
 		F660FCD32C4C095A0022D597 /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCD22C4C095A0022D597 /* DetailedView.swift */; };
 		F660FCD62C4C0E920022D597 /* ModelViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCD52C4C0E920022D597 /* ModelViewModelProtocol.swift */; };
+		F660FCD92C4C26EC0022D597 /* FilmDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCD82C4C26EC0022D597 /* FilmDetailedView.swift */; };
+		F660FCDC2C4C27120022D597 /* FilmDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCDB2C4C27120022D597 /* FilmDetailedViewModel.swift */; };
 		F6635A7D2C3FFF8800813E00 /* CamerasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6635A7C2C3FFF8800813E00 /* CamerasView.swift */; };
 		F6635A7F2C4067AA00813E00 /* FilmRollsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6635A7E2C4067A900813E00 /* FilmRollsView.swift */; };
 		F671790D2C346F860062D350 /* MapPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671790C2C346F860062D350 /* MapPickerViewModel.swift */; };
@@ -51,7 +53,6 @@
 		F6CDAB8A2C3D9C53000CC580 /* TextFieldFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CDAB892C3D9C53000CC580 /* TextFieldFormViewModel.swift */; };
 		F6D3A3462C0FB2AB00D56B8D /* CameraDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */; };
 		F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */; };
-		F6D3A34B2C0FBD4000D56B8D /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34A2C0FBD4000D56B8D /* FormView.swift */; };
 		F6D3A34D2C0FBF4900D56B8D /* TextForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34C2C0FBF4900D56B8D /* TextForm.swift */; };
 		F6D3A34F2C0FC1FC00D56B8D /* TextFieldForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34E2C0FC1FC00D56B8D /* TextFieldForm.swift */; };
 		F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3502C0FC9A600D56B8D /* PhotoDetailedView.swift */; };
@@ -99,6 +100,8 @@
 		F660FCCF2C4A99990022D597 /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
 		F660FCD22C4C095A0022D597 /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
 		F660FCD52C4C0E920022D597 /* ModelViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModelProtocol.swift; sourceTree = "<group>"; };
+		F660FCD82C4C26EC0022D597 /* FilmDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailedView.swift; sourceTree = "<group>"; };
+		F660FCDB2C4C27120022D597 /* FilmDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailedViewModel.swift; sourceTree = "<group>"; };
 		F6635A7C2C3FFF8800813E00 /* CamerasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasView.swift; sourceTree = "<group>"; };
 		F6635A7E2C4067A900813E00 /* FilmRollsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollsView.swift; sourceTree = "<group>"; };
 		F671790C2C346F860062D350 /* MapPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerViewModel.swift; sourceTree = "<group>"; };
@@ -116,7 +119,6 @@
 		F6CDAB892C3D9C53000CC580 /* TextFieldFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFormViewModel.swift; sourceTree = "<group>"; };
 		F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailedView.swift; sourceTree = "<group>"; };
 		F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
-		F6D3A34A2C0FBD4000D56B8D /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		F6D3A34C2C0FBF4900D56B8D /* TextForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextForm.swift; sourceTree = "<group>"; };
 		F6D3A34E2C0FC1FC00D56B8D /* TextFieldForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldForm.swift; sourceTree = "<group>"; };
 		F6D3A3502C0FC9A600D56B8D /* PhotoDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailedView.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				F6FE29A02C0F492B00E9C678 /* ContentView.swift */,
 				F6FE29BF2C0FAA1700E9C678 /* Camera */,
+				F660FCD72C4C25660022D597 /* FIlm */,
 				F6FE29B02C0F644400E9C678 /* FilmRoll */,
 				F6FE29BC2C0F803000E9C678 /* Photo */,
 				F65517B02C1F92D1000133FA /* Map */,
@@ -300,6 +303,7 @@
 				F660FCCF2C4A99990022D597 /* ModelViewModel.swift */,
 				F660FCD52C4C0E920022D597 /* ModelViewModelProtocol.swift */,
 				F660FCD12C4A99FA0022D597 /* Camera */,
+				F660FCDA2C4C26F80022D597 /* Film */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -320,6 +324,22 @@
 				F660FCCC2C4A92650022D597 /* NavigationStackPreview.swift */,
 			);
 			path = Preview;
+			sourceTree = "<group>";
+		};
+		F660FCD72C4C25660022D597 /* FIlm */ = {
+			isa = PBXGroup;
+			children = (
+				F660FCD82C4C26EC0022D597 /* FilmDetailedView.swift */,
+			);
+			path = FIlm;
+			sourceTree = "<group>";
+		};
+		F660FCDA2C4C26F80022D597 /* Film */ = {
+			isa = PBXGroup;
+			children = (
+				F660FCDB2C4C27120022D597 /* FilmDetailedViewModel.swift */,
+			);
+			path = Film;
 			sourceTree = "<group>";
 		};
 		F67179122C34AAC50062D350 /* Location */ = {
@@ -346,7 +366,6 @@
 		F6BC7BE12C3C1CC600160C3E /* Forms */ = {
 			isa = PBXGroup;
 			children = (
-				F6D3A34A2C0FBD4000D56B8D /* FormView.swift */,
 				F6D3A34C2C0FBF4900D56B8D /* TextForm.swift */,
 				F6CDAB8B2C3D9C62000CC580 /* TextFieldForm */,
 			);
@@ -570,6 +589,7 @@
 				F660FCB32C4817C10022D597 /* Route.swift in Sources */,
 				F6635A7D2C3FFF8800813E00 /* CamerasView.swift in Sources */,
 				F660FCC22C4A88A70022D597 /* ModelsView.swift in Sources */,
+				F660FCDC2C4C27120022D597 /* FilmDetailedViewModel.swift in Sources */,
 				F6635A7F2C4067AA00813E00 /* FilmRollsView.swift in Sources */,
 				F6FE29B22C0F645200E9C678 /* FilmFormat.swift in Sources */,
 				F65517A32C1F3668000133FA /* DiscreteSlider.swift in Sources */,
@@ -603,11 +623,11 @@
 				F6FE29C12C0FAA2400E9C678 /* Camera.swift in Sources */,
 				F660FCB52C4843C70022D597 /* FilmRollRowView.swift in Sources */,
 				F6FE29BB2C0F7CBB00E9C678 /* FilmRoll.swift in Sources */,
-				F6D3A34B2C0FBD4000D56B8D /* FormView.swift in Sources */,
 				F63084A32C3857E7008ABF71 /* ModelPreview.swift in Sources */,
 				F660FCAE2C480A850022D597 /* AppRouter.swift in Sources */,
 				F68C5A6B2C4504A700825199 /* ViewState.swift in Sources */,
 				F6D3A34F2C0FC1FC00D56B8D /* TextFieldForm.swift in Sources */,
+				F660FCD92C4C26EC0022D597 /* FilmDetailedView.swift in Sources */,
 				F645616C2C110CC20007940D /* NoteView.swift in Sources */,
 				F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */,
 				F6FE299F2C0F492B00E9C678 /* analogPhotographyApp.swift in Sources */,

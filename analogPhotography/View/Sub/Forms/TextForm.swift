@@ -18,7 +18,7 @@ struct TextForm: View  {
     
     var body: some View {
         if let text = text {
-            FormView(title: title) {
+            LabeledContent(title) {
                 Text(text)
                     .foregroundColor(.secondary)
             }

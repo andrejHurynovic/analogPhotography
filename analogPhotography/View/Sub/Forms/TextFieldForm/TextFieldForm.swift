@@ -31,7 +31,7 @@ struct TextFieldForm: View {
     }
     
     var body: some View {
-        FormView(title: title) {
+        LabeledContent(title) {
             textField
             clearFormButton
         }
