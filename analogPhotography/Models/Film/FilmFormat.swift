@@ -31,9 +31,15 @@ final class FilmFormat {
             FilmFormat(name: "116", length: 70, outdated: true),
             FilmFormat(name: "220", length: 60, outdated: true),
             FilmFormat(name: "620", length: 60, outdated: true),
-            FilmFormat(name: "127", length: 40, outdated: true),
             FilmFormat(name: "828", length: 35, outdated: true),
             FilmFormat(name: "APS", length: 24, outdated: true)]
     }
     
+}
+
+extension FilmFormat {
+    var description: String {
+        guard let length = length else { return name }
+        return name + " (\(length) mm)"
+    }
 }
