@@ -13,7 +13,6 @@ class ModelViewModel<Model: PersistentModel>: ObservableObject {
     @Published var viewState: ViewState
     
     required init(model: Model) {
-        print("init ModelViewModel")
         self.model = model
         self.viewState = model.modelContext != nil ? .showing : .creating
     }

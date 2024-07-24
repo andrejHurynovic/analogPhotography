@@ -10,6 +10,7 @@
 		F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60DC19D2C248FB50092E952 /* LocationItem.swift */; };
 		F62387622C5020CC00A4587F /* FilmProcessPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62387612C5020CC00A4587F /* FilmProcessPicker.swift */; };
 		F62387662C51441300A4587F /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62387652C51441300A4587F /* Binding.swift */; };
+		F62387682C51A62400A4587F /* AddModelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62387672C51A62400A4587F /* AddModelButton.swift */; };
 		F62D38BC2C44731A00E745A6 /* CameraRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62D38BB2C44731A00E745A6 /* CameraRowViewModel.swift */; };
 		F63084922C381D18008ABF71 /* MKMapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63084912C381D18008ABF71 /* MKMapItem.swift */; };
 		F63084942C38294A008ABF71 /* CameraRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63084932C38294A008ABF71 /* CameraRowView.swift */; };
@@ -81,6 +82,7 @@
 		F60DC19D2C248FB50092E952 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		F62387612C5020CC00A4587F /* FilmProcessPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmProcessPicker.swift; sourceTree = "<group>"; };
 		F62387652C51441300A4587F /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		F62387672C51A62400A4587F /* AddModelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModelButton.swift; sourceTree = "<group>"; };
 		F62D38BB2C44731A00E745A6 /* CameraRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRowViewModel.swift; sourceTree = "<group>"; };
 		F63084912C381D18008ABF71 /* MKMapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapItem.swift; sourceTree = "<group>"; };
 		F63084932C38294A008ABF71 /* CameraRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRowView.swift; sourceTree = "<group>"; };
@@ -394,9 +396,10 @@
 		F6BC7BE32C3C1CD500160C3E /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */,
+				F62387672C51A62400A4587F /* AddModelButton.swift */,
 				F6BC7BE72C3C3CBD00160C3E /* ClearFormButton.swift */,
 				F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */,
-				F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				F65517A32C1F3668000133FA /* DiscreteSlider.swift in Sources */,
 				F6BC7BE62C3C1E2300160C3E /* OptionalDatePicker.swift in Sources */,
 				F6EEF2762C3AC98D00FEBCE4 /* PreviewDataProvider.swift in Sources */,
+				F62387682C51A62400A4587F /* AddModelButton.swift in Sources */,
 				F6BC7BEC2C3CA5F800160C3E /* TapToAddButton.swift in Sources */,
 				F671790F2C34A9B30062D350 /* MapMarker.swift in Sources */,
 				F6BD32AA2C3F2243008521FB /* ShutterSpeedPicker.swift in Sources */,

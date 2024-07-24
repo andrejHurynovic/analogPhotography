@@ -26,9 +26,7 @@ struct FilmRollsView: View {
             }, description: {
                 Text("You're films will appear here.")
             }, actions: {
-                Button("Add film") {
-                    
-                }
+                AddModelButton {  }
             })
         }
     }

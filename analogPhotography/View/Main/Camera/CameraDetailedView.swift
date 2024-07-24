@@ -17,7 +17,7 @@ struct CameraDetailedView: View {
                     TextFieldForm(title: "Name", text: viewModelBinding.model.name, viewState: viewModelBinding.viewState, focusOnEdit: true)
                 }
                 Section("Film rolls") {
-                    Button("Add", systemImage: "plus.circle.fill", action: { })
+                    AddModelButton {  }
                 }
                 
                 NoteView(note: viewModelBinding.model.note)

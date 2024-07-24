@@ -11,9 +11,7 @@ struct TapToAddButton: View {
     var action: () -> ()
     
     var body: some View {
-        Button("Tap to add") {
-            action()
-        }
+        Button("Tap to add") { action() }
         .foregroundStyle(Color(uiColor: .systemGray5))
     }
 }
