@@ -13,6 +13,7 @@ final class FilmRoll {
     var name: String?
     var note: String = ""
     
+    var expired: Bool
     var creationDate: Date
     var finished: Bool = false
     
@@ -21,9 +22,10 @@ final class FilmRoll {
     
     @Relationship(inverse: \Camera.filmRolls) var camera: Camera?
     
-    init(name: String? = nil , note: String = "", creationDate: Date = .now, finished: Bool = false, film: Film? = nil, photos: [Photo] = [], camera: Camera? = nil) {
+    init(name: String? = nil , note: String = "", expired: Bool = false, creationDate: Date = .now, finished: Bool = false, film: Film? = nil, photos: [Photo] = [], camera: Camera? = nil) {
         self.name = name
         self.note = note
+        self.expired = expired
         self.creationDate = creationDate
         self.finished = finished
         self.film = film

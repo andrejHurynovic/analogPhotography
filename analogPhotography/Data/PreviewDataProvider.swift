@@ -17,10 +17,13 @@ final class PreviewDataProvider {
         let fed3 = Camera(name: "Fed 3", note: "Grandpa's camera")
         tempContext.insert([pentaxSFX, zenitE, fed3])
         
-        let filmProcess = FilmProcess(name: "C-41")
-        let filmFormat = FilmFormat(name: "135", length: 35, outdated: false)
-        let film = Film(name: "Kodak Gold 200", capacity: 36, iso: 200, expired: false, format: filmFormat, process: filmProcess)
-        tempContext.insert([filmProcess, filmFormat, film])
+        
+        let filmProcesses = FilmProcess.defaults()
+        let filmFormats = FilmFormat.defaults()
+        let film = Film(name: "Kodak Gold 200", capacity: 36, iso: 200, format: filmFormats.randomElement()!, process: filmProcesses.randomElement()!)
+        tempContext.insert(filmProcesses)
+        tempContext.insert(filmFormats)
+        tempContext.insert(film)
         
         createFilmRollWithPhotos(with: film, for: pentaxSFX, in: tempContext)
         createFilmRollWithPhotos(with: film, for: zenitE, in: tempContext)
@@ -34,7 +37,7 @@ final class PreviewDataProvider {
     }
     
     static private func createFilmRollWithPhotos(with film: Film, for camera: Camera, in context: ModelContext) {
-        let filmRoll = FilmRoll(film: film, camera: camera)
+        let filmRoll = FilmRoll(expired: Bool.random(), film: film, camera: camera)
         context.insert(filmRoll)
         
         let photos = (1...Int.random(in: 1...36)).map { order in
