@@ -25,16 +25,30 @@ extension TextFieldForm {
             self.viewState = viewState
         }
         
+        func handleSubmit() {
+            guard let viewState = self.viewState,
+                  viewState.wrappedValue == .editing else { return }
+            viewState.wrappedValue = .showing
+        }
+        
         func handleFocusChange(_ isFocused: Bool) {
             self.isFocused = isFocused
             
             guard let viewState = self.viewState,
-                  viewState.wrappedValue != .creating else { return }
-            viewState.wrappedValue = isFocused ? .editing : .showing
+                  viewState.wrappedValue == .showing,
+                  isFocused == true else { return }
+            viewState.wrappedValue = .editing
         }
-        func handleIsEditingChange() {
+        func handleViewStateChange() {
             guard let viewState = self.viewState?.wrappedValue else { return }
-            isFocused = viewState.editingAvailable && focusOnEdit
+            if focusOnEdit && isFocused == false {
+                isFocused = true
+                return
+            }
+            if viewState == .showing {
+                isFocused = false
+                return 
+            }
         }
         
         func handleClear() {

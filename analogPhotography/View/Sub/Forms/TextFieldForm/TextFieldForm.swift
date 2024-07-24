@@ -10,6 +10,7 @@ import SwiftUI
 struct TextFieldForm: View {
     private var title: String
     private var placeholder: String
+    private var text: Binding<String>
     private var foregroundColor: Color { return isFocused || viewState?.wrappedValue.editingAvailable ?? false ? .primary : .gray }
     
     private var viewState: Binding<ViewState>?
@@ -22,12 +23,13 @@ struct TextFieldForm: View {
          text: Binding<String>,
          viewState: Binding<ViewState>? = nil,
          resetEditOnSubmit: Bool = true,
-         focusOnEdit: Bool = true) {
+         focusOnEdit: Bool = false) {
         self._viewModel = StateObject(wrappedValue:
             TextFieldFormViewModel(text: text, viewState: viewState, resetEditOnSubmit: resetEditOnSubmit, focusOnEdit: focusOnEdit))
         self.viewState = viewState
         self.title = title
         self.placeholder = placeholder
+        self.text = text
     }
     
     var body: some View {
@@ -38,15 +40,16 @@ struct TextFieldForm: View {
     }
     
     @ViewBuilder private var textField: some View {
-        TextField(placeholder, text: viewModel.text, axis: .horizontal)
+        TextField(placeholder, text: text, axis: .horizontal)
             .multilineTextAlignment(.trailing)
             .foregroundStyle(foregroundColor)
             
             .focused($isFocused)
         
+            .onSubmit { viewModel.handleSubmit() }
             .onChange(of: viewModel.isFocused) { self.isFocused = $1 }
             .onChange(of: self.isFocused) { viewModel.handleFocusChange($1) }
-            .onChange(of: viewState?.wrappedValue) { viewModel.handleIsEditingChange() }
+            .onChange(of: viewState?.wrappedValue) { viewModel.handleViewStateChange() }
     }
     @ViewBuilder private var clearFormButton: some View {
         if isFocused {
@@ -60,6 +63,7 @@ struct TextFieldForm: View {
     struct TextFieldFormViewPreview: View {
         @State var textA: String = ""
         @State var textB: String = ""
+        @State var textC: String? = nil
         @State var viewState: ViewState = .showing
         
         var body: some View {
@@ -74,6 +78,11 @@ struct TextFieldForm: View {
                     Section("Without ViewState") {
                         TextFieldForm(title: "Name",
                                       text: $textB)
+                    }
+                    Section("Optional") {
+                        LabeledContent("Text", value: (String(describing: textC)))
+                        TextFieldForm(title: "Name",
+                                      text: $textC.unwrappedOptional())
                     }
                 }
             }
