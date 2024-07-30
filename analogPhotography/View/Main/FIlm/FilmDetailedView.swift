@@ -9,7 +9,6 @@ import SwiftUI
 
 struct FilmDetailedView: View {
     @Bindable var film: Film
-    @State var fuck: String?
     
     var body: some View {
         DetailedView(model: film, viewModelType: FilmDetailedViewModel.self) { viewModel, viewModelBinding in
