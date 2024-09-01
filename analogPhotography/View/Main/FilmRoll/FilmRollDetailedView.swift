@@ -21,33 +21,20 @@ struct FilmRollDetailedView: View {
                 }
                 Section("Realtions") {
                     LabeledContent("Camera") {
-                        <#code#>
+                        SelectButton(systemImage: "camera.circle") { }
                     }
-                    LabeledContent("Roll") {
-                        <#code#>
+                    LabeledContent("Film") {
+                        SelectButton(systemImage: "film.circle") { }
                     }
                 }
                 Section("Photos") {
-                    
+                    AddModelButton {  }
                 }
             }
         }
     }
 }
 
-/*
- var name: String?
-     var note: String = ""
-     
-     var expired: Bool
-     var creationDate: Date
-     var finished: Bool = false
-     
-     @Relationship(inverse: \Film.rolls) var film: Film?
-     @Relationship(deleteRule: .cascade, inverse: \Photo.filmRoll) var photos: [Photo]
-     
-     @Relationship(inverse: \Camera.filmRolls) var camera: Camera?
- */
 #Preview {
     ModelPreview { filmRoll in
         FilmRollDetailedView(filmRoll: filmRoll)
