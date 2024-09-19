@@ -13,6 +13,9 @@ final class Film {
     
     var capacity: Int?
     var iso: Int?
+    var exposureTolerance: FilmExposureTolerance?
+    
+    var dxCode: DXCode { DXCode(from: self) }
     
     @Relationship var format: FilmFormat?
     @Relationship var process: FilmProcess?
