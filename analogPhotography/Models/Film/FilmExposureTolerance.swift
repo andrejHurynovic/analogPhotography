@@ -7,4 +7,12 @@
 
 import Foundation
 
-typealias FilmExposureTolerance = ClosedRange<Decimal>
+struct FilmExposureTolerance: Equatable, Codable {
+    var upperBound: Decimal
+    var lowerBound: Decimal
+    
+    init(_ lowerBound: Decimal, _ upperBound: Decimal) {
+        self.lowerBound = lowerBound
+        self.upperBound = upperBound
+    }
+}

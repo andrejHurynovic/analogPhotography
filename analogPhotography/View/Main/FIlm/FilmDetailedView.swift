@@ -27,6 +27,9 @@ struct FilmDetailedView: View {
                 Section("Rolls") {
                     AddModelButton {  }
                 }
+                Section("DX-Code") {
+                    DXCodeView(film: film)
+                }
             }
         }
     }

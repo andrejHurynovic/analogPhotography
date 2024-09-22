@@ -8,12 +8,12 @@
 import SwiftData
 
 @Model
-final class Film {
+final class Film: FilmProtocol {
     var name: String?
     
     var capacity: Int?
     var iso: Int?
-    var exposureTolerance: FilmExposureTolerance?
+    var exposureTolerance: FilmExposureTolerance? 
     
     var dxCode: DXCode { DXCode(from: self) }
     
@@ -21,9 +21,10 @@ final class Film {
     @Relationship var process: FilmProcess?
     @Relationship var rolls: [FilmRoll]
     
-    init(name: String = "", capacity: Int? = nil, iso: Int? = nil, format: FilmFormat? = nil, process: FilmProcess? = nil, rolls: [FilmRoll] = []) {
+    init(name: String = "", capacity: Int? = nil, iso: Int? = nil, exposureTolerance: FilmExposureTolerance? = nil, format: FilmFormat? = nil, process: FilmProcess? = nil, rolls: [FilmRoll] = []) {
         self.name = name
         self.capacity = capacity
+        self.exposureTolerance = exposureTolerance
         self.iso = iso
         self.format = format
         self.process = process

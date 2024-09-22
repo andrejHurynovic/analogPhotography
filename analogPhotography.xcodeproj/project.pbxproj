@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE112A5E2C9F2933004FEA66 /* DXCoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A5D2C9F2933004FEA66 /* DXCoded.swift */; };
+		CE112A602C9F2957004FEA66 /* Film+DXCoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A5F2C9F2957004FEA66 /* Film+DXCoded.swift */; };
+		CE112A622C9F3061004FEA66 /* FilmProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A612C9F3061004FEA66 /* FilmProtocol.swift */; };
 		CE11A1502C84AC0600675ACE /* ChooseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11A14F2C84AC0600675ACE /* ChooseButton.swift */; };
+		CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */; };
+		CE35C77B2C9DAB1D001E4E55 /* DXCodeBit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */; };
 		CE99583B2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99583A2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift */; };
+		CEABA4682CA0514F00FBC913 /* DXCodeBitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA4672CA0514F00FBC913 /* DXCodeBitView.swift */; };
+		CEABA46A2CA0516E00FBC913 /* DXCodeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA4692CA0516E00FBC913 /* DXCodeRowView.swift */; };
 		CEF634B22C9B5AD200F01C06 /* DXCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF634B12C9B5AD200F01C06 /* DXCode.swift */; };
 		F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60DC19D2C248FB50092E952 /* LocationItem.swift */; };
 		F62387622C5020CC00A4587F /* FilmProcessPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62387612C5020CC00A4587F /* FilmProcessPicker.swift */; };
@@ -84,8 +91,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE112A5D2C9F2933004FEA66 /* DXCoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCoded.swift; sourceTree = "<group>"; };
+		CE112A5F2C9F2957004FEA66 /* Film+DXCoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Film+DXCoded.swift"; sourceTree = "<group>"; };
+		CE112A612C9F3061004FEA66 /* FilmProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmProtocol.swift; sourceTree = "<group>"; };
 		CE11A14F2C84AC0600675ACE /* ChooseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseButton.swift; sourceTree = "<group>"; };
+		CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeView.swift; sourceTree = "<group>"; };
+		CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeBit.swift; sourceTree = "<group>"; };
 		CE99583A2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmExposureTolerance.swift; sourceTree = "<group>"; };
+		CEABA4672CA0514F00FBC913 /* DXCodeBitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeBitView.swift; sourceTree = "<group>"; };
+		CEABA4692CA0516E00FBC913 /* DXCodeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeRowView.swift; sourceTree = "<group>"; };
 		CEF634B12C9B5AD200F01C06 /* DXCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCode.swift; sourceTree = "<group>"; };
 		F60DC19D2C248FB50092E952 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		F62387612C5020CC00A4587F /* FilmProcessPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmProcessPicker.swift; sourceTree = "<group>"; };
@@ -172,10 +186,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE112A5C2C9F291C004FEA66 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CEABA4652CA0506600FBC913 /* Film */,
+				CEABA4662CA0506D00FBC913 /* DXCode */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CE35C7772C9CD7C8001E4E55 /* DXCode */ = {
+			isa = PBXGroup;
+			children = (
+				CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */,
+				CEABA4692CA0516E00FBC913 /* DXCodeRowView.swift */,
+				CEABA4672CA0514F00FBC913 /* DXCodeBitView.swift */,
+			);
+			path = DXCode;
+			sourceTree = "<group>";
+		};
+		CEABA4652CA0506600FBC913 /* Film */ = {
+			isa = PBXGroup;
+			children = (
+				CE112A612C9F3061004FEA66 /* FilmProtocol.swift */,
+			);
+			path = Film;
+			sourceTree = "<group>";
+		};
+		CEABA4662CA0506D00FBC913 /* DXCode */ = {
+			isa = PBXGroup;
+			children = (
+				CE112A5D2C9F2933004FEA66 /* DXCoded.swift */,
+			);
+			path = DXCode;
+			sourceTree = "<group>";
+		};
 		CEF634B02C9B5ABB00F01C06 /* DXCode */ = {
 			isa = PBXGroup;
 			children = (
 				CEF634B12C9B5AD200F01C06 /* DXCode.swift */,
+				CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */,
 			);
 			path = DXCode;
 			sourceTree = "<group>";
@@ -221,6 +271,7 @@
 				F660FCD72C4C25660022D597 /* FIlm */,
 				F6FE29B02C0F644400E9C678 /* FilmRoll */,
 				F6FE29BC2C0F803000E9C678 /* Photo */,
+				CE35C7772C9CD7C8001E4E55 /* DXCode */,
 				F65517B02C1F92D1000133FA /* Map */,
 			);
 			path = Main;
@@ -281,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FE29AE2C0F4CDE00E9C678 /* Film.swift */,
+				CE112A5F2C9F2957004FEA66 /* Film+DXCoded.swift */,
 				F6FE29B12C0F645200E9C678 /* FilmFormat.swift */,
 				F6FE29B82C0F784500E9C678 /* FilmProcess.swift */,
 				CE99583A2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift */,
@@ -493,6 +545,7 @@
 				F6FE299E2C0F492B00E9C678 /* analogPhotographyApp.swift */,
 				F65517A42C1F3C57000133FA /* Constants.swift */,
 				F65517A62C1F6F4B000133FA /* Log.swift */,
+				CE112A5C2C9F291C004FEA66 /* Protocols */,
 				F660FCC42C4A8EFE0022D597 /* Models */,
 				F660FCCA2C4A91A30022D597 /* View */,
 				F660FCCE2C4A997D0022D597 /* ViewModels */,
@@ -625,6 +678,7 @@
 			files = (
 				F660FCE02C4DAF190022D597 /* FilmFormatPicker.swift in Sources */,
 				F6CDAB8A2C3D9C53000CC580 /* TextFieldFormViewModel.swift in Sources */,
+				CE35C77B2C9DAB1D001E4E55 /* DXCodeBit.swift in Sources */,
 				F6E4819B2C1B15ED006EE963 /* String.swift in Sources */,
 				F660FCB02C4815C70022D597 /* Router.swift in Sources */,
 				F65517A72C1F6F4C000133FA /* Log.swift in Sources */,
@@ -651,11 +705,13 @@
 				F63084942C38294A008ABF71 /* CameraRowView.swift in Sources */,
 				F6D3A34D2C0FBF4900D56B8D /* TextForm.swift in Sources */,
 				F660FCC02C4A81D30022D597 /* Camera+CreateableModel.swift in Sources */,
+				CEABA4682CA0514F00FBC913 /* DXCodeBitView.swift in Sources */,
 				F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */,
 				F65517AC2C1F9145000133FA /* Haptic.swift in Sources */,
 				F65517AB2C1F9145000133FA /* HapticType.swift in Sources */,
 				F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */,
 				F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */,
+				CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */,
 				F623876D2C51B00D00A4587F /* FilmRollDetailedViewModel.swift in Sources */,
 				CEF634B22C9B5AD200F01C06 /* DXCode.swift in Sources */,
 				F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */,
@@ -664,8 +720,10 @@
 				CE99583B2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift in Sources */,
 				F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */,
 				F660FCBE2C4A807F0022D597 /* CreateableModel.swift in Sources */,
+				CE112A622C9F3061004FEA66 /* FilmProtocol.swift in Sources */,
 				F6FE29B52C0F704A00E9C678 /* ModelContextExtensions.swift in Sources */,
 				F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D.swift in Sources */,
+				CE112A5E2C9F2933004FEA66 /* DXCoded.swift in Sources */,
 				F6FE29BE2C0F804200E9C678 /* Photo.swift in Sources */,
 				F671790D2C346F860062D350 /* MapPickerViewModel.swift in Sources */,
 				F62387622C5020CC00A4587F /* FilmProcessPicker.swift in Sources */,
@@ -683,11 +741,13 @@
 				F68C5A6B2C4504A700825199 /* ViewState.swift in Sources */,
 				F6D3A34F2C0FC1FC00D56B8D /* TextFieldForm.swift in Sources */,
 				F660FCD92C4C26EC0022D597 /* FilmDetailedView.swift in Sources */,
+				CE112A602C9F2957004FEA66 /* Film+DXCoded.swift in Sources */,
 				F645616C2C110CC20007940D /* NoteView.swift in Sources */,
 				F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */,
 				F6FE299F2C0F492B00E9C678 /* analogPhotographyApp.swift in Sources */,
 				F660FCD32C4C095A0022D597 /* DetailedView.swift in Sources */,
 				F660FCD02C4A99990022D597 /* ModelViewModel.swift in Sources */,
+				CEABA46A2CA0516E00FBC913 /* DXCodeRowView.swift in Sources */,
 				F623876A2C51AF9400A4587F /* FilmRollDetailedView.swift in Sources */,
 				F6FE29B72C0F769A00E9C678 /* Bool.swift in Sources */,
 				F660FCB92C493F020022D597 /* CameraDetailedViewModel.swift in Sources */,
