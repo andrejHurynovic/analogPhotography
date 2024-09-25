@@ -27,5 +27,5 @@ struct TextForm: View  {
 }
 
 #Preview {
-    TextForm("ISO", "300")
+    TextForm("Speed", "300")
 }

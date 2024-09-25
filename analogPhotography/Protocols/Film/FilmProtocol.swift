@@ -11,7 +11,7 @@ protocol FilmProtocol {
     var name: String? { get set }
     
     var capacity: Int? { get set }
-    var iso: Int? { get set }
+    var speed: Int? { get set }
     var exposureTolerance: FilmExposureTolerance? { get set }
     
     @Relationship var format: FilmFormat? { get set }

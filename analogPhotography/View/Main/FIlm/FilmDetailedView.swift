@@ -16,7 +16,7 @@ struct FilmDetailedView: View {
                 TextFieldForm(title: "Name", text: viewModelBinding.model.name.unwrappedOptional(), viewState: viewModelBinding.viewState)
                 Section("Properties") {
                     TextFieldForm(title: "Capacity", text: viewModelBinding.model.capacity.unwrappedOptional(), viewState: viewModelBinding.viewState)
-                    TextFieldForm(title: "ISO", text: viewModelBinding.model.iso.unwrappedOptional(), viewState: viewModelBinding.viewState)
+                    TextFieldForm(title: "Speed", text: viewModelBinding.model.speed.unwrappedOptional(), viewState: viewModelBinding.viewState)
                 }
                 .keyboardType(.numberPad)
                 

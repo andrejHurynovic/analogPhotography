@@ -8,8 +8,8 @@
 extension Film: DXCoded {
     
     var speedBits: [DXCodeBit] {
-        get { getBits(item: self.iso, items: Constants.DXCode.speeds, numberOfBits: 5) }
-        set { self.iso = setBits(newValue: newValue, items: Constants.DXCode.speeds) }
+        get { getBits(item: self.speed, items: Constants.DXCode.speeds, numberOfBits: 5) }
+        set { self.speed = setBits(newValue: newValue, items: Constants.DXCode.speeds) }
     }
     var capacityBits: [DXCodeBit] {
         get { getBits(item: self.capacity, items: Constants.DXCode.capacities, numberOfBits: 3) }

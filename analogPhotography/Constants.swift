@@ -14,12 +14,11 @@ struct Constants {
     }
     
     struct Film {
-        static let sampleISOs: [Int] = [50, 100, 200, 400, 800, 1200]
+        static let sampleSpeeds: [Int] = [50, 100, 200, 400, 800, 1200]
     }
     
     struct DXCode {
         static let speeds: [Int?] = [nil, nil, nil, nil, nil, nil, nil, nil, 25, 50, 100, 200, 400, 800, 1600, 3200, 32, 64, 125, 250, 500, 1000, 2000, 4000, 40, 80, 160, 320, 640, 1250, 2500, 5000]
-        
         static let capacities = [nil, 12, 20, 24, 36, 48, 60, 72]
         static let exposureTolerances: [FilmExposureTolerance] = [.init(-0.5, 0.5), .init(-1, 1), .init(-1, 2), .init(-1, 3)]
     }
