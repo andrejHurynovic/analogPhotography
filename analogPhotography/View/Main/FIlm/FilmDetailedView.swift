@@ -28,7 +28,7 @@ struct FilmDetailedView: View {
                     AddModelButton {  }
                 }
                 Section("DX-Code") {
-                    DXCodeView(film: film)
+                    DXCodeView(bits: film.dxCodeBits)
                 }
             }
         }

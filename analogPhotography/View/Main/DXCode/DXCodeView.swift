@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DXCodeView: View {
-    @Bindable var film: Film
+    var bits: DXCodeBits
     
     var body: some View {
         HStack(spacing: 0) {
@@ -20,21 +20,20 @@ struct DXCodeView: View {
                 UnevenRoundedRectangle(topLeadingRadius: 15, topTrailingRadius: 15)
                     .padding(.horizontal, 30)
                     .shadow(radius: 15)
-                dxCode
+                rows
             }
         }
     }
     
-    var dxCode: some View {
+    var rows: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 DXCodeBitView(bit: DXCodeBit.metalConstant)
-                DXCodeRowView(bits: $film.speedBits)
+                DXCodeRowView(bits: bits.firstRow)
             }
             HStack(spacing: 0) {
                 DXCodeBitView(bit: DXCodeBit.metalConstant)
-                DXCodeRowView(bits: $film.capacityBits)
-                DXCodeRowView(bits: $film.exposureToleranceBits)
+                DXCodeRowView(bits: bits.secondRow)
             }
         }
         .padding()

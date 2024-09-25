@@ -5,22 +5,28 @@
 //  Created by Andrej Hurynovič on 21.09.24.
 //
 
-import Foundation
-
 extension Film: DXCoded {
+    
     var speedBits: [DXCodeBit] {
         get { getBits(item: self.iso, items: Constants.DXCode.speeds, numberOfBits: 5) }
         set { self.iso = setBits(newValue: newValue, items: Constants.DXCode.speeds) }
     }
-    
     var capacityBits: [DXCodeBit] {
         get { getBits(item: self.capacity, items: Constants.DXCode.capacities, numberOfBits: 3) }
         set { self.capacity = setBits(newValue: newValue, items: Constants.DXCode.capacities)}
     }
-    
     var exposureToleranceBits: [DXCodeBit] {
         get { getBits(item: self.exposureTolerance, items: Constants.DXCode.exposureTolerances, numberOfBits: 2) }
         set { self.exposureTolerance = setBits(newValue: newValue, items: Constants.DXCode.exposureTolerances)}
+    }
+    
+    var dxCodeBits: DXCodeBits {
+        get { return .init(firstRow: speedBits, secondRow: capacityBits + exposureToleranceBits) }
+        set {
+            speedBits = newValue.firstRow
+            capacityBits = Array(newValue.secondRow.prefix(3))
+            exposureToleranceBits = Array(newValue.secondRow.suffix(2))
+        }
     }
     
     //MARK: Helpers

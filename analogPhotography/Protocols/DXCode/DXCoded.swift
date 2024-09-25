@@ -11,4 +11,5 @@ protocol DXCoded {
     var speedBits: [DXCodeBit] { get set }
     var capacityBits: [DXCodeBit] { get set }
     var exposureToleranceBits: [DXCodeBit] { get set }
+    var dxCodeBits: DXCodeBits { get set }
 }

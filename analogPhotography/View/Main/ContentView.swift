@@ -11,9 +11,12 @@ struct ContentView: View {
     @StateObject private var router = AppRouter()
     
     var body: some View {
-        NavigationStack(path: $router.path) {
-            CamerasView()
-                .routerNavigationDestinations()
+//        NavigationStack(path: $router.path) {
+//            FilmRollsView()
+//                .routerNavigationDestinations()
+//        }
+        ModelPreview { film in
+            FilmDetailedView(film: film)
         }
         .environmentObject(router)
     }
