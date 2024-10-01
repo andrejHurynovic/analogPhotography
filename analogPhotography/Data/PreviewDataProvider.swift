@@ -20,7 +20,7 @@ final class PreviewDataProvider {
         
         let filmProcesses = FilmProcess.defaults()
         let filmFormats = FilmFormat.defaults()
-        let film = Film(name: "Kodak Gold 200", capacity: 36, speed: 200, exposureTolerance: .init(-1, 3), format: filmFormats.randomElement()!, process: filmProcesses.randomElement()!)
+        let film = Film(name: "Kodak Gold 200", capacity: 36, speed: 200, exposureTolerance: .init(-1, 3), dxBarcodes: [912503], format: filmFormats.randomElement()!, process: filmProcesses.randomElement()!)
         tempContext.insert(filmProcesses)
         tempContext.insert(filmFormats)
         tempContext.insert(film)

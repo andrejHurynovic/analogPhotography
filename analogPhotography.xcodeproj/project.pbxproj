@@ -7,16 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0B0DE02CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */; };
+		CE0BA2B62CA99C3B00FE216D /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BA2B52CA99C3B00FE216D /* UIApplication.swift */; };
 		CE112A5E2C9F2933004FEA66 /* DXCoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A5D2C9F2933004FEA66 /* DXCoded.swift */; };
-		CE112A602C9F2957004FEA66 /* Film+DXCoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A5F2C9F2957004FEA66 /* Film+DXCoded.swift */; };
+		CE112A602C9F2957004FEA66 /* DXCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A5F2C9F2957004FEA66 /* DXCode.swift */; };
 		CE112A622C9F3061004FEA66 /* FilmProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A612C9F3061004FEA66 /* FilmProtocol.swift */; };
 		CE11A1502C84AC0600675ACE /* ChooseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11A14F2C84AC0600675ACE /* ChooseButton.swift */; };
 		CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */; };
 		CE35C77B2C9DAB1D001E4E55 /* DXCodeBit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */; };
+		CE35E5282CA5A612004CF3A9 /* DXCodeScannerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */; };
+		CE35E52A2CA5A68B004CF3A9 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5292CA5A68B004CF3A9 /* ScannerViewModel.swift */; };
+		CE35E5302CA5AADE004CF3A9 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E52F2CA5AADE004CF3A9 /* ScannerView.swift */; };
+		CE5002302CAB2C920088DC69 /* Array+OptionalUnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50022F2CAB2C920088DC69 /* Array+OptionalUnion.swift */; };
+		CE5002322CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */; };
+		CE5AA9532CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE5AA9522CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel */; };
+		CE5AA95B2CAAE37F00BA56F5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5AA9592CAAE37F00BA56F5 /* ScannerViewController.swift */; };
 		CE99583B2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99583A2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift */; };
 		CEABA4682CA0514F00FBC913 /* DXCodeBitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA4672CA0514F00FBC913 /* DXCodeBitView.swift */; };
 		CEABA46A2CA0516E00FBC913 /* DXCodeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA4692CA0516E00FBC913 /* DXCodeRowView.swift */; };
-		CEC0FF122CA4A828003918A7 /* DXCodeBits.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0FF112CA4A828003918A7 /* DXCodeBits.swift */; };
+		CEAEB5FC2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAEB5FB2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift */; };
 		F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60DC19D2C248FB50092E952 /* LocationItem.swift */; };
 		F62387622C5020CC00A4587F /* FilmProcessPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62387612C5020CC00A4587F /* FilmProcessPicker.swift */; };
 		F62387662C51441300A4587F /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62387652C51441300A4587F /* Binding.swift */; };
@@ -91,16 +100,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		CE0BA2B52CA99C3B00FE216D /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		CE112A5D2C9F2933004FEA66 /* DXCoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCoded.swift; sourceTree = "<group>"; };
-		CE112A5F2C9F2957004FEA66 /* Film+DXCoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Film+DXCoded.swift"; sourceTree = "<group>"; };
+		CE112A5F2C9F2957004FEA66 /* DXCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCode.swift; sourceTree = "<group>"; };
 		CE112A612C9F3061004FEA66 /* FilmProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmProtocol.swift; sourceTree = "<group>"; };
 		CE11A14F2C84AC0600675ACE /* ChooseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseButton.swift; sourceTree = "<group>"; };
 		CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeView.swift; sourceTree = "<group>"; };
 		CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeBit.swift; sourceTree = "<group>"; };
+		CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeScannerState.swift; sourceTree = "<group>"; };
+		CE35E5292CA5A68B004CF3A9 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		CE35E52F2CA5AADE004CF3A9 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		CE50022F2CAB2C920088DC69 /* Array+OptionalUnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+OptionalUnion.swift"; sourceTree = "<group>"; };
+		CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDeviceOrientation+videoRotationAngle.swift"; sourceTree = "<group>"; };
+		CE5AA9522CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DXCodeDetector.mlmodel; sourceTree = "<group>"; };
+		CE5AA9592CAAE37F00BA56F5 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		CE5B69D92CA576D8001A7562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CE99583A2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmExposureTolerance.swift; sourceTree = "<group>"; };
 		CEABA4672CA0514F00FBC913 /* DXCodeBitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeBitView.swift; sourceTree = "<group>"; };
 		CEABA4692CA0516E00FBC913 /* DXCodeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeRowView.swift; sourceTree = "<group>"; };
-		CEC0FF112CA4A828003918A7 /* DXCodeBits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeBits.swift; sourceTree = "<group>"; };
+		CEAEB5FB2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerContentUnavailableView.swift; sourceTree = "<group>"; };
 		F60DC19D2C248FB50092E952 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		F62387612C5020CC00A4587F /* FilmProcessPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmProcessPicker.swift; sourceTree = "<group>"; };
 		F62387652C51441300A4587F /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
@@ -204,6 +223,15 @@
 			path = DXCode;
 			sourceTree = "<group>";
 		};
+		CE35E5262CA5A5FA004CF3A9 /* DXCodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */,
+				CE35E5292CA5A68B004CF3A9 /* ScannerViewModel.swift */,
+			);
+			path = DXCodeScanner;
+			sourceTree = "<group>";
+		};
 		CEABA4652CA0506600FBC913 /* Film */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,12 +257,23 @@
 			path = DXCodeBit;
 			sourceTree = "<group>";
 		};
+		CEC0FF142CA4B482003918A7 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				CE35E52F2CA5AADE004CF3A9 /* ScannerView.swift */,
+				CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */,
+				CEAEB5FB2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift */,
+				CE5AA9592CAAE37F00BA56F5 /* ScannerViewController.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
 		CEF634B02C9B5ABB00F01C06 /* DXCode */ = {
 			isa = PBXGroup;
 			children = (
+				CE112A5F2C9F2957004FEA66 /* DXCode.swift */,
 				CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */,
-				CEC0FF112CA4A828003918A7 /* DXCodeBits.swift */,
-				CE112A5F2C9F2957004FEA66 /* Film+DXCoded.swift */,
+				CE5AA9522CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel */,
 			);
 			path = DXCode;
 			sourceTree = "<group>";
@@ -281,6 +320,7 @@
 				F6FE29B02C0F644400E9C678 /* FilmRoll */,
 				F6FE29BC2C0F803000E9C678 /* Photo */,
 				CE35C7772C9CD7C8001E4E55 /* DXCode */,
+				CEC0FF142CA4B482003918A7 /* Scanner */,
 				F65517B02C1F92D1000133FA /* Map */,
 			);
 			path = Main;
@@ -403,6 +443,7 @@
 				F660FCD12C4A99FA0022D597 /* Camera */,
 				F660FCDA2C4C26F80022D597 /* Film */,
 				F623876B2C51AFFC00A4587F /* FilmRoll */,
+				CE35E5262CA5A5FA004CF3A9 /* DXCodeScanner */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -550,6 +591,7 @@
 		F6FE299D2C0F492B00E9C678 /* analogPhotography */ = {
 			isa = PBXGroup;
 			children = (
+				CE5B69D92CA576D8001A7562 /* Info.plist */,
 				F6FE299E2C0F492B00E9C678 /* analogPhotographyApp.swift */,
 				F65517A42C1F3C57000133FA /* Constants.swift */,
 				F65517A62C1F6F4B000133FA /* Log.swift */,
@@ -580,9 +622,12 @@
 		F6FE29B32C0F703100E9C678 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CE50022F2CAB2C920088DC69 /* Array+OptionalUnion.swift */,
 				F6FE29B62C0F769A00E9C678 /* Bool.swift */,
 				F62387652C51441300A4587F /* Binding.swift */,
 				F6E4819A2C1B15ED006EE963 /* String.swift */,
+				CE0BA2B52CA99C3B00FE216D /* UIApplication.swift */,
+				CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */,
 				F6FE29B42C0F704A00E9C678 /* ModelContextExtensions.swift */,
 				F68B56C02C20D077001F1D97 /* CLLocationCoordinate2D.swift */,
 				F63084912C381D18008ABF71 /* MKMapItem.swift */,
@@ -687,12 +732,14 @@
 				F660FCE02C4DAF190022D597 /* FilmFormatPicker.swift in Sources */,
 				F6CDAB8A2C3D9C53000CC580 /* TextFieldFormViewModel.swift in Sources */,
 				CE35C77B2C9DAB1D001E4E55 /* DXCodeBit.swift in Sources */,
+				CE5002302CAB2C920088DC69 /* Array+OptionalUnion.swift in Sources */,
 				F6E4819B2C1B15ED006EE963 /* String.swift in Sources */,
 				F660FCB02C4815C70022D597 /* Router.swift in Sources */,
 				F65517A72C1F6F4C000133FA /* Log.swift in Sources */,
 				F67179112C34AAB60062D350 /* Location.swift in Sources */,
 				F62D38BC2C44731A00E745A6 /* CameraRowViewModel.swift in Sources */,
 				F63084922C381D18008ABF71 /* MKMapItem.swift in Sources */,
+				CE35E52A2CA5A68B004CF3A9 /* ScannerViewModel.swift in Sources */,
 				F65517A52C1F3C57000133FA /* Constants.swift in Sources */,
 				F649B2C52C3897AE00FE7180 /* DataContainer.swift in Sources */,
 				F660FCB32C4817C10022D597 /* Route.swift in Sources */,
@@ -719,25 +766,30 @@
 				F65517AB2C1F9145000133FA /* HapticType.swift in Sources */,
 				F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */,
 				F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */,
+				CE0BA2B62CA99C3B00FE216D /* UIApplication.swift in Sources */,
 				CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */,
 				F623876D2C51B00D00A4587F /* FilmRollDetailedViewModel.swift in Sources */,
 				F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */,
 				F660FCD62C4C0E920022D597 /* ModelViewModelProtocol.swift in Sources */,
+				CE5002322CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift in Sources */,
 				F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */,
 				CE99583B2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift in Sources */,
 				F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */,
 				F660FCBE2C4A807F0022D597 /* CreateableModel.swift in Sources */,
 				CE112A622C9F3061004FEA66 /* FilmProtocol.swift in Sources */,
 				F6FE29B52C0F704A00E9C678 /* ModelContextExtensions.swift in Sources */,
+				CEAEB5FC2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift in Sources */,
 				F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D.swift in Sources */,
 				CE112A5E2C9F2933004FEA66 /* DXCoded.swift in Sources */,
 				F6FE29BE2C0F804200E9C678 /* Photo.swift in Sources */,
 				F671790D2C346F860062D350 /* MapPickerViewModel.swift in Sources */,
 				F62387622C5020CC00A4587F /* FilmProcessPicker.swift in Sources */,
 				F660FCCD2C4A92650022D597 /* NavigationStackPreview.swift in Sources */,
-				CEC0FF122CA4A828003918A7 /* DXCodeBits.swift in Sources */,
 				F6E481992C1B0AD4006EE963 /* ViewStateToolbar.swift in Sources */,
+				CE35E5302CA5AADE004CF3A9 /* ScannerView.swift in Sources */,
 				F6FE29AF2C0F4CDE00E9C678 /* Film.swift in Sources */,
+				CE35E5282CA5A612004CF3A9 /* DXCodeScannerState.swift in Sources */,
+				CE0B0DE02CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift in Sources */,
 				F62387662C51441300A4587F /* Binding.swift in Sources */,
 				F6FE29B92C0F784500E9C678 /* FilmProcess.swift in Sources */,
 				F660FCDE2C4C336C0022D597 /* ModelPicker.swift in Sources */,
@@ -745,11 +797,13 @@
 				F660FCB52C4843C70022D597 /* FilmRollRowView.swift in Sources */,
 				F6FE29BB2C0F7CBB00E9C678 /* FilmRoll.swift in Sources */,
 				F63084A32C3857E7008ABF71 /* ModelPreview.swift in Sources */,
+				CE5AA9532CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel in Sources */,
 				F660FCAE2C480A850022D597 /* AppRouter.swift in Sources */,
 				F68C5A6B2C4504A700825199 /* ViewState.swift in Sources */,
 				F6D3A34F2C0FC1FC00D56B8D /* TextFieldForm.swift in Sources */,
 				F660FCD92C4C26EC0022D597 /* FilmDetailedView.swift in Sources */,
-				CE112A602C9F2957004FEA66 /* Film+DXCoded.swift in Sources */,
+				CE112A602C9F2957004FEA66 /* DXCode.swift in Sources */,
+				CE5AA95B2CAAE37F00BA56F5 /* ScannerViewController.swift in Sources */,
 				F645616C2C110CC20007940D /* NoteView.swift in Sources */,
 				F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */,
 				F6FE299F2C0F492B00E9C678 /* analogPhotographyApp.swift in Sources */,
@@ -895,12 +949,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 120;
+				CURRENT_PROJECT_VERSION = 140;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = analogPhotography/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = analogPhotography;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to scan DX codes and DX barcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -926,12 +982,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 120;
+				CURRENT_PROJECT_VERSION = 140;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = analogPhotography/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = analogPhotography;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to scan DX codes and DX barcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

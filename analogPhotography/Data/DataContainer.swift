@@ -29,7 +29,7 @@ class DataContainer {
                                                 configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: true))
             PreviewDataProvider.insertPreviewData(in: container)
 #else
-            //If not running in the simulator, configure the container to use persistent storage
+            //If not running in the simulator, configure the container to use persistent storage.
             self.container = try ModelContainer(for: schema,
                                                 configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: true))
 #endif

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DXCodeView: View {
-    var bits: DXCodeBits
+    var dxCode: DXCode
     
     var body: some View {
         HStack(spacing: 0) {
@@ -29,11 +29,11 @@ struct DXCodeView: View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 DXCodeBitView(bit: DXCodeBit.metalConstant)
-                DXCodeRowView(bits: bits.firstRow)
+                DXCodeRowView(bits: dxCode.firstRow)
             }
             HStack(spacing: 0) {
                 DXCodeBitView(bit: DXCodeBit.metalConstant)
-                DXCodeRowView(bits: bits.secondRow)
+                DXCodeRowView(bits: dxCode.secondRow)
             }
         }
         .padding()
