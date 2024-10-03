@@ -15,10 +15,7 @@ struct ContentView: View {
 //            FilmRollsView()
 //                .routerNavigationDestinations()
 //        }
-        ModelPreview { film in
-            FilmDetailedView(film: film)
-        }
-        .environmentObject(router)
+        ScannerView()
     }
     
 }

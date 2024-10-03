@@ -26,4 +26,10 @@ struct Constants {
     struct Map {
         static let defaultMapDistance: Double = 200_000
     }
+    
+    struct Scanner {
+        static let captureDelay: Duration = .milliseconds(300)
+        static let dxCodeBufferSize: Int = 20
+        static let dxCodeDetectorPrecision = 0.7
+    }
 }
