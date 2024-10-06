@@ -11,11 +11,11 @@ struct ContentView: View {
     @StateObject private var router = AppRouter()
     
     var body: some View {
-//        NavigationStack(path: $router.path) {
+        NavigationStack(path: $router.path) {
 //            FilmRollsView()
-//                .routerNavigationDestinations()
-//        }
-        ScannerView()
+            ScannerView()
+                .routerNavigationDestinations()
+        }
     }
     
 }

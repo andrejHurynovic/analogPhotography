@@ -32,6 +32,7 @@ class DataContainer {
             //If not running in the simulator, configure the container to use persistent storage.
             self.container = try ModelContainer(for: schema,
                                                 configurations: ModelConfiguration(schema: schema, isStoredInMemoryOnly: true))
+            PreviewDataProvider.insertPreviewData(in: container)
 #endif
         } catch {
             fatalError("Failed to create persistentContainer: \(error.localizedDescription)")

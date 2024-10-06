@@ -20,14 +20,17 @@ final class PreviewDataProvider {
         
         let filmProcesses = FilmProcess.defaults()
         let filmFormats = FilmFormat.defaults()
-        let film = Film(name: "Kodak Gold 200", capacity: 36, speed: 200, exposureTolerance: .init(-1, 3), dxBarcodes: [912503], format: filmFormats.randomElement()!, process: filmProcesses.randomElement()!)
+        let kodakGold200 = Film(name: "Kodak Gold 200", capacity: 36, speed: 200, exposureTolerance: .init(-1, 3), dxBarcodes: Set(["912503"]), format: filmFormats.randomElement()!, process: filmProcesses.randomElement()!)
+        let relleiRetro80s = Film(name: "Rollei Retro 80s", capacity: 36, speed: 80, exposureTolerance: .init(-1, 3), dxBarcodes: Set(["851811"]), format: filmFormats.randomElement()!, process: filmProcesses.randomElement()!)
+
         tempContext.insert(filmProcesses)
         tempContext.insert(filmFormats)
-        tempContext.insert(film)
+        tempContext.insert(kodakGold200)
+        tempContext.insert(relleiRetro80s)
         
-        createFilmRollWithPhotos(with: film, for: pentaxSFX, in: tempContext)
-        createFilmRollWithPhotos(with: film, for: zenitE, in: tempContext)
-        createFilmRollWithPhotos(with: film, for: fed3, in: tempContext)
+        createFilmRollWithPhotos(with: kodakGold200, for: pentaxSFX, in: tempContext)
+        createFilmRollWithPhotos(with: kodakGold200, for: zenitE, in: tempContext)
+        createFilmRollWithPhotos(with: kodakGold200, for: fed3, in: tempContext)
         
         do {
             try tempContext.save()

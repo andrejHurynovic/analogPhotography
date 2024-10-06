@@ -5,7 +5,6 @@
 //  Created by Andrej Hurynovič on 4.06.24.
 //
 
-import Foundation
 import SwiftData
 
 @Model
@@ -37,8 +36,8 @@ final class FilmFormat {
     
 }
 
-extension FilmFormat {
-    var description: String {
+extension FilmFormat: Described {
+    var uiDescription: String {
         guard let length = length else { return name }
         return name + " (\(length) mm)"
     }

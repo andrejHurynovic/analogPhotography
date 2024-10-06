@@ -13,7 +13,7 @@ struct FilmRollsView: View {
     
     var body: some View {
         List(filmRolls) { filmRoll in
-            FilmRollRowView(roll: filmRoll)
+            FilmRollCellView(roll: filmRoll)
         }
         .navigationTitle("Film rolls")
         .overlay { contentUnavailable }

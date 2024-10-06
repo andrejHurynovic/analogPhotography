@@ -14,8 +14,8 @@ struct FilmFormatPicker: View {
         ModelPicker(sort: [.init(\FilmFormat.name)], selectedValue: $filmFormat, title: "Format") { filmFormats in
             let notOutdated = filmFormats.filter { $0.outdated == false }
             let outdated = filmFormats.filter { $0.outdated == true }
-            ForEach(notOutdated) { Text($0.description).tag($0 as FilmFormat?) }
-            Section("Outdated") { ForEach(outdated) { Text($0.description).tag($0 as FilmFormat?) } }
+            ForEach(notOutdated) { Text($0.uiDescription).tag($0 as FilmFormat?) }
+            Section("Outdated") { ForEach(outdated) { Text($0.uiDescription).tag($0 as FilmFormat?) } }
         }
     }
 }

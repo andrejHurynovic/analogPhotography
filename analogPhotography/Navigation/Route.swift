@@ -7,4 +7,5 @@
 
 enum Route: Hashable {
     case camera(Camera)
+    case film(Film)
 }

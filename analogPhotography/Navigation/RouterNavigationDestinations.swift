@@ -12,8 +12,10 @@ private struct RouterNavigationDestinations: ViewModifier {
         content
             .navigationDestination(for: Route.self) { route in
                 switch route {
-                    case .camera(let camera):
-                        CameraDetailedView(camera: camera)
+                case .camera(let camera):
+                    CameraDetailedView(camera: camera)
+                case .film(let film):
+                    FilmDetailedView(film: film)
                 }
             }
     }

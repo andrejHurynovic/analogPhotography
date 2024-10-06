@@ -6,19 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ScannerView: View {
     @StateObject var viewModel = ScannerViewModel()
-    @StateObject var dxCodeBuffer = DXCodeBuffer()
-    
-    @State var barcodes = Set<String>()
-    
-    @AppStorage("cropCorrectionModifier") var cropCorrectionModifier: Double = 0.1
-    @AppStorage("calculateThresholdModifier") var calculateThresholdModifier: Double = 0.8
-    @AppStorage("heightRangeModifier") var heightRangeModifier: Double = 0.1
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             switch viewModel.state {
             case .cameraAccessNotDetermined:
                 ScannerContentUnavailableView(description: "Access to the camera is required to read the DX code.",
@@ -31,13 +26,36 @@ struct ScannerView: View {
             case .cameraNotAvailable:
                 ScannerContentUnavailableView(description: "Access to the camera is required to read the DX code. The camera is not available on your device.")
             case .scannerAvailable:
-                    ScannerViewControllerRepresentable(barcodes: $barcodes, dxCodeBuffer: dxCodeBuffer)
+                ScannerViewControllerRepresentable(barcodes: $viewModel.barcodes, dxCodeBuffer: viewModel.dxCodeBuffer)
             }
             
+            VStack {
+                bottomMenuStatePicker
+                switch viewModel.bottomMenuState {
+                case .barcode:
+                    ScannerFilmsView(filterDXBarcodes: viewModel.barcodes, modelContext: modelContext)
+                case .dxCode:
+                    EmptyView()
+                }
+                
+            }
         }
+        .animation(.easeInOut, value: viewModel.barcodes)
+    }
+    
+    var bottomMenuStatePicker: some View {
+        Picker("", selection: $viewModel.bottomMenuState) {
+            ForEach(ScannerViewBottomMenuState.allCases, id: \.self) { item in
+                Text(item.uiDescription)
+            }
+        }
+        .pickerStyle(.palette)
+        .backgroundStyle()
+        
     }
 }
 
 #Preview {
     ScannerView()
+        .modelContainer(DataContainer().getContainer())
 }

@@ -24,3 +24,7 @@ final class FilmProcess {
     }
     
 }
+
+extension FilmProcess: Described {
+    var uiDescription: String { name }
+}

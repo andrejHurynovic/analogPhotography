@@ -14,7 +14,7 @@ extension Array where Element: SignedNumeric, Element: Comparable {
         var maxDifference: Element?
         var result: (Element, Element, Int)? = nil
         
-        for i in 0..<(self.count - step + 1) {
+        for i in 0..<(self.count - step - 1) {
             let firstElement = self[i]
             let secondElement = self[i + step + 1]
             
