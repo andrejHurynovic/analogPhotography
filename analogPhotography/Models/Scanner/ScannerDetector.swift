@@ -59,7 +59,7 @@ extension ScannerViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         guard let results = results as? [VNBarcodeObservation],
               results.count != 0 else { return }
         
-        coordinator.addBarcodes(results.compactMap { $0.payloadStringValue })
+        coordinator.updateBarcode(results[0].payloadStringValue!)
         barcodeBoxes.append(contentsOf: results.map { $0.boundingBox })
     }
     

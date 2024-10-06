@@ -36,7 +36,7 @@
 		CEB201C62CAF591F00AD6428 /* CGRect+RelativePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201C52CAF591F00AD6428 /* CGRect+RelativePosition.swift */; };
 		CEB201C82CAF60AA00AD6428 /* Described.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201C72CAF60AA00AD6428 /* Described.swift */; };
 		CEB201D02CB086ED00AD6428 /* FilmCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201CF2CB086ED00AD6428 /* FilmCellView.swift */; };
-		CEB201D32CB08F9400AD6428 /* ScannerFilmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201D22CB08F9400AD6428 /* ScannerFilmsView.swift */; };
+		CEB201D32CB08F9400AD6428 /* ScannerBarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201D22CB08F9400AD6428 /* ScannerBarcodeView.swift */; };
 		CEB201D52CB090C800AD6428 /* BackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201D42CB090C800AD6428 /* BackgroundViewModifier.swift */; };
 		CEFFDAFF2CADC01E0047C819 /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFDAFE2CADC01E0047C819 /* ScannerCoordinator.swift */; };
 		F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60DC19D2C248FB50092E952 /* LocationItem.swift */; };
@@ -143,7 +143,7 @@
 		CEB201C52CAF591F00AD6428 /* CGRect+RelativePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+RelativePosition.swift"; sourceTree = "<group>"; };
 		CEB201C72CAF60AA00AD6428 /* Described.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Described.swift; sourceTree = "<group>"; };
 		CEB201CF2CB086ED00AD6428 /* FilmCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCellView.swift; sourceTree = "<group>"; };
-		CEB201D22CB08F9400AD6428 /* ScannerFilmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerFilmsView.swift; sourceTree = "<group>"; };
+		CEB201D22CB08F9400AD6428 /* ScannerBarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerBarcodeView.swift; sourceTree = "<group>"; };
 		CEB201D42CB090C800AD6428 /* BackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifier.swift; sourceTree = "<group>"; };
 		CEFFDAFE2CADC01E0047C819 /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
 		F60DC19D2C248FB50092E952 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				CE35E52F2CA5AADE004CF3A9 /* ScannerView.swift */,
-				CEB201D22CB08F9400AD6428 /* ScannerFilmsView.swift */,
+				CEB201D22CB08F9400AD6428 /* ScannerBarcodeView.swift */,
 				CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */,
 				CEAEB5FB2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift */,
 				CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */,
@@ -884,7 +884,7 @@
 				F660FCD32C4C095A0022D597 /* DetailedView.swift in Sources */,
 				F660FCD02C4A99990022D597 /* ModelViewModel.swift in Sources */,
 				CEABA46A2CA0516E00FBC913 /* DXCodeRowView.swift in Sources */,
-				CEB201D32CB08F9400AD6428 /* ScannerFilmsView.swift in Sources */,
+				CEB201D32CB08F9400AD6428 /* ScannerBarcodeView.swift in Sources */,
 				F623876A2C51AF9400A4587F /* FilmRollDetailedView.swift in Sources */,
 				F6FE29B72C0F769A00E9C678 /* Bool.swift in Sources */,
 				F660FCB92C493F020022D597 /* CameraDetailedViewModel.swift in Sources */,
@@ -1025,7 +1025,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 229;
+				CURRENT_PROJECT_VERSION = 230;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1058,7 +1058,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 229;
+				CURRENT_PROJECT_VERSION = 230;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

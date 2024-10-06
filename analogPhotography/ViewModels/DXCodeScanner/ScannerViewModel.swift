@@ -11,17 +11,17 @@ import AVKit
 @MainActor
 final class ScannerViewModel: ObservableObject {
     @Published var state: DXCodeScannerState = .cameraAccessNotDetermined
-    @Published var bottomMenuState: ScannerViewBottomMenuState = .dxCode
+    @Published var bottomMenuState: ScannerViewBottomMenuState = .barcode
     
     @Published var dxCodeBuffer = DXCodeBuffer()
-    @Published var barcodes = Set<String>()
+    @Published var barcode: String = ""
     
     
     init() {
         Task { await updateScannerAccessStatus() }
     }
     
-    func updateScannerAccessStatus() async {
+    private func updateScannerAccessStatus() async {
         guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
             state = .cameraNotAvailable
             return
@@ -38,7 +38,7 @@ final class ScannerViewModel: ObservableObject {
         }
     }
     
-    func requestCameraPermission() async {
+    public func requestCameraPermission() async {
         let granted = await AVCaptureDevice.requestAccess(for: .video)
         state = granted ? .scannerAvailable : .cameraAccessDenied
     }

@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ScannerViewControllerRepresentable: UIViewControllerRepresentable {
-    @Binding var barcodes: Set<String>
+    @Binding var barcode: String
     var dxCodeBuffer: DXCodeBuffer
     
     func makeCoordinator() -> ScannerCoordinator {
-        return ScannerCoordinator(barcodes: $barcodes, dxCodeBuffer: dxCodeBuffer)
+        return ScannerCoordinator(barcode: $barcode, dxCodeBuffer: dxCodeBuffer)
     }
     func makeUIViewController(context: Context) -> UIViewController {
         let viewController = ScannerViewController()

@@ -1,5 +1,5 @@
 //
-//  ScannerFilmsView.swift
+//  ScannerBarcodeView.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 5.10.24.
@@ -9,20 +9,20 @@ import SwiftUI
 import SwiftData
 
 extension ScannerView {
-    struct ScannerFilmsView: View {
+    struct ScannerBarcodeView: View {
         private var state: ScannerFilmsViewState
         private var filteredFilms: [Film] = []
         
-        init(filterDXBarcodes: Set<String>, modelContext: ModelContext) {
-            guard filterDXBarcodes.isEmpty == false else {
-                state = .noDXBarcodes;
+        init(filterDXBarcode: String, modelContext: ModelContext) {
+            guard filterDXBarcode.isEmpty == false else {
+                state = .noDXBarcode;
                 return
             }
             guard let films = try? modelContext.fetch(FetchDescriptor<Film>()) else {
                 state = .dbError;
                 return
             }
-            filteredFilms = films.filter { film in !film.dxBarcodes.isDisjoint(with: filterDXBarcodes) }
+            filteredFilms = films.filter { film in film.dxBarcodes.contains(filterDXBarcode) }
             guard filteredFilms.isEmpty == false else {
                 state = .noFilteredFilms;
                 return
@@ -32,8 +32,8 @@ extension ScannerView {
         
         var body: some View {
             switch state {
-            case .noDXBarcodes:
-                Text("No barcodes detected.")
+            case .noDXBarcode:
+                Text("No barcode detected.")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
                     .backgroundStyle()
@@ -63,7 +63,7 @@ extension ScannerView {
     }
     
     enum ScannerFilmsViewState {
-        case noDXBarcodes
+        case noDXBarcode
         case dbError
         case noFilteredFilms
         case showing

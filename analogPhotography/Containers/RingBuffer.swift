@@ -5,7 +5,7 @@
 //  Created by Andrej Hurynovič on 2.10.24.
 //
 
-class RingBuffer<T> {
+final class RingBuffer<T> {
     var buffer: [T?]
     private var writeIndex = 0
     private var count = 0

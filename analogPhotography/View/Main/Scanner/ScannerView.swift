@@ -27,19 +27,19 @@ struct ScannerView: View {
         case .scannerAvailable:
             ZStack(alignment: .bottom) {
                 ZStack(alignment: .bottom) {
-                    ScannerViewControllerRepresentable(barcodes: $viewModel.barcodes, dxCodeBuffer: viewModel.dxCodeBuffer)
+                    ScannerViewControllerRepresentable(barcode: $viewModel.barcode, dxCodeBuffer: viewModel.dxCodeBuffer)
                     VStack {
                         Spacer()
                         bottomMenuStatePicker
                         switch viewModel.bottomMenuState {
                         case .barcode:
-                            ScannerFilmsView(filterDXBarcodes: viewModel.barcodes, modelContext: modelContext)
+                            ScannerBarcodeView(filterDXBarcode: viewModel.barcode, modelContext: modelContext)
                         case .dxCode:
                             ScannerDXCodeView(dxCodeBuffer: viewModel.dxCodeBuffer)
                         }
                     }
                 }
-                .animation(.easeInOut, value: viewModel.barcodes)
+                .animation(.easeInOut, value: viewModel.barcode)
                 
             }
         }

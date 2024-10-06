@@ -12,7 +12,6 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack(path: $router.path) {
-            let _ = print(router.path)
             TabView {
                 CamerasView()
                     .tabItem {
