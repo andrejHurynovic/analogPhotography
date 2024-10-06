@@ -13,7 +13,6 @@ extension ScannerView {
         private var state: ScannerFilmsViewState
         private var filteredFilms: [Film] = []
         
-        
         init(filterDXBarcodes: Set<String>, modelContext: ModelContext) {
             guard filterDXBarcodes.isEmpty == false else {
                 state = .noDXBarcodes;
@@ -37,14 +36,19 @@ extension ScannerView {
                 Text("No barcodes detected.")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
+                    .backgroundStyle()
             case .dbError:
                 Text("Database error.")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
+                    .backgroundStyle()
+
             case .noFilteredFilms:
                 Text("No films associated with this barcode.")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
+                    .backgroundStyle()
+
             case .showing:
                 ForEach(filteredFilms) { film in
                     NavigationLink(value: Route.film(film)) {
@@ -64,4 +68,10 @@ extension ScannerView {
         case noFilteredFilms
         case showing
     }
+}
+
+#Preview {
+    ScannerView()
+        .modelContainer(DataContainer().getContainer())
+        .routerNavigationDestinations()
 }

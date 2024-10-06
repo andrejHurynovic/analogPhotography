@@ -11,8 +11,8 @@ fileprivate struct BackgroundViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .background(RoundedRectangle(cornerRadius: 25.0).fill(.bar))
-            .padding()
+            .background(RoundedRectangle(cornerRadius: 25.0).fill(.background))
+            .padding(.horizontal)
     }
 }
 

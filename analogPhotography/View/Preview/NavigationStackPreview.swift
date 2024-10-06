@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct NavigationStackPreview<Content: View>: View {
-    @State var router = AppRouter()
+    @StateObject var router = AppRouter()
     var content: () -> Content
     
     var body: some View {
         NavigationStack(path: $router.path) {
             content()
-                .environmentObject(router)
                 .routerNavigationDestinations()
         }
+        .environmentObject(router)
     }
 }
 

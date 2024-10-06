@@ -32,6 +32,8 @@ final class DXCodeBuffer: ObservableObject {
             self.dxCode = nil
             return
         }
-        self.dxCode = mostFrequentDXCode.element
+        withAnimation {
+            self.dxCode = mostFrequentDXCode.element
+        }
     }
 }

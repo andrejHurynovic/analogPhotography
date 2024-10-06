@@ -11,8 +11,11 @@ struct DXCodeRowView: View {
     var bits: [DXCodeBit]
     
     var body: some View {
-        ForEach(bits, id: \.self) { bit in
-            DXCodeBitView(bit: bit)
+        HStack(spacing: 0) {
+            DXCodeBitView(bit: DXCodeBit.metalConstant)
+            ForEach(bits, id: \.hashValue) { bit in
+                DXCodeBitView(bit: bit)
+            }
         }
     }
 }

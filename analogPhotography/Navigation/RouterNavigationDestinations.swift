@@ -16,6 +16,12 @@ private struct RouterNavigationDestinations: ViewModifier {
                     CameraDetailedView(camera: camera)
                 case .film(let film):
                     FilmDetailedView(film: film)
+                case .filmRoll(let filmRoll):
+                    FilmRollDetailedView(filmRoll: filmRoll)
+                case .photo(let photo):
+                    PhotoDetailedView(photo: photo)
+                case .scanner:
+                    ScannerView()
                 }
             }
     }

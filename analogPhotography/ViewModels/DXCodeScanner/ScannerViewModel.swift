@@ -11,11 +11,11 @@ import AVKit
 @MainActor
 final class ScannerViewModel: ObservableObject {
     @Published var state: DXCodeScannerState = .cameraAccessNotDetermined
-    @Published var bottomMenuState: ScannerViewBottomMenuState = .barcode
+    @Published var bottomMenuState: ScannerViewBottomMenuState = .dxCode
     
     @Published var dxCodeBuffer = DXCodeBuffer()
     @Published var barcodes = Set<String>()
-
+    
     
     init() {
         Task { await updateScannerAccessStatus() }
@@ -45,18 +45,18 @@ final class ScannerViewModel: ObservableObject {
     
 }
 
-    enum ScannerViewBottomMenuState: Described, CaseIterable {
-        case barcode
-        case dxCode
-        
-        var uiDescription: String {
-            switch self {
-            case .barcode:
-                "Barcode"
-            case .dxCode:
-                "DX code"
-            }
+enum ScannerViewBottomMenuState: Described, CaseIterable {
+    case barcode
+    case dxCode
+    
+    var uiDescription: String {
+        switch self {
+        case .barcode:
+            "Barcode"
+        case .dxCode:
+            "DX code"
         }
     }
+}
 
 

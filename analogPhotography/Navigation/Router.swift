@@ -14,6 +14,7 @@ protocol Router: ObservableObject {
     
     func navigate(to route: Route)
     func navigateBack()
+    
     func removeAllWithCurrentModel()
     func resetToRoot()
 }

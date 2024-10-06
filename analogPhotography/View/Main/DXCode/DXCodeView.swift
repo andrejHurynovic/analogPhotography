@@ -27,14 +27,8 @@ struct DXCodeView: View {
     
     var rows: some View {
         VStack(spacing: 0) {
-            HStack(spacing: 0) {
-                DXCodeBitView(bit: DXCodeBit.metalConstant)
-                DXCodeRowView(bits: dxCode.firstRow)
-            }
-            HStack(spacing: 0) {
-                DXCodeBitView(bit: DXCodeBit.metalConstant)
-                DXCodeRowView(bits: dxCode.secondRow)
-            }
+            DXCodeRowView(bits: dxCode.firstRow)
+            DXCodeRowView(bits: dxCode.secondRow)
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 25.0)

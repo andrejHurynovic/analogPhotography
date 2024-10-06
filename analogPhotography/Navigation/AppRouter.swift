@@ -13,8 +13,8 @@ final class AppRouter: Router {
     init(initialPath: [Route]? = nil) { self.path = initialPath ?? [Route]() }
     
     func navigate(to route: Route) { path.append(route) }
-    
     func navigateBack() { path.removeLast() }
+    
     func removeAllWithCurrentModel() { path.removeAll { $0 == path.last } }
     func resetToRoot() { path.removeLast(path.count) }
 }

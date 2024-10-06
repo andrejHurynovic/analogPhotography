@@ -16,11 +16,11 @@ final class Film: FilmProtocol {
     var exposureTolerance: FilmExposureTolerance? 
     
     var dxCode: DXCode { DXCode(speed: self.speed, capacity: self.capacity, exposureTolerance: self.exposureTolerance) }
-    var dxBarcodes: Set<String>
+    var dxBarcodes: Set<String> = Set<String>()
         
     @Relationship var format: FilmFormat?
     @Relationship var process: FilmProcess?
-    @Relationship var rolls: [FilmRoll]
+    @Relationship var rolls: [FilmRoll] = []
     
     init(name: String = "", capacity: Int? = nil, speed: Int? = nil, exposureTolerance: FilmExposureTolerance? = nil, dxBarcodes: Set<String> = [], format: FilmFormat? = nil, process: FilmProcess? = nil, rolls: [FilmRoll] = []) {
         self.name = name
@@ -33,6 +33,11 @@ final class Film: FilmProtocol {
         self.rolls = rolls
     }
     
+    init(from dxCode: DXCode) {
+        self.speed = dxCode.speed
+        self.capacity = dxCode.capacity
+        self.exposureTolerance = dxCode.exposureTolerance
+    }
 }
 
 extension Film: Described {

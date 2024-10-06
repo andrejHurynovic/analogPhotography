@@ -36,8 +36,15 @@ final class ScannerViewController: UIViewController {
             self.setupDetectorsRequests()
             
             self.updateVideoRotationAngle()
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        captureSessionQueue.async {
             self.captureSession.startRunning()
         }
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        self.captureSession.stopRunning()
     }
     
     //Executed when the screen is rotated.

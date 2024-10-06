@@ -8,4 +8,7 @@
 enum Route: Hashable {
     case camera(Camera)
     case film(Film)
+    case filmRoll(FilmRoll)
+    case photo(Photo)
+    case scanner
 }

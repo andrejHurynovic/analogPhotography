@@ -18,6 +18,8 @@
 		CE35E52A2CA5A68B004CF3A9 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5292CA5A68B004CF3A9 /* ScannerViewModel.swift */; };
 		CE35E5302CA5AADE004CF3A9 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E52F2CA5AADE004CF3A9 /* ScannerView.swift */; };
 		CE5002322CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */; };
+		CE50D9CC2CB2F26C00FFC071 /* ScannerDXCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */; };
+		CE50D9CE2CB308B200FFC071 /* CreateFilmCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CD2CB308B200FFC071 /* CreateFilmCellView.swift */; };
 		CE5AA9532CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE5AA9522CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel */; };
 		CE5AA95B2CAAE37F00BA56F5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5AA9592CAAE37F00BA56F5 /* ScannerViewController.swift */; };
 		CE7077902CADFA3200B6E530 /* DXCodeDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70778F2CADFA3200B6E530 /* DXCodeDecoder.swift */; };
@@ -122,6 +124,8 @@
 		CE35E5292CA5A68B004CF3A9 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		CE35E52F2CA5AADE004CF3A9 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDeviceOrientation+videoRotationAngle.swift"; sourceTree = "<group>"; };
+		CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerDXCodeView.swift; sourceTree = "<group>"; };
+		CE50D9CD2CB308B200FFC071 /* CreateFilmCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFilmCellView.swift; sourceTree = "<group>"; };
 		CE5AA9522CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DXCodeDetector.mlmodel; sourceTree = "<group>"; };
 		CE5AA9592CAAE37F00BA56F5 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		CE5B69D92CA576D8001A7562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -311,6 +315,7 @@
 			children = (
 				CE35E52F2CA5AADE004CF3A9 /* ScannerView.swift */,
 				CEB201D22CB08F9400AD6428 /* ScannerFilmsView.swift */,
+				CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */,
 				CEAEB5FB2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift */,
 				CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */,
 				CE5AA9592CAAE37F00BA56F5 /* ScannerViewController.swift */,
@@ -523,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB201CF2CB086ED00AD6428 /* FilmCellView.swift */,
+				CE50D9CD2CB308B200FFC071 /* CreateFilmCellView.swift */,
 				CEB201CE2CB086D500AD6428 /* FilmDetailed */,
 			);
 			path = FIlm;
@@ -800,6 +806,7 @@
 				CE35E52A2CA5A68B004CF3A9 /* ScannerViewModel.swift in Sources */,
 				F65517A52C1F3C57000133FA /* Constants.swift in Sources */,
 				F649B2C52C3897AE00FE7180 /* DataContainer.swift in Sources */,
+				CE50D9CC2CB2F26C00FFC071 /* ScannerDXCodeView.swift in Sources */,
 				F660FCB32C4817C10022D597 /* Route.swift in Sources */,
 				CE761CAA2CACA5D4004E1378 /* Array+Compress.swift in Sources */,
 				F6635A7D2C3FFF8800813E00 /* CamerasView.swift in Sources */,
@@ -829,6 +836,7 @@
 				F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */,
 				CE0BA2B62CA99C3B00FE216D /* UIApplication.swift in Sources */,
 				CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */,
+				CE50D9CE2CB308B200FFC071 /* CreateFilmCellView.swift in Sources */,
 				F623876D2C51B00D00A4587F /* FilmRollDetailedViewModel.swift in Sources */,
 				CEB201D52CB090C800AD6428 /* BackgroundViewModifier.swift in Sources */,
 				F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */,
@@ -1017,7 +1025,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 219;
+				CURRENT_PROJECT_VERSION = 229;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1050,7 +1058,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 219;
+				CURRENT_PROJECT_VERSION = 229;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
