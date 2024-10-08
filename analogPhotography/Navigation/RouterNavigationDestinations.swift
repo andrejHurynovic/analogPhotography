@@ -22,6 +22,8 @@ private struct RouterNavigationDestinations: ViewModifier {
                     PhotoDetailedView(photo: photo)
                 case .scanner:
                     ScannerView()
+                case .settings:
+                    EmptyView()
                 }
             }
     }

@@ -25,7 +25,7 @@ struct FilmProcessPicker: View {
             Form {
                 FilmProcessPicker(filmProcess: $filmProcess)
             }
-            .modelContainer(DataContainer().getContainer())
+            .dataModelContainer()
         }
     }
     return FilmProcessPickerPreview()

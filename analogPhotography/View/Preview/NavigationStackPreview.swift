@@ -17,6 +17,7 @@ struct NavigationStackPreview<Content: View>: View {
                 .routerNavigationDestinations()
         }
         .environmentObject(router)
+        .dataModelContainer()
     }
 }
 

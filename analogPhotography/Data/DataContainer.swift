@@ -14,11 +14,11 @@ class DataContainer {
     init() {
         let schema = Schema([
             Camera.self,
-            Photo.self,
             FilmRoll.self,
             Film.self,
             FilmFormat.self,
-            FilmProcess.self
+            FilmProcess.self,
+            Photo.self
         ])
         
         do {

@@ -14,7 +14,7 @@ protocol FilmProtocol {
     var speed: Int? { get set }
     var exposureTolerance: FilmExposureTolerance? { get set }
     
-    @Relationship var format: FilmFormat? { get set }
-    @Relationship var process: FilmProcess? { get set }
-    @Relationship var rolls: [FilmRoll] { get set }
+    var format: FilmFormat? { get set }
+    var process: FilmProcess? { get set }
+    var rolls: [FilmRoll] { get set }
 }

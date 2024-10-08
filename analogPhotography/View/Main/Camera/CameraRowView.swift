@@ -22,6 +22,7 @@ struct CameraRowView: View {
                 currentFilmRoll
             }
         }
+        .buttonStyle(PlainButtonStyle())
     }
     
     var name: some View {

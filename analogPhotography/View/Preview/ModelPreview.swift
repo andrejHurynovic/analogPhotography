@@ -18,8 +18,6 @@ struct ModelPreview<Model: PersistentModel, Content: View>: View {
     var body: some View {
         NavigationStackPreview {
             PreviewContentView(content: content)
-                .modelContainer(DataContainer().getContainer())
-                .routerNavigationDestinations()
         }
     }
     

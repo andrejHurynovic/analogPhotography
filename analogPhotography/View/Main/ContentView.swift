@@ -12,28 +12,15 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack(path: $router.path) {
-            TabView {
-                CamerasView()
-                    .tabItem {
-                        Label("Cameras", systemImage: "camera")
-                    }
-                FilmRollsView()
-                    .tabItem {
-                        Label("Film rolls", systemImage: "contact.sensor")
-                    }
-                ScannerView()
-                    .tabItem {
-                        Label("Scanner", systemImage: "scanner")
-                    }
-            }
-            .routerNavigationDestinations()
+            HomeView()
+                .routerNavigationDestinations()
         }
         .environmentObject(router)
+        
     }
-    
 }
 
 #Preview {
     ContentView()
-        .modelContainer(DataContainer().getContainer())
+        .dataModelContainer()
 }

@@ -71,7 +71,7 @@ extension ScannerView {
 }
 
 #Preview {
-    ScannerView()
-        .modelContainer(DataContainer().getContainer())
-        .routerNavigationDestinations()
+    NavigationStackPreview {
+        ScannerView()
+    }
 }

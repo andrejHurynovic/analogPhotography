@@ -11,4 +11,5 @@ enum Route: Hashable {
     case filmRoll(FilmRoll)
     case photo(Photo)
     case scanner
+    case settings
 }

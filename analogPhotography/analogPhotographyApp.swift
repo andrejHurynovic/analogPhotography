@@ -13,7 +13,7 @@ struct analogPhotographyApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .dataModelContainer()
         }
-        .modelContainer(DataContainer().getContainer())
     }
 }

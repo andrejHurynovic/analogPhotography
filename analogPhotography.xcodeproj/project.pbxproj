@@ -12,6 +12,10 @@
 		CE112A602C9F2957004FEA66 /* DXCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A5F2C9F2957004FEA66 /* DXCode.swift */; };
 		CE112A622C9F3061004FEA66 /* FilmProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A612C9F3061004FEA66 /* FilmProtocol.swift */; };
 		CE11A1502C84AC0600675ACE /* ChooseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11A14F2C84AC0600675ACE /* ChooseButton.swift */; };
+		CE2779CB2CB45C48005ECE63 /* HomeViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2779CA2CB45C48005ECE63 /* HomeViewMenu.swift */; };
+		CE2779CD2CB463B6005ECE63 /* DataModelContainerViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2779CC2CB463B6005ECE63 /* DataModelContainerViewModifier.swift */; };
+		CE33F7C02CB354040014B429 /* FloatingBackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33F7BF2CB354040014B429 /* FloatingBackgroundViewModifier.swift */; };
+		CE33F7C22CB35B310014B429 /* ModelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33F7C12CB35B310014B429 /* ModelPickerView.swift */; };
 		CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */; };
 		CE35C77B2C9DAB1D001E4E55 /* DXCodeBit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */; };
 		CE35E5282CA5A612004CF3A9 /* DXCodeScannerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */; };
@@ -20,6 +24,7 @@
 		CE5002322CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */; };
 		CE50D9CC2CB2F26C00FFC071 /* ScannerDXCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */; };
 		CE50D9CE2CB308B200FFC071 /* CreateFilmCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CD2CB308B200FFC071 /* CreateFilmCellView.swift */; };
+		CE50D9D02CB323D800FFC071 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CF2CB323D800FFC071 /* HomeView.swift */; };
 		CE5AA9532CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE5AA9522CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel */; };
 		CE5AA95B2CAAE37F00BA56F5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5AA9592CAAE37F00BA56F5 /* ScannerViewController.swift */; };
 		CE7077902CADFA3200B6E530 /* DXCodeDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70778F2CADFA3200B6E530 /* DXCodeDecoder.swift */; };
@@ -118,6 +123,10 @@
 		CE112A5F2C9F2957004FEA66 /* DXCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCode.swift; sourceTree = "<group>"; };
 		CE112A612C9F3061004FEA66 /* FilmProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmProtocol.swift; sourceTree = "<group>"; };
 		CE11A14F2C84AC0600675ACE /* ChooseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseButton.swift; sourceTree = "<group>"; };
+		CE2779CA2CB45C48005ECE63 /* HomeViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewMenu.swift; sourceTree = "<group>"; };
+		CE2779CC2CB463B6005ECE63 /* DataModelContainerViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelContainerViewModifier.swift; sourceTree = "<group>"; };
+		CE33F7BF2CB354040014B429 /* FloatingBackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingBackgroundViewModifier.swift; sourceTree = "<group>"; };
+		CE33F7C12CB35B310014B429 /* ModelPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPickerView.swift; sourceTree = "<group>"; };
 		CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeView.swift; sourceTree = "<group>"; };
 		CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeBit.swift; sourceTree = "<group>"; };
 		CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeScannerState.swift; sourceTree = "<group>"; };
@@ -126,6 +135,7 @@
 		CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDeviceOrientation+videoRotationAngle.swift"; sourceTree = "<group>"; };
 		CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerDXCodeView.swift; sourceTree = "<group>"; };
 		CE50D9CD2CB308B200FFC071 /* CreateFilmCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFilmCellView.swift; sourceTree = "<group>"; };
+		CE50D9CF2CB323D800FFC071 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CE5AA9522CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DXCodeDetector.mlmodel; sourceTree = "<group>"; };
 		CE5AA9592CAAE37F00BA56F5 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		CE5B69D92CA576D8001A7562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -372,6 +382,8 @@
 			isa = PBXGroup;
 			children = (
 				F6FE29A02C0F492B00E9C678 /* ContentView.swift */,
+				CE50D9CF2CB323D800FFC071 /* HomeView.swift */,
+				CE2779CA2CB45C48005ECE63 /* HomeViewMenu.swift */,
 				F6FE29BF2C0FAA1700E9C678 /* Camera */,
 				F660FCD72C4C25660022D597 /* FIlm */,
 				F6FE29B02C0F644400E9C678 /* FilmRoll */,
@@ -407,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				F660FCC12C4A88A60022D597 /* ModelsView.swift */,
+				CE33F7C12CB35B310014B429 /* ModelPickerView.swift */,
 				F660FCD22C4C095A0022D597 /* DetailedView.swift */,
 			);
 			path = Generic;
@@ -625,6 +638,8 @@
 			isa = PBXGroup;
 			children = (
 				CEB201D42CB090C800AD6428 /* BackgroundViewModifier.swift */,
+				CE2779CC2CB463B6005ECE63 /* DataModelContainerViewModifier.swift */,
+				CE33F7BF2CB354040014B429 /* FloatingBackgroundViewModifier.swift */,
 				F6E4819E2C1B88AC006EE963 /* TextFieldWithPrefix.swift */,
 			);
 			path = ViewModifiers;
@@ -818,8 +833,10 @@
 				CEB201C42CAF57BA00AD6428 /* Array+MaximalDifference.swift in Sources */,
 				F6BC7BE62C3C1E2300160C3E /* OptionalDatePicker.swift in Sources */,
 				F6EEF2762C3AC98D00FEBCE4 /* PreviewDataProvider.swift in Sources */,
+				CE33F7C22CB35B310014B429 /* ModelPickerView.swift in Sources */,
 				F62387682C51A62400A4587F /* AddModelButton.swift in Sources */,
 				F6BC7BEC2C3CA5F800160C3E /* TapToAddButton.swift in Sources */,
+				CE2779CD2CB463B6005ECE63 /* DataModelContainerViewModifier.swift in Sources */,
 				F671790F2C34A9B30062D350 /* MapMarker.swift in Sources */,
 				CE7077902CADFA3200B6E530 /* DXCodeDecoder.swift in Sources */,
 				CE11A1502C84AC0600675ACE /* ChooseButton.swift in Sources */,
@@ -871,6 +888,7 @@
 				CE5AA9532CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel in Sources */,
 				F660FCAE2C480A850022D597 /* AppRouter.swift in Sources */,
 				F68C5A6B2C4504A700825199 /* ViewState.swift in Sources */,
+				CE50D9D02CB323D800FFC071 /* HomeView.swift in Sources */,
 				F6D3A34F2C0FC1FC00D56B8D /* TextFieldForm.swift in Sources */,
 				F660FCD92C4C26EC0022D597 /* FilmDetailedView.swift in Sources */,
 				CE112A602C9F2957004FEA66 /* DXCode.swift in Sources */,
@@ -885,7 +903,9 @@
 				F660FCD02C4A99990022D597 /* ModelViewModel.swift in Sources */,
 				CEABA46A2CA0516E00FBC913 /* DXCodeRowView.swift in Sources */,
 				CEB201D32CB08F9400AD6428 /* ScannerBarcodeView.swift in Sources */,
+				CE33F7C02CB354040014B429 /* FloatingBackgroundViewModifier.swift in Sources */,
 				F623876A2C51AF9400A4587F /* FilmRollDetailedView.swift in Sources */,
+				CE2779CB2CB45C48005ECE63 /* HomeViewMenu.swift in Sources */,
 				F6FE29B72C0F769A00E9C678 /* Bool.swift in Sources */,
 				F660FCB92C493F020022D597 /* CameraDetailedViewModel.swift in Sources */,
 				F6C40BCB2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift in Sources */,
@@ -960,6 +980,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -1015,6 +1036,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

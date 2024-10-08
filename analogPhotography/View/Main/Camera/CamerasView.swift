@@ -25,5 +25,4 @@ struct CamerasView: View {
         CamerasView()
             .routerNavigationDestinations()
     }
-    .modelContainer(DataContainer().getContainer())
 }

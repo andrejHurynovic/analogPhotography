@@ -28,7 +28,7 @@ struct FilmFormatPicker: View {
             Form {
                 FilmFormatPicker(filmFormat: $filmFormat)
             }
-            .modelContainer(DataContainer().getContainer())
+            .dataModelContainer()
         }
     }
     return FilmFormatPickerPreview()

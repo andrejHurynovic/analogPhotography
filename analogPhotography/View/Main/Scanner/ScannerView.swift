@@ -58,6 +58,7 @@ struct ScannerView: View {
 }
 
 #Preview {
-    ScannerView()
-        .modelContainer(DataContainer().getContainer())
+    NavigationStackPreview {
+        ScannerView()
+    }
 }
