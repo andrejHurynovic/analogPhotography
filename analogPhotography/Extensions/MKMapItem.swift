@@ -7,4 +7,4 @@
 
 import MapKit
 
-extension MKMapItem: Identifiable {}
+extension MKMapItem: @retroactive Identifiable {}
