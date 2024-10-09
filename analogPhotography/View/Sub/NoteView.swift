@@ -20,7 +20,7 @@ struct NoteView: View {
 }
 
 #Preview {
-    @State var note: String = ""
+    @Previewable @State var note: String = ""
     
     return NavigationStack {
         List {
