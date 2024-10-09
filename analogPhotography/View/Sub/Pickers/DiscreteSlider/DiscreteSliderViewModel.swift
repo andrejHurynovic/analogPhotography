@@ -50,7 +50,9 @@ extension DiscreteSlider {
             }
         }
         func handleSliderIndexChange() {
-            Haptic.impact(.light)
+            Task {
+               await Haptic.impact(.light)
+            }
         }
         
         func getValue() -> String {

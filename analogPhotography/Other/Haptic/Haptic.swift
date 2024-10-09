@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 struct Haptic {
     private static let lightImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
     
