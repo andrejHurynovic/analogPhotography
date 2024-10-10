@@ -52,7 +52,7 @@ extension ScannerView {
             case .showing:
                 ForEach(filteredFilms) { film in
                     NavigationLink(value: Route.film(film)) {
-                        FilmCellView(film: film)
+                        FilmView(film: film)
                             .backgroundStyle()
                     }
                     

@@ -1,5 +1,5 @@
 //
-//  FilmCellView.swift
+//  FilmView.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 4.10.24.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct FilmCellView: View {
-    var film: Film
+struct FilmView: View {
+    @Bindable var film: Film
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -17,14 +17,13 @@ struct FilmCellView: View {
                 parameters
                     .font(.caption)
                     .foregroundStyle(.gray)
-                Spacer()
             }
         }
     }
     
     var name: some View {
         Text(film.uiDescription)
-            .font(.title3)
+            .font(.title2)
             .fontWeight(.bold)
     }
     
@@ -46,6 +45,6 @@ struct FilmCellView: View {
 
 #Preview {
     ModelPreview { film in
-        FilmCellView(film: film)
+        FilmView(film: film)
     }
 }

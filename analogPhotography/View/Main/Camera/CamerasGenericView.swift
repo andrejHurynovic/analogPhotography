@@ -20,3 +20,7 @@ struct CamerasGenericView<Content: View>: View {
         }
     }
 }
+
+#Preview {
+    CamerasView()
+}

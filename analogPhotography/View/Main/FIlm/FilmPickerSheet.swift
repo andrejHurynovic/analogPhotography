@@ -1,5 +1,5 @@
 //
-//  CameraPickerSheet.swift
+//  FilmPickerSheet.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 10.10.2024.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct CameraPickerSheet: View {
+struct FilmPickerSheet: View {
     @Binding var isPresented: Bool
-    @Binding var picked: Camera?
+    @Binding var picked: Film?
     
     var body: some View {
-        CamerasGenericView { cameras in
+        FilmsGenericView { films in
             ModelPickerSheet(isPresented: $isPresented,
                              selectedElement: $picked,
-                             elements: cameras) { camera in
-                CameraView(camera: camera)
+                             elements: films) { film in
+                FilmView(film: film)
             }
         }
         
@@ -25,21 +25,21 @@ struct CameraPickerSheet: View {
 
 #Preview {
     @Previewable @State var isPresented: Bool = false
-    @Previewable @State var picked: Camera?
+    @Previewable @State var picked: Film?
     
     NavigationStackPreview {
         Form {
-            Button("Select camera") {
+            Button("Select film") {
                 isPresented = true
             }
             if let picked = picked {
-                CameraView(camera: picked)
+                FilmView(film: picked)
             } else {
-                Text("No selected camera")
+                Text("No selected film")
             }
         }
         .sheet(isPresented: $isPresented) {
-            CameraPickerSheet(isPresented: $isPresented, picked: $picked)
+            FilmPickerSheet(isPresented: $isPresented, picked: $picked)
         }
     }
     
