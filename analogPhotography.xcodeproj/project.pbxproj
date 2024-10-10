@@ -15,6 +15,9 @@
 		3B7671332CB856320062057A /* Film+CreateableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7671322CB8562D0062057A /* Film+CreateableModel.swift */; };
 		3B7671352CB856A90062057A /* FilmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7671342CB856A90062057A /* FilmsView.swift */; };
 		3B7671372CB857280062057A /* FilmPickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7671362CB857280062057A /* FilmPickerSheet.swift */; };
+		3B7671392CB858760062057A /* FilmRollsGenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7671382CB8586E0062057A /* FilmRollsGenericView.swift */; };
+		3B76713B2CB858EE0062057A /* FilmRoll+CreateableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76713A2CB858EA0062057A /* FilmRoll+CreateableModel.swift */; };
+		3B76713D2CB859A90062057A /* FilmRollPickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76713C2CB859A20062057A /* FilmRollPickerSheet.swift */; };
 		CE0B0DE02CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */; };
 		CE0BA2B62CA99C3B00FE216D /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BA2B52CA99C3B00FE216D /* UIApplication.swift */; };
 		CE112A602C9F2957004FEA66 /* DXCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A5F2C9F2957004FEA66 /* DXCode.swift */; };
@@ -73,7 +76,7 @@
 		F660FCAE2C480A850022D597 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCAD2C480A850022D597 /* AppRouter.swift */; };
 		F660FCB02C4815C70022D597 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCAF2C4815C70022D597 /* Router.swift */; };
 		F660FCB32C4817C10022D597 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCB22C4817C10022D597 /* Route.swift */; };
-		F660FCB52C4843C70022D597 /* FilmRollCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCB42C4843C70022D597 /* FilmRollCellView.swift */; };
+		F660FCB52C4843C70022D597 /* FilmRollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCB42C4843C70022D597 /* FilmRollView.swift */; };
 		F660FCB72C493DEE0022D597 /* RouterNavigationDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCB62C493DEE0022D597 /* RouterNavigationDestinations.swift */; };
 		F660FCB92C493F020022D597 /* CameraDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCB82C493F020022D597 /* CameraDetailedViewModel.swift */; };
 		F660FCBE2C4A807F0022D597 /* CreateableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCBD2C4A807F0022D597 /* CreateableModel.swift */; };
@@ -134,6 +137,9 @@
 		3B7671322CB8562D0062057A /* Film+CreateableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Film+CreateableModel.swift"; sourceTree = "<group>"; };
 		3B7671342CB856A90062057A /* FilmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsView.swift; sourceTree = "<group>"; };
 		3B7671362CB857280062057A /* FilmPickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmPickerSheet.swift; sourceTree = "<group>"; };
+		3B7671382CB8586E0062057A /* FilmRollsGenericView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollsGenericView.swift; sourceTree = "<group>"; };
+		3B76713A2CB858EA0062057A /* FilmRoll+CreateableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilmRoll+CreateableModel.swift"; sourceTree = "<group>"; };
+		3B76713C2CB859A20062057A /* FilmRollPickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollPickerSheet.swift; sourceTree = "<group>"; };
 		CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		CE0BA2B52CA99C3B00FE216D /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		CE112A5F2C9F2957004FEA66 /* DXCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCode.swift; sourceTree = "<group>"; };
@@ -193,7 +199,7 @@
 		F660FCAD2C480A850022D597 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		F660FCAF2C4815C70022D597 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F660FCB22C4817C10022D597 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		F660FCB42C4843C70022D597 /* FilmRollCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollCellView.swift; sourceTree = "<group>"; };
+		F660FCB42C4843C70022D597 /* FilmRollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollView.swift; sourceTree = "<group>"; };
 		F660FCB62C493DEE0022D597 /* RouterNavigationDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterNavigationDestinations.swift; sourceTree = "<group>"; };
 		F660FCB82C493F020022D597 /* CameraDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailedViewModel.swift; sourceTree = "<group>"; };
 		F660FCBD2C4A807F0022D597 /* CreateableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateableModel.swift; sourceTree = "<group>"; };
@@ -325,14 +331,6 @@
 				F62387612C5020CC00A4587F /* FilmProcessPicker.swift */,
 			);
 			path = FilmDetailed;
-			sourceTree = "<group>";
-		};
-		CEB201D12CB0882500AD6428 /* FilmRollDetailed */ = {
-			isa = PBXGroup;
-			children = (
-				F62387692C51AF9400A4587F /* FilmRollDetailedView.swift */,
-			);
-			path = FilmRollDetailed;
 			sourceTree = "<group>";
 		};
 		CEC0FF132CA4AA8A003918A7 /* DXCodeBit */ = {
@@ -488,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FE29BA2C0F7CBB00E9C678 /* FilmRoll.swift */,
+				3B76713A2CB858EA0062057A /* FilmRoll+CreateableModel.swift */,
 			);
 			path = FilmRoll;
 			sourceTree = "<group>";
@@ -697,6 +696,7 @@
 				CE5B69D92CA576D8001A7562 /* Info.plist */,
 				F6FE299E2C0F492B00E9C678 /* analogPhotographyApp.swift */,
 				3B7671262CB7DADB0062057A /* Order.md */,
+				CE112A5C2C9F291C004FEA66 /* Protocols */,
 				F65517A42C1F3C57000133FA /* Constants.swift */,
 				F65517A62C1F6F4B000133FA /* Log.swift */,
 				F660FCC42C4A8EFE0022D597 /* Models */,
@@ -704,7 +704,6 @@
 				F660FCCE2C4A997D0022D597 /* ViewModels */,
 				F660FCB12C4817860022D597 /* Navigation */,
 				F63084972C3847C8008ABF71 /* Data */,
-				CE112A5C2C9F291C004FEA66 /* Protocols */,
 				CE8FB8432CADA81900989321 /* Containers */,
 				F660FCCB2C4A91E60022D597 /* Other */,
 				F6E4819D2C1B886E006EE963 /* ViewModifiers */,
@@ -717,9 +716,11 @@
 		F6FE29B02C0F644400E9C678 /* FilmRoll */ = {
 			isa = PBXGroup;
 			children = (
+				F660FCB42C4843C70022D597 /* FilmRollView.swift */,
+				F62387692C51AF9400A4587F /* FilmRollDetailedView.swift */,
+				3B7671382CB8586E0062057A /* FilmRollsGenericView.swift */,
 				F6635A7E2C4067A900813E00 /* FilmRollsView.swift */,
-				F660FCB42C4843C70022D597 /* FilmRollCellView.swift */,
-				CEB201D12CB0882500AD6428 /* FilmRollDetailed */,
+				3B76713C2CB859A20062057A /* FilmRollPickerSheet.swift */,
 			);
 			path = FilmRoll;
 			sourceTree = "<group>";
@@ -889,6 +890,7 @@
 				F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */,
 				F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */,
 				CE0BA2B62CA99C3B00FE216D /* UIApplication.swift in Sources */,
+				3B7671392CB858760062057A /* FilmRollsGenericView.swift in Sources */,
 				CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */,
 				CE50D9CE2CB308B200FFC071 /* CreateFilmCellView.swift in Sources */,
 				F623876D2C51B00D00A4587F /* FilmRollDetailedViewModel.swift in Sources */,
@@ -899,6 +901,7 @@
 				F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */,
 				CEB201C82CAF60AA00AD6428 /* Described.swift in Sources */,
 				CE99583B2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift in Sources */,
+				3B76713D2CB859A90062057A /* FilmRollPickerSheet.swift in Sources */,
 				CE761CAF2CACA63F004E1378 /* DXCodeBuffer.swift in Sources */,
 				F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */,
 				F660FCBE2C4A807F0022D597 /* CreateableModel.swift in Sources */,
@@ -906,6 +909,7 @@
 				F6FE29B52C0F704A00E9C678 /* ModelContextExtensions.swift in Sources */,
 				CEAEB5FC2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift in Sources */,
 				F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D.swift in Sources */,
+				3B76713B2CB858EE0062057A /* FilmRoll+CreateableModel.swift in Sources */,
 				F6FE29BE2C0F804200E9C678 /* Photo.swift in Sources */,
 				F671790D2C346F860062D350 /* MapPickerViewModel.swift in Sources */,
 				F62387622C5020CC00A4587F /* FilmProcessPicker.swift in Sources */,
@@ -920,7 +924,7 @@
 				F6FE29B92C0F784500E9C678 /* FilmProcess.swift in Sources */,
 				F660FCDE2C4C336C0022D597 /* MenuModelPicker.swift in Sources */,
 				F6FE29C12C0FAA2400E9C678 /* Camera.swift in Sources */,
-				F660FCB52C4843C70022D597 /* FilmRollCellView.swift in Sources */,
+				F660FCB52C4843C70022D597 /* FilmRollView.swift in Sources */,
 				F6FE29BB2C0F7CBB00E9C678 /* FilmRoll.swift in Sources */,
 				F63084A32C3857E7008ABF71 /* ModelPreview.swift in Sources */,
 				CE5AA9532CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel in Sources */,

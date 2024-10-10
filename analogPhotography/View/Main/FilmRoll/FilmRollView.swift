@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FilmRollCellView: View {
+struct FilmRollView: View {
     @Bindable var roll: FilmRoll
     
     var body: some View {
@@ -33,7 +33,7 @@ struct FilmRollCellView: View {
 #Preview {
     ModelPreview { filmRoll in
         List {
-            FilmRollCellView(roll: filmRoll)
+            FilmRollView(roll: filmRoll)
         }
     }
 }

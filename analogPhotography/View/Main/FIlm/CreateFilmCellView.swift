@@ -26,7 +26,7 @@ struct CreateFilmCellView: View {
     
     var name: some View {
         Text("Create new film from DX code ")
-            .font(.title3)
+            .font(.title2)
             .fontWeight(.bold)
     }
     
