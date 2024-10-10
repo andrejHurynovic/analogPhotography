@@ -18,6 +18,13 @@
 		3B7671392CB858760062057A /* FilmRollsGenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7671382CB8586E0062057A /* FilmRollsGenericView.swift */; };
 		3B76713B2CB858EE0062057A /* FilmRoll+CreateableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76713A2CB858EA0062057A /* FilmRoll+CreateableModel.swift */; };
 		3B76713D2CB859A90062057A /* FilmRollPickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76713C2CB859A20062057A /* FilmRollPickerSheet.swift */; };
+		3B7671402CB85B3B0062057A /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76713F2CB85B370062057A /* PhotoView.swift */; };
+		3B76714A2CB85B8A0062057A /* PhotoDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7671472CB85B8A0062057A /* PhotoDetailedView.swift */; };
+		3B76714B2CB85B8A0062057A /* ShutterSpeedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7671482CB85B8A0062057A /* ShutterSpeedPicker.swift */; };
+		3B76714D2CB8619B0062057A /* Photo+CreateableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76714C2CB861960062057A /* Photo+CreateableModel.swift */; };
+		3B7671512CB864ED0062057A /* PhotoPickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7671502CB864ED0062057A /* PhotoPickerSheet.swift */; };
+		3B7671522CB864ED0062057A /* PhotosGenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76714E2CB864ED0062057A /* PhotosGenericView.swift */; };
+		3B7671532CB864ED0062057A /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76714F2CB864ED0062057A /* PhotosView.swift */; };
 		CE0B0DE02CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */; };
 		CE0BA2B62CA99C3B00FE216D /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BA2B52CA99C3B00FE216D /* UIApplication.swift */; };
 		CE112A602C9F2957004FEA66 /* DXCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A5F2C9F2957004FEA66 /* DXCode.swift */; };
@@ -102,7 +109,6 @@
 		F6BC7BE82C3C3CBD00160C3E /* ClearFormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BE72C3C3CBD00160C3E /* ClearFormButton.swift */; };
 		F6BC7BEC2C3CA5F800160C3E /* TapToAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */; };
 		F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC7BED2C3CB70C00160C3E /* DiscreteSliderViewModel.swift */; };
-		F6BD32AA2C3F2243008521FB /* ShutterSpeedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD32A92C3F2243008521FB /* ShutterSpeedPicker.swift */; };
 		F6C40BC92C37230B00DB96A7 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = F6C40BC82C37230B00DB96A7 /* Shimmer */; };
 		F6C40BCB2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C40BCA2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift */; };
 		F6CDAB8A2C3D9C53000CC580 /* TextFieldFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CDAB892C3D9C53000CC580 /* TextFieldFormViewModel.swift */; };
@@ -110,7 +116,6 @@
 		F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */; };
 		F6D3A34D2C0FBF4900D56B8D /* TextForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34C2C0FBF4900D56B8D /* TextForm.swift */; };
 		F6D3A34F2C0FC1FC00D56B8D /* TextFieldForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A34E2C0FC1FC00D56B8D /* TextFieldForm.swift */; };
-		F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3A3502C0FC9A600D56B8D /* PhotoDetailedView.swift */; };
 		F6E481992C1B0AD4006EE963 /* ViewStateToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E481982C1B0AD4006EE963 /* ViewStateToolbar.swift */; };
 		F6E4819B2C1B15ED006EE963 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E4819A2C1B15ED006EE963 /* String.swift */; };
 		F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E4819E2C1B88AC006EE963 /* TextFieldWithPrefix.swift */; };
@@ -140,6 +145,13 @@
 		3B7671382CB8586E0062057A /* FilmRollsGenericView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollsGenericView.swift; sourceTree = "<group>"; };
 		3B76713A2CB858EA0062057A /* FilmRoll+CreateableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilmRoll+CreateableModel.swift"; sourceTree = "<group>"; };
 		3B76713C2CB859A20062057A /* FilmRollPickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollPickerSheet.swift; sourceTree = "<group>"; };
+		3B76713F2CB85B370062057A /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		3B7671472CB85B8A0062057A /* PhotoDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailedView.swift; sourceTree = "<group>"; };
+		3B7671482CB85B8A0062057A /* ShutterSpeedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterSpeedPicker.swift; sourceTree = "<group>"; };
+		3B76714C2CB861960062057A /* Photo+CreateableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CreateableModel.swift"; sourceTree = "<group>"; };
+		3B76714E2CB864ED0062057A /* PhotosGenericView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosGenericView.swift; sourceTree = "<group>"; };
+		3B76714F2CB864ED0062057A /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		3B7671502CB864ED0062057A /* PhotoPickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerSheet.swift; sourceTree = "<group>"; };
 		CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		CE0BA2B52CA99C3B00FE216D /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		CE112A5F2C9F2957004FEA66 /* DXCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCode.swift; sourceTree = "<group>"; };
@@ -225,14 +237,12 @@
 		F6BC7BE72C3C3CBD00160C3E /* ClearFormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearFormButton.swift; sourceTree = "<group>"; };
 		F6BC7BEB2C3CA5F800160C3E /* TapToAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToAddButton.swift; sourceTree = "<group>"; };
 		F6BC7BED2C3CB70C00160C3E /* DiscreteSliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteSliderViewModel.swift; sourceTree = "<group>"; };
-		F6BD32A92C3F2243008521FB /* ShutterSpeedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterSpeedPicker.swift; sourceTree = "<group>"; };
 		F6C40BCA2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPickerMenuSearchBatState.swift; sourceTree = "<group>"; };
 		F6CDAB892C3D9C53000CC580 /* TextFieldFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFormViewModel.swift; sourceTree = "<group>"; };
 		F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailedView.swift; sourceTree = "<group>"; };
 		F6D3A3482C0FBA7400D56B8D /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		F6D3A34C2C0FBF4900D56B8D /* TextForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextForm.swift; sourceTree = "<group>"; };
 		F6D3A34E2C0FC1FC00D56B8D /* TextFieldForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldForm.swift; sourceTree = "<group>"; usesTabs = 0; };
-		F6D3A3502C0FC9A600D56B8D /* PhotoDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailedView.swift; sourceTree = "<group>"; };
 		F6E481982C1B0AD4006EE963 /* ViewStateToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateToolbar.swift; sourceTree = "<group>"; };
 		F6E4819A2C1B15ED006EE963 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F6E4819E2C1B88AC006EE963 /* TextFieldWithPrefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPrefix.swift; sourceTree = "<group>"; };
@@ -269,6 +279,15 @@
 				3B1C5DFE2CB6A953007E323A /* HomeViewViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3B7671492CB85B8A0062057A /* PhotoDetailedView */ = {
+			isa = PBXGroup;
+			children = (
+				3B7671472CB85B8A0062057A /* PhotoDetailedView.swift */,
+				3B7671482CB85B8A0062057A /* ShutterSpeedPicker.swift */,
+			);
+			path = PhotoDetailedView;
 			sourceTree = "<group>";
 		};
 		CE112A5C2C9F291C004FEA66 /* Protocols */ = {
@@ -420,7 +439,6 @@
 		F65517B02C1F92D1000133FA /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				F67179122C34AAC50062D350 /* Location */,
 				F67179132C357A390062D350 /* MapPicker */,
 			);
 			path = Map;
@@ -457,6 +475,7 @@
 				F660FCC82C4A8F650022D597 /* Photo */,
 				CEF634B02C9B5ABB00F01C06 /* DXCode */,
 				CE761CAB2CACA60B004E1378 /* Scanner */,
+				F67179122C34AAC50062D350 /* Location */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -495,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FE29BD2C0F804200E9C678 /* Photo.swift */,
+				3B76714C2CB861960062057A /* Photo+CreateableModel.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -747,8 +767,11 @@
 		F6FE29BC2C0F803000E9C678 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
-				F6D3A3502C0FC9A600D56B8D /* PhotoDetailedView.swift */,
-				F6BD32A92C3F2243008521FB /* ShutterSpeedPicker.swift */,
+				3B76713F2CB85B370062057A /* PhotoView.swift */,
+				3B7671492CB85B8A0062057A /* PhotoDetailedView */,
+				3B76714E2CB864ED0062057A /* PhotosGenericView.swift */,
+				3B76714F2CB864ED0062057A /* PhotosView.swift */,
+				3B7671502CB864ED0062057A /* PhotoPickerSheet.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -877,7 +900,6 @@
 				F671790F2C34A9B30062D350 /* MapMarker.swift in Sources */,
 				CE7077902CADFA3200B6E530 /* DXCodeDecoder.swift in Sources */,
 				CE11A1502C84AC0600675ACE /* ChooseButton.swift in Sources */,
-				F6BD32AA2C3F2243008521FB /* ShutterSpeedPicker.swift in Sources */,
 				3B7671312CB855940062057A /* FilmsGenericView.swift in Sources */,
 				F660FCB72C493DEE0022D597 /* RouterNavigationDestinations.swift in Sources */,
 				F63084942C38294A008ABF71 /* CameraView.swift in Sources */,
@@ -901,12 +923,15 @@
 				F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */,
 				CEB201C82CAF60AA00AD6428 /* Described.swift in Sources */,
 				CE99583B2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift in Sources */,
+				3B7671512CB864ED0062057A /* PhotoPickerSheet.swift in Sources */,
+				3B7671522CB864ED0062057A /* PhotosGenericView.swift in Sources */,
+				3B7671532CB864ED0062057A /* PhotosView.swift in Sources */,
 				3B76713D2CB859A90062057A /* FilmRollPickerSheet.swift in Sources */,
 				CE761CAF2CACA63F004E1378 /* DXCodeBuffer.swift in Sources */,
-				F6D3A3512C0FC9A600D56B8D /* PhotoDetailedView.swift in Sources */,
 				F660FCBE2C4A807F0022D597 /* CreateableModel.swift in Sources */,
 				CE112A622C9F3061004FEA66 /* FilmProtocol.swift in Sources */,
 				F6FE29B52C0F704A00E9C678 /* ModelContextExtensions.swift in Sources */,
+				3B7671402CB85B3B0062057A /* PhotoView.swift in Sources */,
 				CEAEB5FC2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift in Sources */,
 				F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D.swift in Sources */,
 				3B76713B2CB858EE0062057A /* FilmRoll+CreateableModel.swift in Sources */,
@@ -934,6 +959,9 @@
 				F6D3A34F2C0FC1FC00D56B8D /* TextFieldForm.swift in Sources */,
 				F660FCD92C4C26EC0022D597 /* FilmDetailedView.swift in Sources */,
 				CE112A602C9F2957004FEA66 /* DXCode.swift in Sources */,
+				3B76714A2CB85B8A0062057A /* PhotoDetailedView.swift in Sources */,
+				3B76714B2CB85B8A0062057A /* ShutterSpeedPicker.swift in Sources */,
+				3B76714D2CB8619B0062057A /* Photo+CreateableModel.swift in Sources */,
 				3B1C5DFF2CB6A953007E323A /* HomeViewViewModel.swift in Sources */,
 				3B76712B2CB84E830062057A /* CameraPickerSheet.swift in Sources */,
 				CE5AA95B2CAAE37F00BA56F5 /* ScannerViewController.swift in Sources */,

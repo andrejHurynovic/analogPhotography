@@ -12,7 +12,9 @@ import SwiftData
 final class Photo {
     var order: Int
     var date: Date? = Date.now
+    
     var location: Location?
+    var locationDescription: String?
     
     var aperture: String = ""
     var shutterSpeed: String = ""
@@ -26,15 +28,23 @@ final class Photo {
     
     init(date: Date? = .now,
          location: Location? = nil,
+         locationDescription: String? = nil,
          aperture: String = "",
          shutterSpeed: String = "",
          ruined: Bool = false, 
          note: String = "",
          image: Data? = nil,
-         filmRoll: FilmRoll?) {
-        self.order = filmRoll!.photos.count
+         //Temp for testing
+         filmRoll: FilmRoll? = nil) {
+        //Temp for testing
+        if let filmRoll = filmRoll {
+            self.order = filmRoll.photos.count
+        } else {
+            self.order = Int.random(in: 1...36)
+        }
         self.date = date
         self.location = location
+        self.locationDescription = locationDescription
         self.aperture = aperture
         self.shutterSpeed = shutterSpeed
         self.ruined = ruined
