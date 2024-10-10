@@ -1,5 +1,5 @@
 //
-//  CameraRowView.swift
+//  CameraView.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 5.07.24.
@@ -7,22 +7,19 @@
 
 import SwiftUI
 
-struct CameraRowView: View {
-    @StateObject var viewModel: CameraRowViewModel
+struct CameraView: View {
+    @StateObject var viewModel: CameraViewModel
     
     init(camera: Camera) {
-        self._viewModel = StateObject(wrappedValue: CameraRowViewModel(camera: camera))
+        self._viewModel = StateObject(wrappedValue: CameraViewModel(camera: camera))
     }
     
     var body: some View {
-        NavigationLink(value: Route.camera(viewModel.camera)) {
-            VStack(alignment: .leading) {
-                name
-                note
-                currentFilmRoll
-            }
+        VStack(alignment: .leading) {
+            name
+            note
+            currentFilmRoll
         }
-        .buttonStyle(PlainButtonStyle())
     }
     
     var name: some View {
@@ -38,21 +35,24 @@ struct CameraRowView: View {
         }
     }
     
-    var currentFilmRoll: some View {
+    //MARK: FilmRoll
+    @ViewBuilder var currentFilmRoll: some View {
+        if viewModel.isFilmRollVisiable {
             HStack {
                 rollName
                 Spacer()
-                filmRollCapacity
+                rollCapacity
                     .bold()
             }
             .monospaced()
+        }
     }
     @ViewBuilder var rollName: some View {
         if let rollName = viewModel.filmRollName {
             Text(rollName)
         }
     }
-    @ViewBuilder var filmRollCapacity: some View {
+    @ViewBuilder var rollCapacity: some View {
         if let rollCapacityDescription = viewModel.currentFilmRollCapacityDescription {
             Text(rollCapacityDescription)
         }
@@ -62,7 +62,7 @@ struct CameraRowView: View {
 #Preview {
     ModelPreview { camera in
         Form {
-            CameraRowView(camera: camera)
+            CameraView(camera: camera)
         }
     }
 }

@@ -55,7 +55,7 @@ struct HomeView: View {
         QueryView(descriptor: FetchDescriptor<Camera>(predicate: #Predicate {
             searchText.isEmpty || $0.name.localizedStandardContains(searchText)
         })) { camera in
-            CameraRowView(camera: camera)
+            CameraView(camera: camera)
                 .floatingBackground()
         }
     }

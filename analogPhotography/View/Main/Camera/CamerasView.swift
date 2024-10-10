@@ -14,7 +14,7 @@ struct CamerasView: View {
         ModelsView(sort: [SortDescriptor(\Camera.name)],
                    navigationTitle: "Cameras") { cameras in
             List(cameras) { camera in
-                CameraRowView(camera: camera)
+                CameraView(camera: camera)
             }
         }
     }
