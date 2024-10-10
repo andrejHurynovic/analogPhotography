@@ -11,7 +11,9 @@ struct FilmProcessPicker: View {
     @Binding var filmProcess: FilmProcess?
     
     var body: some View {
-        ModelPicker(sort: [.init(\FilmProcess.name)], selectedValue: $filmProcess, title: "Process") { filmProcesses in
+        MenuModelPicker(sort: [.init(\FilmProcess.name)],
+                        selectedValue: $filmProcess,
+                        title: "Process") { filmProcesses in
             ForEach(filmProcesses) { Text($0.name).tag($0 as FilmProcess?) }
         }
     }
