@@ -2,19 +2,18 @@
 //  CamerasView.swift
 //  analogPhotography
 //
-//  Created by Andrej Hurynovič on 11.07.24.
+//  Created by Andrej Hurynovič on 10.10.2024.
 //
 
 import SwiftUI
-import SwiftData
 
 struct CamerasView: View {
-    
     var body: some View {
-        ModelsView(sort: [SortDescriptor(\Camera.name)],
-                   navigationTitle: "Cameras") { cameras in
+        CamerasGenericView { cameras in
             List(cameras) { camera in
-                CameraView(camera: camera)
+                NavigationLink(value: Route.camera(camera)) {
+                    CameraView(camera: camera)
+                }
             }
         }
     }
@@ -23,6 +22,5 @@ struct CamerasView: View {
 #Preview {
     NavigationStackPreview {
         CamerasView()
-            .routerNavigationDestinations()
     }
 }

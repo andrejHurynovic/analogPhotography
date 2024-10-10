@@ -10,9 +10,9 @@ import SwiftData
 
 struct ModelsView<Content: View, Model: CreateableModel>: View {
     @Query var models: [Model]
-    let navigationTitle: String
     
-    var content: ([Model]) -> Content
+    let navigationTitle: String
+    @ViewBuilder var content: ([Model]) -> Content
     
     init(filter: Predicate<Model>? = nil,
          sort: [SortDescriptor<Model>] = [],
@@ -35,9 +35,9 @@ struct ModelsView<Content: View, Model: CreateableModel>: View {
     @ViewBuilder var contentUnavailable: some View {
         if models.isEmpty == true {
             ContentUnavailableView(label: {
-                Label("No " + navigationTitle, systemImage: "xmark.bin")
+                Label("No \(navigationTitle)", systemImage: "xmark.bin")
             }, description: {
-                Text("You're cameras will appear here.")
+                Text("You're \(navigationTitle) will appear here.")
             }, actions: {
                 NavigationLink("Create new", value: Model.creatingRoute())
             })

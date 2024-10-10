@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct CameraView: View {
-    @StateObject var viewModel: CameraViewModel
+    @ObservedObject var viewModel: CameraViewModel
     
     init(camera: Camera) {
-        self._viewModel = StateObject(wrappedValue: CameraViewModel(camera: camera))
+        self._viewModel = ObservedObject(wrappedValue: CameraViewModel(camera: camera))
     }
     
     var body: some View {
