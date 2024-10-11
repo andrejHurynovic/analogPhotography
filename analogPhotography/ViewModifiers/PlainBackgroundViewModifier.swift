@@ -1,5 +1,5 @@
 //
-//  BackgroundViewModifier.swift
+//  PlainBackgroundViewModifier.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 5.10.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-fileprivate struct BackgroundViewModifier: ViewModifier {
+fileprivate struct PlainBackgroundViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
@@ -17,7 +17,8 @@ fileprivate struct BackgroundViewModifier: ViewModifier {
 }
 
 extension View {
-    func backgroundStyle() -> some View {
-        modifier(BackgroundViewModifier())
+    func plainBackgroundStyle() -> some View {
+        modifier(PlaintBackgroundViewModifier())
     }
 }
+

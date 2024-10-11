@@ -52,7 +52,7 @@ struct ScannerView: View {
             }
         }
         .pickerStyle(.palette)
-        .backgroundStyle()
+        .plainBackgroundStyle()
         
     }
 }

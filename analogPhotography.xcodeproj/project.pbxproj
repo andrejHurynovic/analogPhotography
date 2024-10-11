@@ -62,7 +62,7 @@
 		CEB201C82CAF60AA00AD6428 /* Described.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201C72CAF60AA00AD6428 /* Described.swift */; };
 		CEB201D02CB086ED00AD6428 /* FilmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201CF2CB086ED00AD6428 /* FilmView.swift */; };
 		CEB201D32CB08F9400AD6428 /* ScannerBarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201D22CB08F9400AD6428 /* ScannerBarcodeView.swift */; };
-		CEB201D52CB090C800AD6428 /* BackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201D42CB090C800AD6428 /* BackgroundViewModifier.swift */; };
+		CEB201D52CB090C800AD6428 /* PlainBackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201D42CB090C800AD6428 /* PlainBackgroundViewModifier.swift */; };
 		CEFFDAFF2CADC01E0047C819 /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFDAFE2CADC01E0047C819 /* ScannerCoordinator.swift */; };
 		F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60DC19D2C248FB50092E952 /* LocationItem.swift */; };
 		F62387622C5020CC00A4587F /* FilmProcessPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62387612C5020CC00A4587F /* FilmProcessPicker.swift */; };
@@ -192,7 +192,7 @@
 		CEB201C72CAF60AA00AD6428 /* Described.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Described.swift; sourceTree = "<group>"; };
 		CEB201CF2CB086ED00AD6428 /* FilmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmView.swift; sourceTree = "<group>"; };
 		CEB201D22CB08F9400AD6428 /* ScannerBarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerBarcodeView.swift; sourceTree = "<group>"; };
-		CEB201D42CB090C800AD6428 /* BackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifier.swift; sourceTree = "<group>"; };
+		CEB201D42CB090C800AD6428 /* PlainBackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainBackgroundViewModifier.swift; sourceTree = "<group>"; };
 		CEFFDAFE2CADC01E0047C819 /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
 		F60DC19D2C248FB50092E952 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		F62387612C5020CC00A4587F /* FilmProcessPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmProcessPicker.swift; sourceTree = "<group>"; };
@@ -709,9 +709,9 @@
 		F6E4819D2C1B886E006EE963 /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				CEB201D42CB090C800AD6428 /* BackgroundViewModifier.swift */,
 				CE2779CC2CB463B6005ECE63 /* DataModelContainerViewModifier.swift */,
 				CE33F7BF2CB354040014B429 /* FloatingBackgroundViewModifier.swift */,
+				CEB201D42CB090C800AD6428 /* PlainBackgroundViewModifier.swift */,
 				F6E4819E2C1B88AC006EE963 /* TextFieldWithPrefix.swift */,
 			);
 			path = ViewModifiers;
@@ -939,7 +939,7 @@
 				CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */,
 				CE50D9CE2CB308B200FFC071 /* CreateFilmCellView.swift in Sources */,
 				F623876D2C51B00D00A4587F /* FilmRollDetailedViewModel.swift in Sources */,
-				CEB201D52CB090C800AD6428 /* BackgroundViewModifier.swift in Sources */,
+				CEB201D52CB090C800AD6428 /* PlainBackgroundViewModifier.swift in Sources */,
 				F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */,
 				F660FCD62C4C0E920022D597 /* ModelViewModelProtocol.swift in Sources */,
 				CE5002322CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift in Sources */,

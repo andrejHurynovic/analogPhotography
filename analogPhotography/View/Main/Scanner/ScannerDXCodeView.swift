@@ -14,16 +14,16 @@ extension ScannerView {
         var body: some View {
             if let dxCode = dxCodeBuffer.dxCode {
                 DXCodeView(dxCode: dxCode)
-                    .backgroundStyle()
+                    .plainBackgroundStyle()
                     .padding(.horizontal)
                     .aspectRatio(contentMode: .fit)
                 CreateFilmCellView(dxCode: dxCode)
-                    .backgroundStyle()
+                    .plainBackgroundStyle()
             } else {
                 Text("No DX codes detected.")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
-                    .backgroundStyle()
+                    .plainBackgroundStyle()
             }
         }
     }

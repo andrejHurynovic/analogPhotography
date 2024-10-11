@@ -36,24 +36,24 @@ extension ScannerView {
                 Text("No barcode detected.")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
-                    .backgroundStyle()
+                    .plainBackgroundStyle()
             case .dbError:
                 Text("Database error.")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
-                    .backgroundStyle()
+                    .plainBackgroundStyle()
 
             case .noFilteredFilms:
                 Text("No films associated with this barcode.")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
-                    .backgroundStyle()
+                    .plainBackgroundStyle()
 
             case .showing:
                 ForEach(filteredFilms) { film in
                     NavigationLink(value: Route.film(film)) {
                         FilmView(film: film)
-                            .backgroundStyle()
+                            .plainBackgroundStyle()
                     }
                     
                 }
