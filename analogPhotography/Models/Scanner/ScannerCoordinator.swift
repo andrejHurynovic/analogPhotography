@@ -19,7 +19,7 @@ final class ScannerCoordinator: NSObject {
     func updateBarcode(_ barcode: String) {
         self.barcode = barcode
     }
-    func addDXCodeImage(image: CGImage, barcodeSide: CGRect.RelativePosition?) {
+    @MainActor func addDXCodeImage(image: CGImage, barcodeSide: CGRect.RelativePosition?) {
         self.dxCodeBuffer.addDXCodeImage(cgImage: image, barcodeSide: barcodeSide)
     }
 }

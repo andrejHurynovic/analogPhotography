@@ -18,7 +18,7 @@ fileprivate struct PlainBackgroundViewModifier: ViewModifier {
 
 extension View {
     func plainBackgroundStyle() -> some View {
-        modifier(PlaintBackgroundViewModifier())
+        modifier(PlainBackgroundViewModifier())
     }
 }
 

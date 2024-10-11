@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-extension ScannerViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
+extension ScannerViewController: @preconcurrency AVCaptureVideoDataOutputSampleBufferDelegate {
     //MARK: Setup
     func setupDetectorVideoOutput() {
         videoOutput.alwaysDiscardsLateVideoFrames = true

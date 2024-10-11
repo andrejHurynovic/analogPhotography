@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 final class DXCodeBuffer: ObservableObject {
     private var potentialDXCodeBuffer = RingBuffer<DXCode>(size: Constants.Scanner.dxCodeBufferSize)
     @Published var dxCode: DXCode?

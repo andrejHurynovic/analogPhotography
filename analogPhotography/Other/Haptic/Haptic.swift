@@ -1,6 +1,6 @@
 //
 //  Haptic.swift
-//  bsuirSchedule
+//  analogPhotography
 //
 //  Created by Andrej Hurynovič on 7.06.23.
 //

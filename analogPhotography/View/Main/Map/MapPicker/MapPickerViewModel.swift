@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
-import MapKit
+@preconcurrency import MapKit
 
+@MainActor
 @Observable class MapPickerViewModel {
     //Map
     var position: MapCameraPosition = .automatic
