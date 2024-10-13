@@ -1,8 +1,54 @@
 import UIKit
-import AVFoundation
+@preconcurrency import AVFoundation
 import Vision
 
-final class ScannerViewController: UIViewController {
+class Varnisher {
+
+    init(queue: DispatchSerialQueue) {
+        self.queue = queue
+    }
+    
+    let queue: DispatchSerialQueue
+    
+    weak var delegate: Delegate?
+    
+    protocol Delegate: AnyObject {
+        func varnisherShouldUseGloss(_ varnisher: Varnisher) -> Bool
+    }
+    
+}
+
+actor VarnishCentral: Varnisher.Delegate {
+    init() {
+        let queue = DispatchSerialQueue(label: "VarnishCentral.queue")
+        self.queue = queue
+        self.varnisher = Varnisher(queue: queue)
+        self.useGlossForNextWaffle = true
+        
+        self.varnisher.delegate = self
+    }
+
+    private let queue: DispatchSerialQueue
+    private let varnisher: Varnisher
+    private var useGlossForNextWaffle: Bool
+
+    nonisolated var unownedExecutor: UnownedSerialExecutor {
+        self.queue.asUnownedSerialExecutor()
+    }
+
+    nonisolated func varnisherShouldUseGloss(_ varnisher: Varnisher) -> Bool {
+        self.assumeIsolated { a in
+            a.shouldUseGloss()
+        }
+    }
+    
+    private func shouldUseGloss() -> Bool {
+        defer { self.useGlossForNextWaffle.toggle() }
+        return self.useGlossForNextWaffle
+    }
+}
+
+final class ScannerViewController: UIViewController, @unchecked Sendable {
     let captureSession = AVCaptureSession()
     let captureSessionQueue = DispatchQueue(label: "captureSessionQueue")
     var captureVideoPreviewLayer = AVCaptureVideoPreviewLayer()
@@ -27,7 +73,7 @@ final class ScannerViewController: UIViewController {
     
     //MARK: Lifecycle
     override func viewDidLoad() {
-        captureSessionQueue.async {
+//        Task {
             self.setupCaptureSession()
             self.setupCapturePreviewLayer()
             
@@ -36,12 +82,14 @@ final class ScannerViewController: UIViewController {
             self.setupDetectorsRequests()
             
             self.updateVideoRotationAngle()
+//        }
+        captureSessionQueue.sync {
+            self.captureSession.startRunning()
         }
     }
     override func viewWillAppear(_ animated: Bool) {
-        captureSessionQueue.async {
-            self.captureSession.startRunning()
-        }
+//        captureSessionQueue.async {
+//        }
     }
     override func viewDidDisappear(_ animated: Bool) {
         self.captureSession.stopRunning()
