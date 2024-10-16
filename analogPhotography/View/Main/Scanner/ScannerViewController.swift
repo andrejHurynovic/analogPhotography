@@ -8,11 +8,11 @@ final class ScannerViewController: UIViewController {
     var outputActor: ScannerOutputActor!
     
     var captureVideoPreviewLayer = AVCaptureVideoPreviewLayer()
-    var viewSize: CGSize = UIScreen.main.bounds.size
+    var viewSize: CGSize!
     
     var videoOutput = AVCaptureVideoDataOutput()
     
-    var finishedSetup: Bool = false
+    var isSetupFinished: Bool = false
     
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -27,12 +27,12 @@ final class ScannerViewController: UIViewController {
             updateVideoRotationAngle()
             await captureSessionActor.startCaptureSession()
             
-            finishedSetup = true
+            isSetupFinished = true
         }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if finishedSetup {
+        if isSetupFinished {
             Task {
                 await captureSessionActor.startCaptureSession()
             }

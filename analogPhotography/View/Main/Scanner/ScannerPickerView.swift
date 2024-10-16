@@ -31,6 +31,7 @@ struct ScannerPickerView: View {
             ZStack(alignment: .bottom) {
                 ScannerView(barcode: $viewModel.barcode,
                             dxCode: $viewModel.dxCode)
+                .ignoresSafeArea()
                 VStack {
                     Spacer()
                     bottomMenuStatePicker

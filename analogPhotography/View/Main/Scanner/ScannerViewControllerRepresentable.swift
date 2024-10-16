@@ -12,6 +12,7 @@ struct ScannerViewControllerRepresentable: UIViewControllerRepresentable {
     @Binding var barcodeBoundingBox: CGRect?
     @Binding var dxCode: DXCode?
     @Binding var dxCodeBoundingBox: CGRect?
+    var viewSize: CGSize
     
     func makeCoordinator() -> ScannerCoordinator {
         return ScannerCoordinator(barcode: $barcode, barcodeBoundingBox: $barcodeBoundingBox, dxCode: $dxCode, dxCodeBoundingBox: $dxCodeBoundingBox)
@@ -19,6 +20,7 @@ struct ScannerViewControllerRepresentable: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
         let viewController = ScannerViewController()
         viewController.outputActor = context.coordinator.scannerOutputActor
+        viewController.viewSize = viewSize
         return viewController
     }
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) { }

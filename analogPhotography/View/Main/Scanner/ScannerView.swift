@@ -12,23 +12,25 @@ struct ScannerView: View {
     @State var barcodeBoundingBox: CGRect?
     @Binding var dxCode: DXCode?
     @State var dxCodeBoundingBox: CGRect?
-    @State var dxCodeImage: UIImage?
     
     var body: some View {
-        ZStack {
-            ScannerViewControllerRepresentable(barcode: $barcode,
-                                               barcodeBoundingBox: $barcodeBoundingBox,
-                                               dxCode: $dxCode,
-                                               dxCodeBoundingBox: $dxCodeBoundingBox)
-            GeometryReader { geometryProxy in
-                if let barcodeBoundingBox = barcodeBoundingBox {
-                    transformedBoundingBox(barcodeBoundingBox, viewSize: geometryProxy.size)
-                }
-                if let dxCodeBoundingBox = dxCodeBoundingBox {
-                    transformedBoundingBox(dxCodeBoundingBox, viewSize: geometryProxy.size)
+//        GeometryReader { geometryProxy in
+            ZStack {
+                ScannerViewControllerRepresentable(barcode: $barcode,
+                                                   barcodeBoundingBox: $barcodeBoundingBox,
+                                                   dxCode: $dxCode,
+                                                   dxCodeBoundingBox: $dxCodeBoundingBox,
+                                                   viewSize: UIScreen.main.bounds.size)
+                GeometryReader { geometryProxy in
+                    if let barcodeBoundingBox = barcodeBoundingBox {
+                        transformedBoundingBox(barcodeBoundingBox, viewSize: geometryProxy.size)
+                    }
+                    if let dxCodeBoundingBox = dxCodeBoundingBox {
+                        transformedBoundingBox(dxCodeBoundingBox, viewSize: geometryProxy.size)
+                    }
                 }
             }
-        }
+//        }
         .animation(.bouncy, value: barcodeBoundingBox)
         .animation(.bouncy, value: dxCodeBoundingBox)
     }
