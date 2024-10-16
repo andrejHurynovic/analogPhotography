@@ -43,6 +43,7 @@ struct ScannerPickerView: View {
                 }
             }
             .animation(.easeInOut, value: viewModel.barcode)
+            .animation(.easeInOut, value: viewModel.dxCode)
         }
     }
     

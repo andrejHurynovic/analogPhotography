@@ -12,6 +12,7 @@ struct ScannerView: View {
     @State var barcodeBoundingBox: CGRect?
     @Binding var dxCode: DXCode?
     @State var dxCodeBoundingBox: CGRect?
+    @State var dxCodeImage: UIImage?
     
     var body: some View {
         ZStack {

@@ -88,8 +88,10 @@ actor ScannerOutputActor {
             dxCodeBoundingBox = boundingBox
         }
         
+        let ciImageRect = VNImageRectForNormalizedRect(boundingBox, capturedImage!.width, capturedImage!.height)
+        let cgImageRect = CGRect(x: ciImageRect.minX, y: CGFloat(capturedImage!.height) - ciImageRect.maxY, width: ciImageRect.width, height: ciImageRect.height)
         guard let capturedImage = capturedImage,
-              let dxCodeImage = capturedImage.cropping(to: VNImageRectForNormalizedRect(boundingBox, capturedImage.width, capturedImage.height)) else { return }
+              let dxCodeImage = capturedImage.cropping(to: cgImageRect) else { return }
         let barcodeSide = lastBarcodeBoundingBox?.relativePosition(to: boundingBox)
         
         await decodeDXCodeImage(image: dxCodeImage)
@@ -100,7 +102,6 @@ actor ScannerOutputActor {
     
     private func decodeDXCodeImage(image: CGImage) async {
         dxCodeCandidatesBuffer.add(await DXCode(from: image, lastBarcodeSide))
-        print("\(dxCodeCandidatesBuffer.buffer.mostFrequentElement())")
         guard let mostFrequentCandidateDXCode = dxCodeCandidatesBuffer.buffer.mostFrequentElement(),
               mostFrequentCandidateDXCode.percentage >= Constants.Scanner.dxCodeDetectorPrecision else {
             Task { @MainActor in
@@ -109,9 +110,7 @@ actor ScannerOutputActor {
             return
         }
         Task { @MainActor in
-            //                withAnimation {
             dxCode = mostFrequentCandidateDXCode.element
-            //            }
         }
     }
     
