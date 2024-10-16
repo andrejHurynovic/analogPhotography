@@ -21,7 +21,7 @@ private struct RouterNavigationDestinations: ViewModifier {
                 case .photo(let photo):
                     PhotoDetailedView(photo: photo)
                 case .scanner:
-                    ScannerView()
+                    ScannerPickerView()
                 case .settings:
                     EmptyView()
                 }

@@ -8,13 +8,13 @@
 import SwiftUI
 import SwiftData
 
-extension ScannerView {
+extension ScannerPickerView {
     struct ScannerBarcodeView: View {
         private var state: ScannerFilmsViewState
         private var filteredFilms: [Film] = []
         
-        init(filterDXBarcode: String, modelContext: ModelContext) {
-            guard filterDXBarcode.isEmpty == false else {
+        init(filterDXBarcode: String?, modelContext: ModelContext) {
+            guard let filterDXBarcode = filterDXBarcode else {
                 state = .noDXBarcode;
                 return
             }
@@ -42,13 +42,13 @@ extension ScannerView {
                     .font(.subheadline)
                     .foregroundStyle(.gray)
                     .plainBackgroundStyle()
-
+                
             case .noFilteredFilms:
                 Text("No films associated with this barcode.")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
                     .plainBackgroundStyle()
-
+                
             case .showing:
                 ForEach(filteredFilms) { film in
                     NavigationLink(value: Route.film(film)) {
@@ -72,6 +72,6 @@ extension ScannerView {
 
 #Preview {
     NavigationStackPreview {
-        ScannerView()
+        ScannerPickerView()
     }
 }

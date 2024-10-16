@@ -22,7 +22,7 @@ struct Constants {
     }
     
     struct Scanner {
-        static let captureDelay: Duration = .milliseconds(250)
+        static let requestDelay: Duration = .milliseconds(250)
         static let dxCodeBufferSize: Int = 15
         static let dxCodeDetectorPrecision = 0.7
     }

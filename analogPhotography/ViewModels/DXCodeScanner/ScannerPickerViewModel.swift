@@ -9,13 +9,12 @@ import SwiftUI
 import AVKit
 
 @MainActor
-final class ScannerViewModel: ObservableObject {
+final class ScannerPickerViewModel: ObservableObject {
     @Published var state: DXCodeScannerState = .cameraAccessNotDetermined
     @Published var bottomMenuState: ScannerViewBottomMenuState = .barcode
     
-    @Published var dxCodeBuffer = DXCodeBuffer()
-    @Published var barcode: String = ""
-    
+    @Published var dxCode: DXCode?
+    @Published var barcode: String?
     
     init() {
         Task { await updateScannerAccessStatus() }

@@ -139,7 +139,12 @@ extension DXCode {
             
             let maximalDifferenceNumbers = columnAverages.findMaxDifference(step: 1)!
             let threshold = (maximalDifferenceNumbers.first + maximalDifferenceNumbers.second) / 2
-            return (columnAverages.map( { (($0 > threshold ? DXCodeBit.metal : DXCodeBit.paint)) } ).compress())
+            var compressedBits = columnAverages.map( { (($0 > threshold ? DXCodeBit.metal : DXCodeBit.paint)) } ).compress()
+            compressedBits.removeAll { compressedBit in
+                compressedBit.1 < columns / 8
+            }
+            
+            return compressedBits
         }
     }
     

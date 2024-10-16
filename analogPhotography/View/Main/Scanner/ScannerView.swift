@@ -1,64 +1,46 @@
 //
-//  DXCodeScannerView.swift
+//  ScannerView.swift
 //  analogPhotography
 //
-//  Created by Andrej Hurynovič on 26.09.24.
+//  Created by Andrej Hurynovič on 16.10.2024.
 //
 
 import SwiftUI
-import SwiftData
 
 struct ScannerView: View {
-    @StateObject var viewModel = ScannerViewModel()
-    @Environment(\.modelContext) private var modelContext
+    @Binding var barcode: String?
+    @State var barcodeBoundingBox: CGRect?
+    @Binding var dxCode: DXCode?
+    @State var dxCodeBoundingBox: CGRect?
     
     var body: some View {
-        switch viewModel.state {
-        case .cameraAccessNotDetermined:
-            ScannerContentUnavailableView(description: "Access to the camera is required to read the DX code.",
-                                          actionTitle: "Allow access to the camera",
-                                          action: { await viewModel.requestCameraPermission() })
-        case .cameraAccessDenied:
-            ScannerContentUnavailableView(description: "Access to the camera is required to read the DX code. You refused earlier, go to settings to allow access to the camera.",
-                                          actionTitle: "Allow access to the camera",
-                                          action: { UIApplication.openAppSettings() })
-        case .cameraNotAvailable:
-            ScannerContentUnavailableView(description: "Access to the camera is required to read the DX code. The camera is not available on your device.")
-        case .scannerAvailable:
-            ZStack(alignment: .bottom) {
-                ZStack(alignment: .bottom) {
-                    ScannerViewControllerRepresentable(barcode: $viewModel.barcode, dxCodeBuffer: viewModel.dxCodeBuffer)
-                    VStack {
-                        Spacer()
-                        bottomMenuStatePicker
-                        switch viewModel.bottomMenuState {
-                        case .barcode:
-                            ScannerBarcodeView(filterDXBarcode: viewModel.barcode, modelContext: modelContext)
-                        case .dxCode:
-                            ScannerDXCodeView(dxCodeBuffer: viewModel.dxCodeBuffer)
-                        }
-                    }
+        ZStack {
+            ScannerViewControllerRepresentable(barcode: $barcode,
+                                               barcodeBoundingBox: $barcodeBoundingBox,
+                                               dxCode: $dxCode,
+                                               dxCodeBoundingBox: $dxCodeBoundingBox)
+            GeometryReader { geometryProxy in
+                if let barcodeBoundingBox = barcodeBoundingBox {
+                    transformedBoundingBox(barcodeBoundingBox, viewSize: geometryProxy.size)
                 }
-                .animation(.easeInOut, value: viewModel.barcode)
-                
+                if let dxCodeBoundingBox = dxCodeBoundingBox {
+                    transformedBoundingBox(dxCodeBoundingBox, viewSize: geometryProxy.size)
+                }
             }
         }
+        .animation(.bouncy, value: barcodeBoundingBox)
+        .animation(.bouncy, value: dxCodeBoundingBox)
     }
     
-    var bottomMenuStatePicker: some View {
-        Picker("", selection: $viewModel.bottomMenuState.animation()) {
-            ForEach(ScannerViewBottomMenuState.allCases, id: \.self) { item in
-                Text(item.uiDescription)
-            }
-        }
-        .pickerStyle(.palette)
-        .plainBackgroundStyle()
+    @ViewBuilder func transformedBoundingBox(_ boundingBox: CGRect, viewSize: CGSize) -> some View {
+        let rect = CGRect(x:        boundingBox.minX * viewSize.width,
+                          y:        viewSize.height - boundingBox.minY * viewSize.height,
+                          width:    boundingBox.width * viewSize.width,
+                          height:   boundingBox.height * viewSize.height)
         
-    }
-}
-
-#Preview {
-    NavigationStackPreview {
-        ScannerView()
+        RoundedBoundingBox(cornerRadius: 4, lineLength: 12)
+            .stroke(Color.yellow, lineWidth: 2)
+            .position(x: rect.midX, y: rect.midY)
+            .frame(width: rect.width, height: rect.height)
     }
 }

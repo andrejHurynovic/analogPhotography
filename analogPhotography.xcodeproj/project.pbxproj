@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0A09402CBEBB1900CCA7FD /* ScannerCaptureSessionActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A093F2CBEBB1900CCA7FD /* ScannerCaptureSessionActor.swift */; };
+		3B0A09422CBF0F3300CCA7FD /* ScannerOutputActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A09412CBF0F3300CCA7FD /* ScannerOutputActor.swift */; };
+		3B174D6C2CC01041002B928F /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B174D6B2CC01041002B928F /* ScannerView.swift */; };
+		3B174D6F2CC01079002B928F /* RoundedBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B174D6E2CC01079002B928F /* RoundedBoundingBox.swift */; };
 		3B1C5DFF2CB6A953007E323A /* HomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C5DFE2CB6A953007E323A /* HomeViewViewModel.swift */; };
 		3B487C0E2CB93566002C79EE /* String+RemovingLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B487C0D2CB93566002C79EE /* String+RemovingLast.swift */; };
 		3B487C102CB9357A002C79EE /* String+RemovingPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B487C0F2CB9357A002C79EE /* String+RemovingPrefix.swift */; };
-		3B7671272CB7DAE20062057A /* Order.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B7671262CB7DADB0062057A /* Order.md */; };
 		3B76712B2CB84E830062057A /* CameraPickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76712A2CB84E830062057A /* CameraPickerSheet.swift */; };
 		3B76712F2CB850290062057A /* CamerasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76712E2CB850240062057A /* CamerasView.swift */; };
 		3B7671312CB855940062057A /* FilmsGenericView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7671302CB855940062057A /* FilmsGenericView.swift */; };
@@ -39,8 +42,8 @@
 		CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */; };
 		CE35C77B2C9DAB1D001E4E55 /* DXCodeBit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */; };
 		CE35E5282CA5A612004CF3A9 /* DXCodeScannerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */; };
-		CE35E52A2CA5A68B004CF3A9 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5292CA5A68B004CF3A9 /* ScannerViewModel.swift */; };
-		CE35E5302CA5AADE004CF3A9 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E52F2CA5AADE004CF3A9 /* ScannerView.swift */; };
+		CE35E52A2CA5A68B004CF3A9 /* ScannerPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5292CA5A68B004CF3A9 /* ScannerPickerViewModel.swift */; };
+		CE35E5302CA5AADE004CF3A9 /* ScannerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E52F2CA5AADE004CF3A9 /* ScannerPickerView.swift */; };
 		CE5002322CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */; };
 		CE50D9CC2CB2F26C00FFC071 /* ScannerDXCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */; };
 		CE50D9CE2CB308B200FFC071 /* CreateFilmCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CD2CB308B200FFC071 /* CreateFilmCellView.swift */; };
@@ -50,7 +53,6 @@
 		CE7077902CADFA3200B6E530 /* DXCodeDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70778F2CADFA3200B6E530 /* DXCodeDecoder.swift */; };
 		CE761CAA2CACA5D4004E1378 /* Array+compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE761CA92CACA5D4004E1378 /* Array+compress.swift */; };
 		CE761CAD2CACA619004E1378 /* ScannerDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE761CAC2CACA619004E1378 /* ScannerDetector.swift */; };
-		CE761CAF2CACA63F004E1378 /* DXCodeBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE761CAE2CACA63F004E1378 /* DXCodeBuffer.swift */; };
 		CE8FB8452CADA82D00989321 /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FB8442CADA82D00989321 /* RingBuffer.swift */; };
 		CE8FB8492CADA9D400989321 /* Array+mostFrequentElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FB8482CADA9D400989321 /* Array+mostFrequentElement.swift */; };
 		CE99583B2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99583A2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift */; };
@@ -136,10 +138,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0A093F2CBEBB1900CCA7FD /* ScannerCaptureSessionActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCaptureSessionActor.swift; sourceTree = "<group>"; };
+		3B0A09412CBF0F3300CCA7FD /* ScannerOutputActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerOutputActor.swift; sourceTree = "<group>"; };
+		3B174D6B2CC01041002B928F /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		3B174D6E2CC01079002B928F /* RoundedBoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBoundingBox.swift; sourceTree = "<group>"; };
 		3B1C5DFE2CB6A953007E323A /* HomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewViewModel.swift; sourceTree = "<group>"; };
 		3B487C0D2CB93566002C79EE /* String+RemovingLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemovingLast.swift"; sourceTree = "<group>"; };
 		3B487C0F2CB9357A002C79EE /* String+RemovingPrefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemovingPrefix.swift"; sourceTree = "<group>"; };
-		3B7671262CB7DADB0062057A /* Order.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Order.md; sourceTree = "<group>"; };
 		3B76712A2CB84E830062057A /* CameraPickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPickerSheet.swift; sourceTree = "<group>"; };
 		3B76712E2CB850240062057A /* CamerasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasView.swift; sourceTree = "<group>"; };
 		3B7671302CB855940062057A /* FilmsGenericView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsGenericView.swift; sourceTree = "<group>"; };
@@ -168,8 +173,8 @@
 		CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeView.swift; sourceTree = "<group>"; };
 		CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeBit.swift; sourceTree = "<group>"; };
 		CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeScannerState.swift; sourceTree = "<group>"; };
-		CE35E5292CA5A68B004CF3A9 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
-		CE35E52F2CA5AADE004CF3A9 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		CE35E5292CA5A68B004CF3A9 /* ScannerPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPickerViewModel.swift; sourceTree = "<group>"; };
+		CE35E52F2CA5AADE004CF3A9 /* ScannerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPickerView.swift; sourceTree = "<group>"; };
 		CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDeviceOrientation+videoRotationAngle.swift"; sourceTree = "<group>"; };
 		CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerDXCodeView.swift; sourceTree = "<group>"; };
 		CE50D9CD2CB308B200FFC071 /* CreateFilmCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFilmCellView.swift; sourceTree = "<group>"; };
@@ -180,7 +185,6 @@
 		CE70778F2CADFA3200B6E530 /* DXCodeDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeDecoder.swift; sourceTree = "<group>"; };
 		CE761CA92CACA5D4004E1378 /* Array+compress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+compress.swift"; sourceTree = "<group>"; };
 		CE761CAC2CACA619004E1378 /* ScannerDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerDetector.swift; sourceTree = "<group>"; };
-		CE761CAE2CACA63F004E1378 /* DXCodeBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeBuffer.swift; sourceTree = "<group>"; };
 		CE8FB8442CADA82D00989321 /* RingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
 		CE8FB8482CADA9D400989321 /* Array+mostFrequentElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+mostFrequentElement.swift"; sourceTree = "<group>"; };
 		CE99583A2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmExposureTolerance.swift; sourceTree = "<group>"; };
@@ -277,6 +281,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B174D6D2CC01057002B928F /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				3B174D6E2CC01079002B928F /* RoundedBoundingBox.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
 		3B1C5DFD2CB6A947007E323A /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,7 +347,7 @@
 		CE35E5262CA5A5FA004CF3A9 /* DXCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
-				CE35E5292CA5A68B004CF3A9 /* ScannerViewModel.swift */,
+				CE35E5292CA5A68B004CF3A9 /* ScannerPickerViewModel.swift */,
 				CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */,
 			);
 			path = DXCodeScanner;
@@ -346,6 +358,8 @@
 			children = (
 				CEFFDAFE2CADC01E0047C819 /* ScannerCoordinator.swift */,
 				CE761CAC2CACA619004E1378 /* ScannerDetector.swift */,
+				3B0A093F2CBEBB1900CCA7FD /* ScannerCaptureSessionActor.swift */,
+				3B0A09412CBF0F3300CCA7FD /* ScannerOutputActor.swift */,
 			);
 			path = Scanner;
 			sourceTree = "<group>";
@@ -388,10 +402,11 @@
 		CEC0FF142CA4B482003918A7 /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
-				CE35E52F2CA5AADE004CF3A9 /* ScannerView.swift */,
+				3B174D6B2CC01041002B928F /* ScannerView.swift */,
+				CE35E52F2CA5AADE004CF3A9 /* ScannerPickerView.swift */,
+				CEAEB5FB2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift */,
 				CEB201D22CB08F9400AD6428 /* ScannerBarcodeView.swift */,
 				CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */,
-				CEAEB5FB2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift */,
 				CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */,
 				CE5AA9592CAAE37F00BA56F5 /* ScannerViewController.swift */,
 			);
@@ -403,7 +418,6 @@
 			children = (
 				CE112A5F2C9F2957004FEA66 /* DXCode.swift */,
 				CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */,
-				CE761CAE2CACA63F004E1378 /* DXCodeBuffer.swift */,
 				CE70778F2CADFA3200B6E530 /* DXCodeDecoder.swift */,
 				CE5AA9522CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel */,
 			);
@@ -546,6 +560,7 @@
 		F660FCC92C4A8FA70022D597 /* Sub */ = {
 			isa = PBXGroup;
 			children = (
+				3B174D6D2CC01057002B928F /* Shapes */,
 				F6BC7BE12C3C1CC600160C3E /* Forms */,
 				F6BC7BE22C3C1CCF00160C3E /* Pickers */,
 				F6BC7BE32C3C1CD500160C3E /* Buttons */,
@@ -739,7 +754,6 @@
 			children = (
 				CE5B69D92CA576D8001A7562 /* Info.plist */,
 				F6FE299E2C0F492B00E9C678 /* analogPhotographyApp.swift */,
-				3B7671262CB7DADB0062057A /* Order.md */,
 				CE112A5C2C9F291C004FEA66 /* Protocols */,
 				F65517A42C1F3C57000133FA /* Constants.swift */,
 				F65517A62C1F6F4B000133FA /* Log.swift */,
@@ -875,7 +889,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6FE29A52C0F493000E9C678 /* Assets.xcassets in Resources */,
-				3B7671272CB7DAE20062057A /* Order.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -899,7 +912,7 @@
 				3B487C102CB9357A002C79EE /* String+RemovingPrefix.swift in Sources */,
 				F62D38BC2C44731A00E745A6 /* CameraViewModel.swift in Sources */,
 				F63084922C381D18008ABF71 /* MKMapItem+Identifiable.swift in Sources */,
-				CE35E52A2CA5A68B004CF3A9 /* ScannerViewModel.swift in Sources */,
+				CE35E52A2CA5A68B004CF3A9 /* ScannerPickerViewModel.swift in Sources */,
 				F65517A52C1F3C57000133FA /* Constants.swift in Sources */,
 				F649B2C52C3897AE00FE7180 /* DataContainer.swift in Sources */,
 				CE50D9CC2CB2F26C00FFC071 /* ScannerDXCodeView.swift in Sources */,
@@ -935,6 +948,7 @@
 				F6E4819F2C1B88AC006EE963 /* TextFieldWithPrefix.swift in Sources */,
 				F6FE29A12C0F492B00E9C678 /* ContentView.swift in Sources */,
 				CE0BA2B62CA99C3B00FE216D /* UIApplication+openAppSettings.swift in Sources */,
+				3B0A09402CBEBB1900CCA7FD /* ScannerCaptureSessionActor.swift in Sources */,
 				3B7671392CB858760062057A /* FilmRollsGenericView.swift in Sources */,
 				CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */,
 				CE50D9CE2CB308B200FFC071 /* CreateFilmCellView.swift in Sources */,
@@ -943,6 +957,7 @@
 				F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */,
 				F660FCD62C4C0E920022D597 /* ModelViewModelProtocol.swift in Sources */,
 				CE5002322CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift in Sources */,
+				3B0A09422CBF0F3300CCA7FD /* ScannerOutputActor.swift in Sources */,
 				F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */,
 				CEB201C82CAF60AA00AD6428 /* Described.swift in Sources */,
 				CE99583B2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift in Sources */,
@@ -950,7 +965,6 @@
 				3B7671522CB864ED0062057A /* PhotosGenericView.swift in Sources */,
 				3B7671532CB864ED0062057A /* PhotosView.swift in Sources */,
 				3B76713D2CB859A90062057A /* FilmRollPickerSheet.swift in Sources */,
-				CE761CAF2CACA63F004E1378 /* DXCodeBuffer.swift in Sources */,
 				F660FCBE2C4A807F0022D597 /* CreateableModel.swift in Sources */,
 				CE112A622C9F3061004FEA66 /* FilmProtocol.swift in Sources */,
 				F6FE29B52C0F704A00E9C678 /* ModelContext+Insert.swift in Sources */,
@@ -965,7 +979,7 @@
 				3B487C0E2CB93566002C79EE /* String+RemovingLast.swift in Sources */,
 				F660FCCD2C4A92650022D597 /* NavigationStackPreview.swift in Sources */,
 				F6E481992C1B0AD4006EE963 /* ViewStateToolbar.swift in Sources */,
-				CE35E5302CA5AADE004CF3A9 /* ScannerView.swift in Sources */,
+				CE35E5302CA5AADE004CF3A9 /* ScannerPickerView.swift in Sources */,
 				F6FE29AF2C0F4CDE00E9C678 /* Film.swift in Sources */,
 				CE35E5282CA5A612004CF3A9 /* DXCodeScannerState.swift in Sources */,
 				CE0B0DE02CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift in Sources */,
@@ -999,8 +1013,10 @@
 				F660FCD02C4A99990022D597 /* ModelViewModel.swift in Sources */,
 				CEABA46A2CA0516E00FBC913 /* DXCodeRowView.swift in Sources */,
 				CEB201D32CB08F9400AD6428 /* ScannerBarcodeView.swift in Sources */,
+				3B174D6F2CC01079002B928F /* RoundedBoundingBox.swift in Sources */,
 				CE33F7C02CB354040014B429 /* FloatingBackgroundViewModifier.swift in Sources */,
 				F623876A2C51AF9400A4587F /* FilmRollDetailedView.swift in Sources */,
+				3B174D6C2CC01041002B928F /* ScannerView.swift in Sources */,
 				CE2779CB2CB45C48005ECE63 /* HomeViewMenu.swift in Sources */,
 				F6FE29B72C0F769A00E9C678 /* Bool+Comparable.swift in Sources */,
 				F660FCB92C493F020022D597 /* CameraDetailedViewModel.swift in Sources */,
@@ -1143,7 +1159,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 231;
+				CURRENT_PROJECT_VERSION = 246;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1176,7 +1192,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 231;
+				CURRENT_PROJECT_VERSION = 246;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

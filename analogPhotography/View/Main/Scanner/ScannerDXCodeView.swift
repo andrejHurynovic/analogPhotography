@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-extension ScannerView {
+extension ScannerPickerView {
     struct ScannerDXCodeView: View {
-        @ObservedObject var dxCodeBuffer: DXCodeBuffer
+        var dxCode: DXCode?
         
         var body: some View {
-            if let dxCode = dxCodeBuffer.dxCode {
+            if let dxCode = dxCode {
                 DXCodeView(dxCode: dxCode)
                     .plainBackgroundStyle()
                     .padding(.horizontal)

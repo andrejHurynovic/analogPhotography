@@ -8,18 +8,9 @@
 import SwiftUI
 
 final class ScannerCoordinator: NSObject {
-    @Binding private var barcode: String
-    private var dxCodeBuffer: DXCodeBuffer
+    public let scannerOutputActor: ScannerOutputActor
     
-    init(barcode: Binding<String>, dxCodeBuffer: DXCodeBuffer) {
-        self._barcode = barcode
-        self.dxCodeBuffer = dxCodeBuffer
-    }
-    
-    func updateBarcode(_ barcode: String) {
-        self.barcode = barcode
-    }
-    @MainActor func addDXCodeImage(image: CGImage, barcodeSide: CGRect.RelativePosition?) {
-        self.dxCodeBuffer.addDXCodeImage(cgImage: image, barcodeSide: barcodeSide)
+    init(barcode: Binding<String?>, barcodeBoundingBox: Binding<CGRect?>, dxCode: Binding<DXCode?>, dxCodeBoundingBox: Binding<CGRect?>) {
+        self.scannerOutputActor = ScannerOutputActor(barcode: barcode, barcodeBoundingBox: barcodeBoundingBox, dxCode: dxCode, dxCodeBoundingBox: dxCodeBoundingBox)
     }
 }
