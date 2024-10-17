@@ -61,31 +61,26 @@ struct MapPicker: View {
 
 //MARK: Preview
 
-struct MapPickerPreview: View {
-    @State private var selectedLocation: Location?
-    @State private var otherItems = [LocationItem(description: "1",
-                                                                  location: .init(latitude: 53.921563, longitude: 27.641113)),
-                                                     LocationItem(description: "2",
-                                                                  location: .init(latitude: 53.912463, longitude: 27.630100)),
-                                                     LocationItem(description: "3",
-                                                                  location: .init(latitude: 53.916195, longitude: 27.636173))]
+#Preview {
+    @Previewable @State var selectedLocation: Location?
+    @Previewable @State var otherItems = [LocationItem(description: "1",
+                                                       location: .init(latitude: 53.921563, longitude: 27.641113)),
+                                          LocationItem(description: "2",
+                                                       location: .init(latitude: 53.912463, longitude: 27.630100)),
+                                          LocationItem(description: "3",
+                                                       location: .init(latitude: 53.916195, longitude: 27.636173))]
     
-    var body: some View {
-        NavigationStackPreview {
-            List {
-                MapPicker(viewModel: MapPickerViewModel(selectedLocation: $selectedLocation),
-                          otherItems: otherItems,
-                          favoriteItems: [])
-                .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                TextForm("selectedLocation", selectedLocation?.description)
-                Button("Add test item") {
-                    guard let location = selectedLocation else { return }
-                    otherItems.append(LocationItem(location: location))
-                }
+    NavigationStackPreview {
+        List {
+            MapPicker(viewModel: MapPickerViewModel(selectedLocation: $selectedLocation),
+                      otherItems: otherItems,
+                      favoriteItems: [])
+            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+            TextForm("selectedLocation", selectedLocation?.description)
+            Button("Add test item") {
+                guard let location = selectedLocation else { return }
+                otherItems.append(LocationItem(location: location))
             }
         }
     }
-}
-#Preview {
-    return MapPickerPreview()
 }

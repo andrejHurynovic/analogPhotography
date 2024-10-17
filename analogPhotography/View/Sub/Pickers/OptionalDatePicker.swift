@@ -37,20 +37,14 @@ struct OptionalDatePicker: View {
 }
 
 #Preview {
-    struct OptionalDatePickerPreview: View {
-        @State var date: Date? = nil
-        
-        var body: some View {
-            Form {
-                OptionalDatePicker(date: $date)
-                Section("Debug") {
-                    TextForm("Date", "\(String(describing: date))")
-                    Button("Change date to distantFuture") { date = .distantFuture }
-                    Button("Remove date", role: .destructive) { date = nil }
-                }
-            }
+    @Previewable @State var date: Date? = nil
+    
+    Form {
+        OptionalDatePicker(date: $date)
+        Section("Debug") {
+            TextForm("Date", "\(String(describing: date))")
+            Button("Change date to distantFuture") { date = .distantFuture }
+            Button("Remove date", role: .destructive) { date = nil }
         }
     }
-    
-    return OptionalDatePickerPreview()
 }

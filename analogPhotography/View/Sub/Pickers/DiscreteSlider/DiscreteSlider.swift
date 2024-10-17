@@ -36,13 +36,8 @@ struct DiscreteSlider: View {
 }
 
 #Preview {
-    struct DiscreteSliderPreview: View {
-        @State private var value: String = "1/500"
-        
-        var body: some View {
-            ShutterSpeedPicker(value: $value)
-        }
+    @Previewable @State var value: String = "1/500"
+    Form {
+        ShutterSpeedPicker(value: $value)
     }
-    
-    return DiscreteSliderPreview()
 }

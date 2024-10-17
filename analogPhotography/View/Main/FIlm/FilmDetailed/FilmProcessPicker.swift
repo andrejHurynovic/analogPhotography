@@ -20,16 +20,11 @@ struct FilmProcessPicker: View {
 }
 
 #Preview {
-    struct FilmProcessPickerPreview: View {
-        @State var filmProcess: FilmProcess?
-        
-        var body: some View {
-            Form {
-                FilmProcessPicker(filmProcess: $filmProcess)
-            }
-            .dataModelContainer()
-        }
+    @Previewable @State var filmProcess: FilmProcess?
+    
+    Form {
+        FilmProcessPicker(filmProcess: $filmProcess)
     }
-    return FilmProcessPickerPreview()
+    .dataModelContainer()
 }
 

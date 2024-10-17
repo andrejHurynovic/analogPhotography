@@ -31,8 +31,3 @@ struct ModelPickerSheet<Element: PersistentModel, Content: View>: View {
     }
 
 }
-
-//#Preview {
-//    ModelPickerViewPreview()
-//        .dataModelContainer()
-//}

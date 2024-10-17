@@ -22,9 +22,7 @@ struct NoteView: View {
 #Preview {
     @Previewable @State var note: String = ""
     
-    return NavigationStack {
-        List {
-            NoteView(note: $note)
-        }
+    Form {
+        NoteView(note: $note)
     }
 }

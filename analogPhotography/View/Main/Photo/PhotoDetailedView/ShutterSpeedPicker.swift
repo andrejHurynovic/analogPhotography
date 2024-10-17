@@ -20,13 +20,8 @@ struct ShutterSpeedPicker: View {
 }
 
 #Preview {
-    struct ShutterSpeedPickerPreview: View {
-        @State var value: String = "1/100"
-        
-        var body: some View {
-            ShutterSpeedPicker(value: $value)
-        }
+    @Previewable @State var value: String = "1/100"
+    Form {
+        ShutterSpeedPicker(value: $value)
     }
-    
-    return ShutterSpeedPickerPreview()
 }

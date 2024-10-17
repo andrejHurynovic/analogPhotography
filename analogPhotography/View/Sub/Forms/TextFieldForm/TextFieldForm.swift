@@ -25,7 +25,7 @@ struct TextFieldForm: View {
          resetEditOnSubmit: Bool = true,
          focusOnEdit: Bool = false) {
         self._viewModel = StateObject(wrappedValue:
-            TextFieldFormViewModel(text: text, viewState: viewState, resetEditOnSubmit: resetEditOnSubmit, focusOnEdit: focusOnEdit))
+                                        TextFieldFormViewModel(text: text, viewState: viewState, resetEditOnSubmit: resetEditOnSubmit, focusOnEdit: focusOnEdit))
         self.viewState = viewState
         self.title = title
         self.placeholder = placeholder
@@ -43,7 +43,7 @@ struct TextFieldForm: View {
         TextField(placeholder, text: text, axis: .horizontal)
             .multilineTextAlignment(.trailing)
             .foregroundStyle(foregroundColor)
-            
+        
             .focused($isFocused)
         
             .onSubmit { viewModel.handleSubmit() }
@@ -60,34 +60,28 @@ struct TextFieldForm: View {
 }
 
 #Preview {
-    struct TextFieldFormViewPreview: View {
-        @State var textA: String = ""
-        @State var textB: String = ""
-        @State var textC: String? = nil
-        @State var viewState: ViewState = .showing
-        
-        var body: some View {
-            NavigationStack {
-                Form {
-                    Section("With ViewState") {
-                        TextForm("State", "\(viewState)")
-                        TextFieldForm(title: "Name",
-                                      text: $textA,
-                                      viewState: $viewState)
-                    }
-                    Section("Without ViewState") {
-                        TextFieldForm(title: "Name",
-                                      text: $textB)
-                    }
-                    Section("Optional") {
-                        LabeledContent("Text", value: (String(describing: textC)))
-                        TextFieldForm(title: "Name",
-                                      text: $textC.unwrappedOptional())
-                    }
-                }
+    @Previewable @State var textA: String = ""
+    @Previewable @State var textB: String = ""
+    @Previewable @State var textC: String? = nil
+    @Previewable @State var viewState: ViewState = .showing
+    
+    NavigationStack {
+        Form {
+            Section("With ViewState") {
+                TextForm("State", "\(viewState)")
+                TextFieldForm(title: "Name",
+                              text: $textA,
+                              viewState: $viewState)
+            }
+            Section("Without ViewState") {
+                TextFieldForm(title: "Name",
+                              text: $textB)
+            }
+            Section("Optional") {
+                LabeledContent("Text", value: (String(describing: textC)))
+                TextFieldForm(title: "Name",
+                              text: $textC.unwrappedOptional())
             }
         }
     }
-    
-    return TextFieldFormViewPreview()
 }

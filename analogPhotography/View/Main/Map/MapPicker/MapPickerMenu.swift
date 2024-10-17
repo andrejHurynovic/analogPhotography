@@ -73,7 +73,3 @@ struct MapPickerMenu: View {
         }
     }
 }
-
-#Preview {    
-    return MapPickerPreview()
-}
