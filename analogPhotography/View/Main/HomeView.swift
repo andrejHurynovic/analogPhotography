@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct HomeView: View {
-    @StateObject var viewModel = HomeViewViewModel()
+    @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
         ScrollView {

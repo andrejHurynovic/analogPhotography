@@ -11,7 +11,7 @@
 		3B0A09422CBF0F3300CCA7FD /* ScannerOutputActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A09412CBF0F3300CCA7FD /* ScannerOutputActor.swift */; };
 		3B174D6C2CC01041002B928F /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B174D6B2CC01041002B928F /* ScannerView.swift */; };
 		3B174D6F2CC01079002B928F /* RoundedBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B174D6E2CC01079002B928F /* RoundedBoundingBox.swift */; };
-		3B1C5DFF2CB6A953007E323A /* HomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C5DFE2CB6A953007E323A /* HomeViewViewModel.swift */; };
+		3B1C5DFF2CB6A953007E323A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C5DFE2CB6A953007E323A /* HomeViewModel.swift */; };
 		3B487C0E2CB93566002C79EE /* String+RemovingLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B487C0D2CB93566002C79EE /* String+RemovingLast.swift */; };
 		3B487C102CB9357A002C79EE /* String+RemovingPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B487C0F2CB9357A002C79EE /* String+RemovingPrefix.swift */; };
 		3B76712B2CB84E830062057A /* CameraPickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76712A2CB84E830062057A /* CameraPickerSheet.swift */; };
@@ -142,7 +142,7 @@
 		3B0A09412CBF0F3300CCA7FD /* ScannerOutputActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerOutputActor.swift; sourceTree = "<group>"; };
 		3B174D6B2CC01041002B928F /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		3B174D6E2CC01079002B928F /* RoundedBoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBoundingBox.swift; sourceTree = "<group>"; };
-		3B1C5DFE2CB6A953007E323A /* HomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewViewModel.swift; sourceTree = "<group>"; };
+		3B1C5DFE2CB6A953007E323A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3B487C0D2CB93566002C79EE /* String+RemovingLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemovingLast.swift"; sourceTree = "<group>"; };
 		3B487C0F2CB9357A002C79EE /* String+RemovingPrefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemovingPrefix.swift"; sourceTree = "<group>"; };
 		3B76712A2CB84E830062057A /* CameraPickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPickerSheet.swift; sourceTree = "<group>"; };
@@ -292,7 +292,7 @@
 		3B1C5DFD2CB6A947007E323A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3B1C5DFE2CB6A953007E323A /* HomeViewViewModel.swift */,
+				3B1C5DFE2CB6A953007E323A /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1000,7 +1000,7 @@
 				3B76714A2CB85B8A0062057A /* PhotoDetailedView.swift in Sources */,
 				3B76714B2CB85B8A0062057A /* ShutterSpeedPicker.swift in Sources */,
 				3B76714D2CB8619B0062057A /* Photo+CreateableModel.swift in Sources */,
-				3B1C5DFF2CB6A953007E323A /* HomeViewViewModel.swift in Sources */,
+				3B1C5DFF2CB6A953007E323A /* HomeViewModel.swift in Sources */,
 				3B76712B2CB84E830062057A /* CameraPickerSheet.swift in Sources */,
 				CE5AA95B2CAAE37F00BA56F5 /* ScannerViewController.swift in Sources */,
 				CEB201C62CAF591F00AD6428 /* CGRect+RelativePosition.swift in Sources */,
