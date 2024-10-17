@@ -62,7 +62,9 @@ actor ScannerOutputActor {
     private func extractBarcodeDetections(_ results: [VNObservation]?) async {
         guard let results = results as? [VNBarcodeObservation],
               let detectedBarcode = results.first else {
-            
+            Task { @MainActor in
+                barcodeBoundingBox = nil
+            }
             return
         }
         let payloadString = detectedBarcode.payloadStringValue
@@ -114,10 +116,13 @@ actor ScannerOutputActor {
         }
     }
     
-    func handleVideoOutput(cgImage: CGImage) {
+    //MARK: Video output
+    
+    public func handleVideoOutput(cgImage: CGImage) {
         guard lastRequestClock.duration(to: .now) > Constants.Scanner.requestDelay else { return }
         
-        capturedImage = cgImage
+        guard let grayscaleCGImage = grayscaleCGImage(from: cgImage) else { return }
+        capturedImage = grayscaleCGImage
         let imageRequestHandler = VNImageRequestHandler(cgImage: cgImage)
         do {
             try imageRequestHandler.perform(detectorsRequests)
@@ -126,5 +131,20 @@ actor ScannerOutputActor {
         }
         
         lastRequestClock = .now
+    }
+    
+    private func grayscaleCGImage(from cgImage: CGImage) -> CGImage? {
+        let imageWidth = cgImage.width
+        let imageHeight = cgImage.height
+        guard let cgContext = CGContext(data: nil,
+                                width: imageWidth,
+                                height: imageHeight,
+                                bitsPerComponent: 8,
+                                bytesPerRow: imageWidth,
+                                space: CGColorSpaceCreateDeviceGray(),
+                                bitmapInfo: CGImageAlphaInfo.none.rawValue)
+        else { return nil }
+        cgContext.draw(cgImage, in: CGRect(x: 0, y: 0, width: CGFloat(imageWidth), height: CGFloat(imageHeight)))
+        return cgContext.makeImage()
     }
 }

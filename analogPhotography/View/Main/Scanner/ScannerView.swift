@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Vision
 
 struct ScannerView: View {
     @Binding var barcode: String?
@@ -21,12 +22,14 @@ struct ScannerView: View {
                                                    dxCode: $dxCode,
                                                    dxCodeBoundingBox: $dxCodeBoundingBox,
                                                    viewSize: UIScreen.main.bounds.size)
-                GeometryReader { geometryProxy in
-                    if let barcodeBoundingBox = barcodeBoundingBox {
-                        transformedBoundingBox(barcodeBoundingBox, viewSize: geometryProxy.size)
-                    }
-                    if let dxCodeBoundingBox = dxCodeBoundingBox {
-                        transformedBoundingBox(dxCodeBoundingBox, viewSize: geometryProxy.size)
+                ZStack {
+                    GeometryReader { geometryProxy in
+                        if let barcodeBoundingBox = barcodeBoundingBox {
+                            transformedBoundingBox(barcodeBoundingBox, viewSize: geometryProxy.size)
+                        }
+                        if let dxCodeBoundingBox = dxCodeBoundingBox {
+                            transformedBoundingBox(dxCodeBoundingBox, viewSize: geometryProxy.size)
+                        }
                     }
                 }
             }
@@ -47,3 +50,5 @@ struct ScannerView: View {
             .frame(width: rect.width, height: rect.height)
     }
 }
+
+//Перенести этот рект внутрь viewcontroller
