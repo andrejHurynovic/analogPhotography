@@ -33,7 +33,3 @@ final class FilmRoll {
         self.camera = camera
     }
 }
-
-extension FilmRoll: Described {
-    var uiDescription: String { name ?? film?.name ?? "Film roll" }
-}

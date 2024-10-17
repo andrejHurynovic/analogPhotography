@@ -8,55 +8,39 @@
 import SwiftUI
 
 struct CameraView: View {
-    @ObservedObject var viewModel: CameraViewModel
-    
-    init(camera: Camera) {
-        self._viewModel = ObservedObject(wrappedValue: CameraViewModel(camera: camera))
-    }
+    @Bindable var camera: Camera
     
     var body: some View {
         VStack(alignment: .leading) {
             name
             note
-            currentFilmRoll
+            filmRoll
         }
     }
     
     var name: some View {
-        Text(viewModel.camera.name)
+        Text(camera.name)
             .font(.title2)
             .fontWeight(.bold)
     }
     @ViewBuilder var note: some View {
-        if viewModel.camera.note != "" {
-            Text(viewModel.camera.note)
+        if camera.note != "" {
+            Text(camera.note)
                 .font(.caption)
                 .foregroundStyle(.gray)
         }
     }
     
     //MARK: FilmRoll
-    @ViewBuilder var currentFilmRoll: some View {
-        if viewModel.isFilmRollVisiable {
-            HStack {
-                rollName
-                Spacer()
-                rollCapacity
-                    .bold()
-            }
-            .monospaced()
+    
+    @ViewBuilder var filmRoll: some View {
+        if let currentFilmRoll = camera.currentFilmRoll {
+            FilmRollMinimizedView(filmRoll: currentFilmRoll)
+        } else {
+            
         }
     }
-    @ViewBuilder var rollName: some View {
-        if let rollName = viewModel.filmRollName {
-            Text(rollName)
-        }
-    }
-    @ViewBuilder var rollCapacity: some View {
-        if let rollCapacityDescription = viewModel.currentFilmRollCapacityDescription {
-            Text(rollCapacityDescription)
-        }
-    }
+    
 }
 
 #Preview {
@@ -66,4 +50,3 @@ struct CameraView: View {
         }
     }
 }
-
