@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CameraView: View {
     @Bindable var camera: Camera
+    @State var pickedFilm: Film?
+    @State var showFilmPicker: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -16,6 +18,14 @@ struct CameraView: View {
             note
             filmRoll
         }
+        .sheet(isPresented: $showFilmPicker) {
+            withAnimation {
+                self.camera.filmRolls.append(FilmRoll(film: pickedFilm, camera: camera))
+            }
+        } content: {
+            FilmPickerSheet(isPresented: $showFilmPicker, picked: $pickedFilm)
+        }
+
     }
     
     var name: some View {
@@ -32,14 +42,19 @@ struct CameraView: View {
     }
     
     //MARK: FilmRoll
-    
     @ViewBuilder var filmRoll: some View {
         if let currentFilmRoll = camera.currentFilmRoll {
             FilmRollMinimizedView(filmRoll: currentFilmRoll)
         } else {
-            
+            Button("Select new film") {
+                showFilmPicker = true
+            }
+            .buttonStyle(CellButtonStyle())
         }
     }
+    
+    //MARK: FilmPicker
+    
     
 }
 

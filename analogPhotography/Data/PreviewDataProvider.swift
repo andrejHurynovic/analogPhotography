@@ -32,7 +32,6 @@ final class PreviewDataProvider {
             }
             
             try createFilmRollWithPhotos(with: kodakGold200, for: pentaxSFX, in: tempContext)
-            try createFilmRollWithPhotos(with: kodakGold200, for: zenitE, in: tempContext)
             try createFilmRollWithPhotos(with: relleiRetro80s, for: fed3, in: tempContext)
             
             
