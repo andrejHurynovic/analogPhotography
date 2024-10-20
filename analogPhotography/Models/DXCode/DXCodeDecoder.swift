@@ -187,9 +187,7 @@ extension DXCode {
                 guard let barcodeSide = barcodeSide,
                       [CGRect.RelativePosition.below, CGRect.RelativePosition.above].contains(barcodeSide) else { return nil }
                 if barcodeSide == .below {
-                    let tempFirstRow = firstRow
-                    resultFirstRow = secondRow.reversed()
-                    resultSecondRow = tempFirstRow.reversed()
+                    (resultFirstRow, resultSecondRow) = (secondRow.reversed(), firstRow.reversed())
                 }
             } else {
                 let tempFirstRow = firstRow
