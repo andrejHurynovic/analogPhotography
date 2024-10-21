@@ -12,11 +12,13 @@ struct FilmRollPickerSheet: View {
     @Binding var picked: FilmRoll?
     
     var body: some View {
-        FilmRollsGenericView { filmRolls in
-            ModelPickerSheet(isPresented: $isPresented,
-                             selectedElement: $picked,
-                             elements: filmRolls) { filmRoll in
-                FilmRollView(roll: filmRoll)
+        NavigationStack {
+            FilmRollsGenericView { filmRolls in
+                ModelPickerSheet(isPresented: $isPresented,
+                                 selectedElement: $picked,
+                                 elements: filmRolls) { filmRoll in
+                    FilmRollView(roll: filmRoll)
+                }
             }
         }
         

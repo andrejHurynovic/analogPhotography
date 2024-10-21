@@ -12,11 +12,13 @@ struct PhotoPickerSheet: View {
     @Binding var picked: Photo?
     
     var body: some View {
-        PhotosGenericView { photos in
-            ModelPickerSheet(isPresented: $isPresented,
-                             selectedElement: $picked,
-                             elements: photos) { photo in
-                PhotoView(photo: photo)
+        NavigationStack {
+            PhotosGenericView { photos in
+                ModelPickerSheet(isPresented: $isPresented,
+                                 selectedElement: $picked,
+                                 elements: photos) { photo in
+                    PhotoView(photo: photo)
+                }
             }
         }
         

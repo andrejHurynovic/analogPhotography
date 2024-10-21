@@ -12,11 +12,13 @@ struct CameraPickerSheet: View {
     @Binding var picked: Camera?
     
     var body: some View {
-        CamerasGenericView { cameras in
-            ModelPickerSheet(isPresented: $isPresented,
-                             selectedElement: $picked,
-                             elements: cameras) { camera in
-                CameraView(camera: camera)
+        NavigationStack {
+            CamerasGenericView { cameras in
+                ModelPickerSheet(isPresented: $isPresented,
+                                 selectedElement: $picked,
+                                 elements: cameras) { camera in
+                    CameraView(camera: camera)
+                }
             }
         }
         
