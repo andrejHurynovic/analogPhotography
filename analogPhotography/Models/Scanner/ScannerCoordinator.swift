@@ -8,9 +8,9 @@
 import SwiftUI
 
 final class ScannerCoordinator: NSObject {
-    public let scannerOutputActor: ScannerOutputActor
+    public let scannerOutputActor: ScannerOutputHandler
     
     init(barcode: Binding<String?>, barcodeBoundingBox: Binding<CGRect?>, dxCode: Binding<DXCode?>, dxCodeBoundingBox: Binding<CGRect?>) {
-        self.scannerOutputActor = ScannerOutputActor(barcode: barcode, barcodeBoundingBox: barcodeBoundingBox, dxCode: dxCode, dxCodeBoundingBox: dxCodeBoundingBox)
+        self.scannerOutputActor = ScannerOutputHandler(barcode: barcode, barcodeBoundingBox: barcodeBoundingBox, dxCode: dxCode, dxCodeBoundingBox: dxCodeBoundingBox)
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 actor ScannerCaptureSessionActor {
     private let captureSession: AVCaptureSession
     private var isRunning: Bool = false
-    private let captureSessionQueue = DispatchQueue(label: "captureSessionQueue")
+    private let captureSessionQueue = DispatchQueue(label: "com.analogPhotography.captureSessionQueue")
     
     init(captureSession: AVCaptureSession) {
         self.captureSession = captureSession

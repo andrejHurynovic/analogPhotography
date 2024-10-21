@@ -13,7 +13,7 @@ extension ScannerViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func setupDetectorVideoOutput() async {
         videoOutput.alwaysDiscardsLateVideoFrames = true
         videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)]
-        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "captureSessionQueue"))
+        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "com.analogPhotography.captureSessionQueue"))
         captureSession.addOutput(videoOutput)
     }
     

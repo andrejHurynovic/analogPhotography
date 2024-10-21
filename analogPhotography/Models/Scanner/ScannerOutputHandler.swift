@@ -1,5 +1,5 @@
 //
-//  ScannerOutputActor.swift
+//  ScannerOutputHandler.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 15.10.2024.
@@ -8,7 +8,7 @@
 import Vision
 import SwiftUI
 
-actor ScannerOutputActor {
+actor ScannerOutputHandler {
     //Detectors
     private var detectorsRequests = [VNRequest]()
     private var lastRequestClock = ContinuousClock.now

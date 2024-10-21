@@ -5,7 +5,7 @@ import Vision
 final class ScannerViewController: UIViewController {
     let captureSession = AVCaptureSession()
     var captureSessionActor: ScannerCaptureSessionActor!
-    var outputActor: ScannerOutputActor!
+    var outputActor: ScannerOutputHandler!
     
     var captureVideoPreviewLayer = AVCaptureVideoPreviewLayer()
     var viewSize: CGSize!

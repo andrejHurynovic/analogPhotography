@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B0A09402CBEBB1900CCA7FD /* ScannerCaptureSessionActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A093F2CBEBB1900CCA7FD /* ScannerCaptureSessionActor.swift */; };
-		3B0A09422CBF0F3300CCA7FD /* ScannerOutputActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A09412CBF0F3300CCA7FD /* ScannerOutputActor.swift */; };
+		3B0A09422CBF0F3300CCA7FD /* ScannerOutputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A09412CBF0F3300CCA7FD /* ScannerOutputHandler.swift */; };
 		3B174D6C2CC01041002B928F /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B174D6B2CC01041002B928F /* ScannerView.swift */; };
 		3B174D6F2CC01079002B928F /* RoundedBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B174D6E2CC01079002B928F /* RoundedBoundingBox.swift */; };
 		3B1C5DFF2CB6A953007E323A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C5DFE2CB6A953007E323A /* HomeViewModel.swift */; };
@@ -141,7 +141,7 @@
 
 /* Begin PBXFileReference section */
 		3B0A093F2CBEBB1900CCA7FD /* ScannerCaptureSessionActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCaptureSessionActor.swift; sourceTree = "<group>"; };
-		3B0A09412CBF0F3300CCA7FD /* ScannerOutputActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerOutputActor.swift; sourceTree = "<group>"; };
+		3B0A09412CBF0F3300CCA7FD /* ScannerOutputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerOutputHandler.swift; sourceTree = "<group>"; };
 		3B174D6B2CC01041002B928F /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		3B174D6E2CC01079002B928F /* RoundedBoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBoundingBox.swift; sourceTree = "<group>"; };
 		3B1C5DFE2CB6A953007E323A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -371,7 +371,7 @@
 				CEFFDAFE2CADC01E0047C819 /* ScannerCoordinator.swift */,
 				CE761CAC2CACA619004E1378 /* ScannerDetector.swift */,
 				3B0A093F2CBEBB1900CCA7FD /* ScannerCaptureSessionActor.swift */,
-				3B0A09412CBF0F3300CCA7FD /* ScannerOutputActor.swift */,
+				3B0A09412CBF0F3300CCA7FD /* ScannerOutputHandler.swift */,
 			);
 			path = Scanner;
 			sourceTree = "<group>";
@@ -971,7 +971,7 @@
 				F6BC7BEE2C3CB70C00160C3E /* DiscreteSliderViewModel.swift in Sources */,
 				F660FCD62C4C0E920022D597 /* ModelViewModelProtocol.swift in Sources */,
 				CE5002322CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift in Sources */,
-				3B0A09422CBF0F3300CCA7FD /* ScannerOutputActor.swift in Sources */,
+				3B0A09422CBF0F3300CCA7FD /* ScannerOutputHandler.swift in Sources */,
 				F65517B22C1F92E3000133FA /* MapPicker.swift in Sources */,
 				CEB201C82CAF60AA00AD6428 /* Described.swift in Sources */,
 				CE99583B2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift in Sources */,
