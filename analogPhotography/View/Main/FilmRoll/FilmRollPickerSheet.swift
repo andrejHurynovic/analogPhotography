@@ -20,6 +20,7 @@ struct FilmRollPickerSheet: View {
                     FilmRollView(roll: filmRoll)
                 }
             }
+            .routerNavigationDestinations()
         }
         
     }

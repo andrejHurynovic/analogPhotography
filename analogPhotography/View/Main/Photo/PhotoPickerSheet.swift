@@ -20,8 +20,8 @@ struct PhotoPickerSheet: View {
                     PhotoView(photo: photo)
                 }
             }
+            .routerNavigationDestinations()
         }
-        
     }
 }
 

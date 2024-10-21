@@ -20,6 +20,7 @@ struct FilmPickerSheet: View {
                     FilmView(film: film)
                 }
             }
+            .routerNavigationDestinations()
         }
         
     }

@@ -20,8 +20,8 @@ struct CameraPickerSheet: View {
                     CameraView(camera: camera)
                 }
             }
+            .routerNavigationDestinations()
         }
-        
     }
 }
 
