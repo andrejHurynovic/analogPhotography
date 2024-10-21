@@ -19,13 +19,13 @@ struct FilmsGenericView<Content: View>: View {
                    sort: [SortDescriptor(\Film.name)],
                    navigationTitle: "Films") { films in
             content(films)
-                .searchable(text: $searchText, placement: .automatic, prompt: "Search")
+//                .searchable(text: $searchText, placement: .automatic, prompt: "Search")
         }
     }
 }
 
 #Preview {
-    NavigationStackPreview {
+    RoutedNavigationStack {
         FilmsView()
     }
 }

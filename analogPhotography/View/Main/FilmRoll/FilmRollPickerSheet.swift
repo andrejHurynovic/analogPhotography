@@ -27,7 +27,7 @@ struct FilmRollPickerSheet: View {
     @Previewable @State var isPresented: Bool = false
     @Previewable @State var picked: FilmRoll?
     
-    NavigationStackPreview {
+    RoutedNavigationStack {
         Form {
             Button("Select filmRoll") {
                 isPresented = true

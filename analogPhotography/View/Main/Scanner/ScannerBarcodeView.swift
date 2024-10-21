@@ -71,7 +71,7 @@ extension ScannerPickerView {
 }
 
 #Preview {
-    NavigationStackPreview {
+    RoutedNavigationStack {
         ScannerPickerView()
     }
 }

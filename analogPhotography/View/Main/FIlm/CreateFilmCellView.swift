@@ -41,7 +41,7 @@ struct CreateFilmCellView: View {
 }
 
 #Preview {
-    NavigationStackPreview {
+    RoutedNavigationStack {
         CreateFilmCellView(dxCode: DXCode(speed: 200, capacity: 36, exposureTolerance: FilmExposureTolerance(-1,1)))
     }
 }

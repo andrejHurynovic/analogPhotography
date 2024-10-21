@@ -70,7 +70,7 @@ struct MapPicker: View {
                                           LocationItem(description: "3",
                                                        location: .init(latitude: 53.916195, longitude: 27.636173))]
     
-    NavigationStackPreview {
+    RoutedNavigationStack {
         List {
             MapPicker(viewModel: MapPickerViewModel(selectedLocation: $selectedLocation),
                       otherItems: otherItems,

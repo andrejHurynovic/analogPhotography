@@ -14,12 +14,20 @@ private struct RouterNavigationDestinations: ViewModifier {
                 switch route {
                 case .camera(let camera):
                     CameraDetailedView(camera: camera)
+                case .cameras:
+                    CamerasView()
                 case .film(let film):
                     FilmDetailedView(film: film)
+                case .films:
+                    FilmsView()
                 case .filmRoll(let filmRoll):
                     FilmRollDetailedView(filmRoll: filmRoll)
+                case .filmRolls:
+                    FilmRollsView()
                 case .photo(let photo):
                     PhotoDetailedView(photo: photo)
+                case .photos:
+                    PhotosView()
                 case .scanner:
                     ScannerPickerView()
                 case .settings:

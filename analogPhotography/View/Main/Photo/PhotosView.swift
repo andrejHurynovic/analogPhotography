@@ -20,7 +20,7 @@ struct PhotosView: View {
 }
 
 #Preview {
-    NavigationStackPreview {
+    RoutedNavigationStack {
         PhotosView()
     }
 }

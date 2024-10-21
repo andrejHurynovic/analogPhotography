@@ -25,7 +25,7 @@ struct PhotosGenericView<Content: View>: View {
 }
 
 #Preview {
-    NavigationStackPreview {
+    RoutedNavigationStack {
         PhotosView()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  NavigationStackPreview.swift
+//  RoutedNavigationStack.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 19.07.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigationStackPreview<Content: View>: View {
+struct RoutedNavigationStack<Content: View>: View {
     @StateObject var router = AppRouter()
     var content: () -> Content
     

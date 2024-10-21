@@ -20,7 +20,7 @@ struct FilmsView: View {
 }
 
 #Preview {
-    NavigationStackPreview {
+    RoutedNavigationStack {
         FilmsView()
     }
 }

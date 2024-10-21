@@ -61,7 +61,7 @@ struct ScannerPickerView: View {
 }
 
 #Preview {
-    NavigationStackPreview {
+    RoutedNavigationStack {
         ScannerPickerView()
     }
 }

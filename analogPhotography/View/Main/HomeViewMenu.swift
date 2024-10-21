@@ -22,6 +22,10 @@ struct HomeViewMenu: View {
             NavigationLink(value: Route.filmRoll(FilmRoll())) {
                 Label("Add film roll", systemImage: "film")
             }
+            NavigationLink("cameras", value: Route.cameras)
+            NavigationLink("films", value: Route.films)
+            NavigationLink("filmRolls", value: Route.filmRolls)
+            NavigationLink("photos", value: Route.photos)
         } label: {
             Image(systemName: "plus")
                 .resizable()
@@ -43,7 +47,7 @@ struct HomeViewMenu: View {
 }
 
 #Preview {
-    NavigationStackPreview {
+    RoutedNavigationStack {
         ZStack {
             Color(uiColor: UIColor.systemGroupedBackground)
             HStack {

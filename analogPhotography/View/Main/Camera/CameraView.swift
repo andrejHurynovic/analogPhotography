@@ -19,13 +19,13 @@ struct CameraView: View {
             filmRoll
         }
         .sheet(isPresented: $showFilmPicker) {
-            withAnimation {
-                self.camera.filmRolls.append(FilmRoll(film: pickedFilm, camera: camera))
+            if let film = pickedFilm {
+                camera.addFilmRoll(film: film)
             }
         } content: {
             FilmPickerSheet(isPresented: $showFilmPicker, picked: $pickedFilm)
         }
-
+        .animation(.default, value: camera.currentFilmRoll)
     }
     
     var name: some View {

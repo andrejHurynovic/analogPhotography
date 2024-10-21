@@ -27,7 +27,7 @@ struct PhotoPickerSheet: View {
     @Previewable @State var isPresented: Bool = false
     @Previewable @State var picked: Photo?
     
-    NavigationStackPreview {
+    RoutedNavigationStack {
         Form {
             Button("Select photo") {
                 isPresented = true

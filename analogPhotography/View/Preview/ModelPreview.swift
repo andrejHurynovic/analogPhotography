@@ -16,7 +16,7 @@ struct ModelPreview<Model: PersistentModel, Content: View>: View {
     }
     
     var body: some View {
-        NavigationStackPreview {
+        RoutedNavigationStack {
             PreviewContentView(content: content)
         }
     }

@@ -80,7 +80,7 @@ struct QueryView<Element : PersistentModel, Content: View>: View {
 }
 
 #Preview {
-    NavigationStackPreview {
+    RoutedNavigationStack {
         HomeView()
     }
 }

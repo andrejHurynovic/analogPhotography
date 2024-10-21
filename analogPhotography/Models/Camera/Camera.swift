@@ -22,5 +22,11 @@ final class Camera {
 }
 
 extension Camera {
+    func addFilmRoll(film: Film) {
+//        withAnimation {
+            self.filmRolls.append(FilmRoll(film: film, camera: self))
+//        }
+    }
+    
     var currentFilmRoll: FilmRoll? { filmRolls.first { !$0.finished } }
 }

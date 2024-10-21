@@ -27,7 +27,7 @@ struct CameraPickerSheet: View {
     @Previewable @State var isPresented: Bool = false
     @Previewable @State var picked: Camera?
     
-    NavigationStackPreview {
+    RoutedNavigationStack {
         Form {
             Button("Select camera") {
                 isPresented = true

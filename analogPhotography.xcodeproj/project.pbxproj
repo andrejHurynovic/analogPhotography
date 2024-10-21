@@ -95,7 +95,7 @@
 		F660FCBE2C4A807F0022D597 /* CreateableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCBD2C4A807F0022D597 /* CreateableModel.swift */; };
 		F660FCC02C4A81D30022D597 /* Camera+CreateableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCBF2C4A81D30022D597 /* Camera+CreateableModel.swift */; };
 		F660FCC22C4A88A70022D597 /* ModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCC12C4A88A60022D597 /* ModelsView.swift */; };
-		F660FCCD2C4A92650022D597 /* NavigationStackPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCCC2C4A92650022D597 /* NavigationStackPreview.swift */; };
+		F660FCCD2C4A92650022D597 /* RoutedNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCCC2C4A92650022D597 /* RoutedNavigationStack.swift */; };
 		F660FCD02C4A99990022D597 /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCCF2C4A99990022D597 /* ModelViewModel.swift */; };
 		F660FCD32C4C095A0022D597 /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCD22C4C095A0022D597 /* DetailedView.swift */; };
 		F660FCD62C4C0E920022D597 /* ModelViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660FCD52C4C0E920022D597 /* ModelViewModelProtocol.swift */; };
@@ -229,7 +229,7 @@
 		F660FCBD2C4A807F0022D597 /* CreateableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateableModel.swift; sourceTree = "<group>"; };
 		F660FCBF2C4A81D30022D597 /* Camera+CreateableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Camera+CreateableModel.swift"; sourceTree = "<group>"; };
 		F660FCC12C4A88A60022D597 /* ModelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsView.swift; sourceTree = "<group>"; };
-		F660FCCC2C4A92650022D597 /* NavigationStackPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackPreview.swift; sourceTree = "<group>"; };
+		F660FCCC2C4A92650022D597 /* RoutedNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutedNavigationStack.swift; sourceTree = "<group>"; };
 		F660FCCF2C4A99990022D597 /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
 		F660FCD22C4C095A0022D597 /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
 		F660FCD52C4C0E920022D597 /* ModelViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -508,6 +508,7 @@
 		F660FCC32C4A8E840022D597 /* Generic */ = {
 			isa = PBXGroup;
 			children = (
+				F660FCCC2C4A92650022D597 /* RoutedNavigationStack.swift */,
 				F660FCD22C4C095A0022D597 /* DetailedView.swift */,
 				CE33F7C12CB35B310014B429 /* ModelPickerSheet.swift */,
 				F660FCC12C4A88A60022D597 /* ModelsView.swift */,
@@ -628,7 +629,6 @@
 			isa = PBXGroup;
 			children = (
 				F63084A22C3857E7008ABF71 /* ModelPreview.swift */,
-				F660FCCC2C4A92650022D597 /* NavigationStackPreview.swift */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -991,7 +991,7 @@
 				F62387622C5020CC00A4587F /* FilmProcessPicker.swift in Sources */,
 				3B7671372CB857280062057A /* FilmPickerSheet.swift in Sources */,
 				3B487C0E2CB93566002C79EE /* String+RemovingLast.swift in Sources */,
-				F660FCCD2C4A92650022D597 /* NavigationStackPreview.swift in Sources */,
+				F660FCCD2C4A92650022D597 /* RoutedNavigationStack.swift in Sources */,
 				F6E481992C1B0AD4006EE963 /* ViewStateToolbar.swift in Sources */,
 				CE35E5302CA5AADE004CF3A9 /* ScannerPickerView.swift in Sources */,
 				F6FE29AF2C0F4CDE00E9C678 /* Film.swift in Sources */,
@@ -1175,7 +1175,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 267;
+				CURRENT_PROJECT_VERSION = 268;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1208,7 +1208,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 267;
+				CURRENT_PROJECT_VERSION = 268;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

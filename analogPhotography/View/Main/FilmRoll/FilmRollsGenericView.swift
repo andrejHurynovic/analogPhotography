@@ -25,7 +25,7 @@ struct FilmRollsGenericView<Content: View>: View {
 }
 
 #Preview {
-    NavigationStackPreview {
+    RoutedNavigationStack {
         FilmRollsView()
     }
 }
