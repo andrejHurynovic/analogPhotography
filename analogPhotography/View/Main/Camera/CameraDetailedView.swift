@@ -12,7 +12,7 @@ struct CameraDetailedView: View {
     
     var body: some View {
         DetailedView(model: camera, viewModelType: CameraDetailedViewModel.self) { viewModel, viewModelBinding in
-            List {
+            Form {
                 Section("Info") {
                     TextFieldForm(title: "Name", text: viewModelBinding.model.name, viewState: viewModelBinding.viewState, focusOnEdit: true)
                 }
