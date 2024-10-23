@@ -11,12 +11,19 @@ import SwiftData
 extension ScannerFilmPickerView {
     struct ScannerBarcodeView: View {
         private var state: ScannerFilmsViewState
+        @Binding var bottomMenuState: ScannerViewBottomMenuState
         private var filteredFilms: [Film] = []
-
+        
         var selectedFilm: Binding<Film?>?
         @EnvironmentObject var manager: ModelPickerSheetManager
         
-        init(filterDXBarcode: String?, selectedFilm: Binding<Film?>?, modelContext: ModelContext) {
+        init(filterDXBarcode: String?,
+             bottomMenuState: Binding<ScannerViewBottomMenuState>,
+             selectedFilm: Binding<Film?>?,
+             modelContext: ModelContext) {
+            self._bottomMenuState = bottomMenuState
+            self.selectedFilm = selectedFilm
+            
             guard let filterDXBarcode = filterDXBarcode else {
                 state = .noDXBarcode;
                 return
@@ -31,7 +38,7 @@ extension ScannerFilmPickerView {
                 return
             }
             state = .showing
-            self.selectedFilm = selectedFilm
+            
         }
         
         var body: some View {
@@ -48,10 +55,16 @@ extension ScannerFilmPickerView {
                     .plainBackgroundStyle()
                 
             case .noFilteredFilms:
-                Text("No films associated with this barcode.")
-                    .font(.subheadline)
-                    .foregroundStyle(.gray)
-                    .plainBackgroundStyle()
+                VStack {
+                    Text("No films associated with this barcode.")
+                        .font(.subheadline)
+                        .foregroundStyle(.gray)
+                        .plainBackgroundStyle()
+                    Button("Try to create new film from DXCode") {
+                        bottomMenuState = .dxCode
+                    }
+                    .buttonStyle(CellButtonStyle())
+                }
                 
             case .showing:
                 ForEach(filteredFilms) { film in

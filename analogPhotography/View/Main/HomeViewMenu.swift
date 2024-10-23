@@ -16,7 +16,7 @@ struct HomeViewMenu: View {
             NavigationLink(value: Route.film(Film())) {
                 Label("Add film", systemImage: "film.stack")
             }
-            NavigationLink(value: Route.scanner) {
+            NavigationLink(value: Route.scannerFilmPickerView()) {
                 Label("Add film from barcode or DXCode", systemImage: "scanner")
             }
             NavigationLink(value: Route.filmRoll(FilmRoll())) {

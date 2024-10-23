@@ -36,7 +36,7 @@ struct ScannerFilmPickerView: View {
                     bottomMenuStatePicker
                     switch viewModel.bottomMenuState {
                     case .barcode:
-                        ScannerBarcodeView(filterDXBarcode: viewModel.barcode, selectedFilm: selectedFilm, modelContext: modelContext)
+                        ScannerBarcodeView(filterDXBarcode: viewModel.barcode, bottomMenuState: $viewModel.bottomMenuState, selectedFilm: selectedFilm, modelContext: modelContext)
                     case .dxCode:
                         ScannerDXCodeView(dxCode: viewModel.dxCode, selectedFilm: selectedFilm)
                     }

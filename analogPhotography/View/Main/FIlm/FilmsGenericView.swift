@@ -25,7 +25,7 @@ struct FilmsGenericView<Content: View>: View {
             ToolbarItem {
                 Menu("Add") {
                     NavigationLink("Add film", value: Route.film(Film(), selectedFilm))
-                    NavigationLink("Add film with barcode or DXCode", value: Route.scannerFilmPickerView(selectedFilm))
+                    NavigationLink("Scan barcode or DXCode", value: Route.scannerFilmPickerView(selectedFilm))
                 }
             }
         }
