@@ -7,18 +7,22 @@
 
 import SwiftUI
 
-extension ScannerPickerView {
+extension ScannerFilmPickerView {
     struct ScannerDXCodeView: View {
         var dxCode: DXCode?
         
+        var selectedFilm: Binding<Film?>?
+
         var body: some View {
             if let dxCode = dxCode {
                 DXCodeView(dxCode: dxCode)
                     .plainBackgroundStyle()
                     .padding(.horizontal)
                     .aspectRatio(contentMode: .fit)
-                CreateFilmCellView(dxCode: dxCode)
-                    .plainBackgroundStyle()
+                NavigationLink(value: Route.film(Film(from: dxCode), selectedFilm)) {
+                    DXCodeFilmView(dxCode: dxCode)
+                        .plainBackgroundStyle()
+                }
             } else {
                 Text("No DX codes detected.")
                     .font(.subheadline)

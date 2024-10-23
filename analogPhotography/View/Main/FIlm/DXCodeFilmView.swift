@@ -1,5 +1,5 @@
 //
-//  CreateFilmCellView.swift
+//  DXCodeFilmView.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 6.10.24.
@@ -7,21 +7,19 @@
 
 import SwiftUI
 
-struct CreateFilmCellView: View {
+struct DXCodeFilmView: View {
     var dxCode: DXCode
     
     var body: some View {
-            NavigationLink(value: Route.film(Film(from: dxCode))) {
-                VStack(alignment: .listRowSeparatorLeading) {
-                    name
-                    HStack {
-                        parameters
-                            .font(.caption)
-                            .foregroundStyle(.gray)
-                        Spacer()
-                    }
-                }
+        VStack(alignment: .listRowSeparatorLeading) {
+            name
+            HStack {
+                parameters
+                    .font(.caption)
+                    .foregroundStyle(.gray)
+                Spacer()
             }
+        }
     }
     
     var name: some View {
@@ -42,6 +40,6 @@ struct CreateFilmCellView: View {
 
 #Preview {
     RoutedNavigationStack {
-        CreateFilmCellView(dxCode: DXCode(speed: 200, capacity: 36, exposureTolerance: FilmExposureTolerance(-1,1)))
+        DXCodeFilmView(dxCode: DXCode(speed: 200, capacity: 36, exposureTolerance: FilmExposureTolerance(-1,1)))
     }
 }

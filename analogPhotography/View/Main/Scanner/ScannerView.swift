@@ -15,25 +15,23 @@ struct ScannerView: View {
     @State var dxCodeBoundingBox: CGRect?
     
     var body: some View {
-//        GeometryReader { geometryProxy in
+        ZStack {
+            ScannerViewControllerRepresentable(barcode: $barcode,
+                                               barcodeBoundingBox: $barcodeBoundingBox,
+                                               dxCode: $dxCode,
+                                               dxCodeBoundingBox: $dxCodeBoundingBox,
+                                               viewSize: UIScreen.main.bounds.size)
             ZStack {
-                ScannerViewControllerRepresentable(barcode: $barcode,
-                                                   barcodeBoundingBox: $barcodeBoundingBox,
-                                                   dxCode: $dxCode,
-                                                   dxCodeBoundingBox: $dxCodeBoundingBox,
-                                                   viewSize: UIScreen.main.bounds.size)
-                ZStack {
-                    GeometryReader { geometryProxy in
-                        if let barcodeBoundingBox = barcodeBoundingBox {
-                            transformedBoundingBox(barcodeBoundingBox, viewSize: geometryProxy.size)
-                        }
-                        if let dxCodeBoundingBox = dxCodeBoundingBox {
-                            transformedBoundingBox(dxCodeBoundingBox, viewSize: geometryProxy.size)
-                        }
+                GeometryReader { geometryProxy in
+                    if let barcodeBoundingBox = barcodeBoundingBox {
+                        transformedBoundingBox(barcodeBoundingBox, viewSize: geometryProxy.size)
+                    }
+                    if let dxCodeBoundingBox = dxCodeBoundingBox {
+                        transformedBoundingBox(dxCodeBoundingBox, viewSize: geometryProxy.size)
                     }
                 }
             }
-//        }
+        }
         .animation(.bouncy, value: barcodeBoundingBox)
         .animation(.bouncy, value: dxCodeBoundingBox)
     }
@@ -50,5 +48,3 @@ struct ScannerView: View {
             .frame(width: rect.width, height: rect.height)
     }
 }
-
-//Перенести этот рект внутрь viewcontroller

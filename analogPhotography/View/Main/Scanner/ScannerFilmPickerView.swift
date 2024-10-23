@@ -8,12 +8,11 @@
 import SwiftUI
 import SwiftData
 
-struct ScannerPickerView: View {
+struct ScannerFilmPickerView: View {
     @StateObject var viewModel = ScannerPickerViewModel()
     @Environment(\.modelContext) private var modelContext
     
-    @State var barcodeBoundingBox: CGRect?
-    @State var dxCodeBoundingBox: CGRect?
+    var selectedFilm: Binding<Film?>?
     
     var body: some View {
         switch viewModel.state {
@@ -37,9 +36,9 @@ struct ScannerPickerView: View {
                     bottomMenuStatePicker
                     switch viewModel.bottomMenuState {
                     case .barcode:
-                        ScannerBarcodeView(filterDXBarcode: viewModel.barcode, modelContext: modelContext)
+                        ScannerBarcodeView(filterDXBarcode: viewModel.barcode, selectedFilm: selectedFilm, modelContext: modelContext)
                     case .dxCode:
-                        ScannerDXCodeView(dxCode: viewModel.dxCode)
+                        ScannerDXCodeView(dxCode: viewModel.dxCode, selectedFilm: selectedFilm)
                     }
                 }
             }
@@ -57,11 +56,5 @@ struct ScannerPickerView: View {
         .pickerStyle(.palette)
         .plainBackgroundStyle()
         
-    }
-}
-
-#Preview {
-    RoutedNavigationStack {
-        ScannerPickerView()
     }
 }

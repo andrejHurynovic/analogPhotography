@@ -8,12 +8,15 @@
 import SwiftUI
 import SwiftData
 
-extension ScannerPickerView {
+extension ScannerFilmPickerView {
     struct ScannerBarcodeView: View {
         private var state: ScannerFilmsViewState
         private var filteredFilms: [Film] = []
+
+        var selectedFilm: Binding<Film?>?
+        @EnvironmentObject var manager: ModelPickerSheetManager
         
-        init(filterDXBarcode: String?, modelContext: ModelContext) {
+        init(filterDXBarcode: String?, selectedFilm: Binding<Film?>?, modelContext: ModelContext) {
             guard let filterDXBarcode = filterDXBarcode else {
                 state = .noDXBarcode;
                 return
@@ -28,6 +31,7 @@ extension ScannerPickerView {
                 return
             }
             state = .showing
+            self.selectedFilm = selectedFilm
         }
         
         var body: some View {
@@ -51,15 +55,30 @@ extension ScannerPickerView {
                 
             case .showing:
                 ForEach(filteredFilms) { film in
-                    NavigationLink(value: Route.film(film)) {
-                        FilmView(film: film)
-                            .plainBackgroundStyle()
+                    if let selectedFilm = selectedFilm {
+                        Button {
+                            selectedFilm.wrappedValue = film
+                            manager.isPresented = false
+                        } label: {
+                            filmView(for: film)
+                        }
+                    } else {
+                        NavigationLink(value: Route.film(film)) {
+                            filmView(for: film)
+                        }
                     }
+                    
                     
                 }
             }
             
         }
+        
+        @ViewBuilder func filmView(for film: Film) -> some View {
+            FilmView(film: film)
+                .plainBackgroundStyle()
+        }
+
     }
     
     enum ScannerFilmsViewState {
@@ -67,11 +86,5 @@ extension ScannerPickerView {
         case dbError
         case noFilteredFilms
         case showing
-    }
-}
-
-#Preview {
-    RoutedNavigationStack {
-        ScannerPickerView()
     }
 }

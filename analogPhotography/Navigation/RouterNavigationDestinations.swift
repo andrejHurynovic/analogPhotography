@@ -16,8 +16,8 @@ private struct RouterNavigationDestinations: ViewModifier {
                     CameraDetailedView(camera: camera, selectedCamera: selectedCamera)
                 case .cameras:
                     CamerasView()
-                case .film(let film, let filmBinding):
-                    FilmDetailedView(film: film, selectedFilm: filmBinding)
+                case .film(let film, let selectedFilm):
+                    FilmDetailedView(film: film, selectedFilm: selectedFilm)
                 case .films:
                     FilmsView()
                 case .filmRoll(let filmRoll, let selectedFilmRoll):
@@ -28,8 +28,8 @@ private struct RouterNavigationDestinations: ViewModifier {
                     PhotoDetailedView(photo: photo, selectedPhoto: selectedPhoto)
                 case .photos:
                     PhotosView()
-                case .scanner:
-                    ScannerPickerView()
+                case .scannerFilmPickerView(let selectedFilm):
+                    ScannerFilmPickerView(selectedFilm: selectedFilm)
                 case .settings:
                     EmptyView()
                 }

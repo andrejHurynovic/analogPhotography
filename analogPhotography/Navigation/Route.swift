@@ -16,6 +16,6 @@ enum Route: Hashable {
     case filmRolls
     case photo(Photo, Binding<Photo?>? = nil)
     case photos
-    case scanner
+    case scannerFilmPickerView(Binding<Film?>? = nil)
     case settings
 }
