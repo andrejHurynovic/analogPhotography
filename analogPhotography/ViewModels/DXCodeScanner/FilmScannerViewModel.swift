@@ -9,9 +9,9 @@ import SwiftUI
 import AVKit
 
 @MainActor
-final class ScannerPickerViewModel: ObservableObject {
-    @Published var state: DXCodeScannerState = .cameraAccessNotDetermined
-    @Published var bottomMenuState: ScannerViewBottomMenuState = .barcode
+final class FilmScannerViewModel: ObservableObject {
+    @Published var state: FilmScannerState = .cameraAccessNotDetermined
+    @Published var menuState: FilmScannerMenuState = .barcode
     
     @Published var dxCode: DXCode?
     @Published var barcode: String?
@@ -44,7 +44,7 @@ final class ScannerPickerViewModel: ObservableObject {
     
 }
 
-enum ScannerViewBottomMenuState: Described, CaseIterable {
+enum FilmScannerMenuState: Described, CaseIterable {
     case barcode
     case dxCode
     

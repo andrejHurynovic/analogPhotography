@@ -49,11 +49,11 @@
 		CE33F7C22CB35B310014B429 /* ModelPickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33F7C12CB35B310014B429 /* ModelPickerSheet.swift */; };
 		CE35C7792C9CD7DD001E4E55 /* DXCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */; };
 		CE35C77B2C9DAB1D001E4E55 /* DXCodeBit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */; };
-		CE35E5282CA5A612004CF3A9 /* DXCodeScannerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */; };
-		CE35E52A2CA5A68B004CF3A9 /* ScannerPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5292CA5A68B004CF3A9 /* ScannerPickerViewModel.swift */; };
-		CE35E5302CA5AADE004CF3A9 /* ScannerFilmPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E52F2CA5AADE004CF3A9 /* ScannerFilmPickerView.swift */; };
+		CE35E5282CA5A612004CF3A9 /* FilmScannerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5272CA5A612004CF3A9 /* FilmScannerState.swift */; };
+		CE35E52A2CA5A68B004CF3A9 /* FilmScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E5292CA5A68B004CF3A9 /* FilmScannerViewModel.swift */; };
+		CE35E5302CA5AADE004CF3A9 /* FilmScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35E52F2CA5AADE004CF3A9 /* FilmScannerView.swift */; };
 		CE5002322CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */; };
-		CE50D9CC2CB2F26C00FFC071 /* ScannerDXCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */; };
+		CE50D9CC2CB2F26C00FFC071 /* FilmScannerDXCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CB2CB2F26C00FFC071 /* FilmScannerDXCodeView.swift */; };
 		CE50D9CE2CB308B200FFC071 /* DXCodeFilmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CD2CB308B200FFC071 /* DXCodeFilmView.swift */; };
 		CE50D9D02CB323D800FFC071 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50D9CF2CB323D800FFC071 /* HomeView.swift */; };
 		CE5AA9532CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE5AA9522CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel */; };
@@ -66,12 +66,12 @@
 		CE99583B2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99583A2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift */; };
 		CEABA4682CA0514F00FBC913 /* DXCodeBitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA4672CA0514F00FBC913 /* DXCodeBitView.swift */; };
 		CEABA46A2CA0516E00FBC913 /* DXCodeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABA4692CA0516E00FBC913 /* DXCodeRowView.swift */; };
-		CEAEB5FC2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAEB5FB2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift */; };
+		CEAEB5FC2CA9711B00D7EC17 /* FilmScannerContentUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAEB5FB2CA9711B00D7EC17 /* FilmScannerContentUnavailableView.swift */; };
 		CEB201C42CAF57BA00AD6428 /* Array+maximalDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201C32CAF57BA00AD6428 /* Array+maximalDifference.swift */; };
 		CEB201C62CAF591F00AD6428 /* CGRect+RelativePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201C52CAF591F00AD6428 /* CGRect+RelativePosition.swift */; };
 		CEB201C82CAF60AA00AD6428 /* Described.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201C72CAF60AA00AD6428 /* Described.swift */; };
 		CEB201D02CB086ED00AD6428 /* FilmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201CF2CB086ED00AD6428 /* FilmView.swift */; };
-		CEB201D32CB08F9400AD6428 /* ScannerBarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201D22CB08F9400AD6428 /* ScannerBarcodeView.swift */; };
+		CEB201D32CB08F9400AD6428 /* FilmScannerBarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201D22CB08F9400AD6428 /* FilmScannerBarcodeView.swift */; };
 		CEB201D52CB090C800AD6428 /* PlainBackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB201D42CB090C800AD6428 /* PlainBackgroundViewModifier.swift */; };
 		CEFFDAFF2CADC01E0047C819 /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFDAFE2CADC01E0047C819 /* ScannerCoordinator.swift */; };
 		F60DC19E2C248FB50092E952 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60DC19D2C248FB50092E952 /* LocationItem.swift */; };
@@ -187,11 +187,11 @@
 		CE33F7C12CB35B310014B429 /* ModelPickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPickerSheet.swift; sourceTree = "<group>"; };
 		CE35C7782C9CD7DD001E4E55 /* DXCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeView.swift; sourceTree = "<group>"; };
 		CE35C77A2C9DAB1D001E4E55 /* DXCodeBit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeBit.swift; sourceTree = "<group>"; };
-		CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeScannerState.swift; sourceTree = "<group>"; };
-		CE35E5292CA5A68B004CF3A9 /* ScannerPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPickerViewModel.swift; sourceTree = "<group>"; };
-		CE35E52F2CA5AADE004CF3A9 /* ScannerFilmPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerFilmPickerView.swift; sourceTree = "<group>"; };
+		CE35E5272CA5A612004CF3A9 /* FilmScannerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmScannerState.swift; sourceTree = "<group>"; };
+		CE35E5292CA5A68B004CF3A9 /* FilmScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmScannerViewModel.swift; sourceTree = "<group>"; };
+		CE35E52F2CA5AADE004CF3A9 /* FilmScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmScannerView.swift; sourceTree = "<group>"; };
 		CE5002312CAB44470088DC69 /* UIDeviceOrientation+videoRotationAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDeviceOrientation+videoRotationAngle.swift"; sourceTree = "<group>"; };
-		CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerDXCodeView.swift; sourceTree = "<group>"; };
+		CE50D9CB2CB2F26C00FFC071 /* FilmScannerDXCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmScannerDXCodeView.swift; sourceTree = "<group>"; };
 		CE50D9CD2CB308B200FFC071 /* DXCodeFilmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeFilmView.swift; sourceTree = "<group>"; };
 		CE50D9CF2CB323D800FFC071 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CE5AA9522CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DXCodeDetector.mlmodel; sourceTree = "<group>"; };
@@ -205,12 +205,12 @@
 		CE99583A2C9CBE4B0052B9A1 /* FilmExposureTolerance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmExposureTolerance.swift; sourceTree = "<group>"; };
 		CEABA4672CA0514F00FBC913 /* DXCodeBitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeBitView.swift; sourceTree = "<group>"; };
 		CEABA4692CA0516E00FBC913 /* DXCodeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCodeRowView.swift; sourceTree = "<group>"; };
-		CEAEB5FB2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerContentUnavailableView.swift; sourceTree = "<group>"; };
+		CEAEB5FB2CA9711B00D7EC17 /* FilmScannerContentUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmScannerContentUnavailableView.swift; sourceTree = "<group>"; };
 		CEB201C32CAF57BA00AD6428 /* Array+maximalDifference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+maximalDifference.swift"; sourceTree = "<group>"; };
 		CEB201C52CAF591F00AD6428 /* CGRect+RelativePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+RelativePosition.swift"; sourceTree = "<group>"; };
 		CEB201C72CAF60AA00AD6428 /* Described.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Described.swift; sourceTree = "<group>"; };
 		CEB201CF2CB086ED00AD6428 /* FilmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmView.swift; sourceTree = "<group>"; };
-		CEB201D22CB08F9400AD6428 /* ScannerBarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerBarcodeView.swift; sourceTree = "<group>"; };
+		CEB201D22CB08F9400AD6428 /* FilmScannerBarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmScannerBarcodeView.swift; sourceTree = "<group>"; };
 		CEB201D42CB090C800AD6428 /* PlainBackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainBackgroundViewModifier.swift; sourceTree = "<group>"; };
 		CEFFDAFE2CADC01E0047C819 /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
 		F60DC19D2C248FB50092E952 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
@@ -377,8 +377,8 @@
 		CE35E5262CA5A5FA004CF3A9 /* DXCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
-				CE35E5292CA5A68B004CF3A9 /* ScannerPickerViewModel.swift */,
-				CE35E5272CA5A612004CF3A9 /* DXCodeScannerState.swift */,
+				CE35E5292CA5A68B004CF3A9 /* FilmScannerViewModel.swift */,
+				CE35E5272CA5A612004CF3A9 /* FilmScannerState.swift */,
 			);
 			path = DXCodeScanner;
 			sourceTree = "<group>";
@@ -433,10 +433,10 @@
 			isa = PBXGroup;
 			children = (
 				3B174D6B2CC01041002B928F /* ScannerView.swift */,
-				CE35E52F2CA5AADE004CF3A9 /* ScannerFilmPickerView.swift */,
-				CEAEB5FB2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift */,
-				CEB201D22CB08F9400AD6428 /* ScannerBarcodeView.swift */,
-				CE50D9CB2CB2F26C00FFC071 /* ScannerDXCodeView.swift */,
+				CE35E52F2CA5AADE004CF3A9 /* FilmScannerView.swift */,
+				CEAEB5FB2CA9711B00D7EC17 /* FilmScannerContentUnavailableView.swift */,
+				CEB201D22CB08F9400AD6428 /* FilmScannerBarcodeView.swift */,
+				CE50D9CB2CB2F26C00FFC071 /* FilmScannerDXCodeView.swift */,
 				CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */,
 				CE5AA9592CAAE37F00BA56F5 /* ScannerViewController.swift */,
 			);
@@ -950,10 +950,10 @@
 				3B76712F2CB850290062057A /* CamerasView.swift in Sources */,
 				3B487C102CB9357A002C79EE /* String+RemovingPrefix.swift in Sources */,
 				F63084922C381D18008ABF71 /* MKMapItem+Identifiable.swift in Sources */,
-				CE35E52A2CA5A68B004CF3A9 /* ScannerPickerViewModel.swift in Sources */,
+				CE35E52A2CA5A68B004CF3A9 /* FilmScannerViewModel.swift in Sources */,
 				F65517A52C1F3C57000133FA /* Constants.swift in Sources */,
 				F649B2C52C3897AE00FE7180 /* DataContainer.swift in Sources */,
-				CE50D9CC2CB2F26C00FFC071 /* ScannerDXCodeView.swift in Sources */,
+				CE50D9CC2CB2F26C00FFC071 /* FilmScannerDXCodeView.swift in Sources */,
 				F660FCB32C4817C10022D597 /* Route.swift in Sources */,
 				CE761CAA2CACA5D4004E1378 /* Array+compress.swift in Sources */,
 				F6635A7D2C3FFF8800813E00 /* CamerasGenericView.swift in Sources */,
@@ -1010,7 +1010,7 @@
 				CE112A622C9F3061004FEA66 /* FilmProtocol.swift in Sources */,
 				F6FE29B52C0F704A00E9C678 /* ModelContext+Insert.swift in Sources */,
 				3B7671402CB85B3B0062057A /* PhotoView.swift in Sources */,
-				CEAEB5FC2CA9711B00D7EC17 /* ScannerContentUnavailableView.swift in Sources */,
+				CEAEB5FC2CA9711B00D7EC17 /* FilmScannerContentUnavailableView.swift in Sources */,
 				F68B56C12C20D078001F1D97 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
 				3B76713B2CB858EE0062057A /* FilmRoll+CreateableModel.swift in Sources */,
 				F6FE29BE2C0F804200E9C678 /* Photo.swift in Sources */,
@@ -1020,9 +1020,9 @@
 				3B487C0E2CB93566002C79EE /* String+RemovingLast.swift in Sources */,
 				F660FCCD2C4A92650022D597 /* RoutedNavigationStack.swift in Sources */,
 				F6E481992C1B0AD4006EE963 /* ViewStateToolbar.swift in Sources */,
-				CE35E5302CA5AADE004CF3A9 /* ScannerFilmPickerView.swift in Sources */,
+				CE35E5302CA5AADE004CF3A9 /* FilmScannerView.swift in Sources */,
 				F6FE29AF2C0F4CDE00E9C678 /* Film.swift in Sources */,
-				CE35E5282CA5A612004CF3A9 /* DXCodeScannerState.swift in Sources */,
+				CE35E5282CA5A612004CF3A9 /* FilmScannerState.swift in Sources */,
 				CE0B0DE02CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift in Sources */,
 				F62387662C51441300A4587F /* Binding+Optional.swift in Sources */,
 				F6FE29B92C0F784500E9C678 /* FilmProcess.swift in Sources */,
@@ -1055,7 +1055,7 @@
 				F660FCD32C4C095A0022D597 /* DetailedView.swift in Sources */,
 				F660FCD02C4A99990022D597 /* ModelViewModel.swift in Sources */,
 				CEABA46A2CA0516E00FBC913 /* DXCodeRowView.swift in Sources */,
-				CEB201D32CB08F9400AD6428 /* ScannerBarcodeView.swift in Sources */,
+				CEB201D32CB08F9400AD6428 /* FilmScannerBarcodeView.swift in Sources */,
 				3B174D6F2CC01079002B928F /* RoundedBoundingBox.swift in Sources */,
 				CE33F7C02CB354040014B429 /* FloatingBackgroundViewModifier.swift in Sources */,
 				F623876A2C51AF9400A4587F /* FilmRollDetailedView.swift in Sources */,

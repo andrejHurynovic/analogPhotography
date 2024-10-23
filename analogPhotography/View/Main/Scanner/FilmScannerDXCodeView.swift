@@ -1,5 +1,5 @@
 //
-//  ScannerDXCodeView.swift
+//  FilmScannerDXCodeView.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 6.10.24.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-extension ScannerFilmPickerView {
-    struct ScannerDXCodeView: View {
+extension FilmScannerView {
+    struct FilmScannerDXCodeView: View {
         var dxCode: DXCode?
         
         var selectedFilm: Binding<Film?>?

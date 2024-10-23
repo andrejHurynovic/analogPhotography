@@ -1,5 +1,5 @@
 //
-//  ScannerContentUnavailableView.swift
+//  FilmScannerContentUnavailableView.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 29.09.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ScannerContentUnavailableView: View {
+struct FilmScannerContentUnavailableView: View {
     var description: String
     var actionTitle: String?
     var action: (() async -> ())?

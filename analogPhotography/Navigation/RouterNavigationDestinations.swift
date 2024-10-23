@@ -29,7 +29,7 @@ private struct RouterNavigationDestinations: ViewModifier {
                 case .photos:
                     PhotosView()
                 case .scannerFilmPickerView(let selectedFilm):
-                    ScannerFilmPickerView(selectedFilm: selectedFilm)
+                    FilmScannerView(selectedFilm: selectedFilm)
                 case .settings:
                     EmptyView()
                 }

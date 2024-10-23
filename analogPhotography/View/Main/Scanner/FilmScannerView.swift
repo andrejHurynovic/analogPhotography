@@ -8,8 +8,8 @@
 import SwiftUI
 import SwiftData
 
-struct ScannerFilmPickerView: View {
-    @StateObject var viewModel = ScannerPickerViewModel()
+struct FilmScannerView: View {
+    @StateObject var viewModel = FilmScannerViewModel()
     @Environment(\.modelContext) private var modelContext
     
     var selectedFilm: Binding<Film?>?
@@ -17,15 +17,15 @@ struct ScannerFilmPickerView: View {
     var body: some View {
         switch viewModel.state {
         case .cameraAccessNotDetermined:
-            ScannerContentUnavailableView(description: "Access to the camera is required to read the DX code.",
+            FilmScannerContentUnavailableView(description: "Access to the camera is required to read the DX code.",
                                           actionTitle: "Allow access to the camera",
                                           action: { await viewModel.requestCameraPermission() })
         case .cameraAccessDenied:
-            ScannerContentUnavailableView(description: "Access to the camera is required to read the DX code. You refused earlier, go to settings to allow access to the camera.",
+            FilmScannerContentUnavailableView(description: "Access to the camera is required to read the DX code. You refused earlier, go to settings to allow access to the camera.",
                                           actionTitle: "Allow access to the camera",
                                           action: { UIApplication.openAppSettings() })
         case .cameraNotAvailable:
-            ScannerContentUnavailableView(description: "Access to the camera is required to read the DX code. The camera is not available on your device.")
+            FilmScannerContentUnavailableView(description: "Access to the camera is required to read the DX code. The camera is not available on your device.")
         case .scannerAvailable:
             ZStack(alignment: .bottom) {
                 ScannerView(barcode: $viewModel.barcode,
@@ -34,11 +34,11 @@ struct ScannerFilmPickerView: View {
                 VStack {
                     Spacer()
                     bottomMenuStatePicker
-                    switch viewModel.bottomMenuState {
+                    switch viewModel.menuState {
                     case .barcode:
-                        ScannerBarcodeView(filterDXBarcode: viewModel.barcode, bottomMenuState: $viewModel.bottomMenuState, selectedFilm: selectedFilm, modelContext: modelContext)
+                        FilmScannerBarcodeView(filterDXBarcode: viewModel.barcode, bottomMenuState: $viewModel.menuState, selectedFilm: selectedFilm, modelContext: modelContext)
                     case .dxCode:
-                        ScannerDXCodeView(dxCode: viewModel.dxCode, selectedFilm: selectedFilm)
+                        FilmScannerDXCodeView(dxCode: viewModel.dxCode, selectedFilm: selectedFilm)
                     }
                 }
             }
@@ -48,8 +48,8 @@ struct ScannerFilmPickerView: View {
     }
     
     var bottomMenuStatePicker: some View {
-        Picker("", selection: $viewModel.bottomMenuState.animation()) {
-            ForEach(ScannerViewBottomMenuState.allCases, id: \.self) { item in
+        Picker("", selection: $viewModel.menuState.animation()) {
+            ForEach(FilmScannerMenuState.allCases, id: \.self) { item in
                 Text(item.uiDescription)
             }
         }

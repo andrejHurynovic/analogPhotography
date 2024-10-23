@@ -1,5 +1,5 @@
 //
-//  ScannerBarcodeView.swift
+//  FilmScannerBarcodeView.swift
 //  analogPhotography
 //
 //  Created by Andrej Hurynovič on 5.10.24.
@@ -8,24 +8,24 @@
 import SwiftUI
 import SwiftData
 
-extension ScannerFilmPickerView {
-    struct ScannerBarcodeView: View {
-        private var state: ScannerFilmsViewState
-        @Binding var bottomMenuState: ScannerViewBottomMenuState
+extension FilmScannerView {
+    struct FilmScannerBarcodeView: View {
+        private var state: FilmScannerBarcodeViewState
+        @Binding var bottomMenuState: FilmScannerMenuState
         private var filteredFilms: [Film] = []
         
         var selectedFilm: Binding<Film?>?
         @EnvironmentObject var manager: ModelPickerSheetManager
         
         init(filterDXBarcode: String?,
-             bottomMenuState: Binding<ScannerViewBottomMenuState>,
+             bottomMenuState: Binding<FilmScannerMenuState>,
              selectedFilm: Binding<Film?>?,
              modelContext: ModelContext) {
             self._bottomMenuState = bottomMenuState
             self.selectedFilm = selectedFilm
             
             guard let filterDXBarcode = filterDXBarcode else {
-                state = .noDXBarcode;
+                state = .noBarcode;
                 return
             }
             guard let films = try? modelContext.fetch(FetchDescriptor<Film>()) else {
@@ -43,7 +43,7 @@ extension ScannerFilmPickerView {
         
         var body: some View {
             switch state {
-            case .noDXBarcode:
+            case .noBarcode:
                 Text("No barcode detected.")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
@@ -94,8 +94,8 @@ extension ScannerFilmPickerView {
 
     }
     
-    enum ScannerFilmsViewState {
-        case noDXBarcode
+    enum FilmScannerBarcodeViewState {
+        case noBarcode
         case dbError
         case noFilteredFilms
         case showing
