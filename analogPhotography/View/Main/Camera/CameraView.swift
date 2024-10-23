@@ -9,53 +9,13 @@ import SwiftUI
 
 struct CameraView: View {
     @Bindable var camera: Camera
-    @State var pickedFilm: Film?
-    @StateObject var pickerManager = ModelPickerSheetManager()
     
     var body: some View {
         VStack(alignment: .leading) {
-            name
-            note
-            filmRoll
-        }
-        .sheet(isPresented: $pickerManager.isPresented) {
-            if let film = pickedFilm {
-                camera.addFilmRoll(film: film)
-            }
-        } content: {
-            FilmPickerSheet(picked: $pickedFilm)
-                .environmentObject(pickerManager)
-        }
-        .animation(.default, value: camera.currentFilmRoll)
-    }
-    
-    var name: some View {
-        Text(camera.name)
-            .font(.title2)
-            .fontWeight(.bold)
-    }
-    @ViewBuilder var note: some View {
-        if camera.note != "" {
-            Text(camera.note)
-                .font(.caption)
-                .foregroundStyle(.gray)
+            CameraMinimizedView(camera: camera)
+            CameraFilmRollView(camera: camera)
         }
     }
-    
-    //MARK: FilmRoll
-    @ViewBuilder var filmRoll: some View {
-        if let currentFilmRoll = camera.currentFilmRoll {
-            FilmRollMinimizedView(filmRoll: currentFilmRoll)
-        } else {
-            Button("Select new film") {
-                pickerManager.isPresented = true
-            }
-            .buttonStyle(CellButtonStyle())
-        }
-    }
-    
-    //MARK: FilmPicker
-    
     
 }
 

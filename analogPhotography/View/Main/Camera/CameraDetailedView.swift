@@ -10,23 +10,33 @@ import SwiftUI
 struct CameraDetailedView: View {
     @Bindable var camera: Camera
     var selectedCamera: Binding<Camera?>?
-    
+        
     var body: some View {
         DetailedView(model: camera,
                      selectedModel: selectedCamera,
                      viewModelType: CameraDetailedViewModel.self) { viewModel, viewModelBinding in
             Form {
-                Section("Info") {
-                    TextFieldForm(title: "Name", text: viewModelBinding.model.name, viewState: viewModelBinding.viewState, focusOnEdit: true)
+                if viewModel.viewState.editingAvailable {
+                    Section("Info") {
+                        TextFieldForm(title: "Name", text: viewModelBinding.model.name, viewState: viewModelBinding.viewState, focusOnEdit: true)
+                    }
+                    NoteView(note: viewModelBinding.model.note)
+                } else {
+                    Button {
+                        viewModel.viewState = .editing
+                    } label: {
+                        CameraMinimizedView(camera: camera)
+                    }
+                    .buttonStyle(PlainButtonStyle())
                 }
-                Section("Film rolls") {
-                    AddModelButton {  }
+                Section("Current film roll") {
+                    CameraFilmRollView(camera: camera)
                 }
-                
-                NoteView(note: viewModelBinding.model.note)
             }
+            .animation(.default, value: viewModel.viewState)
         }
     }
+    
 }
 
 #Preview {

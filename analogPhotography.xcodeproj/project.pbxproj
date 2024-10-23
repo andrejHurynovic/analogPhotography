@@ -38,6 +38,8 @@
 		3BD717842CC937B800EE60AD /* Binding+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717832CC937B500EE60AD /* Binding+Equatable.swift */; };
 		3BD717862CC937C600EE60AD /* Binding+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717852CC937BA00EE60AD /* Binding+Hashable.swift */; };
 		3BD717882CC9680E00EE60AD /* ModelPickerSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717872CC9680E00EE60AD /* ModelPickerSheetManager.swift */; };
+		3BD7178A2CC9968100EE60AD /* CameraFilmRollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717892CC9968100EE60AD /* CameraFilmRollView.swift */; };
+		3BD7178C2CC9983400EE60AD /* CameraMinimizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7178B2CC9983400EE60AD /* CameraMinimizedView.swift */; };
 		CE0B0DE02CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */; };
 		CE0BA2B62CA99C3B00FE216D /* UIApplication+openAppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BA2B52CA99C3B00FE216D /* UIApplication+openAppSettings.swift */; };
 		CE112A602C9F2957004FEA66 /* DXCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A5F2C9F2957004FEA66 /* DXCode.swift */; };
@@ -176,6 +178,8 @@
 		3BD717832CC937B500EE60AD /* Binding+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Equatable.swift"; sourceTree = "<group>"; };
 		3BD717852CC937BA00EE60AD /* Binding+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Hashable.swift"; sourceTree = "<group>"; };
 		3BD717872CC9680E00EE60AD /* ModelPickerSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPickerSheetManager.swift; sourceTree = "<group>"; };
+		3BD717892CC9968100EE60AD /* CameraFilmRollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilmRollView.swift; sourceTree = "<group>"; };
+		3BD7178B2CC9983400EE60AD /* CameraMinimizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraMinimizedView.swift; sourceTree = "<group>"; };
 		CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		CE0BA2B52CA99C3B00FE216D /* UIApplication+openAppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+openAppSettings.swift"; sourceTree = "<group>"; };
 		CE112A5F2C9F2957004FEA66 /* DXCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCode.swift; sourceTree = "<group>"; };
@@ -809,6 +813,7 @@
 			children = (
 				F660FCB42C4843C70022D597 /* FilmRollView.swift */,
 				3BC0E80A2CC1BC2A004565B1 /* FilmRollMinimizedView.swift */,
+				3BD717892CC9968100EE60AD /* CameraFilmRollView.swift */,
 				F62387692C51AF9400A4587F /* FilmRollDetailedView.swift */,
 				3B7671382CB8586E0062057A /* FilmRollsGenericView.swift */,
 				F6635A7E2C4067A900813E00 /* FilmRollsView.swift */,
@@ -853,6 +858,7 @@
 			isa = PBXGroup;
 			children = (
 				F63084932C38294A008ABF71 /* CameraView.swift */,
+				3BD7178B2CC9983400EE60AD /* CameraMinimizedView.swift */,
 				F6D3A3452C0FB2AB00D56B8D /* CameraDetailedView.swift */,
 				F6635A7C2C3FFF8800813E00 /* CamerasGenericView.swift */,
 				3B76712E2CB850240062057A /* CamerasView.swift */,
@@ -1060,12 +1066,14 @@
 				CE33F7C02CB354040014B429 /* FloatingBackgroundViewModifier.swift in Sources */,
 				F623876A2C51AF9400A4587F /* FilmRollDetailedView.swift in Sources */,
 				3B174D6C2CC01041002B928F /* ScannerView.swift in Sources */,
+				3BD7178A2CC9968100EE60AD /* CameraFilmRollView.swift in Sources */,
 				CE2779CB2CB45C48005ECE63 /* HomeViewMenu.swift in Sources */,
 				F6FE29B72C0F769A00E9C678 /* Bool+Comparable.swift in Sources */,
 				F660FCB92C493F020022D597 /* CameraDetailedViewModel.swift in Sources */,
 				F6C40BCB2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift in Sources */,
 				CE8FB8452CADA82D00989321 /* RingBuffer.swift in Sources */,
 				F6D3A3462C0FB2AB00D56B8D /* CameraDetailedView.swift in Sources */,
+				3BD7178C2CC9983400EE60AD /* CameraMinimizedView.swift in Sources */,
 				3BC0E9362CC1C2AD004565B1 /* CellButtonStyle.swift in Sources */,
 				F67179162C357AED0062D350 /* MapPickerMenu.swift in Sources */,
 				F6BC7BE82C3C3CBD00160C3E /* ClearFormButton.swift in Sources */,
@@ -1203,7 +1211,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 271;
+				CURRENT_PROJECT_VERSION = 272;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1236,7 +1244,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 271;
+				CURRENT_PROJECT_VERSION = 272;
 				DEVELOPMENT_TEAM = R38NN26M52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

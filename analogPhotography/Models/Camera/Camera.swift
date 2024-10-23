@@ -25,6 +25,22 @@ extension Camera {
     func addFilmRoll(film: Film) {
         self.filmRolls.append(FilmRoll(film: film, camera: self))
     }
+    func changeCurrentFilmRoll(film: Film, in modelContext: ModelContext) {
+        guard let oldFilmRoll = currentFilmRoll else { return }
+        
+        try? modelContext.transaction {
+            let newFilmRoll = FilmRoll(film: film)
+            
+            for photo in oldFilmRoll.photos {
+                photo.filmRoll = newFilmRoll
+            }
+            
+            modelContext.insert(newFilmRoll)
+            modelContext.delete(oldFilmRoll)
+            
+            self.filmRolls.append(newFilmRoll)
+        }
+    }
     
     var currentFilmRoll: FilmRoll? { filmRolls.first { !$0.finished } }
 }
