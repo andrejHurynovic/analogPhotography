@@ -11,12 +11,16 @@ struct FilmRollMinimizedView: View {
     @Bindable var filmRoll: FilmRoll
     
     var body: some View {
-        HStack {
-            Text(filmRoll.uiDescription)
-            Spacer()
-            Text(filmRoll.capacityDescription)
-                .bold()
+        VStack(alignment: .leading) {
+            HStack {
+                Text(filmRoll.uiDescription)
+                Spacer()
+                Text(filmRoll.capacityDescription)
+                    .bold()
+            }
+            .monospaced()
+            FilmRollFinishButton(filmRoll: filmRoll, checkIsOfferToFinish: true)
+                .buttonStyle(CellButtonStyle())
         }
-        .monospaced()
     }
 }

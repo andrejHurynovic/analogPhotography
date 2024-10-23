@@ -33,3 +33,10 @@ final class FilmRoll {
         self.camera = camera
     }
 }
+
+extension FilmRoll {
+    var isOfferToFinish: Bool? {
+        guard let capacity = self.film?.capacity else { return nil }
+        return capacity - photos.count < Constants.FilmRoll.numberOfPhotosLeftToShowFinishButton
+    }
+}

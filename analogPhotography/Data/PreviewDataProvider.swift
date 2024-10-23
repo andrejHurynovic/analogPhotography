@@ -31,7 +31,7 @@ final class PreviewDataProvider {
                 tempContext.insert(relleiRetro80s)
             }
             
-            try createFilmRollWithPhotos(with: kodakGold200, for: pentaxSFX, in: tempContext)
+            try createFilmRollWithPhotos(with: kodakGold200, for: pentaxSFX, photosCountEqualsFilmCapacity: true, in: tempContext)
             try createFilmRollWithPhotos(with: relleiRetro80s, for: fed3, in: tempContext)
             
             
@@ -41,11 +41,16 @@ final class PreviewDataProvider {
         }
     }
     
-    static private func createFilmRollWithPhotos(with film: Film, for camera: Camera, in context: ModelContext) throws {
+    static private func createFilmRollWithPhotos(with film: Film,
+                                                 for camera: Camera,
+                                                 photosCountEqualsFilmCapacity: Bool = false,
+                                                 in context: ModelContext) throws {
         let filmRoll = FilmRoll(expired: Bool.random(), film: film, camera: camera)
         context.insert(filmRoll)
         
-        let photos = (1...Int.random(in: 1...36)).map { order in
+        let photoCount = photosCountEqualsFilmCapacity ? film.capacity ?? 36 : Int.random(in: 1...36)
+        
+        let photos = (1...photoCount).map { order in
             let photo = Photo(locationDescription: "A Big Place",
                               aperture: Constants.Photo.sampleAperture.randomElement()!,
                               shutterSpeed: Constants.Photo.shutterSpeeds.randomElement()!,

@@ -17,6 +17,10 @@ struct Constants {
         static let sampleSpeeds: [Int] = [50, 100, 200, 400, 800, 1200]
     }
     
+    struct FilmRoll {
+        static let numberOfPhotosLeftToShowFinishButton: Int = 2
+    }
+    
     struct Map {
         static let defaultMapDistance: Double = 200_000
     }

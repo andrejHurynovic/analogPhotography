@@ -28,6 +28,7 @@ struct ModelPickerSheet<Element: PersistentModel, Content: View>: View {
             }
             .buttonStyle(.plain)
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 
 }
