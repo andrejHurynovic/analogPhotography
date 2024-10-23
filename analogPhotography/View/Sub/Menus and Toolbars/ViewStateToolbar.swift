@@ -12,7 +12,8 @@ struct ViewStateToolbar<Content: View, Model: PersistentModel>: ToolbarContent {
     @ObservedObject var viewModel: ModelViewModel<Model>
     
     @Environment(\.modelContext) private var modelContext
-    @EnvironmentObject var router: AppRouter
+    @EnvironmentObject private var router: AppRouter
+    @EnvironmentObject private var modelPickerSheetManager: ModelPickerSheetManager
     
     var menuContent: () -> Content
     
@@ -20,7 +21,7 @@ struct ViewStateToolbar<Content: View, Model: PersistentModel>: ToolbarContent {
         switch viewModel.viewState {
         case .showing: showing
         case .editing: editing
-        case .creating, .creatingAndSelecting: creating
+        case .creating, .creatingAndSelecting: creatingAndSelecting
         }
     }
     
@@ -43,11 +44,13 @@ struct ViewStateToolbar<Content: View, Model: PersistentModel>: ToolbarContent {
             }
         }
     }
-    @ToolbarContentBuilder var creating: some ToolbarContent {
+    
+    @ToolbarContentBuilder var creatingAndSelecting: some ToolbarContent {
         ToolbarItem(placement: .cancellationAction) {
             Button("Cancel") {
                 router.removeAllWithCurrentModel()
             }
+            .navigationBarBackButtonHidden(true)
         }
         ToolbarItem(placement: .confirmationAction) {
             switch viewModel.viewState {
@@ -60,7 +63,7 @@ struct ViewStateToolbar<Content: View, Model: PersistentModel>: ToolbarContent {
                 Button("Select") {
                     viewModel.insert(in: modelContext)
                     viewModel.selectedModel?.wrappedValue = viewModel.model
-                    router.resetToRoot()
+                    modelPickerSheetManager.isPresented = false
                 }
             default: EmptyView()
             }

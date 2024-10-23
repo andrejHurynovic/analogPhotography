@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct CameraPickerSheet: View {
-    @Binding var isPresented: Bool
+    @EnvironmentObject var manager: ModelPickerSheetManager
     @Binding var picked: Camera?
     @StateObject var router = AppRouter()
     
     var body: some View {
         NavigationStack(path: $router.path) {
             CamerasGenericView(selectedCamera: $picked) { cameras in
-                ModelPickerSheet(isPresented: $isPresented,
+                ModelPickerSheet(isPresented: $manager.isPresented,
                                  selectedElement: $picked,
                                  elements: cameras) { camera in
                     CameraView(camera: camera)
@@ -28,13 +28,13 @@ struct CameraPickerSheet: View {
 }
 
 #Preview {
-    @Previewable @State var isPresented: Bool = false
+    @Previewable @State var manager = ModelPickerSheetManager()
     @Previewable @State var picked: Camera?
     
     RoutedNavigationStack {
         Form {
             Button("Select camera") {
-                isPresented = true
+                manager.isPresented = true
             }
             if let picked = picked {
                 CameraView(camera: picked)
@@ -42,8 +42,9 @@ struct CameraPickerSheet: View {
                 Text("No selected camera")
             }
         }
-        .sheet(isPresented: $isPresented) {
-            CameraPickerSheet(isPresented: $isPresented, picked: $picked)
+        .sheet(isPresented: $manager.isPresented) {
+            CameraPickerSheet(picked: $picked)
+                .environmentObject(manager)
         }
     }
     

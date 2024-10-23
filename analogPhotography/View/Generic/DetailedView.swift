@@ -27,7 +27,6 @@ struct DetailedView<Content: View,
     var body: some View {
         content(viewModel, $viewModel)
             .navigationTitle(viewModel.name)
-            .navigationBarBackButtonHidden(viewModel.viewState == .creating)
             .toolbar { toolbarContent }
     }
     

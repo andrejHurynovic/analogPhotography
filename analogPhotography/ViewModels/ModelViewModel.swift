@@ -17,9 +17,10 @@ class ModelViewModel<Model: PersistentModel>: ObservableObject {
         self.model = model
         self.selectedModel = selectedModel
         if model.modelContext == nil {
+            self.viewState = selectedModel == nil ? .creating : .creatingAndSelecting
+        } else {
             self.viewState = .showing
-        } else {}
-        self.viewState = selectedModel == nil ? .creating : .creatingAndSelecting
+        }
         
     }
     

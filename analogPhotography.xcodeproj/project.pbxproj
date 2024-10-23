@@ -37,6 +37,7 @@
 		3BD717822CC9352C00EE60AD /* PhotoDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717812CC9352C00EE60AD /* PhotoDetailedViewModel.swift */; };
 		3BD717842CC937B800EE60AD /* Binding+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717832CC937B500EE60AD /* Binding+Equatable.swift */; };
 		3BD717862CC937C600EE60AD /* Binding+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717852CC937BA00EE60AD /* Binding+Hashable.swift */; };
+		3BD717882CC9680E00EE60AD /* ModelPickerSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717872CC9680E00EE60AD /* ModelPickerSheetManager.swift */; };
 		CE0B0DE02CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */; };
 		CE0BA2B62CA99C3B00FE216D /* UIApplication+openAppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0BA2B52CA99C3B00FE216D /* UIApplication+openAppSettings.swift */; };
 		CE112A602C9F2957004FEA66 /* DXCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE112A5F2C9F2957004FEA66 /* DXCode.swift */; };
@@ -174,6 +175,7 @@
 		3BD717812CC9352C00EE60AD /* PhotoDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailedViewModel.swift; sourceTree = "<group>"; };
 		3BD717832CC937B500EE60AD /* Binding+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Equatable.swift"; sourceTree = "<group>"; };
 		3BD717852CC937BA00EE60AD /* Binding+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Hashable.swift"; sourceTree = "<group>"; };
+		3BD717872CC9680E00EE60AD /* ModelPickerSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPickerSheetManager.swift; sourceTree = "<group>"; };
 		CE0B0DDF2CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		CE0BA2B52CA99C3B00FE216D /* UIApplication+openAppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+openAppSettings.swift"; sourceTree = "<group>"; };
 		CE112A5F2C9F2957004FEA66 /* DXCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCode.swift; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				F660FCBD2C4A807F0022D597 /* CreateableModel.swift */,
+				3BD717872CC9680E00EE60AD /* ModelPickerSheetManager.swift */,
 				F660FCC52C4A8F080022D597 /* Camera */,
 				F660FCC62C4A8F320022D597 /* Film */,
 				F660FCC72C4A8F390022D597 /* FilmRoll */,
@@ -1043,6 +1046,7 @@
 				3B76712B2CB84E830062057A /* CameraPickerSheet.swift in Sources */,
 				CE5AA95B2CAAE37F00BA56F5 /* ScannerViewController.swift in Sources */,
 				CEB201C62CAF591F00AD6428 /* CGRect+RelativePosition.swift in Sources */,
+				3BD717882CC9680E00EE60AD /* ModelPickerSheetManager.swift in Sources */,
 				F645616C2C110CC20007940D /* NoteView.swift in Sources */,
 				F6D3A3492C0FBA7400D56B8D /* DeleteButton.swift in Sources */,
 				CE761CAD2CACA619004E1378 /* ScannerDetector.swift in Sources */,

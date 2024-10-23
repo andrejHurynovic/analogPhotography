@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct FilmRollPickerSheet: View {
-    @Binding var isPresented: Bool
+    @EnvironmentObject var manager: ModelPickerSheetManager
     @Binding var picked: FilmRoll?
     @StateObject var router = AppRouter()
     
     var body: some View {
         NavigationStack(path: $router.path) {
             FilmRollsGenericView(selectedFilmRoll: $picked) { filmRolls in
-                ModelPickerSheet(isPresented: $isPresented,
+                ModelPickerSheet(isPresented: $manager.isPresented,
                                  selectedElement: $picked,
                                  elements: filmRolls) { filmRoll in
                     FilmRollView(roll: filmRoll)
@@ -28,13 +28,13 @@ struct FilmRollPickerSheet: View {
 }
 
 #Preview {
-    @Previewable @State var isPresented: Bool = false
+    @Previewable @State var manager = ModelPickerSheetManager()
     @Previewable @State var picked: FilmRoll?
     
     RoutedNavigationStack {
         Form {
             Button("Select filmRoll") {
-                isPresented = true
+                manager.isPresented = true
             }
             if let picked = picked {
                 FilmRollView(roll: picked)
@@ -42,8 +42,9 @@ struct FilmRollPickerSheet: View {
                 Text("No selected filmRoll")
             }
         }
-        .sheet(isPresented: $isPresented) {
-            FilmRollPickerSheet(isPresented: $isPresented, picked: $picked)
+        .sheet(isPresented: $manager.isPresented) {
+            FilmRollPickerSheet(picked: $picked)
+                .environmentObject(manager)
         }
     }
     

@@ -10,7 +10,7 @@ import SwiftUI
 struct CameraView: View {
     @Bindable var camera: Camera
     @State var pickedFilm: Film?
-    @State var showFilmPicker: Bool = false
+    @StateObject var pickerManager = ModelPickerSheetManager()
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,12 +18,13 @@ struct CameraView: View {
             note
             filmRoll
         }
-        .sheet(isPresented: $showFilmPicker) {
+        .sheet(isPresented: $pickerManager.isPresented) {
             if let film = pickedFilm {
                 camera.addFilmRoll(film: film)
             }
         } content: {
-            FilmPickerSheet(isPresented: $showFilmPicker, picked: $pickedFilm)
+            FilmPickerSheet(picked: $pickedFilm)
+                .environmentObject(pickerManager)
         }
         .animation(.default, value: camera.currentFilmRoll)
     }
@@ -47,7 +48,7 @@ struct CameraView: View {
             FilmRollMinimizedView(filmRoll: currentFilmRoll)
         } else {
             Button("Select new film") {
-                showFilmPicker = true
+                pickerManager.isPresented = true
             }
             .buttonStyle(CellButtonStyle())
         }

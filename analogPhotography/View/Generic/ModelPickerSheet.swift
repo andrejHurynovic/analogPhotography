@@ -28,9 +28,6 @@ struct ModelPickerSheet<Element: PersistentModel, Content: View>: View {
             }
             .buttonStyle(.plain)
         }
-        .onChange(of: selectedElement, { _, _ in
-            isPresented = false
-        })
         .navigationBarTitleDisplayMode(.inline)
     }
 

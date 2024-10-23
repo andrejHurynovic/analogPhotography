@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct PhotoPickerSheet: View {
-    @Binding var isPresented: Bool
+    @EnvironmentObject var manager: ModelPickerSheetManager
     @Binding var picked: Photo?
     @StateObject var router = AppRouter()
     
     var body: some View {
         NavigationStack(path: $router.path) {
             PhotosGenericView(selectedPhoto: $picked) { photos in
-                ModelPickerSheet(isPresented: $isPresented,
+                ModelPickerSheet(isPresented: $manager.isPresented,
                                  selectedElement: $picked,
                                  elements: photos) { photo in
                     PhotoView(photo: photo)
@@ -28,13 +28,13 @@ struct PhotoPickerSheet: View {
 }
 
 #Preview {
-    @Previewable @State var isPresented: Bool = false
+    @Previewable @State var manager = ModelPickerSheetManager()
     @Previewable @State var picked: Photo?
     
     RoutedNavigationStack {
         Form {
             Button("Select photo") {
-                isPresented = true
+                manager.isPresented = true
             }
             if let picked = picked {
                 PhotoView(photo: picked)
@@ -42,8 +42,9 @@ struct PhotoPickerSheet: View {
                 Text("No selected photo")
             }
         }
-        .sheet(isPresented: $isPresented) {
-            PhotoPickerSheet(isPresented: $isPresented, picked: $picked)
+        .sheet(isPresented: $manager.isPresented) {
+            PhotoPickerSheet(picked: $picked)
+                .environmentObject(manager)
         }
     }
     
