@@ -10,9 +10,10 @@ import SwiftUI
 struct PhotoPickerSheet: View {
     @Binding var isPresented: Bool
     @Binding var picked: Photo?
+    @StateObject var router = AppRouter()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $router.path) {
             PhotosGenericView { photos in
                 ModelPickerSheet(isPresented: $isPresented,
                                  selectedElement: $picked,

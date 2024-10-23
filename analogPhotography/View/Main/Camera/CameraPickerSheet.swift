@@ -10,9 +10,10 @@ import SwiftUI
 struct CameraPickerSheet: View {
     @Binding var isPresented: Bool
     @Binding var picked: Camera?
+    @StateObject var router = AppRouter()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $router.path) {
             CamerasGenericView { cameras in
                 ModelPickerSheet(isPresented: $isPresented,
                                  selectedElement: $picked,

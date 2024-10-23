@@ -10,9 +10,10 @@ import SwiftUI
 struct FilmPickerSheet: View {
     @Binding var isPresented: Bool
     @Binding var picked: Film?
+    @StateObject var router = AppRouter()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $router.path) {
             FilmsGenericView { films in
                 ModelPickerSheet(isPresented: $isPresented,
                                  selectedElement: $picked,

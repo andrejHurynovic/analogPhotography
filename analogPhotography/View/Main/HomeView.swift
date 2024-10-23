@@ -17,8 +17,7 @@ struct HomeView: View {
                 HStack(spacing: 16) {
                     TextField("", text: $viewModel.searchText, prompt: Text("Search"))
                         .frame(height: 16)
-                        .padding()
-                        .background(.thinMaterial, in: Capsule())
+                        .floatingBackground()
                     menu
                 }
                 camerasGrid

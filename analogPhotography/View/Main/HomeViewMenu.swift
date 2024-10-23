@@ -31,8 +31,7 @@ struct HomeViewMenu: View {
                 .resizable()
                 .aspectRatio(1.0, contentMode: .fill)
                 .frame(width: 16, height: 16)
-                .padding()
-                .background(.thinMaterial, in: Circle())
+                .floatingBackground()
             
         }
         NavigationLink(value: Route.settings) {
@@ -40,8 +39,7 @@ struct HomeViewMenu: View {
                 .resizable()
                 .aspectRatio(1.0, contentMode: .fill)
                 .frame(width: 16, height: 16)
-                .padding()
-                .background(.thinMaterial, in: Circle())
+                .floatingBackground()
         }
     }
 }
