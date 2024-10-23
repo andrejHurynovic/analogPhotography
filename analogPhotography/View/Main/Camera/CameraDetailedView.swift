@@ -29,8 +29,16 @@ struct CameraDetailedView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                 }
+                
                 Section("Current film roll") {
                     CameraFilmRollView(camera: camera)
+                }
+                if let finishedFilmRolls = camera.finishedFilmRolls {
+                    ForEach(finishedFilmRolls) { filmRoll in
+                        NavigationLink(value: Route.filmRoll(filmRoll)) {
+                            FilmRollView(filmRoll: filmRoll)
+                        }
+                    }
                 }
             }
             .animation(.default, value: viewModel.viewState)

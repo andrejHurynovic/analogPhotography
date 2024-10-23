@@ -18,7 +18,7 @@ struct FilmRollPickerSheet: View {
                 ModelPickerSheet(isPresented: $manager.isPresented,
                                  selectedElement: $picked,
                                  elements: filmRolls) { filmRoll in
-                    FilmRollView(roll: filmRoll)
+                    FilmRollView(filmRoll: filmRoll)
                 }
             }
             .routerNavigationDestinations()
@@ -37,7 +37,7 @@ struct FilmRollPickerSheet: View {
                 manager.isPresented = true
             }
             if let picked = picked {
-                FilmRollView(roll: picked)
+                FilmRollView(filmRoll: picked)
             } else {
                 Text("No selected filmRoll")
             }

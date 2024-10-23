@@ -14,7 +14,7 @@ struct FilmRollFinishButton: View {
     @State var showAlert: Bool = false
     
     var body: some View {
-        if !checkIsOfferToFinish || filmRoll.isOfferToFinish == true {
+        if !filmRoll.finished && (!checkIsOfferToFinish || filmRoll.isOfferToFinish == true) {
             Button("Finish film") {
                 showAlert = true
             }

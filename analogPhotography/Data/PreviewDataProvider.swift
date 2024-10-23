@@ -33,6 +33,18 @@ final class PreviewDataProvider {
             
             try createFilmRollWithPhotos(with: kodakGold200, for: pentaxSFX, photosCountEqualsFilmCapacity: true, in: tempContext)
             try createFilmRollWithPhotos(with: relleiRetro80s, for: fed3, in: tempContext)
+            try createFilmRollWithPhotos(with: kodakGold200, for: pentaxSFX, photosCountEqualsFilmCapacity: true, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: relleiRetro80s, for: fed3, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: kodakGold200, for: pentaxSFX, photosCountEqualsFilmCapacity: true, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: relleiRetro80s, for: fed3, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: kodakGold200, for: pentaxSFX, photosCountEqualsFilmCapacity: true, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: relleiRetro80s, for: fed3, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: kodakGold200, for: zenitE, photosCountEqualsFilmCapacity: true, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: relleiRetro80s, for: zenitE, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: kodakGold200, for: zenitE, photosCountEqualsFilmCapacity: true, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: relleiRetro80s, for: zenitE, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: kodakGold200, for: zenitE, photosCountEqualsFilmCapacity: true, finished: true, in: tempContext)
+            try createFilmRollWithPhotos(with: relleiRetro80s, for: zenitE, finished: true, in: tempContext)
             
             
             try tempContext.save()
@@ -44,8 +56,9 @@ final class PreviewDataProvider {
     static private func createFilmRollWithPhotos(with film: Film,
                                                  for camera: Camera,
                                                  photosCountEqualsFilmCapacity: Bool = false,
+                                                 finished: Bool = false,
                                                  in context: ModelContext) throws {
-        let filmRoll = FilmRoll(expired: Bool.random(), film: film, camera: camera)
+        let filmRoll = FilmRoll(expired: Bool.random(), finished: finished, film: film, camera: camera)
         context.insert(filmRoll)
         
         let photoCount = photosCountEqualsFilmCapacity ? film.capacity ?? 36 : Int.random(in: 1...36)

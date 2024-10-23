@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FilmRollView: View {
-    @Bindable var roll: FilmRoll
+    @Bindable var filmRoll: FilmRoll
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,13 +18,13 @@ struct FilmRollView: View {
     }
     
     var name: some View {
-        Text(roll.uiDescription)
+        Text(filmRoll.uiDescription)
             .font(.title2)
             .fontWeight(.bold)
     }
     
     var creationDate: some View {
-        Text(roll.creationDate.formatted())
+        Text(filmRoll.creationDate.formatted())
             .font(.caption)
             .foregroundStyle(.gray)
     }
@@ -33,7 +33,7 @@ struct FilmRollView: View {
 #Preview {
     ModelPreview { filmRoll in
         List {
-            FilmRollView(roll: filmRoll)
+            FilmRollView(filmRoll: filmRoll)
         }
     }
 }

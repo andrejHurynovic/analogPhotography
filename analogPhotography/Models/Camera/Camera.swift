@@ -43,4 +43,9 @@ extension Camera {
     }
     
     var currentFilmRoll: FilmRoll? { filmRolls.first { !$0.finished } }
+    var finishedFilmRolls: [FilmRoll]? {
+        let filmRolls = self.filmRolls.filter { $0.finished == true }
+        guard !filmRolls.isEmpty else { return nil }
+        return filmRolls
+    }
 }

@@ -12,7 +12,7 @@ struct FilmRollsView: View {
         FilmRollsGenericView { filmRolls in
             List(filmRolls) { filmRoll in
                 NavigationLink(value: Route.filmRoll(filmRoll)) {
-                    FilmRollView(roll: filmRoll)
+                    FilmRollView(filmRoll: filmRoll)
                 }
             }
         }
