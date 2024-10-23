@@ -8,26 +8,27 @@
 import SwiftUI
 import SwiftData
 
-struct ModelsView<Content: View, Model: CreateableModel>: View {
+struct ModelsView<Content: View, ContentToolbar: ToolbarContent, Model: CreateableModel>: View {
     @Query var models: [Model]
     
     let navigationTitle: String
     @ViewBuilder var content: ([Model]) -> Content
+    @ViewBuilder var toolbarContent: () -> ContentToolbar
     
     init(filter: Predicate<Model>? = nil,
          sort: [SortDescriptor<Model>] = [],
          navigationTitle: String,
-         content: @escaping ([Model]) -> Content) {
+         content: @escaping ([Model]) -> Content,
+         toolbarContent: @escaping () -> ContentToolbar) {
         self._models = Query(filter: filter, sort: sort)
         self.navigationTitle = navigationTitle
         self.content = content
+        self.toolbarContent = toolbarContent
     }
     
     var body: some View {
         content(models)
-            .toolbar(content: {
-                NavigationLink("Add", value: Model.creatingRoute())
-            })
+            .toolbar { toolbarContent() }
             .navigationTitle(navigationTitle)
             .overlay { contentUnavailable }
     }

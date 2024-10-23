@@ -20,6 +20,10 @@ struct PhotosGenericView<Content: View>: View {
                    navigationTitle: "Films") { photos in
             content(photos)
                 .searchable(text: $searchText, placement: .automatic, prompt: "Search")
+        } toolbarContent: {
+            ToolbarItem {
+                NavigationLink("Add", value: Photo.creatingRoute())
+            }
         }
     }
 }

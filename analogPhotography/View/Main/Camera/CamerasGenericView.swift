@@ -17,6 +17,10 @@ struct CamerasGenericView<Content: View>: View {
                    navigationTitle: "Cameras") { cameras in
             content(cameras)
                 .searchable(text: $searchText, placement: .automatic, prompt: "Search")
+        } toolbarContent: {
+            ToolbarItem {
+                NavigationLink("Add", value: Camera.creatingRoute())
+            }
         }
     }
 }

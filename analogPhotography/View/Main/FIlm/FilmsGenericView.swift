@@ -20,6 +20,13 @@ struct FilmsGenericView<Content: View>: View {
                    navigationTitle: "Films") { films in
             content(films)
                 .searchable(text: $searchText, placement: .automatic, prompt: "Search")
+        } toolbarContent: {
+            ToolbarItem {
+                Menu("Add") {
+                    NavigationLink("Add film", value: Film.creatingRoute())
+                    NavigationLink("Add film with barcode or DXCode", value: Route.scanner)
+                }
+            }
         }
     }
 }
