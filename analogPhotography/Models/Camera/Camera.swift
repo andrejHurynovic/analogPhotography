@@ -41,6 +41,12 @@ extension Camera {
             self.filmRolls.append(newFilmRoll)
         }
     }
+    func deleteCurrentFilmRoll(in modelContext: ModelContext) {
+        guard let currentFilmRoll = currentFilmRoll,
+              let currentFilmRollIndex = self.filmRolls.firstIndex(of: currentFilmRoll) else { return }
+        self.filmRolls.remove(at: currentFilmRollIndex)
+        modelContext.delete(currentFilmRoll)
+    }
     
     var currentFilmRoll: FilmRoll? { filmRolls.first { !$0.finished } }
     var finishedFilmRolls: [FilmRoll]? {

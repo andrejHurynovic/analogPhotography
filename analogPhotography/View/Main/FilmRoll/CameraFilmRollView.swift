@@ -18,7 +18,10 @@ struct CameraFilmRollView: View {
         VStack {
             if let currentFilmRoll = camera.currentFilmRoll {
                 FilmRollMinimizedView(filmRoll: currentFilmRoll)
-                    .contextMenu { changeFilmButton }
+                    .contextMenu {
+                        changeFilmButton
+                        deleteFilmButton
+                    }
             } else {
                 selectFilmButton
                 .buttonStyle(CellButtonStyle())
@@ -34,6 +37,11 @@ struct CameraFilmRollView: View {
     var changeFilmButton: some View {
         Button("Change film") {
             pickerManager.isPresented = true
+        }
+    }
+    var deleteFilmButton: some View {
+        DeleteButton {
+            camera.deleteCurrentFilmRoll(in: modelContext)
         }
     }
     var selectFilmButton: some View {
