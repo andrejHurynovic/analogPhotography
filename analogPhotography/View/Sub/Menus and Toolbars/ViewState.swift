@@ -9,9 +9,12 @@ enum ViewState {
     case showing
     case editing
     case creating
+    case creatingAndSelecting
     
     var editingAvailable: Bool {
-        let editingCriteria: [Self] = [.creating, .editing]
-        return editingCriteria.contains { self == $0 }
+        switch self {
+        case .showing: return false
+        case .editing, .creating, .creatingAndSelecting: return true
+        }
     }
 }

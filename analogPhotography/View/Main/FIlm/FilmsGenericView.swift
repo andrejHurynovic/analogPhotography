@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FilmsGenericView<Content: View>: View {
     @State var searchText: String = ""
+    var selectedFilm: Binding<Film?>?
     @ViewBuilder var content: ([Film]) -> Content
     
     var body: some View {
@@ -23,7 +24,7 @@ struct FilmsGenericView<Content: View>: View {
         } toolbarContent: {
             ToolbarItem {
                 Menu("Add") {
-                    NavigationLink("Add film", value: Film.creatingRoute())
+                    NavigationLink("Add film", value: Route.film(Film(), selectedFilm))
                     NavigationLink("Add film with barcode or DXCode", value: Route.scanner)
                 }
             }

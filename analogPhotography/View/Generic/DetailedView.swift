@@ -8,13 +8,19 @@
 import SwiftUI
 import SwiftData
 
-struct DetailedView<Content: View, Model: PersistentModel, ViewModel: ModelViewModel<Model> & ModelViewModelProtocol>: View {
+struct DetailedView<Content: View,
+                    Model: PersistentModel,
+                    ViewModel: ModelViewModel<Model> & ModelViewModelProtocol>: View {
+    
     @StateObject private var viewModel: ViewModel
     
     var content: (ViewModel, ObservedObject<ViewModel>.Wrapper) -> Content
     
-    init(model: Model, viewModelType: (ViewModel.Type), content: @escaping (ViewModel, ObservedObject<ViewModel>.Wrapper) -> Content) {
-        self._viewModel = StateObject(wrappedValue: ViewModel(model: model))
+    init(model: Model,
+         selectedModel: Binding<Model?>?,
+         viewModelType: (ViewModel.Type),
+         content: @escaping (ViewModel, ObservedObject<ViewModel>.Wrapper) -> Content) {
+        self._viewModel = StateObject(wrappedValue: ViewModel(model: model, selectedModel: selectedModel))
         self.content = content
     }
     

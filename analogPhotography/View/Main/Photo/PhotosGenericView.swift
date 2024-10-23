@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PhotosGenericView<Content: View>: View {
     @State var searchText: String = ""
+    var selectedPhoto: Binding<Photo?>?
     @ViewBuilder var content: ([Photo]) -> Content
     
     var body: some View {
@@ -22,7 +23,7 @@ struct PhotosGenericView<Content: View>: View {
                 .searchable(text: $searchText, placement: .automatic, prompt: "Search")
         } toolbarContent: {
             ToolbarItem {
-                NavigationLink("Add", value: Photo.creatingRoute())
+                NavigationLink("Add", value: Route.photo(Photo(), selectedPhoto))
             }
         }
     }

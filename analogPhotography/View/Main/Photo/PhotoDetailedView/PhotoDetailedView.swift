@@ -10,14 +10,19 @@ import SwiftData
 
 struct PhotoDetailedView: View {
     @Bindable var photo: Photo
+    var selectedPhoto: Binding<Photo?>?
     @State var apertureText: String = ""
 
     var body: some View {
-        List {
-            map
-            properties
-            NoteView(note: $photo.note)
+        DetailedView(model: photo, selectedModel: selectedPhoto,
+                     viewModelType: PhotoDetailedViewModel.self) { viewModel, viewModelBinding in
+            Form {
+                map
+                properties
+                NoteView(note: $photo.note)
+            }
         }
+        
     }
     
     @ViewBuilder var map: some View {

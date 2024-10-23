@@ -11,7 +11,7 @@ struct PhotoView: View {
     @Bindable var photo: Photo
     
     var body: some View {
-        VStack(alignment: .listRowSeparatorLeading) {
+        VStack(alignment: .leading) {
             firstLine
             secondLine
         }

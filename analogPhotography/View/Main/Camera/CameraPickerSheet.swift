@@ -14,7 +14,7 @@ struct CameraPickerSheet: View {
     
     var body: some View {
         NavigationStack(path: $router.path) {
-            CamerasGenericView { cameras in
+            CamerasGenericView(selectedCamera: $picked) { cameras in
                 ModelPickerSheet(isPresented: $isPresented,
                                  selectedElement: $picked,
                                  elements: cameras) { camera in
@@ -23,6 +23,7 @@ struct CameraPickerSheet: View {
             }
             .routerNavigationDestinations()
         }
+        .environmentObject(router)
     }
 }
 

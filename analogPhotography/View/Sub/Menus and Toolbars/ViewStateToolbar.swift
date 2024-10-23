@@ -18,9 +18,9 @@ struct ViewStateToolbar<Content: View, Model: PersistentModel>: ToolbarContent {
     
     var body: some ToolbarContent {
         switch viewModel.viewState {
-            case .showing: showing
-            case .editing: editing
-            case .creating: creating
+        case .showing: showing
+        case .editing: editing
+        case .creating, .creatingAndSelecting: creating
         }
     }
     
@@ -44,15 +44,25 @@ struct ViewStateToolbar<Content: View, Model: PersistentModel>: ToolbarContent {
         }
     }
     @ToolbarContentBuilder var creating: some ToolbarContent {
-        ToolbarItem(placement: .topBarLeading) {
+        ToolbarItem(placement: .cancellationAction) {
             Button("Cancel") {
                 router.removeAllWithCurrentModel()
             }
         }
-        ToolbarItem(placement: .topBarTrailing) {
-            Button("Save") {
-                viewModel.insert(in: modelContext)
-                viewModel.viewState = .showing
+        ToolbarItem(placement: .confirmationAction) {
+            switch viewModel.viewState {
+            case .creating:
+                Button("Save") {
+                    viewModel.insert(in: modelContext)
+                    viewModel.viewState = .showing
+                }
+            case .creatingAndSelecting:
+                Button("Select") {
+                    viewModel.insert(in: modelContext)
+                    viewModel.selectedModel?.wrappedValue = viewModel.model
+                    router.resetToRoot()
+                }
+            default: EmptyView()
             }
         }
     }

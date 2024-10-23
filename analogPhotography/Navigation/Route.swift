@@ -5,14 +5,16 @@
 //  Created by Andrej Hurynovič on 17.07.24.
 //
 
+import SwiftUICore
+
 enum Route: Hashable {
-    case camera(Camera)
+    case camera(Camera, Binding<Camera?>? = nil)
     case cameras
-    case film(Film)
+    case film(Film, Binding<Film?>? = nil)
     case films
-    case filmRoll(FilmRoll)
+    case filmRoll(FilmRoll, Binding<FilmRoll?>? = nil)
     case filmRolls
-    case photo(Photo)
+    case photo(Photo, Binding<Photo?>? = nil)
     case photos
     case scanner
     case settings

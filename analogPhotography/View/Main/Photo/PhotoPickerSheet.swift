@@ -14,7 +14,7 @@ struct PhotoPickerSheet: View {
     
     var body: some View {
         NavigationStack(path: $router.path) {
-            PhotosGenericView { photos in
+            PhotosGenericView(selectedPhoto: $picked) { photos in
                 ModelPickerSheet(isPresented: $isPresented,
                                  selectedElement: $picked,
                                  elements: photos) { photo in
@@ -23,6 +23,7 @@ struct PhotoPickerSheet: View {
             }
             .routerNavigationDestinations()
         }
+        .environmentObject(router)
     }
 }
 

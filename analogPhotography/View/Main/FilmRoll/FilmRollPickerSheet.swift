@@ -14,7 +14,7 @@ struct FilmRollPickerSheet: View {
     
     var body: some View {
         NavigationStack(path: $router.path) {
-            FilmRollsGenericView { filmRolls in
+            FilmRollsGenericView(selectedFilmRoll: $picked) { filmRolls in
                 ModelPickerSheet(isPresented: $isPresented,
                                  selectedElement: $picked,
                                  elements: filmRolls) { filmRoll in
@@ -23,7 +23,7 @@ struct FilmRollPickerSheet: View {
             }
             .routerNavigationDestinations()
         }
-        
+        .environmentObject(router)
     }
 }
 

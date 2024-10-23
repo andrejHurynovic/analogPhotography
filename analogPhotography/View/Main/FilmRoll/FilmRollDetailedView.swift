@@ -9,9 +9,12 @@ import SwiftUI
 
 struct FilmRollDetailedView: View {
     @Bindable var filmRoll: FilmRoll
+    var selectedFilmRoll: Binding<FilmRoll?>?
     
     var body: some View {
-        DetailedView(model: filmRoll, viewModelType: FilmRollDetailedViewModel.self) { viewModel, viewModelBinding in
+        DetailedView(model: filmRoll,
+                     selectedModel: selectedFilmRoll,
+                     viewModelType: FilmRollDetailedViewModel.self) { viewModel, viewModelBinding in
             Form {
                 TextFieldForm(title: "Name", text: viewModelBinding.model.name.unwrappedOptional(), viewState: viewModelBinding.viewState)
                 Section("Properties") {

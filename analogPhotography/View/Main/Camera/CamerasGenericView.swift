@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CamerasGenericView<Content: View>: View {
     @State var searchText: String = ""
+    var selectedCamera: Binding<Camera?>?
     @ViewBuilder var content: ([Camera]) -> Content
     
     var body: some View {
@@ -19,7 +20,7 @@ struct CamerasGenericView<Content: View>: View {
                 .searchable(text: $searchText, placement: .automatic, prompt: "Search")
         } toolbarContent: {
             ToolbarItem {
-                NavigationLink("Add", value: Camera.creatingRoute())
+                NavigationLink("Add", value: Route.camera(Camera(), selectedCamera))
             }
         }
     }

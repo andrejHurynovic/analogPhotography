@@ -9,9 +9,12 @@ import SwiftUI
 
 struct CameraDetailedView: View {
     @Bindable var camera: Camera
+    var selectedCamera: Binding<Camera?>?
     
     var body: some View {
-        DetailedView(model: camera, viewModelType: CameraDetailedViewModel.self) { viewModel, viewModelBinding in
+        DetailedView(model: camera,
+                     selectedModel: selectedCamera,
+                     viewModelType: CameraDetailedViewModel.self) { viewModel, viewModelBinding in
             Form {
                 Section("Info") {
                     TextFieldForm(title: "Name", text: viewModelBinding.model.name, viewState: viewModelBinding.viewState, focusOnEdit: true)
