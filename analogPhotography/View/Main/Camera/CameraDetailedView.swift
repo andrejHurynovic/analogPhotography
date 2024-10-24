@@ -10,7 +10,7 @@ import SwiftUI
 struct CameraDetailedView: View {
     @Bindable var camera: Camera
     var selectedCamera: Binding<Camera?>?
-        
+    
     var body: some View {
         DetailedView(model: camera,
                      selectedModel: selectedCamera,
@@ -33,15 +33,32 @@ struct CameraDetailedView: View {
                 Section("Current film roll") {
                     CameraFilmRollView(camera: camera)
                 }
-                if let finishedFilmRolls = camera.finishedFilmRolls {
-                    ForEach(finishedFilmRolls) { filmRoll in
-                        NavigationLink(value: Route.filmRoll(filmRoll)) {
-                            FilmRollView(filmRoll: filmRoll)
-                        }
+                currentFilmRollPhotos
+                finishedFilmRolls
+            }
+            .animation(.default, value: viewModel.viewState)
+        }
+    }
+    
+    @ViewBuilder var currentFilmRollPhotos: some View {
+        if let currentFilmRoll = camera.currentFilmRoll {
+            Section("Current film rolls photos") {
+                ForEach(currentFilmRoll.photos) { photo in
+                    PhotoView(photo: photo)
+                }
+            }
+        }
+    }
+    
+    @ViewBuilder var finishedFilmRolls: some View {
+        if let finishedFilmRolls = camera.finishedFilmRolls {
+            Section("Finished film rolls") {
+                ForEach(finishedFilmRolls) { filmRoll in
+                    NavigationLink(value: Route.filmRoll(filmRoll)) {
+                        FilmRollView(filmRoll: filmRoll)
                     }
                 }
             }
-            .animation(.default, value: viewModel.viewState)
         }
     }
     
