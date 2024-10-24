@@ -17,7 +17,6 @@ struct PhotosGenericView<Content: View>: View {
             searchText.isEmpty ||
             $0.locationDescription?.localizedStandardContains(searchText) ?? false
         },
-                   sort: [SortDescriptor(\Photo.order)],
                    navigationTitle: "Films") { photos in
             content(photos)
                 .searchable(text: $searchText, placement: .automatic, prompt: "Search")

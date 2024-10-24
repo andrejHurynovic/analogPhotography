@@ -14,7 +14,6 @@ struct CamerasGenericView<Content: View>: View {
     
     var body: some View {
         ModelsView(filter: #Predicate { searchText.isEmpty || $0.name.localizedStandardContains(searchText) },
-                   sort: [SortDescriptor(\Camera.name)],
                    navigationTitle: "Cameras") { cameras in
             content(cameras)
                 .searchable(text: $searchText, placement: .automatic, prompt: "Search")

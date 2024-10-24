@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class Photo {
+final class Photo: ModelProtocol {
     var order: Int
     var date: Date? = Date.now
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FilmDetailedViewModel: ModelViewModel<Film>, ModelViewModelProtocol {
+final class FilmDetailedViewModel<FilmType: FilmProtocol>: ModelViewModel<FilmType>, ModelViewModelProtocol {
     var name: String { model.name ?? "Film"}
 }
 

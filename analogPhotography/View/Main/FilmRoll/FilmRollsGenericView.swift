@@ -17,7 +17,6 @@ struct FilmRollsGenericView<Content: View>: View {
             searchText.isEmpty ||
             $0.name?.localizedStandardContains(searchText) ?? false
         },
-                   sort: [SortDescriptor(\FilmRoll.name)],
                    navigationTitle: "Films") { filmRolls in
             content(filmRolls)
                 .searchable(text: $searchText, placement: .automatic, prompt: "Search")

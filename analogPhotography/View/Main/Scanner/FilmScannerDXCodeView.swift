@@ -11,7 +11,7 @@ extension FilmScannerView {
     struct FilmScannerDXCodeView: View {
         var dxCode: DXCode?
         
-        var selectedFilm: Binding<Film?>?
+        var selectedFilm: Binding<FilmType?>?
 
         var body: some View {
             if let dxCode = dxCode {
@@ -19,7 +19,7 @@ extension FilmScannerView {
                     .plainBackgroundStyle()
                     .padding(.horizontal)
                     .aspectRatio(contentMode: .fit)
-                NavigationLink(value: Route.film(Film(from: dxCode), selectedFilm)) {
+                NavigationLink(value: Route.film(Film(from: dxCode), selectedFilm as! Binding<Film?>?)) {
                     DXCodeFilmView(dxCode: dxCode)
                         .plainBackgroundStyle()
                 }

@@ -34,6 +34,12 @@
 		3BC0E8092CC1BABD004565B1 /* FilmRoll+Described.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0E8082CC1BABD004565B1 /* FilmRoll+Described.swift */; };
 		3BC0E80B2CC1BC2A004565B1 /* FilmRollMinimizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0E80A2CC1BC2A004565B1 /* FilmRollMinimizedView.swift */; };
 		3BC0E9362CC1C2AD004565B1 /* CellButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0E9352CC1C2AD004565B1 /* CellButtonStyle.swift */; };
+		3BCC07B92CCADD000089A512 /* DefaultSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC07B82CCADD000089A512 /* DefaultSortable.swift */; };
+		3BCC07BB2CCADD210089A512 /* Camera+DefaultSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC07BA2CCADD210089A512 /* Camera+DefaultSortable.swift */; };
+		3BCC07BD2CCADD3E0089A512 /* Film+DefaultSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC07BC2CCADD350089A512 /* Film+DefaultSortable.swift */; };
+		3BCC07BF2CCADD4C0089A512 /* FilmRoll+DefaultSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC07BE2CCADD480089A512 /* FilmRoll+DefaultSortable.swift */; };
+		3BCC07C12CCADD570089A512 /* Photo+DefaultSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC07C02CCADD540089A512 /* Photo+DefaultSortable.swift */; };
+		3BCC07C32CCADE470089A512 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC07C22CCADE470089A512 /* ModelProtocol.swift */; };
 		3BD717822CC9352C00EE60AD /* PhotoDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717812CC9352C00EE60AD /* PhotoDetailedViewModel.swift */; };
 		3BD717842CC937B800EE60AD /* Binding+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717832CC937B500EE60AD /* Binding+Equatable.swift */; };
 		3BD717862CC937C600EE60AD /* Binding+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717852CC937BA00EE60AD /* Binding+Hashable.swift */; };
@@ -174,6 +180,12 @@
 		3BC0E8082CC1BABD004565B1 /* FilmRoll+Described.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilmRoll+Described.swift"; sourceTree = "<group>"; };
 		3BC0E80A2CC1BC2A004565B1 /* FilmRollMinimizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollMinimizedView.swift; sourceTree = "<group>"; };
 		3BC0E9352CC1C2AD004565B1 /* CellButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellButtonStyle.swift; sourceTree = "<group>"; };
+		3BCC07B82CCADD000089A512 /* DefaultSortable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSortable.swift; sourceTree = "<group>"; };
+		3BCC07BA2CCADD210089A512 /* Camera+DefaultSortable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Camera+DefaultSortable.swift"; sourceTree = "<group>"; };
+		3BCC07BC2CCADD350089A512 /* Film+DefaultSortable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Film+DefaultSortable.swift"; sourceTree = "<group>"; };
+		3BCC07BE2CCADD480089A512 /* FilmRoll+DefaultSortable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilmRoll+DefaultSortable.swift"; sourceTree = "<group>"; };
+		3BCC07C02CCADD540089A512 /* Photo+DefaultSortable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+DefaultSortable.swift"; sourceTree = "<group>"; };
+		3BCC07C22CCADE470089A512 /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 		3BD717812CC9352C00EE60AD /* PhotoDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailedViewModel.swift; sourceTree = "<group>"; };
 		3BD717832CC937B500EE60AD /* Binding+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Equatable.swift"; sourceTree = "<group>"; };
 		3BD717852CC937BA00EE60AD /* Binding+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Hashable.swift"; sourceTree = "<group>"; };
@@ -364,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB201C72CAF60AA00AD6428 /* Described.swift */,
+				3BCC07C22CCADE470089A512 /* ModelProtocol.swift */,
 				CEABA4652CA0506600FBC913 /* Film */,
 			);
 			path = Protocols;
@@ -410,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				CE112A612C9F3061004FEA66 /* FilmProtocol.swift */,
+				3BCC07B82CCADD000089A512 /* DefaultSortable.swift */,
 			);
 			path = Film;
 			sourceTree = "<group>";
@@ -558,6 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FE29C02C0FAA2400E9C678 /* Camera.swift */,
+				3BCC07BA2CCADD210089A512 /* Camera+DefaultSortable.swift */,
 				F660FCBF2C4A81D30022D597 /* Camera+CreateableModel.swift */,
 			);
 			path = Camera;
@@ -567,6 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FE29AE2C0F4CDE00E9C678 /* Film.swift */,
+				3BCC07BC2CCADD350089A512 /* Film+DefaultSortable.swift */,
 				3B7671322CB8562D0062057A /* Film+CreateableModel.swift */,
 				F6FE29B12C0F645200E9C678 /* FilmFormat.swift */,
 				F6FE29B82C0F784500E9C678 /* FilmProcess.swift */,
@@ -579,6 +595,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FE29BA2C0F7CBB00E9C678 /* FilmRoll.swift */,
+				3BCC07BE2CCADD480089A512 /* FilmRoll+DefaultSortable.swift */,
 				3BC0E8082CC1BABD004565B1 /* FilmRoll+Described.swift */,
 				3B76713A2CB858EA0062057A /* FilmRoll+CreateableModel.swift */,
 			);
@@ -589,6 +606,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FE29BD2C0F804200E9C678 /* Photo.swift */,
+				3BCC07C02CCADD540089A512 /* Photo+DefaultSortable.swift */,
 				3B76714C2CB861960062057A /* Photo+CreateableModel.swift */,
 			);
 			path = Photo;
@@ -944,6 +962,7 @@
 			files = (
 				F660FCE02C4DAF190022D597 /* FilmFormatPicker.swift in Sources */,
 				CE8FB8492CADA9D400989321 /* Array+mostFrequentElement.swift in Sources */,
+				3BCC07BB2CCADD210089A512 /* Camera+DefaultSortable.swift in Sources */,
 				F6CDAB8A2C3D9C53000CC580 /* TextFieldFormViewModel.swift in Sources */,
 				CE35C77B2C9DAB1D001E4E55 /* DXCodeBit.swift in Sources */,
 				CEB201D02CB086ED00AD6428 /* FilmView.swift in Sources */,
@@ -975,6 +994,7 @@
 				F6BC7BE62C3C1E2300160C3E /* OptionalDatePicker.swift in Sources */,
 				F6EEF2762C3AC98D00FEBCE4 /* PreviewDataProvider.swift in Sources */,
 				CE33F7C22CB35B310014B429 /* ModelPickerSheet.swift in Sources */,
+				3BCC07BF2CCADD4C0089A512 /* FilmRoll+DefaultSortable.swift in Sources */,
 				F62387682C51A62400A4587F /* AddModelButton.swift in Sources */,
 				F6BC7BEC2C3CA5F800160C3E /* TapToAddButton.swift in Sources */,
 				CE2779CD2CB463B6005ECE63 /* DataModelContainerViewModifier.swift in Sources */,
@@ -1012,6 +1032,7 @@
 				3B7671522CB864ED0062057A /* PhotosGenericView.swift in Sources */,
 				3B7671532CB864ED0062057A /* PhotosView.swift in Sources */,
 				3B76713D2CB859A90062057A /* FilmRollPickerSheet.swift in Sources */,
+				3BCC07C12CCADD570089A512 /* Photo+DefaultSortable.swift in Sources */,
 				F660FCBE2C4A807F0022D597 /* CreateableModel.swift in Sources */,
 				CE112A622C9F3061004FEA66 /* FilmProtocol.swift in Sources */,
 				F6FE29B52C0F704A00E9C678 /* ModelContext+Insert.swift in Sources */,
@@ -1028,6 +1049,7 @@
 				F6E481992C1B0AD4006EE963 /* ViewStateToolbar.swift in Sources */,
 				CE35E5302CA5AADE004CF3A9 /* FilmScannerView.swift in Sources */,
 				F6FE29AF2C0F4CDE00E9C678 /* Film.swift in Sources */,
+				3BCC07BD2CCADD3E0089A512 /* Film+DefaultSortable.swift in Sources */,
 				CE35E5282CA5A612004CF3A9 /* FilmScannerState.swift in Sources */,
 				CE0B0DE02CAB4EE3003A5002 /* ScannerViewControllerRepresentable.swift in Sources */,
 				F62387662C51441300A4587F /* Binding+Optional.swift in Sources */,
@@ -1041,12 +1063,14 @@
 				CE5AA9532CA9FC3B00BA56F5 /* DXCodeDetector.mlmodel in Sources */,
 				F660FCAE2C480A850022D597 /* AppRouter.swift in Sources */,
 				F68C5A6B2C4504A700825199 /* ViewState.swift in Sources */,
+				3BCC07C32CCADE470089A512 /* ModelProtocol.swift in Sources */,
 				CE50D9D02CB323D800FFC071 /* HomeView.swift in Sources */,
 				F6D3A34F2C0FC1FC00D56B8D /* TextFieldForm.swift in Sources */,
 				F660FCD92C4C26EC0022D597 /* FilmDetailedView.swift in Sources */,
 				CE112A602C9F2957004FEA66 /* DXCode.swift in Sources */,
 				3B76714A2CB85B8A0062057A /* PhotoDetailedView.swift in Sources */,
 				3B76714B2CB85B8A0062057A /* ShutterSpeedPicker.swift in Sources */,
+				3BCC07B92CCADD000089A512 /* DefaultSortable.swift in Sources */,
 				3B76714D2CB8619B0062057A /* Photo+CreateableModel.swift in Sources */,
 				3B1C5DFF2CB6A953007E323A /* HomeViewModel.swift in Sources */,
 				3B76712B2CB84E830062057A /* CameraPickerSheet.swift in Sources */,

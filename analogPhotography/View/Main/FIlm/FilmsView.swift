@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct FilmsView: View {
+struct FilmsView<FilmType: FilmProtocol>: View {
     var body: some View {
         FilmsGenericView { films in
             List(films) { film in
-                NavigationLink(value: Route.film(film)) {
-                    FilmView(film: film)
+                NavigationLink(value: Route.film(film as! Film)) {
+                    FilmView<FilmType>(film: film)
                 }
             }
         }
@@ -21,6 +21,6 @@ struct FilmsView: View {
 
 #Preview {
     RoutedNavigationStack {
-        FilmsView()
+        FilmsView<Film>()
     }
 }

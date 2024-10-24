@@ -12,14 +12,14 @@ extension FilmScannerView {
     struct FilmScannerBarcodeView: View {
         private var state: FilmScannerBarcodeViewState
         @Binding var bottomMenuState: FilmScannerMenuState
-        private var filteredFilms: [Film] = []
+        private var filteredFilms: [FilmType] = []
         
-        var selectedFilm: Binding<Film?>?
+        var selectedFilm: Binding<FilmType?>?
         @EnvironmentObject var manager: ModelPickerSheetManager
         
         init(filterDXBarcode: String?,
              bottomMenuState: Binding<FilmScannerMenuState>,
-             selectedFilm: Binding<Film?>?,
+             selectedFilm: Binding<FilmType?>?,
              modelContext: ModelContext) {
             self._bottomMenuState = bottomMenuState
             self.selectedFilm = selectedFilm
@@ -28,7 +28,7 @@ extension FilmScannerView {
                 state = .noBarcode;
                 return
             }
-            guard let films = try? modelContext.fetch(FetchDescriptor<Film>()) else {
+            guard let films = try? modelContext.fetch(FetchDescriptor<FilmType>()) else {
                 state = .dbError;
                 return
             }
@@ -76,7 +76,7 @@ extension FilmScannerView {
                             filmView(for: film)
                         }
                     } else {
-                        NavigationLink(value: Route.film(film)) {
+                        NavigationLink(value: Route.film(film as! Film)) {
                             filmView(for: film)
                         }
                     }
@@ -87,7 +87,7 @@ extension FilmScannerView {
             
         }
         
-        @ViewBuilder func filmView(for film: Film) -> some View {
+        @ViewBuilder func filmView(for film: FilmType) -> some View {
             FilmView(film: film)
                 .plainBackgroundStyle()
         }

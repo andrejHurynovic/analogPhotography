@@ -39,6 +39,6 @@ struct DXCodeView: View {
 }
 #Preview {
     ModelPreview { film in
-        FilmDetailedView(film: film)
+        FilmDetailedView(film: film as Film)
     }
 }

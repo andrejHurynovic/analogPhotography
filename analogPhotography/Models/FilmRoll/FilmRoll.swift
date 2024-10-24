@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class FilmRoll {
+final class FilmRoll: ModelProtocol {
     var name: String?
     var note: String = ""
     

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-private struct RouterNavigationDestinations: ViewModifier {
+private struct RouterNavigationDestinations<FilmType: FilmProtocol>: ViewModifier {
     func body(content: Content) -> some View {
         content
             .navigationDestination(for: Route.self) { route in
@@ -19,7 +19,7 @@ private struct RouterNavigationDestinations: ViewModifier {
                 case .film(let film, let selectedFilm):
                     FilmDetailedView(film: film, selectedFilm: selectedFilm)
                 case .films:
-                    FilmsView()
+                    FilmsView<FilmType>()
                 case .filmRoll(let filmRoll, let selectedFilmRoll):
                     FilmRollDetailedView(filmRoll: filmRoll, selectedFilmRoll: selectedFilmRoll)
                 case .filmRolls:
@@ -39,6 +39,6 @@ private struct RouterNavigationDestinations: ViewModifier {
 
 extension View {
     func routerNavigationDestinations() -> some View {
-        self.modifier(RouterNavigationDestinations())
+        self.modifier(RouterNavigationDestinations<Film>())
     }
 }

@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct FilmDetailedView: View {
-    @Bindable var film: Film
-    var selectedFilm : Binding<Film?>?
+struct FilmDetailedView<FilmType: FilmProtocol>: View {
+    @Bindable var film: FilmType
+    var selectedFilm : Binding<FilmType?>?
     
     var body: some View {
         DetailedView(model: film, selectedModel: selectedFilm, viewModelType: FilmDetailedViewModel.self) { viewModel, viewModelBinding in
@@ -38,6 +38,6 @@ struct FilmDetailedView: View {
 
 #Preview {
     ModelPreview { film in
-        FilmDetailedView(film: film)
+        FilmDetailedView(film: film as Film)
     }
 }

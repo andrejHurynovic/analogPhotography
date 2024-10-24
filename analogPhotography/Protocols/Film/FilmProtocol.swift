@@ -7,14 +7,19 @@
 
 import SwiftData
 
-protocol FilmProtocol {
+protocol FilmProtocol: ModelProtocol, Described {
     var name: String? { get set }
     
     var capacity: Int? { get set }
     var speed: Int? { get set }
     var exposureTolerance: FilmExposureTolerance? { get set }
     
+    var dxCode: DXCode { get }
+    var dxBarcodes: Set<String> { get set }
+    
     var format: FilmFormat? { get set }
     var process: FilmProcess? { get set }
     var rolls: [FilmRoll] { get set }
+    
+    init(from: DXCode)
 }

@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct FilmPickerSheet: View {
+struct FilmPickerSheet<FilmType: Film>: View {
     @EnvironmentObject var manager: ModelPickerSheetManager
-    @Binding var picked: Film?
+    @Binding var picked: FilmType?
     @StateObject var router = AppRouter()
     
     var body: some View {

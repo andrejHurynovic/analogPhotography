@@ -8,11 +8,11 @@
 import SwiftUI
 import SwiftData
 
-struct FilmScannerView: View {
+struct FilmScannerView<FilmType: FilmProtocol>: View {
     @StateObject var viewModel = FilmScannerViewModel()
     @Environment(\.modelContext) private var modelContext
     
-    var selectedFilm: Binding<Film?>?
+    var selectedFilm: Binding<FilmType?>?
     
     var body: some View {
         switch viewModel.state {

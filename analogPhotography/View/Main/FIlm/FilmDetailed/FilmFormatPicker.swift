@@ -23,7 +23,10 @@ struct FilmFormatPicker: View {
 }
 
 #Preview {
-    ModelPreview { film in
-        FilmDetailedView(film: film)
+    @Previewable @State var filmFormat: FilmFormat?
+    
+    Form {
+        FilmFormatPicker(filmFormat: $filmFormat)
     }
+    .dataModelContainer()
 }

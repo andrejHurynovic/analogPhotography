@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct FilmView: View {
-    @Bindable var film: Film
+struct FilmView<FilmType: FilmProtocol>: View {
+    @Bindable var film: FilmType
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -45,6 +45,6 @@ struct FilmView: View {
 
 #Preview {
     ModelPreview { film in
-        FilmView(film: film)
+        FilmView(film: film as Film)
     }
 }

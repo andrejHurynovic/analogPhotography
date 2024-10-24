@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ModelsView<Content: View, ContentToolbar: ToolbarContent, Model: CreateableModel>: View {
+struct ModelsView<Content: View, ContentToolbar: ToolbarContent, Model: ModelProtocol>: View {
     @Query var models: [Model]
     
     let navigationTitle: String
@@ -16,7 +16,7 @@ struct ModelsView<Content: View, ContentToolbar: ToolbarContent, Model: Createab
     @ViewBuilder var toolbarContent: () -> ContentToolbar
     
     init(filter: Predicate<Model>? = nil,
-         sort: [SortDescriptor<Model>] = [],
+         sort: [SortDescriptor<Model>] = Model.defaultSortDescriptors(),
          navigationTitle: String,
          content: @escaping ([Model]) -> Content,
          toolbarContent: @escaping () -> ContentToolbar) {
