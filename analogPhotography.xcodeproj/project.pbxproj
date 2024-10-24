@@ -40,6 +40,7 @@
 		3BCC07BF2CCADD4C0089A512 /* FilmRoll+DefaultSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC07BE2CCADD480089A512 /* FilmRoll+DefaultSortable.swift */; };
 		3BCC07C12CCADD570089A512 /* Photo+DefaultSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC07C02CCADD540089A512 /* Photo+DefaultSortable.swift */; };
 		3BCC07C32CCADE470089A512 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC07C22CCADE470089A512 /* ModelProtocol.swift */; };
+		3BCC07C62CCAFAF50089A512 /* FilmRollProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC07C52CCAFAF10089A512 /* FilmRollProtocol.swift */; };
 		3BD717822CC9352C00EE60AD /* PhotoDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717812CC9352C00EE60AD /* PhotoDetailedViewModel.swift */; };
 		3BD717842CC937B800EE60AD /* Binding+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717832CC937B500EE60AD /* Binding+Equatable.swift */; };
 		3BD717862CC937C600EE60AD /* Binding+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD717852CC937BA00EE60AD /* Binding+Hashable.swift */; };
@@ -186,6 +187,7 @@
 		3BCC07BE2CCADD480089A512 /* FilmRoll+DefaultSortable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilmRoll+DefaultSortable.swift"; sourceTree = "<group>"; };
 		3BCC07C02CCADD540089A512 /* Photo+DefaultSortable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+DefaultSortable.swift"; sourceTree = "<group>"; };
 		3BCC07C22CCADE470089A512 /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
+		3BCC07C52CCAFAF10089A512 /* FilmRollProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollProtocol.swift; sourceTree = "<group>"; };
 		3BD717812CC9352C00EE60AD /* PhotoDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailedViewModel.swift; sourceTree = "<group>"; };
 		3BD717832CC937B500EE60AD /* Binding+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Equatable.swift"; sourceTree = "<group>"; };
 		3BD717852CC937BA00EE60AD /* Binding+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Hashable.swift"; sourceTree = "<group>"; };
@@ -364,6 +366,14 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		3BCC07C42CCAFAEA0089A512 /* FilmRoll */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC07C52CCAFAF10089A512 /* FilmRollProtocol.swift */,
+			);
+			path = FilmRoll;
+			sourceTree = "<group>";
+		};
 		3BD717802CC9351A00EE60AD /* Photo */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,9 +385,11 @@
 		CE112A5C2C9F291C004FEA66 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3BCC07B82CCADD000089A512 /* DefaultSortable.swift */,
 				CEB201C72CAF60AA00AD6428 /* Described.swift */,
 				3BCC07C22CCADE470089A512 /* ModelProtocol.swift */,
 				CEABA4652CA0506600FBC913 /* Film */,
+				3BCC07C42CCAFAEA0089A512 /* FilmRoll */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -423,7 +435,6 @@
 			isa = PBXGroup;
 			children = (
 				CE112A612C9F3061004FEA66 /* FilmProtocol.swift */,
-				3BCC07B82CCADD000089A512 /* DefaultSortable.swift */,
 			);
 			path = Film;
 			sourceTree = "<group>";
@@ -1096,6 +1107,7 @@
 				F660FCB92C493F020022D597 /* CameraDetailedViewModel.swift in Sources */,
 				F6C40BCB2C373B5900DB96A7 /* MapPickerMenuSearchBatState.swift in Sources */,
 				CE8FB8452CADA82D00989321 /* RingBuffer.swift in Sources */,
+				3BCC07C62CCAFAF50089A512 /* FilmRollProtocol.swift in Sources */,
 				F6D3A3462C0FB2AB00D56B8D /* CameraDetailedView.swift in Sources */,
 				3BD7178C2CC9983400EE60AD /* CameraMinimizedView.swift in Sources */,
 				3BC0E9362CC1C2AD004565B1 /* CellButtonStyle.swift in Sources */,
