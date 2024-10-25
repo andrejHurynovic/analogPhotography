@@ -5,7 +5,7 @@
 //  Created by Andrej Hurynovič on 26.10.2024.
 //
 
-protocol CameraProtocol {
+protocol CameraProtocol: ModelProtocol {
     associatedtype FilmRollType: FilmRollProtocol
     
     var name: String { get set }
