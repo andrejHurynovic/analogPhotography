@@ -8,7 +8,7 @@
 import SwiftData
 
 @Model
-final class Camera: ModelProtocol {
+final class Camera: CameraProtocol {
     var name: String = ""
     var note: String = ""
     

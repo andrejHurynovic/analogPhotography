@@ -8,6 +8,8 @@
 import SwiftData
 
 protocol FilmProtocol: ModelProtocol, Described {
+    associatedtype FilmRollType: FilmRollProtocol
+    
     var name: String? { get set }
     
     var capacity: Int? { get set }
@@ -19,7 +21,7 @@ protocol FilmProtocol: ModelProtocol, Described {
     
     var format: FilmFormat? { get set }
     var process: FilmProcess? { get set }
-    var rolls: [FilmRoll] { get set }
+    var rolls: [FilmRollType] { get set }
     
     init(from: DXCode)
 }

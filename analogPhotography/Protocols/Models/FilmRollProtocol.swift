@@ -9,6 +9,10 @@ import Foundation
 import SwiftData
 
 protocol FilmRollProtocol: ModelProtocol, Described {
+    associatedtype CameraType: CameraProtocol
+    associatedtype FilmType: FilmProtocol
+    associatedtype PhotoType: PhotoProtocol
+    
     var name: String? { get set }
     var note: String { get set }
     
@@ -16,8 +20,8 @@ protocol FilmRollProtocol: ModelProtocol, Described {
     var creationDate: Date { get set }
     var finished: Bool  { get set }
     
-    var film: Film? { get set }
-    var photos: [Photo] { get set }
+    var film: FilmType? { get set }
+    var photos: [PhotoType] { get set }
     
-    var camera: Camera? { get set }
+    var camera: CameraType? { get set }
 }
