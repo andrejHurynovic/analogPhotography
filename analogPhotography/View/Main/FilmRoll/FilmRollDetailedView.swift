@@ -31,7 +31,7 @@ struct FilmRollDetailedView: View {
                     }
                 }
                 Section("Photos") {
-                    AddModelButton {  }
+                    PhotosSliderView(photos: filmRoll.photos)
                 }
             }
         }

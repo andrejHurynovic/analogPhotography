@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PhotoProtocol: ModelProtocol {
+protocol PhotoProtocol: ModelProtocol, Comparable {
     associatedtype FilmRollType: FilmRollProtocol
     
     var order: Int { get set }

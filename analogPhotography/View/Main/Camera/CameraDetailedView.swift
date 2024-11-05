@@ -41,11 +41,10 @@ struct CameraDetailedView: View {
     }
     
     @ViewBuilder var currentFilmRollPhotos: some View {
-        if let currentFilmRoll = camera.currentFilmRoll {
+        if let currentFilmRoll = camera.currentFilmRoll,
+           currentFilmRoll.photos.isEmpty == false {
             Section("Current film rolls photos") {
-                ForEach(currentFilmRoll.photos) { photo in
-                    PhotoView(photo: photo)
-                }
+                PhotosSliderView(photos: currentFilmRoll.photos.sorted())
             }
         }
     }
