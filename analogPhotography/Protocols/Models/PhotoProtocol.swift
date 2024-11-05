@@ -16,7 +16,7 @@ protocol PhotoProtocol: ModelProtocol {
     var location: Location? { get set }
     var locationDescription: String? { get set }
     
-    var aperture: String { get set }
+    var aperture: String? { get set }
     var shutterSpeed: String { get set }
     
     var ruined: Bool { get set }

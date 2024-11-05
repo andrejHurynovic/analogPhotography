@@ -16,7 +16,7 @@ final class Photo: PhotoProtocol {
     var location: Location?
     var locationDescription: String?
     
-    var aperture: String = ""
+    var aperture: String?
     var shutterSpeed: String = ""
     
     var ruined: Bool = false
@@ -29,7 +29,7 @@ final class Photo: PhotoProtocol {
     init(date: Date? = .now,
          location: Location? = nil,
          locationDescription: String? = nil,
-         aperture: String = "",
+         aperture: String? = nil,
          shutterSpeed: String = "",
          ruined: Bool = false, 
          note: String = "",

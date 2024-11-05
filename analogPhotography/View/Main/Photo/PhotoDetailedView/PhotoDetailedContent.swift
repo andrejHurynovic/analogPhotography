@@ -10,7 +10,6 @@ import SwiftData
 
 struct PhotoDetailedContent: View {
     @Bindable var photo: Photo
-    @State var apertureText: String = ""
     
     var body: some View {
         map
@@ -37,10 +36,8 @@ struct PhotoDetailedContent: View {
     
     @ViewBuilder var aperturePicker: some View {
         TextFieldForm(title: "Aperture",
-                          placeholder: "f/2.8",
-                          text: $apertureText)
-            .keyboardType(.numberPad)
-            .textFieldPrefix(prefix: "f/", text: $photo.aperture, textFieldText: $apertureText)
+                      placeholder: "f/2.8",
+                      text: $photo.aperture.prefixed(with: "f/"))
+        .keyboardType(.numberPad)
     }
-    
 }

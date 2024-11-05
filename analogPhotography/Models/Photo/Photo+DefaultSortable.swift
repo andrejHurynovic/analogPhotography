@@ -8,5 +8,5 @@
 import Foundation
 
 extension Photo: DefaultSortable {
-    static func defaultSortDescriptors() -> [SortDescriptor<Photo>] { [SortDescriptor(\.order)] }
+    static func defaultSortDescriptors() -> [SortDescriptor<Photo>] { [SortDescriptor(\.order), SortDescriptor(\.shutterSpeed)] }
 }

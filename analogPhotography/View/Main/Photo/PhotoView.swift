@@ -15,6 +15,7 @@ struct PhotoView: View {
             firstLine
             secondLine
         }
+        .foregroundStyle(Color.random())
     }
     
     var firstLine: some View {
@@ -32,8 +33,8 @@ struct PhotoView: View {
             if let locationDescription = photo.locationDescription {
                 Text(locationDescription)
             }
-            if !photo.aperture.isEmpty {
-                Text(photo.aperture)
+            if let aperture = photo.aperture {
+                Text(aperture)
             }
             if !photo.shutterSpeed.isEmpty {
                 Text(photo.shutterSpeed)
