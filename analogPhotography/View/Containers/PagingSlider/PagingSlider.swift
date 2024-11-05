@@ -17,6 +17,7 @@ where Items: MutableCollection, Items.Element: Identifiable {
     @ViewBuilder var titleContent: (Items.Element) -> TitleContent
     
     let titleScrollSpeed: CGFloat = 0.65
+    let animationDuration: TimeInterval = 0.35
     
     var body: some View {
         VStack {
@@ -39,18 +40,18 @@ where Items: MutableCollection, Items.Element: Identifiable {
             }
             .scrollIndicators(.hidden)
             .scrollTargetBehavior(.viewAligned)
-            .scrollPosition(id: Binding($activeID))
+            .scrollPosition(id: $activeID)
             .safeAreaPadding([.horizontal])
             
             PagingControl(numberOfPages: items.count, currentPage: activePage) { pageIndex in
+                print("pageIndex: \(pageIndex)")
                 guard let index = pageIndex as? Items.Index,
                         items.indices.contains(index) else { return }
-                withAnimation(.snappy(duration: 0.35)) {
+                withAnimation(.snappy(duration: animationDuration)) {
                     activeID = items[index].id
                 }
             }
         }
-        .background(Color(uiColor: UIColor.systemGroupedBackground))
     }
     
     nonisolated func titleContentScrollOffset(_ proxy: GeometryProxy) -> CGFloat {
@@ -58,8 +59,9 @@ where Items: MutableCollection, Items.Element: Identifiable {
         return -minX * min(titleScrollSpeed, 1.0)
     }
     
-    var activePage: Int {
+    private var activePage: Int {
         guard let index = items.firstIndex(where: { $0.id == activeID }) as? Int else { return 0 }
+        print("activePage: \(index)")
         return index
     }
         
